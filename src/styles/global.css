@@ -1,0 +1,66 @@
+body {
+  font-family: "Inter Variable";
+}
+.app-black-gradient-bg {
+  background: linear-gradient(180deg, #071c27 0%, #181717 91.12%);
+}
+.app-gradient-bg {
+  background: linear-gradient(90deg, #0b63f6 0%, #063a90 100%);
+}
+.app-border-gradient-bg {
+  background: linear-gradient(90deg, #0B63F6 0%, #9F87FF 43%, #08D5EC 73%, #41F892 100%);
+}
+
+.app-text-gradient-bg {
+  background: linear-gradient(90deg, #2b43f7 5.84%, #00c9fb 63.5%, #45fa8e 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.black-gradient {
+  background: linear-gradient(0deg, #0D111D 0%, rgba(13, 19, 31, 0.00) 100%);
+}
+.text-shadow-blue {
+  text-shadow: 0px 0px 10px #00C9FB;
+}
+.app-glass-bg {
+  backdrop-filter: blur(51.98776626586914px);
+  background: rgba(20, 26, 33, 0.48);
+}
+
+.lang-selector-bg {
+  background: linear-gradient(102deg, #1DA1F2 -18.39%, rgba(153, 153, 153, 0.10) 51.46%, #7289DA 100%);
+  backdrop-filter: blur(12.5px);
+}
+.login-bg {
+  backdrop-filter: blur(25px);
+  background: linear-gradient(135deg, rgba(29, 161, 242, 0.4) 24.4%, rgba(153, 153, 153, 0.4) 60%, rgba(114, 137, 218, 0.5) 100%);
+}
+.menu-gradient {
+  background: linear-gradient(174deg, #142B3A 0%, #091720 50.5%, #142B3A 100%);
+}
+img {
+  -webkit-user-drag: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #01080E;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #193445;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #193445;
+}

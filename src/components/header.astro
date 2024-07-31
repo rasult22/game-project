@@ -1,0 +1,169 @@
+---
+import { Icon } from "astro-icon/components";
+// import ThemeSwitcher from "~/components/theme-switcher.astro";
+import type { NavItem } from "~/types";
+import LangSelector from '~/components/lang-selector.svelte'
+import Login from '~/components/login.svelte'
+import LoginMetamask from '~/components/login-metamask.svelte'
+const navItems: Array<NavItem> = [
+  { title: "Home", url: "#home" },
+  { title: "About", url: "#about" },
+  { title: "Docs", url: "#docs" },
+];
+---
+
+<header
+  id="page-header"
+  class="absolute font-Poppins flex items-center min-h-[100px] text-[20px] w-full justify-between  top-0 z-20  header-bg px-8 py-4 text-white"
+>
+  <a class="flex items-center gap-3 hover:!text-default" href="#">
+    <img width="206" height="45" class="max-w-[206px]" src="/optimized/logo.webp" alt="logo">
+  </a>
+  <div>
+    <div class="flex items-center justify-between gap-6">
+      <nav class="sm:hidden block">
+        <ul class="flex items-center gap-6">
+          {
+            navItems.map(({ title, url }) => (
+              <li>
+                <a class="text-sm 3xl:text-[20px]" href={url}>
+                  {title}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+      <button
+        id="open-nav-button"
+        type="button"
+        class="btn hidden sm:block"
+        aria-label="Navigation"
+      >
+        <Icon name="mdi:menu" class="size-8" />
+      </button>
+    </div>
+
+    <div id="menu-modal" class="modal hidden" aria-hidden="true">
+      <div class="fixed w-full h-full left-0 top-0 bg-[rgba(0,0,0,0.4)]"></div>
+      <div id="drawer" class="fixed w-[80%] translate-x-[80%] right-0 top-0 h-[100vh] bg-default px-8 py-4 text-default menu-gradient">
+        <div class="space-y-4" role="dialog" aria-modal="true">
+          <header class="text-right">
+            <button
+              id="close-nav-button"
+              type="button"
+              class="btn"
+              aria-label="Close navigation"
+            >
+              <Icon name="mdi:close" class="size-8" />
+            </button>
+          </header>
+          <div class="flex justify-center py-[20px]">
+            <img width="206" height="45" class="max-w-[201px]" src="/optimized/logo.webp" alt="logo">
+          </div>
+          </div>
+          <nav>
+            <ul class="flex flex-col">
+              {
+                navItems.map(({ title, url }) => (
+                  <li>
+                    <a class="block py-4 text-center text-xl" href={url}>
+                      {title}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </nav>
+          <div class="mt-[20px] flex flex-col items-center">
+            <LangSelector client:idle/>
+            <div class="py-1"></div>
+            <Login client:idle />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sm:hidden flex space-x-4 items-center">
+    <div>
+      <LangSelector client:idle />
+    </div>
+    <div>
+      <LoginMetamask client:only />
+    </div>
+  </div>
+</header>
+
+<script>
+  import MicroModal from "micromodal";
+import { animate } from "motion";
+  import invariant from "tiny-invariant";
+
+  const menuModalId = "menu-modal";
+
+  const header = document.querySelector("#page-header") as HTMLElement;
+  const page = document.documentElement;
+  const menu = document.querySelector(`#${menuModalId} ul`);
+  const openNavButton = document.querySelector("#open-nav-button");
+  const closeNavButton = document.querySelector("#close-nav-button");
+
+  invariant(header, "header should not be null");
+  invariant(menu, "menu should not be null");
+  invariant(openNavButton, "openNavButton should not be null");
+  invariant(closeNavButton, "closeNavButton should not be null");
+
+  const openMenu = () => {
+    MicroModal.show(menuModalId, { disableScroll: true });
+
+    animate("#drawer", {
+      transform: ['translateX(0px)']
+    })
+  };
+
+  const closeMenu = () => {
+    animate("#drawer", {
+      transform: ['translateX(100%)']
+    })
+    setTimeout(() => {
+      MicroModal.close(menuModalId);
+    }, 400)
+  };
+
+  openNavButton.addEventListener("click", openMenu);
+  closeNavButton.addEventListener("click", closeMenu);
+
+  document.addEventListener("scroll", () => {
+    const d = page.clientHeight - page.scrollTop - header.offsetHeight;
+    header.classList.toggle("fixed-header", d < 0);
+  });
+
+  menu.addEventListener("click", (event) => {
+    if ((event.target as HTMLElement).tagName === "A") {
+      closeMenu();
+    }
+  });
+</script>
+
+<noscript>
+  <style>
+    #open-nav-button {
+      display: none;
+    }
+  </style>
+</noscript>
+
+<style>
+  .fixed-header {
+    @apply fixed bottom-auto top-0;
+    @apply text-default;
+    border-bottom: 1px solid #2B43F7;
+    background: linear-gradient(180deg, #091720 0%, rgba(9, 23, 32, 0.70) 100%);
+  }
+  .modal.is-open {
+    @apply block;
+  }
+  .header-bg {
+    border-bottom: 1px solid #2B43F7;
+    background: linear-gradient(180deg, #091720 0%, rgba(9, 23, 32, 0.70) 100%);
+  }
+</style>

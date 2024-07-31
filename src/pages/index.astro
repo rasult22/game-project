@@ -1,0 +1,54 @@
+---
+import "@fontsource-variable/inter";
+import "@fontsource/poppins";
+import '~/styles/global.css'
+import Footer from "~/components/footer.astro";
+import Header from "~/components/header.astro";
+import Intro from '~/components/blocks/intro.astro'
+import WhatIs from '~/components/blocks/what-is.astro'
+import Assistant from '~/components/blocks/assistant.astro'
+import Companion from '~/components/blocks/companion.astro'
+import Roadmap from '~/components/blocks/roadmap.astro'
+import WhitePaper from '~/components/blocks/whitepaper.astro'
+import OurTeam from '~/components/blocks/our-team.astro'
+
+const { generator, site } = Astro;
+const image = new URL("optimized/social.webp", site);
+
+const description = "AI based communication voice avatars, which can be used as different professional assistants – psychologist, fitness coach, nutrition counselor, Wide range of topics communicating Companion";
+---
+
+<!doctype html>
+<html lang="en" class="bg-app-bg h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.png" type="image/svg+xml" />
+    <meta name="generator" content={generator} />
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <title>CompAI - your best AI generated friend</title>
+    <meta name="description" content={description} />
+
+    <!-- social media -->
+    <meta property="og:title" content="CompAI - your best AI generated friend" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={site} />
+    <meta name="twitter:card" content="summary_large_image" />
+  <body
+    class="h-full overflow-x-hidden bg-default text-app-grey-text text-base"
+  >
+    <Header />
+    <div class="md:overflow-hidden md:relative sm:overflow-hidden">
+      <Intro />
+      <WhatIs />
+      <Assistant />
+      <Companion />
+      <Roadmap />
+      <WhitePaper />
+      <!-- <OurTeam /> -->
+    </div>
+    <Footer />
+  </body>
+</html>
