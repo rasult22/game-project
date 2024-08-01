@@ -4,14 +4,10 @@ import "@fontsource/poppins";
 import '~/styles/global.css'
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
-import Intro from '~/components/blocks/intro.astro'
-import WhatIs from '~/components/blocks/what-is.astro'
-import Assistant from '~/components/blocks/assistant.astro'
-import Companion from '~/components/blocks/companion.astro'
-import Roadmap from '~/components/blocks/roadmap.astro'
-import WhitePaper from '~/components/blocks/whitepaper.astro'
-import OurTeam from '~/components/blocks/our-team.astro'
-
+import Buttons from '~/components/buttons.svelte'
+import Search from '~/components/search.svelte'
+import ButtonTab from '~/components/button-tab.svelte'
+import SocialNetworks from '~/components/social-networks.svelte'
 const { generator, site } = Astro;
 const image = new URL("optimized/social.webp", site);
 
@@ -39,10 +35,17 @@ const description = "AI based communication voice avatars, which can be used as 
   <body
     class="h-full overflow-x-hidden bg-default text-app-grey-text text-base"
   >
-    <Header />
-    <div class="md:overflow-hidden md:relative sm:overflow-hidden">
-      Hello
+    <!-- <Header /> -->
+    Hello
+    <div class="p-10 space-x-4 space-y-4">
+      <Buttons />
+      <Search />
+      <div>
+        <ButtonTab client:load />
+      </div>
+      <SocialNetworks />
     </div>
     <Footer />
   </body>
 </html>
+
