@@ -12,6 +12,7 @@ import NetworkFilter from '~/components/network-filter.svelte'
 import DeviceFilter from '~/components/device-filter.svelte'
 import GenreFilter from '~/components/genre-filter.svelte'
 import StatusFilter from '~/components/status-filter.svelte'
+import Dropdown from '~/components/dropdown.svelte'
 const { generator, site } = Astro;
 const image = new URL("optimized/social.webp", site);
 
@@ -59,6 +60,9 @@ const description = "AI based communication voice avatars, which can be used as 
       </div>
       <div >
         <StatusFilter client:load/>
+      </div>
+      <div >
+        <Dropdown client:load/>
       </div>
     </div>
     <Footer />
