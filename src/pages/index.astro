@@ -16,6 +16,8 @@ import Dropdown from '~/components/dropdown.svelte'
 import GameCard from '~/components/game-card.svelte'
 import GameCardBasic from '~/components/game-card-basic.svelte'
 import GamesTable from '~/components/games-table.svelte'
+import ProfileBtn from '~/components/profile-btn.svelte'
+import BaseInput from '~/components/base-input.svelte'
 const { generator, site } = Astro;
 const image = new URL("optimized/social.webp", site);
 
@@ -76,6 +78,16 @@ const description = "AI based communication voice avatars, which can be used as 
       <div>
         <GamesTable client:load />
       </div>
+      <div>
+        <ProfileBtn />
+      </div>
+      <div>
+        <BaseInput />
+      </div>
+      <div>
+        <BaseInput error />
+      </div>
+      
     </div>
     <Footer />
   </body>
