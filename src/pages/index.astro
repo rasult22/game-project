@@ -18,6 +18,7 @@ import GamesTable from '~/components/games-table.svelte'
 import ProfileBtn from '~/components/profile-btn.svelte'
 import BaseInput from '~/components/base-input.svelte'
 import BlogCard from '~/components/blog-card.svelte'
+import JoinRequestModal from '~/components/join-request-modal.svelte'
 const { generator, site } = Astro;
 const image = new URL("optimized/social.webp", site);
 
@@ -89,6 +90,9 @@ const description = "AI based communication voice avatars, which can be used as 
       </div>
       <div>
         <BlogCard />
+      </div>
+      <div>
+        <JoinRequestModal client:load />
       </div>
     </div>
     <Footer />

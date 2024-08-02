@@ -1,17 +1,17 @@
 <script>
-  let active = 'investor'
+  export let active = 'investor'
   let options = [
     {
       key: 'investor',
       val: `I'm an investor`
     },
     {
-      key: 'devs',
+      key: 'dev_team',
       val: `We’re developers`
     }
   ]
 </script>
-<div class="flex">
+<div class="flex bg-[#1B1B1B] rounded-[14px] p-1">
   {#each options as op}
     <button class:btn-tab-active={op.key === active} on:click={() => active = op.key} class="btn-tab">
       {op.val}
