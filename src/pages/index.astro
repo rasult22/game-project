@@ -1,6 +1,5 @@
 ---
 import "@fontsource-variable/inter";
-import "@fontsource/poppins";
 import '~/styles/global.css'
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
@@ -18,6 +17,7 @@ import GameCardBasic from '~/components/game-card-basic.svelte'
 import GamesTable from '~/components/games-table.svelte'
 import ProfileBtn from '~/components/profile-btn.svelte'
 import BaseInput from '~/components/base-input.svelte'
+import BlogCard from '~/components/blog-card.svelte'
 const { generator, site } = Astro;
 const image = new URL("optimized/social.webp", site);
 
@@ -25,7 +25,7 @@ const description = "AI based communication voice avatars, which can be used as 
 ---
 
 <!doctype html>
-<html lang="en" class="bg-app-bg h-full motion-safe:scroll-smooth" data-theme="dark">
+<html lang="en" class="bg-app-bg h-full font-Inter motion-safe:scroll-smooth" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -87,7 +87,9 @@ const description = "AI based communication voice avatars, which can be used as 
       <div>
         <BaseInput error />
       </div>
-      
+      <div>
+        <BlogCard />
+      </div>
     </div>
     <Footer />
   </body>
