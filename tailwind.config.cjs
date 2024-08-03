@@ -105,6 +105,7 @@ module.exports = {
       fontFamily: {
         Inter: ["Inter Variable"],
         Poppins: ["Poppins"],
+        Oxanium: ["Oxanium"],
       },
       textColor: {
         default: "var(--color-text)",

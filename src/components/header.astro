@@ -5,19 +5,28 @@ import type { NavItem } from "~/types";
 import LangSelector from '~/components/lang-selector.svelte'
 import Login from '~/components/login.svelte'
 import LoginMetamask from '~/components/login-metamask.svelte'
+import RequestModal from '~/components/join-request-modal.svelte'
+import AuthModal from '~/components/auth-modal.svelte'
+import TelegramIcon from '~/components/icons/TelegramIcon.svelte'
+import TwitterIcon from '~/components/icons/TwitterIcon.svelte'
 const navItems: Array<NavItem> = [
-  { title: "Home", url: "#home" },
-  { title: "About", url: "#about" },
-  { title: "Docs", url: "#docs" },
+  { title: "Ranking", url: "#" },
+  { title: "Staking", url: "#" },
+  { title: "GameHub", url: "#" },
+  { title: "IDO", url: "#" },
+  { title: "Blog", url: "/blog" },
+  { title: "About", url: "#" },
+  { title: "Whitepaper", url: "#" },
 ];
+let currentUrl = Astro.url.pathname
 ---
 
 <header
   id="page-header"
-  class="absolute font-Poppins flex items-center min-h-[100px] text-[20px] w-full justify-between  top-0 z-20  header-bg px-8 py-4 text-white"
+  class="absolute max-w-[1920px] left-[50%] translate-x-[-50%] mx-auto font-Inter flex items-center min-h-[100px] text-[20px] w-full justify-between  top-0 z-20  header-bg px-8 py-4 text-white"
 >
   <a class="flex items-center gap-3 hover:!text-default" href="#">
-    <img width="206" height="45" class="max-w-[206px]" src="/optimized/logo.webp" alt="logo">
+    <img width="77" height="48" class="max-w-[77px]" src="/logo.svg" alt="logo">
   </a>
   <div>
     <div class="flex items-center justify-between gap-6">
@@ -26,7 +35,7 @@ const navItems: Array<NavItem> = [
           {
             navItems.map(({ title, url }) => (
               <li>
-                <a class="text-sm 3xl:text-[20px]" href={url}>
+                <a class={`text-[16px] transition-all hover:opacity-80 pb-1 ${currentUrl === url ? 'border-b' : ''}`} href={url}>
                   {title}
                 </a>
               </li>
@@ -67,7 +76,7 @@ const navItems: Array<NavItem> = [
               {
                 navItems.map(({ title, url }) => (
                   <li>
-                    <a class="block py-4 text-center text-xl" href={url}>
+                    <a class="block py-4 text-center" href={url}>
                       {title}
                     </a>
                   </li>
@@ -85,11 +94,13 @@ const navItems: Array<NavItem> = [
     </div>
   </div>
   <div class="sm:hidden flex space-x-4 items-center">
+    <a class="cursor-pointer active:scale-95 transition-all"><TelegramIcon/></a>
+    <a class="cursor-pointer active:scale-95 transition-all"><TwitterIcon /></a>
     <div>
-      <LangSelector client:idle />
+      <RequestModal client:idle />
     </div>
     <div>
-      <LoginMetamask client:only />
+      <AuthModal client:only />
     </div>
   </div>
 </header>
@@ -156,14 +167,8 @@ import { animate } from "motion";
   .fixed-header {
     @apply fixed bottom-auto top-0;
     @apply text-default;
-    border-bottom: 1px solid #2B43F7;
-    background: linear-gradient(180deg, #091720 0%, rgba(9, 23, 32, 0.70) 100%);
   }
   .modal.is-open {
     @apply block;
-  }
-  .header-bg {
-    border-bottom: 1px solid #2B43F7;
-    background: linear-gradient(180deg, #091720 0%, rgba(9, 23, 32, 0.70) 100%);
   }
 </style>

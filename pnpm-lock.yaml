@@ -4,6 +4,7 @@ specifiers:
   '@astrojs/svelte': ^5.4.0
   '@astrojs/tailwind': ^5.1.0
   '@fontsource-variable/inter': ^5.0.16
+  '@fontsource/oxanium': ^5.0.20
   '@fontsource/poppins': ^5.0.13
   '@iconify-json/fa-brands': ^1.1.8
   '@iconify-json/mdi': ^1.1.64
@@ -29,6 +30,7 @@ specifiers:
 dependencies:
   '@astrojs/svelte': 5.4.0_astro@4.6.2+svelte@4.2.15
   '@fontsource-variable/inter': 5.0.17
+  '@fontsource/oxanium': 5.0.20
   '@fontsource/poppins': 5.0.13
   ethers: 6.12.0
   micromodal: 0.4.10
@@ -749,6 +751,10 @@ packages:
 
   /@fontsource-variable/inter/5.0.17:
     resolution: {integrity: sha512-sa80nNnqF8kzhBvqusWiL9vlPMVpdmOwMmDBup46Jggsr1VBqo+YuzwB36Ls+X6uHJtb8Yv3ALBHL/zGmT862A==}
+    dev: false
+
+  /@fontsource/oxanium/5.0.20:
+    resolution: {integrity: sha512-+NC9HiELTUw6x5s+cZFx7VHS0gdiEkmneN+Mrq+rrsG+K6KYTHjRw3kh0NmRH2hWEtVQs6rVy6e/EaOJSelxQA==}
     dev: false
 
   /@fontsource/poppins/5.0.13:
