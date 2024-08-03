@@ -1,0 +1,156 @@
+---
+import "@fontsource-variable/inter";
+import "@fontsource/oxanium/500.css";
+import "@fontsource/oxanium/600.css";
+import "@fontsource/oxanium/800.css";
+import "~/styles/global.css";
+import Footer from "~/components/footer.astro";
+import Header from "~/components/header.astro";
+const { generator, site } = Astro;
+const image = new URL("optimized/social.webp", site);
+
+const description =
+  "AI based communication voice avatars, which can be used as different professional assistants – psychologist, fitness coach, nutrition counselor, Wide range of topics communicating Companion";
+
+const blogList = [
+  {
+    img: "/blog-cover.png",
+    title:
+      "The U.S. proposed to study the impact of bitcoin mining on the environment",
+    description:
+      "U.S. lawmakers have introduced a bill that would require the Environmental Protection Agency to conduct a comprehensive study of the environmental impact of the mining industry.",
+  },
+  {
+    img: "/blog-pixel.png",
+    title:
+      "The U.S. proposed to study the impact of bitcoin mining on the environment",
+    description:
+      "U.S. lawmakers have introduced a bill that would require the Environmental Protection Agency to conduct a comprehensive study of the environmental impact of the mining industry.",
+  },
+  {
+    img: "/blog-solana.png",
+    title:
+      "The U.S. proposed to study the impact of bitcoin mining on the environment",
+    description:
+      "U.S. lawmakers have introduced a bill that would require the Environmental Protection Agency to conduct a comprehensive study of the environmental impact of the mining industry.",
+  },
+  {
+    img: "/blog-bitcoin.png",
+    title:
+      "The U.S. proposed to study the impact of bitcoin mining on the environment",
+    description:
+      "U.S. lawmakers have introduced a bill that would require the Environmental Protection Agency to conduct a comprehensive study of the environmental impact of the mining industry.",
+  },
+];
+---
+
+<!doctype html>
+<html
+  lang="en"
+  class="bg-app-bg h-full font-Inter motion-safe:scroll-smooth"
+  data-theme="dark"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.png" type="image/svg+xml" />
+    <meta name="generator" content={generator} />
+    <meta
+      http-equiv="cache-control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <title>CompAI - your best AI generated friend</title>
+    <meta name="description" content={description} />
+
+    <!-- social media -->
+    <meta
+      property="og:title"
+      content="CompAI - your best AI generated friend"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={site} />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head><body class="h-full overflow-x-hidden bg-default text-white">
+    <Header />
+    <div class="py-[150px] space-x-4 max-w-[920px] mx-auto">
+      <h1 class="text-[36px] font-medium uppercase font-Oxanium">Blog</h1>
+
+      <div class="mt-[50px] space-y-6 max-w-[912px]">
+        {
+          blogList.map((article) => (
+            <div class="bg-[#272727] hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer py-2 pl-2 pr-4 flex space-x-[36px] max-w-[912px] rounded-[12px]">
+              <img class="max-w-[410px]" src={article.img} alt="" />
+              <div class="w-full justify-center flex flex-col text-white">
+                <div class="text-[24px] leading-[120%] font-semibold">
+                  {article.title}
+                </div>
+                <div class="text-[#B0B0B2] leading-[120%] mt-4">
+                  {article.description}
+                </div>
+                <button class="flex text-[20px] mt-4">Read more</button>
+              </div>
+            </div>
+          ))
+        }
+
+        <div
+          class="flex max-w-[912px] justify-center pt-[30px] items-center space-x-4"
+        >
+          <svg
+            class="cursor-pointer hover:opacity-80 active:scale-95 transition-all"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L14.2929 5.2929C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L10.4142 12L15.7071 17.2929C16.0976 17.6834 16.0976 18.3166 15.7071 18.7071C15.3166 19.0976 14.6834 19.0976 14.2929 18.7071L8.29289 12.7071Z"
+              fill="white"></path>
+          </svg>
+          <div class="flex space-x-4 select-none">
+            <div
+              class="cursor-pointer transition-all active:scale-95 w-[36px] h-[36px] hover:bg-white hover:text-black bg-[#414141] flex items-center justify-center rounded-full"
+            >
+              1
+            </div>
+            <div
+              class="cursor-pointer transition-all active:scale-95 w-[36px] h-[36px] hover:bg-white hover:text-black bg-[#414141] flex items-center justify-center rounded-full"
+            >
+              2
+            </div>
+            <div
+              class="cursor-pointer transition-all active:scale-95 w-[36px] h-[36px] hover:bg-white hover:text-black bg-[#414141] flex items-center justify-center rounded-full"
+            >
+              3
+            </div>
+            <div
+              class="cursor-pointer transition-all active:scale-95 w-[36px] h-[36px] hover:bg-white hover:text-black bg-[#414141] flex items-center justify-center rounded-full"
+            >
+              4
+            </div>
+          </div>
+          <svg
+            class="cursor-pointer hover:opacity-80 active:scale-95 transition-all"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M15.7071 12.7071C16.0976 12.3166 16.0976 11.6834 15.7071 11.2929L9.70711 5.2929C9.31658 4.90237 8.68342 4.90237 8.29289 5.29289C7.90237 5.68342 7.90237 6.31658 8.29289 6.70711L13.5858 12L8.29289 17.2929C7.90237 17.6834 7.90237 18.3166 8.29289 18.7071C8.68342 19.0976 9.31658 19.0976 9.70711 18.7071L15.7071 12.7071Z"
+              fill="white"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <!-- <Footer /> -->
+  </body>
+</html>
