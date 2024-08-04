@@ -2,12 +2,22 @@
 	import GameCard from './../../components/game-card.svelte';
 	import BalanceCard from './../../components/profile-page/balance-card.svelte';
   import ProfileCard from '~/components/profile-page/profile-card.svelte';
-  import {dragscroll} from '@svelte-put/dragscroll' 
+  import {dragscroll} from '@svelte-put/dragscroll'
+  import { auth } from '~/store/auth';
+  $: {
+    if(!$auth.isAuthorized) {
+      const link = document.createElement('a')
+      link.href = '/'
+      link.click()
+    }
+  }
 </script>
-<div class="w-full flex gap-4 rounded-[12px]">
-  <ProfileCard />
-  <BalanceCard />
-</div>
+{#if $auth.isAuthorized}
+  <div class="w-full flex gap-4 rounded-[12px]">
+    <ProfileCard />
+    <BalanceCard />
+  </div>
+{/if}
 
 <div class="bg-[#1C1C1E] rounded-[20px] p-4 mt-4">
   <div class="text-[24px] font-medium">My Games</div>

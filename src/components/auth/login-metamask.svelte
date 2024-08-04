@@ -49,11 +49,11 @@
         });
         isMMConnected = true;
        
-        if (window.ethereum.selectedAddress) {
-          let address =window.ethereum.selectedAddress
+        if (accounts.length) {
+          let address =accounts[0]
           $auth = {
             user: {
-              name: 'Metamask User',
+              name: 'User',
               address_full: address,
               address: address.slice(0, address.length/5)+ '...' + address.slice(address.length - 5, address.length)
             },
@@ -76,10 +76,14 @@
     const selectedAddress = window.ethereum.selectedAddress;
 
     const nonce = makeId(12);
-    const signature = await window.ethereum.request({
-      method: "personal_sign",
-      params: [nonce, selectedAddress],
-    });
+    try {
+      const signature = await window.ethereum.request({
+        method: "personal_sign",
+        params: [nonce, selectedAddress],
+      });
+    } catch (e) {
+      console.log(e)
+    }
   };
 </script>
 

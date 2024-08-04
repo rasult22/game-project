@@ -19,6 +19,8 @@
       })
     }
   })
+
+  $: isConflict = window.ethereum && window.ethereum.isTrustWallet && window.ethereum.isMetaMask
 </script>
 {#if $auth.isAuthorized}
   <ProfileBtn name={$auth.user && $auth.user.name} address={$auth.user && $auth.user.address} />
@@ -38,6 +40,12 @@
             </svg>
           </button>
         </div>
+        {#if isConflict}
+          <div class="text-[14px]  mt-4 bg-orange-400 p-4 rounded-[20px]">
+            <div>Caution! You have both (Metamask, TrustWallet) extension installed.</div>
+            <div>Plese disable one of them, to avoid conflicts</div>
+          </div>
+        {/if}
         <!-- body -->
         <div class="space-y-4 mt-4">
           <LoginMetamask bind:authPopupIsOpen={open}/>
