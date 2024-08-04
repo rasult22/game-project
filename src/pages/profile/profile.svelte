@@ -9,7 +9,7 @@
   <BalanceCard />
 </div>
 
-<div class="bg-[#2A2A2A] rounded-[20px] p-4 mt-4">
+<div class="bg-[#1C1C1E] rounded-[20px] p-4 mt-4">
   <div class="text-[24px] font-medium">My Games</div>
   <div use:dragscroll class="flex min-h-[382px] gap-[10px] mt-4 overflow-x-auto pb-3" >
     <GameCard />

@@ -1,4 +1,4 @@
-<div class="bg-[#2A2A2A] w-full p-6 rounded-[20px] space-y-3">
+<div class="bg-[#1C1C1E] w-full p-6 rounded-[20px] space-y-3">
 
   <div class="flex gap-3">
     <!-- Balance -->

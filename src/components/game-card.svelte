@@ -1,7 +1,7 @@
 <script>
 
 </script>
-<div class="min-w-[260px] px-2 pt-2 pb-3 rounded-[14px] max-w-[290px] group hover:bg-[#464648] cursor-pointer transition-all">
+<div class="min-w-[260px] px-2 pt-2 pb-3 rounded-[14px] max-w-[290px] group hover:bg-[#37373D] cursor-pointer transition-all">
   <img width="257" height="300" class="w-full rounded-[10px]" src="/game-card-sample.png" alt="">
   <div class="mt-2 group-hover:hidden transition-all">
     <div class="leading-[120%]">
