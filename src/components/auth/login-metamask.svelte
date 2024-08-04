@@ -1,5 +1,5 @@
 <script>
-	import { auth } from './../store/auth.ts';
+	import { auth } from '~/store/auth.ts';
   import { ethers } from "ethers";
   import { onMount } from "svelte";
   let accounts = [];

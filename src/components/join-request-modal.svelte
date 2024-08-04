@@ -1,7 +1,7 @@
 <script>
   import { fade } from 'svelte/transition';
   import ButtonTab from './button-tab.svelte'
-  import BaseInput from './base-input.svelte'
+  import BaseInput from './base/base-input.svelte'
   let activeTab = 'investor'
   export let open = false
 </script>

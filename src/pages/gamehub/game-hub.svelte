@@ -1,10 +1,10 @@
 <script>
-  import GenreFilter from "~/components/genre-filter.svelte";
-  import NetworkFilter from "~/components/network-filter.svelte";
-  import DeviceFilter from "~/components/device-filter.svelte";
-  import StatusFilter from "~/components/status-filter.svelte";
-  import Search from "~/components/search.svelte";
-  import Dropdown from "~/components/dropdown.svelte";
+  import GenreFilter from "~/components/filters/genre-filter.svelte";
+  import NetworkFilter from "~/components/filters/network-filter.svelte";
+  import DeviceFilter from "~/components/filters/device-filter.svelte";
+  import StatusFilter from "~/components/filters/status-filter.svelte";
+  import Search from "~/components/filters/search.svelte";
+  import Dropdown from "~/components/filters/dropdown.svelte";
   import GameCardBasic from "~/components/game-card-basic.svelte";
   import GamesTable from '~/components/games-table.svelte'
   
