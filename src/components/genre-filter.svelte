@@ -1,4 +1,5 @@
 <script>
+	import { fade } from 'svelte/transition';
 	import BaseChip from './base-chip.svelte';
 let items = [
   {
@@ -68,7 +69,7 @@ let items = [
     </svg>
   </div>
   {#if open}
-    <div class="flex gap-[10px] flex-wrap pt-4">
+    <div transition:fade class="flex gap-[10px] flex-wrap pt-4">
       {#each items as item (item.key) }
         <BaseChip active={false}>
           <span slot="text">
