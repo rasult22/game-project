@@ -53,7 +53,9 @@
           let address =window.ethereum.selectedAddress
           $auth = {
             user: {
-              name: address.slice(0, address.length/5)+ '...' + address.slice(address.length/1.3, address.length)
+              name: 'Metamask User',
+              address_full: address,
+              address: address.slice(0, address.length/5)+ '...' + address.slice(address.length - 5, address.length)
             },
             isAuthorized: true,
             authType: 'metamask'
