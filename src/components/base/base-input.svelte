@@ -13,7 +13,7 @@
     type="text"
     id={id}
     class:border-red-500={error}
-    class="w-full block bg-transparent border focus:outline-none focus:border-white placeholder:text-[#888888] border-[#888] py-[14px] px-3 rounded-[12px] appearance-none peer"
+    class="w-full block bg-transparent border focus:outline-none focus:border-[#D9D9D9] placeholder:text-[#888888] border-[#888] py-[14px] px-3 rounded-[12px] appearance-none peer"
     placeholder=" "
   />
   <label
