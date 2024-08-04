@@ -21,11 +21,7 @@
   })
 </script>
 {#if $auth.isAuthorized}
-  <ProfileBtn name={$auth.user && $auth.user.name} address={$auth.user && $auth.user.address} on:click={() => {
-    if (window.location.pathname !== '/profile') {
-      window.location.href = '/profile'
-    }
-  }} />
+  <ProfileBtn name={$auth.user && $auth.user.name} address={$auth.user && $auth.user.address} />
 {:else}
   <button on:click={() => open = true} class="font-medium bg-[#fff] text-black border py-[10px] active:border-[#fff] active:scale-95 active:bg-[#D9D9D9] transition-all px-[36px] rounded-[12px]">Log in</button>
 {/if}

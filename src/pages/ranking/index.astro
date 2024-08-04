@@ -6,8 +6,8 @@ import "@fontsource/oxanium/800.css";
 import "~/styles/global.css";
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
+import GamesTable from '~/components/games-table.svelte'
 import { ViewTransitions } from 'astro:transitions';
-import GameHub from './game-hub.svelte'
 const { generator, site } = Astro;
 const image = new URL("optimized/social.webp", site);
 
@@ -19,7 +19,7 @@ const description =
 <!doctype html>
 <html
   lang="en"
-  class="bg-app-bg font-Inter motion-safe:scroll-smooth"
+  class="bg-app-bg h-full font-Inter motion-safe:scroll-smooth"
   data-theme="dark"
 >
   <head>
@@ -33,25 +33,29 @@ const description =
     />
     <title>CompAI - your best AI generated friend</title>
     <meta name="description" content={description} />
-
+    <ViewTransitions />
     <!-- social media -->
     <meta
       property="og:title"
       content="CompAI - your best AI generated friend"
     />
-    <ViewTransitions />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
     <meta property="og:url" content={site} />
     <meta name="twitter:card" content="summary_large_image" />
-  </head>
-  <body class="h-full py-[150px] overflow-x-hidden bg-[#0D0D0F] text-white">
+  </head><body class="overflow-x-hidden bg-[#0D0D0F] text-white">
     <Header />
-    <div class="flex flex-col space-x-4 px-9 max-w-[1620px] mx-auto">
-      <GameHub client:load/>
-      <div class="w-full mt-[110px] h-[350px] bg-[#c3c3c3] rounded-[12px]">
+    <div class="py-[150px] space-x-4 px-6 max-w-[1440px] mx-auto">
+      <h1 class="text-[36px] font-medium uppercase font-Oxanium">ranking</h1>
 
+      <div class="mt-[50px] space-y-6 max-w-[1440px]">
+     
+        <div class="flex mt-[50px] space-x-4 h-full">
+          <!-- ranking -->
+          <GamesTable />
+        </div>
+       
       </div>
     </div>
     <!-- <Footer /> -->

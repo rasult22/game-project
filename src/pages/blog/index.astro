@@ -7,6 +7,7 @@ import "~/styles/global.css";
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
 const { generator, site } = Astro;
+import { ViewTransitions } from 'astro:transitions';
 const image = new URL("optimized/social.webp", site);
 
 const description =
@@ -67,6 +68,7 @@ const blogList = [
       property="og:title"
       content="CompAI - your best AI generated friend"
     />
+    <ViewTransitions />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
