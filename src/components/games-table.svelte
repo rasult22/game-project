@@ -170,8 +170,8 @@
     <div>Session Lenght</div>
     <div>ARPDAU</div>
     <div>Churn Rate</div>
-    <div class="text-right">Token Volume</div>
-    <div class="text-right">Market cap</div>
+    <div class="text-center">Token Volume</div>
+    <div class="text-center">Market cap</div>
   </div>  
   {#each data as item, index}
     <div class="grid grid-cols-8 items-center py-2 text-sm group d">
@@ -219,8 +219,8 @@
           <span>{item.volumeChange}</span>
         </div>
       </div>
-      <div class="text-right">{item.value1}</div>
-      <div class="text-right">{item.value2}</div>
+      <div class="text-center">{item.value1}</div>
+      <div class="text-center">{item.value2}</div>
     </div>
   {/each}
 </div>

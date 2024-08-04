@@ -4,7 +4,6 @@ import { Icon } from "astro-icon/components";
 import type { NavItem } from "~/types";
 import LangSelector from '~/components/lang-selector.svelte'
 import Login from '~/components/login.svelte'
-import LoginMetamask from '~/components/login-metamask.svelte'
 import RequestModal from '~/components/join-request-modal.svelte'
 import AuthModal from '~/components/auth-modal.svelte'
 import TelegramIcon from '~/components/icons/TelegramIcon.svelte'
@@ -23,7 +22,7 @@ let currentUrl = Astro.url.pathname
 
 <header
   id="page-header"
-  class="absolute max-w-[1920px] left-[50%] translate-x-[-50%] mx-auto font-Inter flex items-center min-h-[100px] text-[20px] w-full justify-between  top-0 z-20  header-bg px-8 py-4 text-white"
+  class="absolute max-w-[1920px] left-[50%] bg-[#1B1B1B] translate-x-[-50%] mx-auto font-Inter flex items-center min-h-[100px] text-[20px] w-full justify-between  top-0 z-20  header-bg px-8 py-4 text-white"
 >
   <a class="flex items-center gap-3 hover:!text-default" href="#">
     <img width="77" height="48" class="max-w-[77px]" src="/logo.svg" alt="logo">
