@@ -1,12 +1,14 @@
 <script>
-let tab = 'gamehub'
-import GenreFilter from "~/components/genre-filter.svelte";
-import NetworkFilter from "~/components/network-filter.svelte";
-import DeviceFilter from "~/components/device-filter.svelte";
-import StatusFilter from "~/components/status-filter.svelte";
-import Search from "~/components/search.svelte";
-import Dropdown from "~/components/dropdown.svelte";
-import GameCardBasic from "~/components/game-card-basic.svelte";
+  import GenreFilter from "~/components/genre-filter.svelte";
+  import NetworkFilter from "~/components/network-filter.svelte";
+  import DeviceFilter from "~/components/device-filter.svelte";
+  import StatusFilter from "~/components/status-filter.svelte";
+  import Search from "~/components/search.svelte";
+  import Dropdown from "~/components/dropdown.svelte";
+  import GameCardBasic from "~/components/game-card-basic.svelte";
+  import GamesTable from '~/components/games-table.svelte'
+  
+  let tab = 'gamehub'
 </script>
 
 <div class="flex space-x-4">
@@ -107,8 +109,6 @@ import GameCardBasic from "~/components/game-card-basic.svelte";
   {:else}
   <div class="flex mt-[50px] space-x-4 h-full">
     <!-- ranking -->
-    <div>
-      RANKING TABLE
-    </div>
+    <GamesTable />
   </div>
 {/if}

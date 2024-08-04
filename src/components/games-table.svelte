@@ -45,10 +45,134 @@
       value1: "$7,923,903.75",
       value2: "$88,049,070.79"
     },
+    {
+      id: 1,
+      name: "The SandBox",
+      percentage: "12%",
+      percentageChange: "-2.4%",
+      time: "54.8 min.",
+      timeChange: "2.4%",
+      price: "$1.25",
+      priceChange: "2.4%",
+      volume: "12%",
+      volumeChange: "2.4%",
+      value1: "$7,923,903.75",
+      value2: "$88,049,070.79"
+    },
+    {
+      id: 1,
+      name: "The SandBox",
+      percentage: "12%",
+      percentageChange: "-2.4%",
+      time: "54.8 min.",
+      timeChange: "2.4%",
+      price: "$1.25",
+      priceChange: "2.4%",
+      volume: "12%",
+      volumeChange: "2.4%",
+      value1: "$7,923,903.75",
+      value2: "$88,049,070.79"
+    },
+    {
+      id: 1,
+      name: "The SandBox",
+      percentage: "12%",
+      percentageChange: "-2.4%",
+      time: "54.8 min.",
+      timeChange: "2.4%",
+      price: "$1.25",
+      priceChange: "2.4%",
+      volume: "12%",
+      volumeChange: "2.4%",
+      value1: "$7,923,903.75",
+      value2: "$88,049,070.79"
+    },
+    {
+      id: 1,
+      name: "The SandBox",
+      percentage: "12%",
+      percentageChange: "-2.4%",
+      time: "54.8 min.",
+      timeChange: "2.4%",
+      price: "$1.25",
+      priceChange: "2.4%",
+      volume: "12%",
+      volumeChange: "2.4%",
+      value1: "$7,923,903.75",
+      value2: "$88,049,070.79"
+    },
+    {
+      id: 1,
+      name: "The SandBox",
+      percentage: "12%",
+      percentageChange: "-2.4%",
+      time: "54.8 min.",
+      timeChange: "2.4%",
+      price: "$1.25",
+      priceChange: "2.4%",
+      volume: "12%",
+      volumeChange: "2.4%",
+      value1: "$7,923,903.75",
+      value2: "$88,049,070.79"
+    },
+    {
+      id: 1,
+      name: "The SandBox",
+      percentage: "12%",
+      percentageChange: "-2.4%",
+      time: "54.8 min.",
+      timeChange: "2.4%",
+      price: "$1.25",
+      priceChange: "2.4%",
+      volume: "12%",
+      volumeChange: "2.4%",
+      value1: "$7,923,903.75",
+      value2: "$88,049,070.79"
+    },
+    {
+      id: 1,
+      name: "The SandBox",
+      percentage: "12%",
+      percentageChange: "-2.4%",
+      time: "54.8 min.",
+      timeChange: "2.4%",
+      price: "$1.25",
+      priceChange: "2.4%",
+      volume: "12%",
+      volumeChange: "2.4%",
+      value1: "$7,923,903.75",
+      value2: "$88,049,070.79"
+    },
+    {
+      id: 1,
+      name: "The SandBox",
+      percentage: "12%",
+      percentageChange: "-2.4%",
+      time: "54.8 min.",
+      timeChange: "2.4%",
+      price: "$1.25",
+      priceChange: "2.4%",
+      volume: "12%",
+      volumeChange: "2.4%",
+      value1: "$7,923,903.75",
+      value2: "$88,049,070.79"
+    },
   ];
 </script>
 
-<div class="bg-gray-900 text-white p-4 rounded-lg">
+<div class="bg-transparent space-y-3 w-full text-white p-4 rounded-lg">
+  <div class="grid border-b border-[#787575] mb-4 text-center grid-cols-8 items-center py-2 text-sm group d">
+    <div class="col-span-2 flex space-x-[24px]">
+      <div class="text-left text-[#787575]">Rank</div>
+      <div class="text-left">Name</div>
+    </div>
+    <div>Retention</div>
+    <div>Session Lenght</div>
+    <div>ARPDAU</div>
+    <div>Churn Rate</div>
+    <div class="text-right">Token Volume</div>
+    <div class="text-right">Market cap</div>
+  </div>  
   {#each data as item, index}
     <div class="grid grid-cols-8 items-center py-2 text-sm group d">
       <div class="col-span-2 flex items-center gap-3">
@@ -56,9 +180,9 @@
           <span class="group-hover:hidden">
             {index + 1}
           </span>
-          <button class="bg-[#27B1EC] py-1 px-[6px] hidden group-hover:block rounded-[12px]">Add</button>
+          <button class="bg-[#27B1EC] active:scale-95 transition-all py-1 px-[6px] hidden group-hover:block rounded-[12px]">Add</button>
         </span>
-        <img src="/game-logo.png" alt={item.name} class="w-10 h-10 rounded-md" />
+        <img src="/game-logo.png" alt={item.name} class="w-[52px] h-[52px] rounded-md" />
         <div class="flex flex-col">
           <span class="font-semibold">{item.name}</span>
           <div class="flex items-center gap-1">
