@@ -90,7 +90,7 @@
         <Search />
         <Dropdown />
       </div> 
-      <div class="mt-[50px] p-4 gap-3 grid grid-cols-4 bg-[#2A2A2A] rounded-[16px]">
+      <div class="mt-[50px] p-4 gap-3 grid grid-cols-4 bg-[#1C1C1E] rounded-[16px]">
         <GameCardBasic />
         <GameCardBasic />
         <GameCardBasic />

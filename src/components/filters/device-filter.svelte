@@ -20,7 +20,7 @@
   ]
   let open = true
 </script>
-<div class="max-w-[500px] border-b pb-4 select-none">
+<div class="max-w-[500px] border-b border-[#464648] pb-4 select-none">
   <div on:click={() => open = !open} class="flex justify-between cursor-pointer">
     <div class="text-[16px] font-semibold">Device</div>
     <svg class:rotate-180={!open} class="transition-all" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

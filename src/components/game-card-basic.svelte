@@ -1,7 +1,7 @@
 <script>
 
 </script>
-<div class="px-2 pt-2 pb-3 rounded-[14px]  group hover:bg-[#464648] active:scale-95 cursor-pointer transition-all">
+<div class="px-2 pt-2 pb-3 rounded-[14px]  group hover:bg-[#37373D] active:bg-[#111115] active:scale-95 cursor-pointer transition-all">
   <img width="257" height="300" class="w-full rounded-[10px]" src="/game-card-sample.png" alt="">
   <div class="mt-2 transition-all">
     <div class="leading-[120%] flex items-center justify-between">
