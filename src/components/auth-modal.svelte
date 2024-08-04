@@ -1,10 +1,30 @@
 <script>
+	import ProfileBtn from './profile-btn.svelte';
   import { fade } from "svelte/transition";
-
+  import LoginMetamask from "./login-metamask.svelte";
+  import { auth } from "~/store/auth";
+  import { onMount } from 'svelte';
   export let open = false
 
+  onMount(() => {
+    if (window.ethereum) {
+      window.ethereum.on('accountsChanged', (acc) => {
+        if (!acc.length) {
+          $auth = {
+            ...$auth,
+            isAuthorized: false,
+            address: null
+          }
+        }
+      })
+    }
+  })
 </script>
-<button on:click={() => open = true} class="font-medium bg-[#fff] text-black border py-[10px] active:border-[#fff] active:scale-95 active:bg-[#D9D9D9] transition-all px-[36px] rounded-[12px]">Log in</button>
+{#if $auth.isAuthorized}
+  <ProfileBtn />
+{:else}
+  <button on:click={() => open = true} class="font-medium bg-[#fff] text-black border py-[10px] active:border-[#fff] active:scale-95 active:bg-[#D9D9D9] transition-all px-[36px] rounded-[12px]">Log in</button>
+{/if}
 {#if open}
   <div transition:fade on:click={() => open = false} class="fixed cursor-pointer flex items-center justify-center top-0 left-0 bg-[rgba(0,0,0,0.5)] backdrop-blur-sm w-[100vw] h-[100vh] z-10">
     <div on:click|stopPropagation class="flex w-[600px] cursor-default z-50 rounded-[24px] overflow-hidden">
@@ -20,12 +40,7 @@
         </div>
         <!-- body -->
         <div class="space-y-4 mt-4">
-          <button class="w-full bg-[#464648] active:scale-95 active:bg-[#58585B] transition-all rounded-[24px] px-4 py-[10px] flex items-center">
-            <img src="/metamask-icon.png" width="48" height="48" alt="">
-            <div class="ml-4 font-medium">
-              Metamask
-            </div>
-          </button>
+          <LoginMetamask bind:authPopupIsOpen={open}/>
           <button class="w-full bg-[#464648] active:scale-95 active:bg-[#58585B] transition-all rounded-[24px] px-4 py-[10px] flex items-center">
             <img src="/trustwallet-icon.png" width="48" height="48" alt="">
             <div class="ml-4 font-medium">
