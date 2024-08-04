@@ -8,13 +8,13 @@
   let isMMConnected = false;
   export let authPopupIsOpen = true
   
-  $: provider = new ethers.BrowserProvider(window.ethereum, "any");
+  $: provider = window.ethereum ? new ethers.BrowserProvider(window.ethereum, "any") : null;
   
   onMount(async () => {
     if (!window.ethereum) return;
     isMMLoading = true;
     isMMInstalled = true;
-    accounts = await provider.listAccounts();
+    accounts = await provider?.listAccounts?.();
     isMMConnected = accounts.length > 0;
     isMMLoading = false;
     window.ethereum.on('accountsChanged', (acc) => {
