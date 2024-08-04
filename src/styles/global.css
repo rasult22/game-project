@@ -51,17 +51,20 @@ img {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #01080E;
+  background: black;
   border-radius: 5px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #193445;
+  background: #393939;
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #193445;
+  background: #444343;
+}
+.anim-btn {
+  @apply active:scale-95 active:opacity-95 transition-all
 }

@@ -8,6 +8,7 @@ specifiers:
   '@fontsource/poppins': ^5.0.13
   '@iconify-json/fa-brands': ^1.1.8
   '@iconify-json/mdi': ^1.1.64
+  '@svelte-put/dragscroll': ^3.0.1
   '@types/micromodal': ^0.3.5
   astro: ^4.1.1
   astro-icon: ^1.0.2
@@ -32,6 +33,7 @@ dependencies:
   '@fontsource-variable/inter': 5.0.17
   '@fontsource/oxanium': 5.0.20
   '@fontsource/poppins': 5.0.13
+  '@svelte-put/dragscroll': 3.0.1_svelte@4.2.15
   ethers: 6.12.0
   micromodal: 0.4.10
   motion: 10.17.0
@@ -1233,6 +1235,14 @@ packages:
     resolution: {integrity: sha512-ONhaKPIufzzrlNbqtWFFd+jlnemX6lJAgq9ZeiZtS7I1PIf/la7CW4m83rTXRnVnsMbW2k56pGYu7AUFJD9Pow==}
     engines: {node: '>=4'}
     dev: true
+
+  /@svelte-put/dragscroll/3.0.1_svelte@4.2.15:
+    resolution: {integrity: sha512-TS5ifxap+F2cKhGJUuggeZT/L1bdeUN1G1pp2gYU2FAsj6d2QMQOsE98Xem+BTKFs4lqn++E6nhtOJss9SNaiw==}
+    peerDependencies:
+      svelte: ^3.55.0 || ^4.0.0 || ^5.0.0
+    dependencies:
+      svelte: 4.2.15
+    dev: false
 
   /@sveltejs/vite-plugin-svelte-inspector/2.1.0_3p4755spquqmqtelkjstcqkpwy:
     resolution: {integrity: sha512-9QX28IymvBlSCqsCll5t0kQVxipsfhFFL+L2t3nTWfXnddYwxBuAEtTtlaVQpRz9c37BhJjltSeY4AJSC03SSg==}

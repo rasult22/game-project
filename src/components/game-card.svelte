@@ -1,10 +1,8 @@
 <script>
 
 </script>
-<div class="px-2 pt-2 pb-3 rounded-[14px] max-w-[290px] group hover:bg-[#464648] cursor-pointer transition-all">
-  <div class="w-[257px] mx-auto h-[257px] bg-slate-500 rounded-[10px]">
-
-  </div>
+<div class="min-w-[260px] px-2 pt-2 pb-3 rounded-[14px] max-w-[290px] group hover:bg-[#464648] cursor-pointer transition-all">
+  <img width="257" height="300" class="w-full rounded-[10px]" src="/game-card-sample.png" alt="">
   <div class="mt-2 group-hover:hidden transition-all">
     <div class="leading-[120%]">
       MOBOX
