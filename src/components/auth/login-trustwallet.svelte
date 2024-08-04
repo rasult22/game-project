@@ -53,12 +53,12 @@
           let address =accounts[0]
           $auth = {
             user: {
-              name: 'Metamask User',
+              name: 'Truswallet User',
               address_full: address,
               address: address.slice(0, address.length/5)+ '...' + address.slice(address.length - 5, address.length)
             },
             isAuthorized: true,
-            authType: 'metamask'
+            authType: 'trustwallet'
           }
           authPopupIsOpen = false
         }
@@ -66,7 +66,7 @@
         console.error(error);
       }
     } else {
-      console.error("Metamask not detected");
+      console.error("Trustwallet not detected");
     }
   }
 
@@ -89,9 +89,9 @@
 
 
 <button on:click={authorize} class="w-full bg-[#464648] active:scale-95 active:bg-[#58585B] transition-all rounded-[24px] px-4 py-[10px] flex items-center">
-  <img src="/metamask-icon.png" width="48" height="48" alt="">
+  <img src="/trustwallet-icon.png" width="48" height="48" alt="">
   <div class="ml-4 font-medium">
-    Metamask
+    TrustWallet
   </div>
 </button>
 

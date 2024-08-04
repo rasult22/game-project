@@ -27,6 +27,9 @@
     {#if $auth.authType === 'metamask'}
       <img src="/metamask-icon.png" width="24" alt="">
     {/if}
+    {#if $auth.authType === 'trustwallet'}
+      <img src="/trustwallet-icon.png" width="24" alt="">
+    {/if}
   </div>
   <!-- name -->
   <div class="flex items-center space-x-2">

@@ -2,6 +2,7 @@
 	import ProfileBtn from './profile-btn.svelte';
   import { fade } from "svelte/transition";
   import LoginMetamask from "./login-metamask.svelte";
+  import LoginTrustwallet from './login-trustwallet.svelte';
   import { auth } from "~/store/auth";
   import { onMount } from 'svelte';
   export let open = false
@@ -42,19 +43,14 @@
         </div>
         {#if isConflict}
           <div class="text-[14px]  mt-4 bg-orange-400 p-4 rounded-[20px]">
-            <div>Caution! You have both (Metamask, TrustWallet) extension installed.</div>
-            <div>Plese disable one of them, to avoid conflicts</div>
+            <div class="font-medium">Caution! You have both (Metamask & TrustWallet) extensions installed.</div>
+            <div class="font-semibold mt-1">Please <span class="underline">disable one of them</span> in your browser settings, to avoid conflicts</div>
           </div>
         {/if}
         <!-- body -->
         <div class="space-y-4 mt-4">
           <LoginMetamask bind:authPopupIsOpen={open}/>
-          <button class="w-full bg-[#464648] active:scale-95 active:bg-[#58585B] transition-all rounded-[24px] px-4 py-[10px] flex items-center">
-            <img src="/trustwallet-icon.png" width="48" height="48" alt="">
-            <div class="ml-4 font-medium">
-              TrustWallet
-            </div>
-          </button>
+          <LoginTrustwallet bind:authPopupIsOpen={open} />
           <button class="w-full bg-[#464648] active:scale-95 active:bg-[#58585B] transition-all rounded-[24px] px-4 py-[10px] flex items-center">
             <img src="/ton-icon.png" width="48" height="48" alt="">
             <div class="ml-4 font-medium">
