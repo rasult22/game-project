@@ -1,6 +1,6 @@
 ---
 import type { GetStaticPaths } from "astro";
-import pb from '~/pocketbase'
+import pb, {items} from '~/pocketbase'
 import {formatDate} from '~/utils/utils'
 import "@fontsource-variable/inter";
 import "@fontsource/oxanium/500.css";
@@ -27,11 +27,6 @@ const description =
   "AI based communication voice avatars, which can be used as different professional assistants – psychologist, fitness coach, nutrition counselor, Wide range of topics communicating Companion";
 
 export const getStaticPaths = ( async () => {
- 
-  const items = await pb.collection('games_posts').getFullList<Post>({
-    expand: 'games_posts'
-  })
-
   return items.map(post => {
     const recommended_posts = post.recommended_posts.map((p: any) => {
       return items.find(x => x.id === p) as Post
@@ -100,7 +95,7 @@ const {post_data} = Astro.props
       <div class="mt-[30px]">
         {post_data.excerpt}
       </div>
-      <div transition:name={post_data.id} class="mt-[30px] w-full rounded-[8px] h-[442px] bg-cover" style={`background-image: url(${post_data.pic})`}>
+      <div transition:name={post_data.id} class="mt-[30px] w-full rounded-[8px] h-[442px] bg-center bg-cover" style={`background-image: url(${post_data.pic})`}>
 
       </div>
       <div set:html={post_data.content} class="mt-[50px] whitespace-pre-line space-y-6 max-w-[912px]">

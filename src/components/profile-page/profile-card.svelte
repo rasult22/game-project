@@ -36,7 +36,7 @@
     <span class="text-[20px] font-semibold">
       {$auth.user && $auth.user.name || '...'}
     </span>
-    <img on:click={() => edit = true} class="active:scale-95 active:opacity-60 transition-all cursor-pointer" width="24" height="24" src="edit-icon.svg" alt="">
+    <img on:click={() => edit = true} class="active:scale-95 active:opacity-60 transition-all cursor-pointer" width="24" height="24" src="/edit-icon.svg" alt="">
   </div>
   <div class="flex items-center space-x-2">
     <span class="text-[#D9D9D9]">
@@ -44,7 +44,7 @@
     </span>
     <img class="active:scale-95 active:opacity-60 transition-all cursor-pointer" on:click={() => {
       navigator.clipboard.writeText($auth.user.address_full)
-    }} width="24" height="24" src="copy-icon.svg" alt="">
+    }} width="24" height="24" src="/copy-icon.svg" alt="">
   </div>
   {#if edit}
     <div transition:fade class="h-full w-[50%]">
