@@ -85,13 +85,22 @@
       console.log(e)
     }
   };
+  $: isAvailable = window.ethereum &&  window.ethereum.isMetaMask
+  $: isConflict = window.ethereum && window.ethereum.isTrustWallet && window.ethereum.isMetaMask
+
 </script>
 
 
-<button on:click={authorize} class="w-full bg-[#464648] active:scale-95 active:bg-[#58585B] transition-all rounded-[24px] px-4 py-[10px] flex items-center">
+<button disabled={!isAvailable || isConflict} on:click={authorize} class="w-full disabled:opacity-35 disabled:cursor-not-allowed bg-[#464648] active:scale-95 active:bg-[#58585B] transition-all rounded-[24px] px-4 py-[10px] flex items-center">
   <img src="/metamask-icon.png" width="48" height="48" alt="">
   <div class="ml-4 font-medium">
     Metamask
+    {#if !isAvailable}
+      <span class="text-[14px]">(not installed in your browser)</span>
+    {/if}
+    {#if isConflict}
+      <span class="text-[14px]">(confict with other wallets)</span>
+    {/if}
   </div>
 </button>
 

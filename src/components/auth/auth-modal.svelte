@@ -42,9 +42,9 @@
           </button>
         </div>
         {#if isConflict}
-          <div class="text-[14px]  mt-4 bg-orange-400 p-4 rounded-[20px]">
+          <div class="text-[14px] text-black  mt-4 bg-orange-400 p-4 rounded-[20px]">
             <div class="font-medium">Caution! You have both (Metamask & TrustWallet) extensions installed.</div>
-            <div class="font-semibold mt-1">Please <span class="underline">disable one of them</span> in your browser settings, to avoid conflicts</div>
+            <div class="font-semibold mt-1">Please <span class="underline">disable one of them</span> in your browser settings to avoid conflicts</div>
           </div>
         {/if}
         <!-- body -->

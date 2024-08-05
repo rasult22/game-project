@@ -85,13 +85,18 @@
       console.log(e)
     }
   };
+  $: isAvailable = window.ethereum &&  window.ethereum.isTrustWallet
+
 </script>
 
 
-<button on:click={authorize} class="w-full bg-[#464648] active:scale-95 active:bg-[#58585B] transition-all rounded-[24px] px-4 py-[10px] flex items-center">
+<button disabled={!isAvailable} on:click={authorize} class="w-full disabled:opacity-35 disabled:cursor-not-allowed bg-[#464648] active:scale-95 active:bg-[#58585B] transition-all rounded-[24px] px-4 py-[10px] flex items-center">
   <img src="/trustwallet-icon.png" width="48" height="48" alt="">
   <div class="ml-4 font-medium">
     TrustWallet
+    {#if !isAvailable}
+      <span class="text-[14px]">(not installed in your browser)</span>
+    {/if}
   </div>
 </button>
 
