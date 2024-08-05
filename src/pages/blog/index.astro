@@ -4,45 +4,37 @@ import "@fontsource/oxanium/500.css";
 import "@fontsource/oxanium/600.css";
 import "@fontsource/oxanium/800.css";
 import "~/styles/global.css";
+import {formatDate} from '~/utils/utils'
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
 const { generator, site } = Astro;
 import { ViewTransitions } from 'astro:transitions';
+import pb from "~/pocketbase";
 const image = new URL("optimized/social.webp", site);
-
+type Post = {
+  id: string,
+  updated: string,
+  pic: string,
+  content: string,
+  excerpt: string,
+  title: string,
+  recommended_posts: Post[]
+}
 const description =
   "AI based communication voice avatars, which can be used as different professional assistants – psychologist, fitness coach, nutrition counselor, Wide range of topics communicating Companion";
 
-const blogList = [
-  {
-    img: "/blog-cover.png",
-    title:
-      "The U.S. proposed to study the impact of bitcoin mining on the environment",
-    description:
-      "U.S. lawmakers have introduced a bill that would require the Environmental Protection Agency to conduct a comprehensive study of the environmental impact of the mining industry.",
-  },
-  {
-    img: "/blog-pixel.png",
-    title:
-      "The U.S. proposed to study the impact of bitcoin mining on the environment",
-    description:
-      "U.S. lawmakers have introduced a bill that would require the Environmental Protection Agency to conduct a comprehensive study of the environmental impact of the mining industry.",
-  },
-  {
-    img: "/blog-solana.png",
-    title:
-      "The U.S. proposed to study the impact of bitcoin mining on the environment",
-    description:
-      "U.S. lawmakers have introduced a bill that would require the Environmental Protection Agency to conduct a comprehensive study of the environmental impact of the mining industry.",
-  },
-  {
-    img: "/blog-bitcoin.png",
-    title:
-      "The U.S. proposed to study the impact of bitcoin mining on the environment",
-    description:
-      "U.S. lawmakers have introduced a bill that would require the Environmental Protection Agency to conduct a comprehensive study of the environmental impact of the mining industry.",
-  },
-];
+const list = await pb.collection('games_posts').getFullList<Post>({
+    expand: 'games_posts'
+})
+
+const items = list.map(post => {
+
+    return {
+          ...post,
+          updated: formatDate(new Date(post.updated)),
+          pic: pb.getFileUrl(post, post.pic)
+      }
+    })
 ---
 
 <!doctype html>
@@ -81,19 +73,20 @@ const blogList = [
 
       <div class="mt-[50px] space-y-6 max-w-[912px]">
         {
-          blogList.map((article) => (
-            <div class="bg-[#272727] hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer py-2 pl-2 pr-4 flex space-x-[36px] max-w-[912px] rounded-[12px]">
-              <img class="max-w-[410px]" src={article.img} alt="" />
+          items.map((article) => (
+            <a href={'/blog/' + article.id} class="bg-[#272727] hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer py-2 pl-2 pr-4 flex space-x-[36px] max-w-[912px] rounded-[12px]">
+              <div transition:name={article.id} style={`background-image: url(${article.pic});`} class="bg-cover shrink-0 rounded-[8px] bg-center h-[257px] w-[410px]">
+              </div>
               <div class="w-full justify-center flex flex-col text-white">
                 <div class="text-[24px] leading-[120%] font-semibold">
                   {article.title}
                 </div>
                 <div class="text-[#B0B0B2] leading-[120%] mt-4">
-                  {article.description}
+                  {article.excerpt}
                 </div>
                 <button class="flex text-[20px] mt-4">Read more</button>
               </div>
-            </div>
+            </a>
           ))
         }
 

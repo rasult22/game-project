@@ -17,6 +17,7 @@ specifiers:
   imagemin-webp: ^8.0.0
   micromodal: ^0.4.10
   motion: ^10.17.0
+  pocketbase: ^0.21.4
   prettier: ^3.1.1
   prettier-plugin-astro: ^0.12.3
   prettier-plugin-tailwindcss: ^0.5.11
@@ -52,6 +53,7 @@ devDependencies:
   astro-icon: 1.1.0
   imagemin: 8.0.1
   imagemin-webp: 8.0.0
+  pocketbase: 0.21.4
   prettier: 3.2.5
   prettier-plugin-astro: 0.12.3
   prettier-plugin-tailwindcss: 0.5.14_fh3tdm7dy526eugcr3cbptvgda
@@ -4256,6 +4258,10 @@ packages:
       jsonc-parser: 3.2.1
       mlly: 1.6.1
       pathe: 1.1.2
+    dev: true
+
+  /pocketbase/0.21.4:
+    resolution: {integrity: sha512-WJHyaqdAt95JgZ1OCRD099+DST4IIG0M/jMrCckWYDSN/6ocp61qsz7m6h0xI0J2N79ScBljceEC0fFAaQrrAw==}
     dev: true
 
   /postcss-import/15.1.0_postcss@8.4.38:
