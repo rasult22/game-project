@@ -6,17 +6,17 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   vite: {
-    build: {
-      rollupOptions: {
-        output: {
-          entryFileNames: 'entry.[hash:6].mjs',
-          chunkFileNames: 'chunks/chunk.[hash:6].mjs',
-          assetFileNames: 'assets/asset.[hash:6][extname]',
-        }
-      }
-    }
+    // build: {
+    //   rollupOptions: {
+    //     output: {
+    //       entryFileNames: 'entry.[hash:6].mjs',
+    //       chunkFileNames: 'chunks/chunk.[hash:6].mjs',
+    //       assetFileNames: 'assets/asset.[hash:6][extname]',
+    //     }
+    //   }
+    // }
   },
-  base: '/game-project/',
+  base: 'game-project',
   site: "https://rasult22.github.io",
   integrations: [tailwind(), icon(), svelte()],
 });

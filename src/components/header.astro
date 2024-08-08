@@ -6,14 +6,15 @@ import RequestModal from '~/components/join-request-modal.svelte'
 import AuthModal from '~/components/auth/auth-modal.svelte'
 import TelegramIcon from '~/components/icons/TelegramIcon.svelte'
 import TwitterIcon from '~/components/icons/TwitterIcon.svelte'
+const githubPrefix = '/game-project'
 const navItems: Array<NavItem> = [
-  { title: "Ranking", url: "/ranking" },
-  { title: "Staking", url: "#" },
-  { title: "GameHub", url: "/gamehub" },
-  { title: "IDO", url: "#" },
-  { title: "Blog", url: "/blog" },
-  { title: "About", url: "#" },
-  { title: "Whitepaper", url: "#" },
+  { title: "Ranking", url: githubPrefix + "/ranking" },
+  { title: "Staking", url: githubPrefix + "#" },
+  { title: "GameHub", url: githubPrefix + "/gamehub" },
+  { title: "IDO", url: githubPrefix + "#" },
+  { title: "Blog", url: githubPrefix + "/blog" },
+  { title: "About", url: githubPrefix + "#" },
+  { title: "Whitepaper", url: githubPrefix + "#" },
 ];
 let currentUrl = Astro.url.pathname
 ---
