@@ -182,12 +182,12 @@
           </span>
           <button class="bg-[#27B1EC] active:scale-95 transition-all py-1 px-[6px] hidden group-hover:block rounded-[12px]">Add</button>
         </span>
-        <img src="/game-logo.png" alt={item.name} class="w-[52px] h-[52px] rounded-md" />
+        <img src="/media/game-logo.png" alt={item.name} class="w-[52px] h-[52px] rounded-md" />
         <div class="flex flex-col">
           <span class="font-semibold">{item.name}</span>
           <div class="flex items-center gap-1">
-            <img width="20" height="20" src="/solana-icon.svg" alt="">
-            <img width="20" height="20" src="/ton-icon.svg" alt="">
+            <img width="20" height="20" src="/media/solana-icon.svg" alt="">
+            <img width="20" height="20" src="/media/ton-icon.svg" alt="">
           </div>
         </div>
       </div>

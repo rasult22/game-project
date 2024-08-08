@@ -10,7 +10,7 @@
 {#if open}
   <div transition:fade on:click={() => open = false} class="fixed cursor-pointer flex items-center justify-center top-0 left-0 bg-[rgba(0,0,0,0.5)] backdrop-blur-sm w-[100vw] h-[100vh] z-10">
     <div on:click|stopPropagation class="flex max-w-[1200px] z-50 cursor-default rounded-[24px] overflow-hidden">
-      <img class="w-[50%]" src="/join-us.png" alt="">
+      <img class="w-[50%]" src="/media/join-us.png" alt="">
       <div class="bg-[#2A2A2A] w-full p-6">
         <!-- header -->
         <div class="flex items-center justify-between">

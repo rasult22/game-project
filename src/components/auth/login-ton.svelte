@@ -14,7 +14,7 @@ $: tonConnectUI = new TonConnectUI({
     console.log(wallet)
   }
 }} class="w-full bg-[#464648] active:scale-95 active:bg-[#58585B] transition-all rounded-[24px] px-4 py-[10px] flex items-center">
-  <img src="/ton-icon.png" width="48" height="48" alt="">
+  <img src="/media/ton-icon.png" width="48" height="48" alt="">
   <div class="ml-4 font-medium">
     Ton wallet
   </div>

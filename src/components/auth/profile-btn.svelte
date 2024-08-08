@@ -19,5 +19,5 @@
       {/if}
     </div>
   </div>
-  <img width="45" height="45" src="/avatar.png" alt="">
+  <img width="45" height="45" src="/media/avatar.png" alt="">
 </a>
