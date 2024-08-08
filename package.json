@@ -21,11 +21,11 @@
     "astro-icon": "^1.0.2",
     "imagemin": "^8.0.1",
     "imagemin-webp": "^8.0.0",
+    "pocketbase": "^0.21.4",
     "prettier": "^3.1.1",
     "prettier-plugin-astro": "^0.12.3",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "rimraf": "^5.0.5",
-    "pocketbase": "^0.21.4",
     "tailwindcss-fluid-type": "^2.0.3"
   },
   "dependencies": {
@@ -34,6 +34,7 @@
     "@fontsource/oxanium": "^5.0.20",
     "@fontsource/poppins": "^5.0.13",
     "@svelte-put/dragscroll": "^3.0.1",
+    "@tonconnect/ui": "^2.0.6",
     "ethers": "^6.12.0",
     "micromodal": "^0.4.10",
     "motion": "^10.17.0",

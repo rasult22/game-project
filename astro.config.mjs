@@ -19,3 +19,7 @@ export default defineConfig({
   site: "https://companionai.tech/",
   integrations: [tailwind(), icon(), svelte()],
 });
+
+
+// https://jsfiddle.net/esedic/npcvax5t/
+// https://kenwheeler.github.io/slick/

@@ -3,6 +3,7 @@
   import { fade } from "svelte/transition";
   import LoginMetamask from "./login-metamask.svelte";
   import LoginTrustwallet from './login-trustwallet.svelte';
+  import LoginTon from './login-ton.svelte'
   import { auth } from "~/store/auth";
   import { onMount } from 'svelte';
   export let open = false
@@ -26,6 +27,7 @@
 {#if $auth.isAuthorized}
   <ProfileBtn name={$auth.user && $auth.user.name} address={$auth.user && $auth.user.address} />
 {:else}
+  <div id="ton-connect" class="hidden"></div>
   <button on:click={() => open = true} class="font-medium bg-[#fff] text-black border py-[10px] active:border-[#fff] active:scale-95 active:bg-[#D9D9D9] transition-all px-[36px] rounded-[12px]">Log in</button>
 {/if}
 {#if open}
@@ -51,12 +53,7 @@
         <div class="space-y-4 mt-4">
           <LoginMetamask bind:authPopupIsOpen={open}/>
           <LoginTrustwallet bind:authPopupIsOpen={open} />
-          <button class="w-full bg-[#464648] active:scale-95 active:bg-[#58585B] transition-all rounded-[24px] px-4 py-[10px] flex items-center">
-            <img src="/ton-icon.png" width="48" height="48" alt="">
-            <div class="ml-4 font-medium">
-              Ton wallet
-            </div>
-          </button>
+          <LoginTon bind:authPopupIsOpen={open} />
           <div class="flex items-center justify-center space-x-4">
             <div class="border-t w-[30%] border-[#888888]"></div>
             <div class="text-[#888888]">Or</div>
