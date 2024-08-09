@@ -3,7 +3,7 @@
   export let authPopupIsOpen
 
 $: tonConnectUI = new TonConnectUI({
-  manifestUrl: 'http://localhost:4321/app_meta.json',
+  manifestUrl: 'https://rasult22.github.io/game-project/app_meta.json',
   buttonRootId: 'ton-connect'
 })
 </script>

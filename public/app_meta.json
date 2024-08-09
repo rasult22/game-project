@@ -1,7 +1,7 @@
 {
-  "url": "http://localhost:4321",
+  "url": "https://rasult22.github.io/game-project",
   "name": "Bizzon Games",
-  "iconUrl": "http://localhost:4321/logo.svg",
-  "termsOfUseUrl": "http://localhost:4321/terms.txt",
-  "privacyPolicyUrl": "http://"
+  "iconUrl": "https://rasult22.github.io/game-project/logo.svg",
+  "termsOfUseUrl": "https://rasult22.github.io/game-project/terms.txt",
+  "privacyPolicyUrl": "https://rasult22.github.io/game-project/privacy.txt"
 }
