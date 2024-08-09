@@ -2,7 +2,7 @@
 
 </script>
 <div class="min-w-[260px] px-2 pt-2 pb-3 rounded-[14px] max-w-[290px] group hover:bg-[#37373D] cursor-pointer transition-all">
-  <img width="257" height="300" class="w-full rounded-[10px]" src="/media/game-card-sample.png" alt="">
+  <img width="257" height="300" class="w-full rounded-[10px]" src="/game-project/media/game-card-sample.png" alt="">
   <div class="mt-2 group-hover:hidden transition-all">
     <div class="leading-[120%]">
       MOBOX
@@ -10,8 +10,8 @@
     <div class="flex items-center justify-between">
       <div class="text-[14px] leading-[120%] text-gray-400">Casual, Metaverse, Adventure</div>
       <div class="flex -space-x-2">
-        <img width="20" height="20" src="/media/solana-icon.svg" alt="">
-        <img width="20" height="20" src="/media/ton-icon.svg" alt="">
+        <img width="20" height="20" src="/game-project/media/solana-icon.svg" alt="">
+        <img width="20" height="20" src="/game-project/media/ton-icon.svg" alt="">
       </div>
     </div>
   </div>

@@ -16,8 +16,8 @@ export default defineConfig({
     //   }
     // }
   },
-  // base: 'game-project',
-  site: "https://rasult22.github.io/game-project",
+  base: 'game-project',
+  site: "https://rasult22.github.io",
   integrations: [tailwind(), icon(), svelte()],
 });
 

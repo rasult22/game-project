@@ -24,10 +24,10 @@
     <div class="w-full flex flex-col py-3 space-y-4 px-4 rounded-[16px] bg-[#464648]">
       <div class="font-semibold">My Games</div>
       <div class="flex gap-2">
-        <img width="32" height="32" src="/media/game-logo.png" alt="">
-        <img width="32" height="32" src="/media/game-logo.png" alt="">
-        <img width="32" height="32" src="/media/game-logo.png" alt="">
-        <img width="32" height="32" src="/media/game-logo.png" alt="">
+        <img width="32" height="32" src="/game-project/media/game-logo.png" alt="">
+        <img width="32" height="32" src="/game-project/media/game-logo.png" alt="">
+        <img width="32" height="32" src="/game-project/media/game-logo.png" alt="">
+        <img width="32" height="32" src="/game-project/media/game-logo.png" alt="">
       </div>
       <div class="flex justify-between items-center">
         <div class="font-semibold text-[20px]">32 games</div>

@@ -1,5 +1,5 @@
 <div class="bg-[#272727] py-2 pl-2 pr-4 flex space-x-[36px] max-w-[912px] rounded-[12px]">
-  <img class="max-w-[410px]" src="/media/blog-cover.png" alt="">
+  <img class="max-w-[410px]" src="/game-project/media/blog-cover.png" alt="">
   <div class="w-full justify-center flex flex-col text-white">
     <div class="text-[24px] leading-[120%] font-semibold">The U.S. proposed to study the impact of bitcoin mining on the environment</div>
     <div class="text-[#B0B0B2] leading-[120%] mt-4">
