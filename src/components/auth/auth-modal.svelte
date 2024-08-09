@@ -1,4 +1,5 @@
 <script>
+  import { init } from '~/utils/ton';
 	import ProfileBtn from './profile-btn.svelte';
   import { fade } from "svelte/transition";
   import LoginMetamask from "./login-metamask.svelte";
@@ -7,15 +8,15 @@
   import { auth } from "~/store/auth";
   import { onMount } from 'svelte';
   export let open = false
-
   onMount(() => {
+    init() // init ton
     if (window.ethereum) {
       window.ethereum.on('accountsChanged', (acc) => {
         if (!acc.length) {
           $auth = {
             ...$auth,
             isAuthorized: false,
-            address: null
+            user: null
           }
         }
       })

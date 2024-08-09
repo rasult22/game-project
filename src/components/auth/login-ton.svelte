@@ -1,17 +1,34 @@
 <script>
-  import {TonConnectUI} from '@tonconnect/ui'
+  import { onMount } from 'svelte';
+  import { auth } from '~/store/auth';
+  import {tonConnectUI} from '~/utils/ton'
   export let authPopupIsOpen
-
-$: tonConnectUI = new TonConnectUI({
-  manifestUrl: 'https://rasult22.github.io/game-project/app_meta.json',
-  buttonRootId: 'ton-connect'
+  let selected = false
+onMount(() => {
+  tonConnectUI.onModalStateChange(function (state) {
+    if (!selected && state.status === 'closed') {
+      if (tonConnectUI.wallet) {
+        let address = tonConnectUI.wallet.account.address
+        $auth = {
+          isAuthorized: true,
+          user: {
+            address_full: address,
+            name: 'Ton User',
+            address: address.slice(0, address.length/5)+ '...' + address.slice(address.length - 5, address.length)
+          },
+          authType: 'ton'
+        }
+        selected = true
+        authPopupIsOpen = false
+      }
+    }
+  })
 })
 </script>
 
 <button on:click={async () => {
   if (tonConnectUI) {
-    const wallet = await tonConnectUI.openModal();
-    console.log(wallet)
+    await tonConnectUI.openModal();
   }
 }} class="w-full bg-[#464648] active:scale-95 active:bg-[#58585B] transition-all rounded-[24px] px-4 py-[10px] flex items-center">
   <img src="/game-project/media/ton-icon.png" width="48" height="48" alt="">

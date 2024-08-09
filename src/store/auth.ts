@@ -1,13 +1,20 @@
 import { writable } from "svelte/store";
 
 type AuthScheme = {
-  user: any,
+  user: {
+    address_full: string,
+    address: string,
+    name: string
+  } | null,
+  authType: 'ton' | 'metamask' | 'trustwallet' | 'google'| null,
   isAuthorized: boolean
 }
 
+
 // default state
-let store = {
-  user: null,
+let store: AuthScheme = {
+  user:  null,
+  authType: null,
   isAuthorized: false
 }
 
