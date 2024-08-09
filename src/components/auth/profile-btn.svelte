@@ -3,7 +3,7 @@
   export let name = '_'
   export let profile_pic
 </script>
-<a href="/profile" class="flex group items-center -space-x-2 cursor-pointer">
+<a href="/game-project/profile" class="flex group items-center -space-x-2 cursor-pointer">
   <div class="bg-[#2A2A2A] group-hover:bg-[#444] cursor-pointer space-x-2 flex items-center px-3 py-1 rounded-[12px]">
     <div>
       <div class="text-[14px]">{name}</div>
