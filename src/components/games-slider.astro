@@ -1,0 +1,115 @@
+---
+type Data = {images: string[]}
+const data: Data = Astro.props.data;
+---
+<div class="flex space-x-8 w-full">
+  <div thumbsSlider="" style="padding: 0; margin:0;" class="swiper shrink-0 mySwiper2 max-w-[130px] max-h-[320px] text-black">
+    <div class="swiper-wrapper">
+      {
+        data.images.map((image, index) => (
+          <div data-index={index} class="swiper-slide border-2 border-transparent">
+            <img
+              class="w-[130px] h-[74px] object-cover cursor-pointer rounded-[8px]"
+              src={image}
+              alt=""
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div class="swiper mySwiper max-w-[778px]">
+    <div class="swiper-wrapper">
+      {
+        data.images.map((image) => (
+          <div class="swiper-slide">
+            <img
+              class="w-[778px] h-[320px] object-cover rounded-[32px]"
+              src={image}
+              alt=""
+            />
+          </div>
+        ))
+      }
+    </div>
+    <svg class="swiper-button-prev top-0 left-0 absolute active:opacity-80 transition-all rounded-l-[32px] z-20 cursor-pointer" width="60" height="320" viewBox="0 0 60 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="60" height="320" fill="url(#paint0_linear_732_767)" fill-opacity="0.2"/>
+      <g opacity="0.5">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M35.5607 149.939C36.1464 150.525 36.1464 151.475 35.5607 152.061L27.6213 160L35.5607 167.939C36.1464 168.525 36.1464 169.475 35.5607 170.061C34.9749 170.646 34.0251 170.646 33.4393 170.061L24.4393 161.061C23.8536 160.475 23.8536 159.525 24.4393 158.939L33.4393 149.939C34.0251 149.354 34.9749 149.354 35.5607 149.939Z" fill="white"/>
+      </g>
+      <defs>
+      <linearGradient id="paint0_linear_732_767" x1="60" y1="160" x2="0" y2="160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1C1C28" stop-opacity="0"/>
+      <stop offset="1" stop-color="#1C1C28"/>
+      </linearGradient>
+      </defs>
+    </svg>
+    <svg class="swiper-button-next top-0 right-0 absolute active:opacity-80 transition-all rounded-r-[32px] z-20 cursor-pointer"  width="60" height="320" viewBox="0 0 60 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="60" height="320" transform="matrix(-1 0 0 1 60 0)" fill="url(#paint0_linear_732_770)" fill-opacity="0.2"/>
+      <g opacity="0.5">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M24.4393 149.939C23.8536 150.525 23.8536 151.475 24.4393 152.061L32.3787 160L24.4393 167.939C23.8536 168.525 23.8536 169.475 24.4393 170.061C25.0251 170.646 25.9749 170.646 26.5607 170.061L35.5607 161.061C36.1464 160.475 36.1464 159.525 35.5607 158.939L26.5607 149.939C25.9749 149.354 25.0251 149.354 24.4393 149.939Z" fill="white"/>
+      </g>
+      <defs>
+      <linearGradient id="paint0_linear_732_770" x1="60" y1="160" x2="0" y2="160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1C1C28" stop-opacity="0"/>
+      <stop offset="1" stop-color="#1C1C28"/>
+      </linearGradient>
+      </defs>
+    </svg>
+  </div>
+</div>
+<script>
+  import Swiper from "swiper";
+  import "swiper/css";
+
+  var thumbTree = document.querySelector('.mySwiper2')
+  var btnNext = document.querySelector('.swiper-button-next')
+  var btnPrev = document.querySelector('.swiper-button-prev')
+  var thumb = new Swiper(".mySwiper2", {
+    direction: 'vertical',
+    spaceBetween: 1,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  var swiper = new Swiper(".mySwiper", {
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    thumbs: {
+      swiper: thumb
+    }
+  });
+
+  thumbTree?.querySelector?.(`[data-index="0"]`)?.classList.add('active-slide')
+
+  if (btnNext && btnPrev) {
+    btnNext.addEventListener('click',() => {
+      swiper.slideNext()
+    })
+    btnPrev.addEventListener('click',() => {
+      swiper.slidePrev()
+    })
+  }
+  swiper.on('slideChange', (s) => {
+    thumbTree?.querySelectorAll('.swiper-slide').forEach(el => {
+      el.classList.remove('active-slide')
+    })
+    const current = thumbTree?.querySelector(`[data-index="${s.activeIndex}"]`)
+    current?.classList.add('active-slide')
+  })
+  thumb.on('click', function(s) {
+    thumbTree?.querySelectorAll('.swiper-slide').forEach(el => {
+      el.classList.remove('active-slide')
+    })
+    const current = thumbTree?.querySelector(`[data-index="${s.clickedIndex}"]`)
+    current?.classList.add('active-slide')
+    thumb.slideTo(s.clickedIndex)
+    swiper.slideTo(s.clickedIndex)
+  })
+</script>

@@ -25,10 +25,10 @@
 
   $: isConflict = window.ethereum && window.ethereum.isTrustWallet && window.ethereum.isMetaMask
 </script>
+<div id="ton-connect" class="hidden"></div>
 {#if $auth.isAuthorized}
   <ProfileBtn name={$auth.user && $auth.user.name} address={$auth.user && $auth.user.address} />
 {:else}
-  <div id="ton-connect" class="hidden"></div>
   <button on:click={() => open = true} class="font-medium bg-[#fff] text-black border py-[10px] active:border-[#fff] active:scale-95 active:bg-[#D9D9D9] transition-all px-[36px] rounded-[12px]">Log in</button>
 {/if}
 {#if open}
