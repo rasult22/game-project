@@ -7,7 +7,7 @@
     <div class="leading-[120%]">
       MOBOX
     </div>
-    <div class="flex items-center justify-between">
+    <div class="flex items-center justify-between mt-2">
       <div class="text-[14px] leading-[120%] text-gray-400">Casual, Metaverse, Adventure</div>
       <div class="flex -space-x-2">
         <img width="20" height="20" src="/game-project/media/solana-icon.svg" alt="">
