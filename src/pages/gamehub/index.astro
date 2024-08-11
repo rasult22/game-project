@@ -4,7 +4,7 @@ import "@fontsource/oxanium/500.css";
 import "@fontsource/oxanium/600.css";
 import "@fontsource/oxanium/800.css";
 import "~/styles/global.css";
-import Footer from "~/components/footer.astro";
+import FooterTwo from "~/components/footer-two.astro";
 import Header from "~/components/header.astro";
 import { ViewTransitions } from 'astro:transitions';
 import GameHub from './game-hub.svelte'
@@ -46,14 +46,11 @@ const description =
     <meta property="og:url" content={site} />
     <meta name="twitter:card" content="summary_large_image" />
   </head>
-  <body class="h-full py-[150px] overflow-x-hidden bg-[#0D0D0F] text-white">
+  <body class="h-full pt-[150px] overflow-x-hidden bg-[#0D0D0F] text-white">
     <Header />
     <div class="flex flex-col space-x-4 px-9 max-w-[1620px] mx-auto">
       <GameHub client:load/>
-      <div class="w-full mt-[110px] h-[350px] bg-[#c3c3c3] rounded-[12px]">
-
-      </div>
     </div>
-    <!-- <Footer /> -->
+    <FooterTwo />
   </body>
 </html>

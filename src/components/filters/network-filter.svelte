@@ -4,22 +4,22 @@
   let items = [
     {
       name: 'TON',
-      img: '/ton-icon.svg',
+      img: '/game-project/media/ton-icon.svg',
       key: 'ton'
     },
     {
       name: 'Solana',
-      img: '/solana-icon.svg',
+      img: '/game-project/media/solana-icon.svg',
       key: 'solana'
     },
     {
       name: 'Ethereum',
-      img: '/ethereum-icon.svg',
+      img: '/game-project/media/ethereum-icon.svg',
       key: 'eth'
     },
     {
       name: 'BCH',
-      img: '/bnb-icon.svg',
+      img: '/game-project/media/bnb-icon.svg',
       key: 'bnb'
     },
   ]
