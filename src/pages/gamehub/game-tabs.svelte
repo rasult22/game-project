@@ -1,6 +1,7 @@
 <script>
   export let game_id
   import OverviewTab from "./OverviewTab.svelte";
+  import AboutTab from "./AboutTab.svelte";
 
   let activeTab = 'overview'
   const tabs = [
@@ -39,6 +40,9 @@
 
 <div class="mt-9">
   {#if activeTab === 'overview'}
-  <OverviewTab />
+    <OverviewTab />
+  {/if}
+  {#if activeTab === 'about'}
+    <AboutTab />
   {/if}
 </div>
