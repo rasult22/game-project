@@ -23,6 +23,12 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.app-text-gradient-bg-3 {
+  background: linear-gradient(135deg, #FB532E 0%, #EB122C 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .black-gradient {
   background: linear-gradient(0deg, #0D111D 0%, rgba(13, 19, 31, 0.00) 100%);
 }

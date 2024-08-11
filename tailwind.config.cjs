@@ -27,11 +27,33 @@ module.exports = {
     },
     extend: {
       animation: {
+        text: 'text 10s ease-in infinite',
         circling: 'circling 10s ease-in-out infinite',
         'custom-top': 'custom-top 15s ease-in-out infinite',
         'circling-reverse': 'circling-reverse 7s ease-in-out infinite'
       },
       keyframes: {
+        text: {
+          '0%': {
+            transform: ['translateY(0%)']
+          },
+          '25%': {
+            transform: ['translateY(-100%)']
+          },
+          '50%': {
+            transform: ['translateY(-200%)']
+          },
+          '75%': {
+            transform: ['translateY(-200%)']
+          },
+          '95%': {
+            transform: ['translateY(-200%)']
+          },
+          '100%': {
+            transform: ['translateY(0%)']
+          },
+          
+        },
         circling: {
           '0%, 100%': {
             left: '10%',
