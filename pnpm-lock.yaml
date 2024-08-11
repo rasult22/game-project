@@ -13,6 +13,7 @@ specifiers:
   '@types/micromodal': ^0.3.5
   astro: ^4.1.1
   astro-icon: ^1.0.2
+  chart.js: ^4.4.3
   ethers: ^6.12.0
   imagemin: ^8.0.1
   imagemin-webp: ^8.0.0
@@ -25,6 +26,7 @@ specifiers:
   rimraf: ^5.0.5
   sharp: ^0.33.1
   svelte: ^4.2.15
+  svelte-chartjs: ^3.1.5
   swipe-detect: ^1.0.1
   swiper: ^11.1.9
   tailwindcss: ^3.4.1
@@ -38,11 +40,13 @@ dependencies:
   '@fontsource/poppins': 5.0.13
   '@svelte-put/dragscroll': 3.0.1_svelte@4.2.15
   '@tonconnect/ui': 2.0.6
+  chart.js: 4.4.3
   ethers: 6.12.0
   micromodal: 0.4.10
   motion: 10.17.0
   sharp: 0.33.3
   svelte: 4.2.15
+  svelte-chartjs: 3.1.5_5g3giuwoq4trtuaqxh3si2uzmi
   swipe-detect: 1.0.1
   swiper: 11.1.9
   tailwindcss: 3.4.3
@@ -1040,6 +1044,10 @@ packages:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
 
+  /@kurkle/color/0.3.2:
+    resolution: {integrity: sha512-fuscdXJ9G1qb7W8VdHi+IwRqij3lBkosAm4ydQtEmbY58OzHXqQhvlxqEkoz0yssNVn38bcpRWgA9PP+OGoisw==}
+    dev: false
+
   /@motionone/animation/10.17.0:
     resolution: {integrity: sha512-ANfIN9+iq1kGgsZxs+Nz96uiNcPLGTXwfNo2Xz/fcJXniPYpaz/Uyrfa+7I5BPLxCP82sh7quVDudf1GABqHbg==}
     dependencies:
@@ -1885,6 +1893,13 @@ packages:
 
   /character-entities/2.0.2:
     resolution: {integrity: sha512-shx7oQ0Awen/BRIdkjkvz54PnEEI/EjwXDSIZp86/KKdbafHh1Df/RYGBhn4hbe2+uKC9FnT5UCEdyPz3ai9hQ==}
+
+  /chart.js/4.4.3:
+    resolution: {integrity: sha512-qK1gkGSRYcJzqrrzdR6a+I0vQ4/R+SoODXyAjscQ/4mzuNzySaMCd+hyVxitSY1+L2fjPD1Gbn+ibNqRmwQeLw==}
+    engines: {pnpm: '>=8'}
+    dependencies:
+      '@kurkle/color': 0.3.2
+    dev: false
 
   /cheerio-select/2.1.0:
     resolution: {integrity: sha512-9v9kG0LvzrlcungtnJtpGNxY+fzECQKhK4EGJX2vByejiMX84MFNQw4UxPJl3bFbTMw+Dfs37XaIkCwTZfLh4g==}
@@ -5136,6 +5151,16 @@ packages:
   /supports-preserve-symlinks-flag/1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+
+  /svelte-chartjs/3.1.5_5g3giuwoq4trtuaqxh3si2uzmi:
+    resolution: {integrity: sha512-ka2zh7v5FiwfAX1oMflZ0HkNkgjHjFqANgRyC+vNYXfxtx2ku68Zo+2KgbKeBH2nS1ThDqkIACPzGxy4T0UaoA==}
+    peerDependencies:
+      chart.js: ^3.5.0 || ^4.0.0
+      svelte: ^4.0.0
+    dependencies:
+      chart.js: 4.4.3
+      svelte: 4.2.15
+    dev: false
 
   /svelte-hmr/0.16.0_svelte@4.2.15:
     resolution: {integrity: sha512-Gyc7cOS3VJzLlfj7wKS0ZnzDVdv3Pn2IuVeJPk9m2skfhcu5bq3wtIZyQGggr7/Iim5rH5cncyQft/kRLupcnA==}
