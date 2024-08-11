@@ -7,7 +7,7 @@
   import Dropdown from "~/components/filters/dropdown.svelte";
   import GameCardBasic from "~/components/game-card-basic.svelte";
   import GamesTable from '~/components/games-table.svelte'
-  
+  import {items} from './mock'
   let tab = 'gamehub'
 </script>
 
@@ -91,18 +91,9 @@
         <Dropdown />
       </div> 
       <div class="mt-[50px] p-4 gap-3 grid grid-cols-4 bg-[#1C1C1E] rounded-[16px]">
-        <GameCardBasic />
-        <GameCardBasic />
-        <GameCardBasic />
-        <GameCardBasic />
-        <GameCardBasic />
-        <GameCardBasic />
-        <GameCardBasic />
-        <GameCardBasic />
-        <GameCardBasic />
-        <GameCardBasic />
-        <GameCardBasic />
-        <GameCardBasic />
+        {#each items as card, index }
+          <GameCardBasic link={'/game-project/gamehub/' + card.id} img={card.game_logo} name={card.game_info.name} networks={card.networks} players={card.players_count} rank={index + 1} tags={card.game_info.tags} />
+        {/each}
       </div>
     </div>
   </div>
