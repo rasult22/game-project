@@ -58,60 +58,64 @@ const data: Data = Astro.props.data;
     </svg>
   </div>
 </div>
+
 <script>
   import Swiper from "swiper";
   import "swiper/css";
-
-  var thumbTree = document.querySelector('.mySwiper2')
-  var btnNext = document.querySelector('.swiper-button-next')
-  var btnPrev = document.querySelector('.swiper-button-prev')
-  var thumb = new Swiper(".mySwiper2", {
-    direction: 'vertical',
-    spaceBetween: 1,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-  });
-  var swiper = new Swiper(".mySwiper", {
-    effect: "fade",
-    fadeEffect: {
-      crossFade: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-    thumbs: {
-      swiper: thumb
+  setupSlider()
+  document.addEventListener('astro:after-swap', setupSlider)
+  function setupSlider() {
+      var thumbTree = document.querySelector('.mySwiper2')
+      var btnNext = document.querySelector('.swiper-button-next')
+      var btnPrev = document.querySelector('.swiper-button-prev')
+      var thumb = new Swiper(".mySwiper2", {
+        direction: 'vertical',
+        spaceBetween: 1,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper = new Swiper(".mySwiper", {
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        thumbs: {
+          swiper: thumb
+        }
+      });
+    
+      thumbTree?.querySelector?.(`[data-index="0"]`)?.classList.add('active-slide')
+    
+      if (btnNext && btnPrev) {
+        btnNext.addEventListener('click',() => {
+          swiper.slideNext()
+        })
+        btnPrev.addEventListener('click',() => {
+          swiper.slidePrev()
+        })
+      }
+      swiper.on('slideChange', (s) => {
+        thumbTree?.querySelectorAll('.swiper-slide').forEach(el => {
+          el.classList.remove('active-slide')
+        })
+        const current = thumbTree?.querySelector(`[data-index="${s.activeIndex}"]`)
+        current?.classList.add('active-slide')
+      })
+      thumb.on('click', function(s) {
+        thumbTree?.querySelectorAll('.swiper-slide').forEach(el => {
+          el.classList.remove('active-slide')
+        })
+        const current = thumbTree?.querySelector(`[data-index="${s.clickedIndex}"]`)
+        current?.classList.add('active-slide')
+        thumb.slideTo(s.clickedIndex)
+        swiper.slideTo(s.clickedIndex)
+      })
     }
-  });
-
-  thumbTree?.querySelector?.(`[data-index="0"]`)?.classList.add('active-slide')
-
-  if (btnNext && btnPrev) {
-    btnNext.addEventListener('click',() => {
-      swiper.slideNext()
-    })
-    btnPrev.addEventListener('click',() => {
-      swiper.slidePrev()
-    })
-  }
-  swiper.on('slideChange', (s) => {
-    thumbTree?.querySelectorAll('.swiper-slide').forEach(el => {
-      el.classList.remove('active-slide')
-    })
-    const current = thumbTree?.querySelector(`[data-index="${s.activeIndex}"]`)
-    current?.classList.add('active-slide')
-  })
-  thumb.on('click', function(s) {
-    thumbTree?.querySelectorAll('.swiper-slide').forEach(el => {
-      el.classList.remove('active-slide')
-    })
-    const current = thumbTree?.querySelector(`[data-index="${s.clickedIndex}"]`)
-    current?.classList.add('active-slide')
-    thumb.slideTo(s.clickedIndex)
-    swiper.slideTo(s.clickedIndex)
-  })
 </script>
 <style>
   .mySwiper2 .swiper-slide-thumb-active {

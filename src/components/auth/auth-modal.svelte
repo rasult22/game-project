@@ -9,7 +9,9 @@
   import { onMount } from 'svelte';
   export let open = false
   onMount(() => {
-    init() // init ton
+    if (!$auth.isAuthorized) {
+      init() // init ton
+    }
     if (window.ethereum) {
       window.ethereum.on('accountsChanged', (acc) => {
         if (!acc.length) {
