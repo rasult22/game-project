@@ -7,6 +7,7 @@ import "@fontsource/oxanium/500.css";
 import "@fontsource/oxanium/600.css";
 import "@fontsource/oxanium/800.css";
 import "~/styles/global.css";
+import GameTabs from './game-tabs.svelte'
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
 import GamesSlider from "~/components/games-slider.astro";
@@ -148,6 +149,9 @@ const { data } = Astro.props;
           <GamesSlider data={data} />
           <!-- info -->
           <GamesInfo data={data.game_info}/>
+          <div class="max-w-[778px] ml-auto mt-8">
+            <GameTabs client:load game_id={data.id} />
+          </div>
         </div>
         <!-- side card -->
         <div class="sticky z-50 shrink-0 top-[105px] w-[300px]">

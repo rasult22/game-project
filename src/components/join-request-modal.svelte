@@ -8,8 +8,8 @@
 <button on:click={() => open = true} class="font-medium border py-[10px] active:border-[#fff] active:scale-95 transition-all px-[36px] rounded-[12px]">Send request</button>
 
 {#if open}
-  <div transition:fade on:click={() => open = false} class="fixed cursor-pointer flex items-center justify-center top-0 left-0 bg-[rgba(0,0,0,0.5)] backdrop-blur-sm w-[100vw] h-[100vh] z-10">
-    <div on:click|stopPropagation class="flex max-w-[1200px] z-50 cursor-default rounded-[24px] overflow-hidden">
+  <div transition:fade on:click={() => open = false} class="fixed cursor-pointer flex items-center justify-center top-0 left-0 bg-[rgba(0,0,0,0.5)] backdrop-blur-sm w-[100vw] h-[100vh] z-[150]">
+    <div on:click|stopPropagation class="flex max-w-[1200px] z-[150] cursor-default rounded-[24px] overflow-hidden">
       <img class="w-[50%]" src="/game-project/media/join-us.png" alt="">
       <div class="bg-[#2A2A2A] w-full p-6">
         <!-- header -->
