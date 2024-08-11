@@ -109,6 +109,7 @@ const { data } = Astro.props;
     <Header />
     <div class="py-[150px] max-w-[1920px] mx-auto px-6">
       <!-- breadcrumbs -->
+      <!-- game -->
       <div class="flex space-x-2 items-center">
         <a href="/game-project" class="text-[#888888] hover:opacity-80">Home</a>
         <svg
@@ -142,8 +143,7 @@ const { data } = Astro.props;
         </svg>
         <a class="uppercase">{game_name}</a>
       </div>
-      <!-- game -->
-      <div class="flex items-start space-x-8 mt-[30px]">
+      <div class="flex items-start justify-center space-x-8 mt-[30px]">
         <div class="">
           <!-- slider -->
           <GamesSlider data={data} />
@@ -218,7 +218,7 @@ const { data } = Astro.props;
         </div>
       </div>
     </div>
-    <!-- <Foote/r /> -->
+    <Footer />
   </body>
 </html>
 

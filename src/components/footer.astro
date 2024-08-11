@@ -1,54 +1,65 @@
 ---
 import { Icon } from "astro-icon/components";
-import type { FooterLink } from "~/types";
+import type { FooterLink, NavItem } from "~/types";
+import RequestForm from '~/components/request-form.svelte'
+import TelegramIcon from '~/components/icons/TelegramIcon.svelte'
+import TwitterIcon from '~/components/icons/TwitterIcon.svelte'
+let currentUrl = Astro.url.pathname
 
-const links: Array<FooterLink> = [
-  {
-    url: "https://astro.build/",
-    description: "Astro's official website",
-    icon: "mdi:home",
-  },
-  {
-    url: "https://github.com/mhyfritz/astro-landing-page",
-    description: "View source on GitHub",
-    icon: "fa-brands:github-alt",
-  },
-  {
-    url: "https://astro.build/chat",
-    description: "Astro on Discord",
-    icon: "fa-brands:discord",
-  },
-  {
-    url: "https://twitter.com/astrodotbuild",
-    description: "Astro on Twitter",
-    icon: "fa-brands:twitter",
-  },
+const githubPrefix = '/game-project'
+const navItems: Array<NavItem> = [
+  { title: "Ranking", url: githubPrefix + "/ranking" },
+  { title: "Staking", url: githubPrefix + "#" },
+  { title: "GameHub", url: githubPrefix + "/gamehub" },
+  { title: "IDO", url: githubPrefix + "#" },
+  { title: "Blog", url: githubPrefix + "/blog" },
+  { title: "About", url: githubPrefix + "#" },
+  { title: "Whitepaper", url: githubPrefix + "#" },
 ];
 ---
 
-<footer class="z-[5] relative mx-auto mt-[150px] md:px-[40px] px-[40px] sm:px-[24px] pb-[100px] sm:pb-[44px] max-w-[1430px] flex justify-between sm:flex-wrap">
-  <div>
-    <div class="sm:text-center">
-      <div class="text-[64px] md:text-[32px] sm:text-[32px] font-Poppins font-semibold text-white">Join our community</div>
-      <div class="text-[20px] md:text-[17px] sm:text-[17px] mt-[40px] md:mt-[24px] sm:mt-[24px] ">Follow the latest news from our company on our social networks</div>
+<footer class="z-[5] relative pt-[48px] bg-[url(/game-project/media/footer-bg.jpeg)] bg-cover  mt-[150px] md:px-[40px] px-[40px] sm:px-[24px] pb-[20px] sm:pb-[44px] ">
+  <div class="max-w-[1520px] mx-auto">
+    <div class="app-text-gradient-bg max-w-[60%] font-Oxanium text-[64px] uppercase leading-[120%]">
+      Would you like to
+      be part of our project?
     </div>
-    <div class="mt-[100px] sm:my-[72px]">
-      <ul class="flex space-x-4 sm:justify-center">
-        <li><a target="_blank" href="https://twitter.com/compai_tech?s=11"><img class="sm:max-w-[48px]" width="64" height="64" src="/twitter.svg" alt="twitter logo"></a></li>
-        <li><a target="_blank" href="https://t.me/companion_ai_tech"><img class="sm:max-w-[48px]" width="64" height="64" src="/tg.svg" alt="telegram logo"></a></li>
+    <div class="max-w-[35%] mt-3">Leave a request and our managers will contact you and discuss all the details</div>
+    <div class="max-w-[552px] mt-10" >
+      <RequestForm client:load />
+    </div>
+    <div class="flex space-x-4 items-center mt-[72px]">
+      <span class="font-Oxanium uppercase text-[32px]">Our socials</span>
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M28.5858 14.5858C29.3668 13.8047 30.6332 13.8047 31.4142 14.5858L39.4142 22.5858C40.1953 23.3668 40.1953 24.6332 39.4142 25.4142L31.4142 33.4142C30.6332 34.1953 29.3668 34.1953 28.5858 33.4142C27.8047 32.6332 27.8047 31.3668 28.5858 30.5858L33.1716 26H10C8.89543 26 8 25.1046 8 24C8 22.8954 8.89543 22 10 22H33.1716L28.5858 17.4142C27.8047 16.6332 27.8047 15.3668 28.5858 14.5858Z" fill="white"/>
+      </svg>
+      <TelegramIcon classes="w-[32px]" />
+      <TwitterIcon classes="w-[32px]"/>
+    </div>
+    <div class="my-9 h-[1px] w-full bg-[#c3c3c3] opacity-80" />
+    <nav class="flex items-center">
+      <ul class="flex items-center gap-6 max-w-[680px]">
+        {
+          navItems.map(({ title, url }) => (
+            <li>
+              <a class={`text-[16px] transition-all hover:opacity-80 pb-1 ${currentUrl.includes(url) ? 'border-b-2 border-[#F97C0E]' : ''}`} href={url}>
+                {title}
+              </a>
+            </li>
+          ))
+        }
       </ul>
-    </div>
-  </div>
-  <div class="flex flex-col sm:mx-auto">
-    <div>
-      <img width="400" height="86.6" class="max-w-[400px] md:max-w-[202px] sm:max-w-[196px] mt-[10px]" src="/optimized/logo.webp" alt="logo">
-    </div>
-    <ul class="md:text-[17px] sm:mt-[33px] flex space-x-4 justify-end sm:justify-center mt-auto text-[#B1B1B1]">
-      <li>FAQ</li>
-      <a target="_blank" class="underline hover:opacity-[0.5]" href="/privacy.pdf"><li>Privacy Policy</li></a>
-    </ul>
+      <div class="ml-auto flex gap-6">
+        <a class="opacity-50 hover:underline" href="#">
+          Terms of use
+        </a>
+        <a class="opacity-50 hover:underline" href="#">
+          User Agreement
+        </a>
+        <a class="opacity-50 hover:underline" href="#">
+          Privacy policy
+        </a>
+      </div>
+    </nav>
   </div>
 </footer>
-<div class="text-center text-[16px] text-[#B1B1B1] pb-[100px] sm:pb-[60px]">
-  Companion LLC
-</div>
