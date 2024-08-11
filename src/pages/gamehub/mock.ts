@@ -91,3 +91,21 @@ export let items = [
   },
 
 ];
+
+export let ranking = items.map(game => {
+  return {
+    id: game.id,
+    image: game.game_logo,
+    name: game.game_info.name,
+    retention: "12%",
+    retentionChange: "-2.4%",
+    session: "54.8 min.",
+    sessionChange: "2.4%",
+    arp_dau: "$1.25",
+    arp_dau_change: "2.4%",
+    churn: "12%",
+    churnChange: "2.4%",
+    token_volume: "$7,923,903.75",
+    market_cap: "$88,049,070.79"
+  }
+})

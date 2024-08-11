@@ -9,6 +9,24 @@
   import GamesTable from '~/components/games-table.svelte'
   import {items} from './mock'
   let tab = 'gamehub'
+
+  $: game_table_data = items.map(game => {
+    return {
+      id: game.id,
+      image: game.game_logo,
+      name: game.game_info.name,
+      retention: "12%",
+      retentionChange: "-2.4%",
+      session: "54.8 min.",
+      sessionChange: "2.4%",
+      arp_dau: "$1.25",
+      arp_dau_change: "2.4%",
+      churn: "12%",
+      churnChange: "2.4%",
+      token_volume: "$7,923,903.75",
+      market_cap: "$88,049,070.79"
+    }
+  })
 </script>
 
 <div class="flex space-x-4">
@@ -100,6 +118,6 @@
   {:else}
   <div class="flex mt-[50px] space-x-4 h-full">
     <!-- ranking -->
-    <GamesTable />
+    <GamesTable data={game_table_data}/>
   </div>
 {/if}
