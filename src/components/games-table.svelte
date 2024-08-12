@@ -30,7 +30,7 @@
           </span>
           {/if}
         </span>
-        <img src={item.image} alt={item.name} class="w-[52px] h-[52px] rounded-md" />
+        <img width="52" src={item.image} alt={item.name} class="w-[52px] h-[52px] rounded-md" />
         <div class="flex flex-col">
           <span class="font-semibold">{item.name}</span>
           <div class="flex items-center gap-1">

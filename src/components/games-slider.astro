@@ -9,6 +9,7 @@ const data: Data = Astro.props.data;
         data.images.map((image, index) => (
           <div data-index={index} class="swiper-slide border-2 border-transparent">
             <img
+              width="130"
               class="w-[130px] h-[74px] object-cover cursor-pointer rounded-[8px]"
               src={image}
               alt=""
@@ -24,6 +25,7 @@ const data: Data = Astro.props.data;
         data.images.map((image) => (
           <div class="swiper-slide">
             <img
+              width="778"
               class="w-[778px] h-[320px] object-cover rounded-[32px]"
               src={image}
               alt=""

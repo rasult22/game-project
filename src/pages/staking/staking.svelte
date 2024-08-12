@@ -45,7 +45,7 @@
         <span class="font-medium"> Staking pool </span>
       </div>
       <div class="text-[32px] font-medium mt-3 flex items-center gap-4">
-        <img src="/game-project/media/staking.svg" alt="" />
+        <img width="48" src="/game-project/media/staking.svg" alt="" />
         <span>1.200.000 / 1.200.000</span>
       </div>
     </div>
@@ -59,16 +59,19 @@
 
   <div in:fade class="flex -ml-9 -space-x-9 mt-[45px]">
     <img
+      width="320"
       class="max-w-[320px] hover:scale-105 active:scale-[0.99] transition-all cursor-pointer"
       src="/game-project/media/common-box.png"
       alt=""
     />
     <img
+      width="320"
       class="max-w-[320px] hover:scale-105 active:scale-[0.99] transition-all cursor-pointer"
       src="/game-project/media/epic-box.png"
       alt=""
     />
     <img
+      width="320"
       class="max-w-[320px] hover:scale-105 active:scale-[0.99] transition-all cursor-pointer"
       src="/game-project/media/legendary-box.png"
       alt=""
