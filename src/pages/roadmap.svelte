@@ -23,54 +23,54 @@ const next = () => {
 }
 </script>
 
-<div class="min-h-[596px] w-full pt-[241px] overflow-hidden">
-  <div class="h-[5px] w-[100vw]  bg-gradient-to-r from-[#FF2600] to-[#F97C0E]">
-    <div 
-    class:translate-x-[0%]={active==='3Q'}
-    class:translate-x-[-30%]={active==='4Q'}
-    class:translate-x-[-60%]={active==='4Q1Q'} 
-    class:translate-x-[-90%]={active==='2Q'} 
-    class="relative transition-transform duration-700">
-      <div on:click={() => active = '3Q'} class:container-active={active==='3Q'} class="container transition-all absolute left-0 translate-x-[450%]  space-y-6 flex flex-col items-center w-[120px]">
-        <div class:title-active={active==='3Q'} class="title transition-all">
-          3Q
-        </div>
-        <div class:text-active={active==='3Q'} class="text transition-all">
-          2024
-        </div>
-        <div class:circle-active={active==='3Q'} class="circle transition-all"/>
+<div class="min-h-[596px] max-w-[1520px] mx-auto w-full pt-[241px]">
+  <div 
+  class:translate-x-[0%]={active==='3Q'}
+  class:translate-x-[-30%]={active==='4Q'}
+  class:translate-x-[-60%]={active==='4Q1Q'} 
+  class:translate-x-[-90%]={active==='2Q'} 
+  class="relative z-[2] transition-transform duration-700">
+    <div on:click={() => active = '3Q'} class:container-active={active==='3Q'} class="container transition-all absolute left-0 translate-x-[450%]  space-y-6 flex flex-col items-center w-[120px]">
+      <div class:title-active={active==='3Q'} class="title transition-all">
+        3Q
       </div>
-  
-      <div on:click={() => active = '4Q'} class:container-active={active==='4Q'} class="container transition-all absolute left-0 translate-x-[850%]  space-y-6 flex flex-col items-center w-[120px]">
-        <div class:title-active={active==='4Q'} class="title transition-all">
-          4Q
-        </div>
-        <div class:text-active={active==='4Q'} class="text transition-all">
-          2024
-        </div>
-        <div class:circle-active={active==='4Q'} class="circle transition-all"/>
+      <div class:text-active={active==='3Q'} class="text transition-all">
+        2024
       </div>
-  
-      <div on:click={() => active = '4Q1Q'} class:container-active={active==='4Q1Q'} class="container transition-all absolute left-0 translate-x-[1250%]  space-y-6 flex flex-col items-center w-[120px]">
-        <div class:title-active={active==='4Q1Q'} class="title transition-all">
-          4Q-1Q
-        </div>
-        <div class:text-active={active==='4Q1Q'} class="text transition-all">
-          2024-2025
-        </div>
-        <div class:circle-active={active==='4Q1Q'} class="circle transition-all"/>
-      </div>
-  
-      <div on:click={() => active = '2Q'} class:container-active={active==='2Q'} class="container transition-all absolute left-0 translate-x-[1650%]  space-y-6 flex flex-col items-center w-[120px]">
-        <div class:title-active={active==='2Q'} class="title transition-all">
-          2Q
-        </div>
-        <div class:text-active={active==='2Q'} class="text transition-all">
-          2025
-        </div>
-        <div class:circle-active={active==='2Q'} class="circle transition-all"/>
-      </div>
+      <div class:circle-active={active==='3Q'} class="circle transition-all"/>
     </div>
+
+    <div on:click={() => active = '4Q'} class:container-active={active==='4Q'} class="container transition-all absolute left-0 translate-x-[850%]  space-y-6 flex flex-col items-center w-[120px]">
+      <div class:title-active={active==='4Q'} class="title transition-all">
+        4Q
+      </div>
+      <div class:text-active={active==='4Q'} class="text transition-all">
+        2024
+      </div>
+      <div class:circle-active={active==='4Q'} class="circle transition-all"/>
+    </div>
+
+    <div on:click={() => active = '4Q1Q'} class:container-active={active==='4Q1Q'} class="container transition-all absolute left-0 translate-x-[1250%]  space-y-6 flex flex-col items-center w-[120px]">
+      <div class:title-active={active==='4Q1Q'} class="title transition-all">
+        4Q-1Q
+      </div>
+      <div class:text-active={active==='4Q1Q'} class="text transition-all">
+        2024-2025
+      </div>
+      <div class:circle-active={active==='4Q1Q'} class="circle transition-all"/>
+    </div>
+
+    <div on:click={() => active = '2Q'} class:container-active={active==='2Q'} class="container transition-all absolute left-0 translate-x-[1650%]  space-y-6 flex flex-col items-center w-[120px]">
+      <div class:title-active={active==='2Q'} class="title transition-all">
+        2Q
+      </div>
+      <div class:text-active={active==='2Q'} class="text transition-all">
+        2025
+      </div>
+      <div class:circle-active={active==='2Q'} class="circle transition-all"/>
+    </div>
+  </div>
+  <div class="h-[5px] z-[1] w-[400vw] translate-x-[-100vw] bg-gradient-to-r from-[#FF2600] to-[#F97C0E]">
   </div>
   <div class="mt-[48px] pl-[72px]">
     {#if active === '3Q'}
