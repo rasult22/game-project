@@ -19,15 +19,20 @@
       </div>
     </div>
     <div class="flex items-center justify-between mt-2">
-      <div class="text-[14px] leading-[120%] text-gray-400">{tags}</div>
+      <div class="text-[14px] leading-[120%] text-gray-400">{tags.join(', ').length > 25 ?  tags.join(', ').slice(0, 25) + '...' : tags.join(', ')}.</div>
       <div class="flex -space-x-2">
         {#each  networks as network }
           {#if network === 'solana'}
             <img width="20" height="20" src="/game-project/media/solana-icon.svg" alt="">
-          {/if}  
-          {#if network === 'ton'}
+          {:else if network === 'ton'}
             <img width="20" height="20" src="/game-project/media/ton-icon.svg" alt="">
-          {/if}  
+          {:else if network === 'eth'}
+            <img width="20" height="20" src="/game-project/media/ethereum-icon.svg" alt="">
+          {:else if network === 'bsc'}
+            <img width="20" height="20" src="/game-project/media/bnb-icon.svg" alt="">
+          {:else}
+          {network}
+          {/if}
         {/each}
       </div>
     </div>
