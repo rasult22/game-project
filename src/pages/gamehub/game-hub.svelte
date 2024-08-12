@@ -14,6 +14,7 @@
     return {
       id: game.id,
       image: game.banner,
+      networks: game.networks,
       name: game.game_info.name,
       retention: "12%",
       retentionChange: "-2.4%",

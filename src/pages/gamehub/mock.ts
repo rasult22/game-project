@@ -839,6 +839,7 @@ export let ranking = items.map((game) => {
     id: game.id,
     image: game.banner,
     name: game.game_info.name,
+    networks: game.networks,
     retention: "12%",
     retentionChange: "-2.4%",
     session: "54.8 min.",

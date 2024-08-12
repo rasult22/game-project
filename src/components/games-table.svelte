@@ -34,8 +34,19 @@
         <div class="flex flex-col">
           <span class="font-semibold">{item.name}</span>
           <div class="flex items-center gap-1">
-            <img width="20" height="20" src="/game-project/media/solana-icon.svg" alt="">
-            <img width="20" height="20" src="/game-project/media/ton-icon.svg" alt="">
+            {#each  item.networks as network }
+              {#if network === 'solana'}
+                <img width="20" height="20" src="/game-project/media/solana-icon.svg" alt="">
+              {:else if network === 'ton'}
+                <img width="20" height="20" src="/game-project/media/ton-icon.svg" alt="">
+              {:else if network === 'eth'}
+                <img width="20" height="20" src="/game-project/media/ethereum-icon.svg" alt="">
+              {:else if network === 'bsc'}
+                <img width="20" height="20" src="/game-project/media/bnb-icon.svg" alt="">
+              {:else}
+              {network}
+              {/if}
+            {/each}
           </div>
         </div>
       </div>
