@@ -2,6 +2,7 @@
   import BizzonRating from "~/components/bizzon-rating.svelte";
   import Chart from "./chart.svelte";
   import { fade } from "svelte/transition";
+  export let backedBy;
   let teamMembers = [
     {
       avatar: "/game-project/media/avatar.png",
@@ -190,12 +191,12 @@
         <BizzonRating rating="SSS" />
       </div>
       <!-- bakers -->
-      <div class="flex flex-wrap justify-center gap-3 pt-10 mt-1">
-        <img width="132" src="/game-project/media/baker-1.svg" alt="" />
-        <img width="132" src="/game-project/media/baker-2.svg" alt="" />
-        <img width="132" src="/game-project/media/baker-3.svg" alt="" />
-        <img width="132" src="/game-project/media/baker-4.svg" alt="" />
-        <img width="132" src="/game-project/media/baker-5.svg" alt="" />
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-10 mt-1">
+        {#each backedBy as backer, index (index)}
+          {#if index < 5}
+            <img width="132" height="72" src={backer.logo} alt="">
+          {/if}
+        {/each}
       </div>
     </div>
   </div>

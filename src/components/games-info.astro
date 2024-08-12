@@ -3,6 +3,7 @@ import BizzonRating from '~/components/bizzon-rating.svelte'
 import SocialLevel from '~/components/social-level.svelte'
 type Data = {
   name: string,
+  star_rating: number,
   studio: string,
   social_level: number,
   bizzon_rating: string,
@@ -21,6 +22,7 @@ const data: Data = Astro.props.data
       <div class="text-[40px] leading-[120%] font-medium font-Oxanium">{data.name}</div>
       <div class="flex items-center space-x-2 mt-2">
         <img src="/game-project/media/rating.svg" alt="">
+        {data.star_rating}
         <span class="text-[#888888]">Reviews (6)</span>  
       </div>
     </div>
@@ -30,7 +32,7 @@ const data: Data = Astro.props.data
         <span class="font-medium">Bizzon Ranking</span>
       </div>
       <div class="flex items-center space-x-4">
-        <SocialLevel />
+        <SocialLevel level={data.social_level && Math.floor(data.social_level)} />
         <span class="font-medium">Social Level</span>
       </div>
     </div>
@@ -87,7 +89,7 @@ const data: Data = Astro.props.data
           return <></>
         }
         return <div class="flex p-2 items-center space-x-1 text-[12px]">
-          <img src={v.logo} alt="">
+          <img width="32" height="32" class="rounded-full" src={v.logo} alt="">
           <span>{v.name}</span>
         </div>
       })}

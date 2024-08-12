@@ -3,6 +3,8 @@
   import OverviewTab from "./OverviewTab.svelte";
   import AboutTab from "./AboutTab.svelte";
 
+  export let game
+
   let activeTab = 'overview'
   const tabs = [
     {
@@ -40,7 +42,7 @@
 
 <div class="mt-9">
   {#if activeTab === 'overview'}
-    <OverviewTab />
+    <OverviewTab backedBy={game.game_info.backed_by} />
   {/if}
   {#if activeTab === 'about'}
     <AboutTab />

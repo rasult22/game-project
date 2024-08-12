@@ -7,95 +7,837 @@ const mobox = {
     "/game-project/media/game-slide-4.png",
   ], // Картинки для слайдера
   top: 1, // место в рейтинге
-  networks: ['solana', 'ton'], // блокчейн сети
-  players_count: 2349, // данные о кол-ве игроков за последние 7 дней
+  networks: ["solana", "ton"], // блокчейн сети
+  players_count: 2312, // данные о кол-ве игроков за последние 7 дней
   game_info: {
-    name: 'MOBOX', // имя игры
-    studio: 'MOBOX Team', // студия разработчик
-    social_level: 95, 
-    bizzon_rating: 'SS',
+    name: "MOBOX", // имя игры
+    studio: "MOBOX Team", // студия разработчик
+    social_level: 95,
+    bizzon_rating: "SS",
     release_date: new Date().toISOString(), // дата релиза
-    devices: ['ios', 'android', 'web', 'desktop'], // поддерживаемые платформы
+    devices: ["ios", "android", "web", "desktop"], // поддерживаемые платформы
     backed_by: [
-      {name: 'Bitkraft Ventures', logo: '/game-project/media/vc.svg'},
-      {name: 'Bitkraft Ventures', logo: '/game-project/media/vc.svg'},
-      {name: 'Bitkraft Ventures', logo: '/game-project/media/vc.svg'},
-      {name: 'Bitkraft Ventures', logo: '/game-project/media/vc.svg'},
-      {name: 'Bitkraft Ventures', logo: '/game-project/media/vc.svg'},
+      { name: "Bitkraft Ventures", logo: "/game-project/media/vc.svg" },
+      { name: "Bitkraft Ventures", logo: "/game-project/media/vc.svg" },
+      { name: "Bitkraft Ventures", logo: "/game-project/media/vc.svg" },
+      { name: "Bitkraft Ventures", logo: "/game-project/media/vc.svg" },
+      { name: "Bitkraft Ventures", logo: "/game-project/media/vc.svg" },
     ], // бейкеры игры
-    tags: ['Metaverse', 'Casual', 'Platform'], // теги
-    description: 'MOBOX is a community-driven GameFi platform empowering users by rewarding them for their engagement and enjoyment. By using innovative tokenomics ($MBOX allocation), utilizing finance and games. Whilst also combining the best of DeFi and NFTs to create a truly unique and everlasting FREE TO PLAY, PLAY TO EARN ECOSYSTEM' // описание игры
+    tags: ["Metaverse", "Casual", "Platform"], // теги
+    description:
+      "MOBOX is a community-driven GameFi platform empowering users by rewarding them for their engagement and enjoyment. By using innovative tokenomics ($MBOX allocation), utilizing finance and games. Whilst also combining the best of DeFi and NFTs to create a truly unique and everlasting FREE TO PLAY, PLAY TO EARN ECOSYSTEM", // описание игры
   },
   game_logo: "/game-project/media/game-card.png", // изображение игры, которая показывается в списке игр
-}
-export let items = [
-  {
-    ...mobox,
-    id: 1
-  },
-  {
-    ...mobox,
-    id: 2
-  },
-  {
-    ...mobox,
-    id: 3
-  },
-  {
-    ...mobox,
-    id: 4
-  },
-  {
-    ...mobox,
-    id: 5
-  },
-  {
-    ...mobox,
-    id: 6
-  },
-  {
-    ...mobox,
-    id: 7
-  },
-  {
-    ...mobox,
-    id: 8
-  },
-  {
-    ...mobox,
-    id: 9
-  },
-  {
-    ...mobox,
-    id: 10
-  },
-  {
-    ...mobox,
-    id: 11
-  },
-  {
-    ...mobox,
-    id: 12
-  },
-  {
-    ...mobox,
-    id: 13
-  },
-  {
-    ...mobox,
-    id: 14
-  },
-  {
-    ...mobox,
-    id: 15
-  },
+};
 
+export const items = [
+  {
+    id: "the-sandbox",
+    banner: "https://d1j2c9jkfhu70p.cloudfront.net/sandbox_ver_b36a88fa66.png",
+    images: [
+      "https://d1j2c9jkfhu70p.cloudfront.net/the_sandbox_f4efb5eebe.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/the_sandbox_7_542a966407.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/the_sandbox_2_1231d8f09a.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/the_sandbox_4_84ac81b638.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/the_sandbox_3_c85be280b3.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/the_sandbox_6_41e3ddc177.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/the_sandbox_5_bb713d322b.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/the_sandbox_9_964cc5d393.png",
+    ],
+    top: 2,
+    networks: ["eth", "polygon"],
+    players_count: 2312,
+    star_rating: 4,
+    game_info: {
+      name: "The Sandbox",
+      studio: "The Sandbox Team",
+      social_level: 94.970458984375,
+      bizzon_rating: null,
+      release_date: "2022-10-04T11:22:08.537Z",
+      devices: [],
+      backed_by: [
+        {
+          name: "Animoca Brands KK",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/animocabrands_full_color_a9c5c4f1a6.png",
+        },
+        {
+          name: "Binance Labs",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/binancelabs_full_color_5d38a73f49.png",
+        },
+        {
+          name: "Hashed Fund",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/hashed_white_logo_fococlipping_standard_b03480102e.png",
+        },
+        {
+          name: "Polygon Studios",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/polygon_studios_logo_a2ca962ca2.png",
+        },
+      ],
+      tags: ["Sandbox", "Metaverse", "NFT"],
+      description:
+        "The Sandbox is a virtual world where players can build, own, and monetize their gaming experiences in the Ethereum blockchain using SAND, the platform\u2019s utility token. ",
+      game_logo:
+        "https://d1j2c9jkfhu70p.cloudfront.net/sandbox_project_logo_9e0bd7d8af.png",
+    },
+  },
+  {
+    id: "axie-infinity",
+    banner:
+      "https://d1j2c9jkfhu70p.cloudfront.net/axie_infinity_b8b2907045.png",
+    images: [
+      "https://d1j2c9jkfhu70p.cloudfront.net/axie_infinity_2_e3fceab6b0.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/axie_infinity_4_56a2d00c20.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/axie_infinity_1_8b21a77bb3.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/axie_infinity_homepage_9b8d39eff3.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/axie_infinity_3_10f0f0b6c1.png",
+    ],
+    top: 3,
+    networks: ["eth", "ronin"],
+    players_count: 2312,
+    star_rating: 4,
+    game_info: {
+      name: "Axie Infinity",
+      studio: "Sky Mavis",
+      social_level: 95.11310577392578,
+      bizzon_rating: null,
+      release_date: "2022-05-19T08:51:05.974Z",
+      devices: [],
+      backed_by: [
+        {
+          name: "Andreessen Horowitz (a16z)",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/a16z_full_color_0f13517f54.png",
+        },
+        {
+          name: "Binance",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/binance_full_color_a89b254154.png",
+        },
+        {
+          name: "Binance Labs",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/binancelabs_full_color_5d38a73f49.png",
+        },
+        {
+          name: "CMT Digital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/cmtdigital_full_color_659b1ceb1c.png",
+        },
+        {
+          name: "DeFi Alliance",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/defialliance_full_color_74775afbdf.png",
+        },
+        {
+          name: "Fabric Ventures",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/fabricventures_full_color_701ac73621.png",
+        },
+        {
+          name: "MetaCartel Ventures",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/metacartelventures_full_color_b438760487.png",
+        },
+        {
+          name: "Paradigm",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/paradigm_full_color_e2dc669bb2.png",
+        },
+        {
+          name: "Twin Apex Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/twinapexcapital_full_color_b2274edfba.png",
+        },
+        {
+          name: "Hashed Fund",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/hashed_white_logo_fococlipping_standard_b03480102e.png",
+        },
+        {
+          name: "Kyber Network",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/kybernetwork_full_white_d0c33c2dfe.png",
+        },
+        {
+          name: "Kenetic Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/keneticcapital_full_white_6eb1637539.png",
+        },
+        {
+          name: "FTX Ventures",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/ftx_ventures_logo_b99030908b.png",
+        },
+      ],
+      tags: ["Action", "Turn-based", "NFT"],
+      description:
+        "Axie Infinity is a game universe filled with fascinating creatures, Axies, that players can collect as pets. Players aim to battle, breed, collect, raise, and build kingdoms for their Axies",
+      game_logo:
+        "https://d1j2c9jkfhu70p.cloudfront.net/axie_infinity_logo_8c59d554a9.png",
+    },
+  },
+  {
+    id: "thetan-arena",
+    banner: "https://d1j2c9jkfhu70p.cloudfront.net/thetan_5d08ee76b2.png",
+    images: [
+      "https://d1j2c9jkfhu70p.cloudfront.net/thetan_arena_1_ae31f7746b.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/thetan_arena_4_15f761fb1c.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/thetan_arena_3_4701a232c3.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/thetan_arena_2_fc90cb6be7.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/thetan_arena_banner_9d62c6f310.png",
+    ],
+    top: 6,
+    networks: ["bsc"],
+    players_count: 2312,
+    star_rating: 4,
+    game_info: {
+      name: "Thetan Arena",
+      studio: "Wolffun Game",
+      social_level: 56,
+      bizzon_rating: null,
+      release_date: "2022-05-19T09:23:01.182Z",
+      devices: [],
+      backed_by: [
+        {
+          name: "Animoca Brands KK",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/animocabrands_full_color_a9c5c4f1a6.png",
+        },
+        {
+          name: "AU 21 Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/au21capital_full_color_bd12e85db4.png",
+        },
+        {
+          name: "AVStar Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/avstarcapital_full_color_a356e31ac6.png",
+        },
+        {
+          name: "DEC.ventures",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/dec_ventures_full_color_e46792d55d.png",
+        },
+        {
+          name: "Digital Finance Group",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/digitalfinancegroup_full_color_810add04d0.png",
+        },
+        {
+          name: "GFS Ventures",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/gfsventures_full_color_7b5ca5befc.png",
+        },
+        {
+          name: "Jump Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/jumpcapital_full_color_644caadacf.png",
+        },
+        {
+          name: "Mask.Io",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/mask_io_full_color_5b59fd2bbe.png",
+        },
+        {
+          name: "Spark Digital Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/sparkdigitalcapital_full_color_505c5d1557.png",
+        },
+        {
+          name: "Vespertine Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/vespertinecapital_full_color_3e6460bfec.png",
+        },
+        {
+          name: "Kyros Ventures",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/kyrosventures_full_white_5cc115f45a.png",
+        },
+      ],
+      tags: ["Strategy", "Metaverse", "Role-playing"],
+      description:
+        "Thetan Arena has a 2D design with a top-down view for players. The game features an environment and characters that are minimalistic in design and have a retro touch.",
+      game_logo: "https://d1j2c9jkfhu70p.cloudfront.net/token_a7ddce9f58.png",
+    },
+  },
+  {
+    id: "league-of-kingdoms",
+    banner:
+      "https://d1j2c9jkfhu70p.cloudfront.net/Gamefi_Image_3_dc330533ea.png",
+    images: [
+      "https://d1j2c9jkfhu70p.cloudfront.net/7_d7503f35ca.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/6_a4978eaf7f.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/5_64b758e3d0.png",
+    ],
+    top: 8,
+    networks: ["eth", "polygon"],
+    players_count: 2312,
+    star_rating: 4,
+    game_info: {
+      name: "League of Kingdoms",
+      studio: "NOD Games",
+      social_level: 73.04265594482422,
+      bizzon_rating: null,
+      release_date: "2022-05-19T09:09:57.063Z",
+      devices: [],
+      backed_by: [
+        {
+          name: "Andreessen Horowitz (a16z)",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/a16z_full_color_0f13517f54.png",
+        },
+        {
+          name: "Binance",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/binance_full_color_a89b254154.png",
+        },
+        {
+          name: "Binance Labs",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/binancelabs_full_color_5d38a73f49.png",
+        },
+        {
+          name: "Sequoia Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/sequoiacapital_full_color_fc7d80bb48.png",
+        },
+        {
+          name: "YGG",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/ygg_full_color_aaa9492794.png",
+        },
+        {
+          name: "Hashed Fund",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/hashed_white_logo_fococlipping_standard_b03480102e.png",
+        },
+        {
+          name: "Skynet Trading",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/skynettrading_full_white_f5345b9c8e.png",
+        },
+        {
+          name: "BlockTower Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/blocktowercapital_full_white_25c00f8702.png",
+        },
+        {
+          name: "Salad Ventures",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/saladventures_isotype_color_6e0ca43db5.png",
+        },
+      ],
+      tags: ["Strategy", "Metaverse", "Role-playing"],
+      description:
+        "League of kingdoms is a massive multiplayer strategy game that is centered around building kingdoms and governing the world.",
+      game_logo:
+        "https://d1j2c9jkfhu70p.cloudfront.net/lok_token_168bf84f6b.png",
+    },
+  },
+  {
+    id: "sidus-heroes",
+    banner:
+      "https://d1j2c9jkfhu70p.cloudfront.net/01294a9b-b291-4e27-938f-1165e354077d.png",
+    images: [
+      "https://d1j2c9jkfhu70p.cloudfront.net/b56569a2-b6b2-4523-81df-8ddbbc285e2a.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/75a9d8a9-fbc5-4485-9f12-bf1d9864e210.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/e9dc3ac2-6e48-4ce4-b8c3-b406d943c567.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/e6b45385-1e25-4a5a-9209-00239fe4f1e9.jpg",
+    ],
+    top: 11,
+    networks: ["eth"],
+    players_count: 2312,
+    star_rating: 4,
+    game_info: {
+      name: "Sidus Heroes",
+      studio: "SIDUS GAMES",
+      social_level: 89.80460357666016,
+      bizzon_rating: null,
+      release_date: "2022-05-19T08:03:15.545Z",
+      devices: [],
+      backed_by: [
+        {
+          name: "Asteroid Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/asteroidcapital_full_color_2c4946f61b.png",
+        },
+        {
+          name: "Master Ventures",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/masterventures_full_color_883bad99e8.png",
+        },
+        {
+          name: "Sfermion",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/sfermion_full_color_f25fd716b8.png",
+        },
+        {
+          name: "HashKey Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/hashkey_cap_logo_fococlipping_standard_a8979029ef.png",
+        },
+        {
+          name: "Magnus Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/magnuscapital_full_white_b6e3f78751.png",
+        },
+        {
+          name: "Alameda Research",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/alamedaresearch_full_white_869a2b424a.png",
+        },
+        {
+          name: "Bloktopia",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/Bloktopia_bd912af9b0.png",
+        },
+        {
+          name: "Merit Circle",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/69466ac5-1053-404a-a722-c00c280ce809.png",
+        },
+      ],
+      tags: ["MMO", "Metaverse", "Role-playing", "NFT", "Adventure"],
+      description:
+        "Sidus Heroes is an NFT collection and a play-to-earn MMORPG space-themed game that runs on the Ethereum blockchain and lets players colonize planets and explore the far reaches of its massive metaverse. ",
+      game_logo:
+        "https://d1j2c9jkfhu70p.cloudfront.net/073121c1-a1fe-41b9-9e45-2ef94223a7d1.png",
+    },
+  },
+  {
+    id: "monsterra",
+    banner:
+      "https://d1j2c9jkfhu70p.cloudfront.net/79_monsterra_vertical_2a51dbd270.png",
+    images: [
+      "https://d1j2c9jkfhu70p.cloudfront.net/49c8ba85-bbec-497d-b1e0-ac2c6939d795.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/031fe842-6611-4b7e-86d6-383176fdcc49.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/012826ff-603a-42b2-83f9-c0de188a083c.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/e445c11b-3e37-44a8-926d-cfe2ad2b6317.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/9ccb1716-01cb-48db-a2af-8a82bbf10d88.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/11dd5926-70f0-4615-bdef-2394d0ef4680.png",
+    ],
+    top: 15,
+    networks: ["avax", "bsc"],
+    players_count: 2312,
+    star_rating: 4,
+    game_info: {
+      name: "Monsterra",
+      studio: "CrescentShine Studio",
+      social_level: 71.32215118408203,
+      bizzon_rating: null,
+      release_date: "2022-05-19T08:38:34.482Z",
+      devices: [],
+      backed_by: [
+        {
+          name: "Red Kite",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/redkite_full_color_678a84bb1a.png",
+        },
+        {
+          name: "Hashed Fund",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/hashed_white_logo_fococlipping_standard_b03480102e.png",
+        },
+        {
+          name: "Icetea Labs",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/icetealabs_full_white_9ccf0c6e07.png",
+        },
+        {
+          name: "Kyros Ventures",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/kyrosventures_full_white_5cc115f45a.png",
+        },
+        {
+          name: "Huobi Ventures",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/huobiventures_full_white_56c20b1be8.png",
+        },
+        {
+          name: "Shima Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/shimacapital_full_white_9643332080.png",
+        },
+        {
+          name: "Salad Ventures",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/saladventures_isotype_color_6e0ca43db5.png",
+        },
+        {
+          name: "GameFi.org",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/gamefi_org_full_color_ed225a9122.png",
+        },
+      ],
+      tags: ["Turn-based", "Idle", "Adventure"],
+      description:
+        "Monsterra is the #1 Multi-chain P2E on #BNB, #Avalanche & #OKX with Free to Play & Earn Model. \n\nPowered by CrescentShine Studio this game is one of the Top GameFi projects on BNB Chain(By DappRadar) & Avalanche & OKC with 350K ++ Gamers till now. The game sets foot in a fictional world and revolves around farming, property building, and battling with other lands with the magical creatures named Mongen. The revolutionized design of Monsterra is a combination of free-to-play and free-to-earn models which allows millions of gaming enthusiasts to enjoy fun and have a high-profit stream with no prior investment.  ",
+      game_logo:
+        "https://d1j2c9jkfhu70p.cloudfront.net/Monsterra_token_187e7dc2ec.png",
+    },
+  },
+  {
+    id: "xana",
+    banner:
+      "https://d1j2c9jkfhu70p.cloudfront.net/xana_Vertical_2f5393f94c.png",
+    images: [
+      "https://d1j2c9jkfhu70p.cloudfront.net/xana_Gallery4_26131cf671.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/xana_Gallery3_5af210f23a.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/xana_Gallery_1_66bf4085fb.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/xana_Gallery_2_434a0843ec.png",
+    ],
+    top: 20,
+    networks: ["avax", "eth"],
+    players_count: 2312,
+    star_rating: 4,
+    game_info: {
+      name: "XANA",
+      studio: "NOBORDERZ",
+      social_level: 96.7859115600586,
+      bizzon_rating: null,
+      release_date: "2022-06-17T07:53:21.36Z",
+      devices: [],
+      backed_by: [
+        {
+          name: "DAO Maker",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/daomaker_white_d02232f9b3.png",
+        },
+        {
+          name: "Raptor Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/raptorcapital_full_white_fae0e63a14.png",
+        },
+      ],
+      tags: ["Simulation", "Metaverse", "Digital collectible"],
+      description:
+        "XANA is an EVM sidechain custom-built for the Metaverse. Compatible with all popular wallets, bridged with all major blockchains, and already adopted by the major institutions and global brands.",
+      game_logo:
+        "https://d1j2c9jkfhu70p.cloudfront.net/xana_token_e2550727b5.png",
+    },
+  },
+  {
+    id: "illuvium",
+    banner: "https://d1j2c9jkfhu70p.cloudfront.net/illuvium_ver_d986ee7d20.png",
+    images: [
+      "https://d1j2c9jkfhu70p.cloudfront.net/illuvium_5_2a9fa0ef47.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/illuvium_4_628b6183ef.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/illuvium_f11a7540f0.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/illuvium_2_172bc6f24d.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/illuvium_3_22a280995b.png",
+    ],
+    top: 19,
+    networks: ["eth"],
+    players_count: 2312,
+    star_rating: 4,
+    game_info: {
+      name: "Illuvium",
+      studio: "Illuvium Team",
+      social_level: 99,
+      bizzon_rating: null,
+      release_date: "2022-10-12T05:01:24.288Z",
+      devices: [],
+      backed_by: [
+        {
+          name: "Delphi Digital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/delphidigital_full_color_5935def680.png",
+        },
+        {
+          name: "IOSG",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/iosgventures_full_color_084cc32eef.png",
+        },
+        {
+          name: "Lotus Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/lotuscapital_full_color_d4c2a9be01.png",
+        },
+        {
+          name: "Moonwhale Ventures",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/moonwhaleventures_full_color_7706516efd.png",
+        },
+        {
+          name: "Quantstamp",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/quantstamp_full_color_973c049070.png",
+        },
+        {
+          name: "YGG",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/ygg_full_color_aaa9492794.png",
+        },
+        {
+          name: "LD capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/ldcapital_full_white_74232d5be5.png",
+        },
+        {
+          name: "Bitscale Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/bitscalecapital_full_white_15d3fb563f.png",
+        },
+      ],
+      tags: ["Card", "Strategy", "Turn-based", "Adventure"],
+      description:
+        "Illuvium is an upcoming open-world RPG that bears some similarities to Pokemon, in that players traverse a digital world filled with rare and unusual monsters (known as Illuvials) that can be captured, collected, trained, and battled. ",
+      game_logo:
+        "https://d1j2c9jkfhu70p.cloudfront.net/illuvium_project_a427487add.png",
+    },
+  },
+  {
+    id: "planetix",
+    banner: "https://d1j2c9jkfhu70p.cloudfront.net/Group_32_6e130d2df2.png",
+    images: [
+      "https://d1j2c9jkfhu70p.cloudfront.net/Rectangle_141538_31e432912e.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/Rectangle_141534_c3ab1e9c3f.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/Rectangle_141549_56eca05865.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/Rectangle_141535_d6d85d9bb2.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/Rectangle_141547_6d4cf6f2b2.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/Rectangle_141536_8b3e0fdabb.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/Rectangle_141526_ba1d8d88e1.png",
+    ],
+    top: 32,
+    networks: ["eth", "polygon"],
+    players_count: 2312,
+    star_rating: 4,
+    game_info: {
+      name: "Planet IX",
+      studio: "Nibiru Software",
+      social_level: 83.5195083618164,
+      bizzon_rating: null,
+      release_date: "2022-11-09T04:48:53.861Z",
+      devices: [],
+      backed_by: [],
+      tags: ["Metaverse", "Platform", "NFT"],
+      description:
+        "In Planet IX, you can connect your Land to earn IXT. You\u2019ll\nalso be able to farm your way to the IXT without investing anything other than your time. Connect your land and help rejuvenate the broken lands and Build the Planet of Tomorrow.",
+      game_logo:
+        "https://d1j2c9jkfhu70p.cloudfront.net/Rectangle_141546_fb854e3a37.png",
+    },
+  },
+  {
+    id: "aspo-world",
+    banner:
+      "https://d1j2c9jkfhu70p.cloudfront.net/47_aspoworld_vertical_982ce04094.png",
+    images: [
+      "https://d1j2c9jkfhu70p.cloudfront.net/screen_shots_1_1cf795fb2a.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/screen_shots_3_f559a1fd49.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/screen_shots_5_c99cc314d5.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/screen_shots_2_ab120ad0cd.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/screen_shots_4_d450de73c3.jpg",
+    ],
+    top: 35,
+    networks: ["bsc"],
+    players_count: 2312,
+    star_rating: 5,
+    game_info: {
+      name: "ASPO World",
+      studio: "ASPO team",
+      social_level: 69.59256744384766,
+      bizzon_rating: null,
+      release_date: "2022-05-19T07:33:13.863Z",
+      devices: [],
+      backed_by: [
+        {
+          name: "Hashed Fund",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/hashed_white_logo_fococlipping_standard_b03480102e.png",
+        },
+        {
+          name: "DAO Maker",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/daomaker_white_d02232f9b3.png",
+        },
+        {
+          name: "Icetea Labs",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/icetealabs_full_white_9ccf0c6e07.png",
+        },
+      ],
+      tags: ["Card", "Digital collectible", "Turn-based"],
+      description:
+        "ASPO is expected as a game universe backed by a strong and talented Vietnamese team with the hope of turning P2E games into the future of digital assets",
+      game_logo: "https://d1j2c9jkfhu70p.cloudfront.net/token_4d09cb1cc5.png",
+    },
+  },
+  {
+    id: "gunstar-metaverse",
+    banner:
+      "https://d1j2c9jkfhu70p.cloudfront.net/gunstar_Vertical_120899e236.png",
+    images: [
+      "https://d1j2c9jkfhu70p.cloudfront.net/gunstar_Gallery_1_4a6a29f156.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/gunstar_Gallery_6f943b982b.png",
+    ],
+    top: 27,
+    networks: ["bsc"],
+    players_count: 2312,
+    star_rating: 4,
+    game_info: {
+      name: "Gunstar Metaverse",
+      studio: "Gunstar Labs",
+      social_level: 75.06513977050781,
+      bizzon_rating: null,
+      release_date: "2022-05-19T07:52:50.693Z",
+      devices: [],
+      backed_by: [
+        {
+          name: "Black Ventures",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/blackventures_full_color_4350bd43a3.png",
+        },
+        {
+          name: "Spark Digital Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/sparkdigitalcapital_full_color_505c5d1557.png",
+        },
+        {
+          name: "Wings Ventures",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/wingsventures_full_color_618daef288.png",
+        },
+        {
+          name: "Hashed Fund",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/hashed_white_logo_fococlipping_standard_b03480102e.png",
+        },
+        {
+          name: "DAO Maker",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/daomaker_white_d02232f9b3.png",
+        },
+        {
+          name: "GuildFi",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/guildfi_full_white_21d61a57c3.png",
+        },
+        {
+          name: "Icetea Labs",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/icetealabs_full_white_9ccf0c6e07.png",
+        },
+        {
+          name: "Magnus Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/magnuscapital_full_white_b6e3f78751.png",
+        },
+        {
+          name: "Raptor Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/raptorcapital_full_white_fae0e63a14.png",
+        },
+      ],
+      tags: ["Turn-based", "Role-playing", "Idle"],
+      description:
+        "Gunstar Metaverse (Gunstar) is a massively multiplayer online role-playing (RPG) and turn-based strategy NFT Game that gives you the real value of enjoyment and excitement in gaming and the real value provided through the blockchain platform",
+      game_logo:
+        "https://d1j2c9jkfhu70p.cloudfront.net/Gunstart_tokenicon_9500675829.png",
+    },
+  },
+  {
+    id: "eldarune",
+    banner:
+      "https://d1j2c9jkfhu70p.cloudfront.net/8151f2b3-ef2e-41e4-8ccb-445c9c18a443.png",
+    images: [
+      "https://d1j2c9jkfhu70p.cloudfront.net/8bb9a8dc-b5cc-4560-a24f-39b63630c81b.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/32e9dd84-0e31-43d1-a360-c8708e710a0c.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/9e1a91b0-707f-451d-8aee-51b933e485ac.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/42ced102-2921-4d67-9d35-a01d62a41663.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/0c098d90-e631-4cd9-91d2-2a86f0100acb.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/d4150c91-f973-4ca3-8f32-6f9a5d0d8147.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/6f34c22f-93b1-43ef-921a-9cd0c4430c90.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/eb8167b5-0416-467a-8caa-626786312a5a.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/18d72072-a4b8-479e-acc6-5f19cf8d7cb5.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/434ffe44-c49b-4c11-a2dd-8e302c169ace.jpg",
+    ],
+    top: 233,
+    networks: ["bsc"],
+    players_count: 2312,
+    star_rating: 4,
+    game_info: {
+      name: "Eldarune",
+      studio: "Eldarune",
+      social_level: 96.99974822998047,
+      bizzon_rating: null,
+      release_date: "2023-03-13T05:00:00Z",
+      devices: [],
+      backed_by: [],
+      tags: [
+        "Strategy",
+        "Action",
+        "Digital collectible",
+        "Role-playing",
+        "NFT",
+      ],
+      description:
+        " Eldarune is a medieval themed, Action Role Playing Game with 4K graphics, clan and season system.\nAlso there are four different game modes in Eldarune. \n While playing campaign mode players will travel to 21 islands, fight in hundreds of dungeons, and defeat the strongest monsters in the Elymnias world with your clan.\nThere are also PvP Battles to test your capability against your opponents both alone and with your clan. Players can use weapons, dragons, and battleships to defeat their opponents..\n",
+      game_logo:
+        "https://d1j2c9jkfhu70p.cloudfront.net/ebd67b1f-46aa-4f1c-8486-f84fbb5fcfdf.jpg",
+    },
+  },
+  {
+    id: "binaryx",
+    banner:
+      "https://d1j2c9jkfhu70p.cloudfront.net/Rectangle_141476_e5af239aac.png",
+    images: [
+      "https://d1j2c9jkfhu70p.cloudfront.net/Rectangle_141484_28193ab9b0.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/Rectangle_141481_fd3f5f0c07.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/Rectangle_141482_be45c49204.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/Rectangle_141483_d17d1f1c24.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/Rectangle_141479_419fea2407.png",
+      "https://d1j2c9jkfhu70p.cloudfront.net/Rectangle_141486_994003c996.png",
+    ],
+    top: 7,
+    networks: ["bsc"],
+    players_count: 2312,
+    star_rating: 4,
+    game_info: {
+      name: "BinaryX",
+      studio: "BinaryX",
+      social_level: 94.5059585571289,
+      bizzon_rating: null,
+      release_date: "2022-12-19T04:39:18.931Z",
+      devices: [],
+      backed_by: [
+        {
+          name: "Binance Labs",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/binancelabs_full_color_5d38a73f49.png",
+        },
+      ],
+      tags: ["MMO", "Strategy", "Turn-based"],
+      description:
+        "Enjoy the unique multi-token economic system, explore the adventurous dungeon, and earn daily work income. All characters and items are NFTs. Click the button, recruit your hero and start your epic journey in the metaverse now!",
+      game_logo:
+        "https://d1j2c9jkfhu70p.cloudfront.net/Rectangle_141478_ad6c775d7a.png",
+    },
+  },
+  {
+    id: "blockchain-monster-hunt",
+    banner:
+      "https://d1j2c9jkfhu70p.cloudfront.net/BCMH_Gamebanner396x544_43934965c9.jpg",
+    images: [
+      "https://d1j2c9jkfhu70p.cloudfront.net/pre_battle_d336fcb8e6.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/Molten_Rock_map_18978ad999.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/PVP_cfaab8b948.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/Heartwood_map_004fc9fcb8.jpg",
+      "https://d1j2c9jkfhu70p.cloudfront.net/Battle_7b60e54680.jpg",
+    ],
+    top: 30,
+    networks: ["bsc", "eth", "moonbeam", "polygon"],
+    players_count: 2312,
+    star_rating: 5,
+    game_info: {
+      name: "Blockchain Monster Hunt",
+      studio: "Ambros Technology",
+      social_level: 75,
+      bizzon_rating: null,
+      release_date: "2022-07-08T08:36:29.464Z",
+      devices: [],
+      backed_by: [
+        {
+          name: "Animoca Brands KK",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/animocabrands_full_color_a9c5c4f1a6.png",
+        },
+        {
+          name: "DWeb3",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/dweb3_full_color_c73b8f1218.png",
+        },
+        {
+          name: "Everse Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/eversecapital_full_color_d8d32b574d.png",
+        },
+        {
+          name: "Morningstar Ventures",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/morningstarventures_full_color_a8845b9a2d.png",
+        },
+        {
+          name: "SkyVision Capital",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/skyvisioncapital_full_color_cd76533772.png",
+        },
+        {
+          name: "Polkastarter",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/polkastarter_full_white_019d5d6aab.png",
+        },
+        {
+          name: "Polygon",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/polygon_full_white_6a87c2281e.png",
+        },
+        {
+          name: "Double Peak",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/double_peak_logo_ff7a5a9eba.png",
+        },
+        {
+          name: "GD10 Venture",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/gd10_venture_logo_30cd42ec60.png",
+        },
+        {
+          name: "Delta Blockchain Fund",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/delta_blockchain_fund_logo_598f0be0bc.webp",
+        },
+        {
+          name: "PNetwork",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/pnetwork_logo_88cf8f2e70.png",
+        },
+        {
+          name: "HyperEdge",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/hyperedge_logo_5cc6e79434.png",
+        },
+        {
+          name: "ChainBoost",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/chainboost_logo_17037ec878.png",
+        },
+        {
+          name: "Hyperion Alpha",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/hyperion_alpha_logo_6b0eb7d184.svg",
+        },
+        {
+          name: "MoonEdge",
+          logo: "https://d1j2c9jkfhu70p.cloudfront.net/moonedge_logo_136756502e.png",
+        },
+      ],
+      tags: ["Metaverse", "Digital collectible", "NFT"],
+      description:
+        "Blockchain Monster Hunt is the world\u2019s first multi-chain metaverse game that connects people from different blockchain communities. Inspired by Pok\u00e9mon GO, Blockchain Monster Hunt allows users to play and earn in an abundantly diverse world of monsters.",
+      game_logo:
+        "https://d1j2c9jkfhu70p.cloudfront.net/BCMH_logo_1_8_8b05c5e4d6.png",
+    },
+  },
 ];
 
-export let ranking = items.map(game => {
+export let ranking = items.map((game) => {
   return {
     id: game.id,
-    image: game.game_logo,
+    image: game.banner,
     name: game.game_info.name,
     retention: "12%",
     retentionChange: "-2.4%",
@@ -106,6 +848,6 @@ export let ranking = items.map(game => {
     churn: "12%",
     churnChange: "2.4%",
     token_volume: "$7,923,903.75",
-    market_cap: "$88,049,070.79"
-  }
-})
+    market_cap: "$88,049,070.79",
+  };
+});

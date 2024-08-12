@@ -16,15 +16,6 @@ import GamesInfo from "~/components/games-info.astro";
 const { generator, site } = Astro;
 import { ViewTransitions } from "astro:transitions";
 const image = new URL("optimized/social.webp", site);
-type Post = {
-  id: string;
-  updated: string;
-  pic: string;
-  content: string;
-  excerpt: string;
-  title: string;
-  recommended_posts: Post[];
-};
 
 const description =
   "AI based communication voice avatars, which can be used as different professional assistants – psychologist, fitness coach, nutrition counselor, Wide range of topics communicating Companion";
@@ -120,14 +111,14 @@ const { data } = Astro.props;
           <!-- slider -->
           <GamesSlider data={data} />
           <!-- info -->
-          <GamesInfo data={data.game_info}/>
+          <GamesInfo data={{...data.game_info, star_rating: data.star_rating}}/>
           <div class="max-w-[778px] ml-auto mt-8">
-            <GameTabs client:load game_id={data.id} />
+            <GameTabs game={data} client:load game_id={data.id} />
           </div>
         </div>
         <!-- side card -->
         <div class="sticky z-50 shrink-0 top-[105px] w-[300px]">
-          <img src={data.game_logo} alt="" />
+          <img src={data.banner} alt="" />
           <div class="space-y-[10px] mt-6">
             <button
               class="w-full text-black justify-center font-medium bg-white hover:bg-[#1CC141] flex items-center space-x-2 hover:text-white py-2 active:scale-95 active:bg-[#17B23A] transition-all px-[36px] rounded-[12px]"

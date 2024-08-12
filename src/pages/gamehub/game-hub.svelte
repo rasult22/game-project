@@ -13,7 +13,7 @@
   $: game_table_data = items.map(game => {
     return {
       id: game.id,
-      image: game.game_logo,
+      image: game.banner,
       name: game.game_info.name,
       retention: "12%",
       retentionChange: "-2.4%",
@@ -110,7 +110,7 @@
       </div> 
       <div class="mt-[50px] p-4 gap-3 grid grid-cols-4 bg-[#1C1C1E] rounded-[16px]">
         {#each items as card, index }
-          <GameCardBasic link={'/game-project/gamehub/' + card.id} img={card.game_logo} name={card.game_info.name} networks={card.networks} players={card.players_count} rank={index + 1} tags={card.game_info.tags} />
+          <GameCardBasic link={'/game-project/gamehub/' + card.id} img={card.banner} name={card.game_info.name} networks={card.networks} players={card.players_count} rank={index + 1} tags={card.game_info.tags} />
         {/each}
       </div>
     </div>
