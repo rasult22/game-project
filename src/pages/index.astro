@@ -8,6 +8,7 @@ import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
 import JoinRequestModal from '~/components/join-request-modal.svelte'
 import AuthModal from '~/components/auth/auth-modal.svelte'
+import Roadmap from './roadmap.svelte'
 const { generator, site } = Astro;
 const image = new URL("optimized/social.webp", site);
 
@@ -64,7 +65,7 @@ const description = "AI based communication voice avatars, which can be used as 
       </div>
     </section>
     <!-- opportunity -->
-    <section>
+   <section>
       <div class="relative mt-[130px] max-w-[1520px] mx-auto z-10">
         <div class="uppercase font-Oxanium text-[40px] font-medium">Opportunity</div>
         <div class="flex gap-4 pt-[16px]">
@@ -106,7 +107,7 @@ const description = "AI based communication voice avatars, which can be used as 
             <span class="app-text-gradient-bg">To promote blockchain technologies and empower users to select games tailored to their preferences.</span>
              Our platform features the most engaging games with innovative and equitable reward systems
              <div class="text-[16px] leading-[120%] mt-9">
-              To make BIZZON not just one of the most attractive and popular platforms for a narrow crypto audience, but also to attract a broad mass of users unfamiliar with the cryptocurrency world in order to introduce them the most fast growing industry of our time. To teach them how  to understand and use blockchain solutions based on the most widespread and at the same time the simplest application - <span class="app-text-gradient-bg">gamification</span>
+              To make BIZZON not just one of the most attractive and popular platforms for a narrow crypto audience, but also to attract a broad mass of users unfamiliar with the cryptocurrency world in order to introduce them the most fast growing industry of our time. To teach them how to understand and use blockchain solutions based on the most widespread and at the same time the simplest application - <span class="app-text-gradient-bg">gamification</span>
              </div>
           </div>
           <img width="729" class="max-w-[729px]" src="/game-project/optimized/mission-image.webp" alt="">
@@ -114,7 +115,7 @@ const description = "AI based communication voice avatars, which can be used as 
       </div>
     </section>
       <!-- game world -->
-    <section class="mt-[150px]">
+    <section class="mt-[150px] overflow-hidden">
       <div class="text-[48px] font-medium font-Oxanium uppercase text-center">
         Game World
       </div>
@@ -145,6 +146,13 @@ const description = "AI based communication voice avatars, which can be used as 
         <img src="/game-project/optimized/game-landing-8.webp" alt="">
       </div>
     </section>
+    <!-- roadmap -->
+     <section class="mt-[118px]">
+      <div class="max-w-[1520px] mx-auto uppercase text-[48px] font-Oxanium font-medium">
+        Our RoadMap
+      </div>
+      <Roadmap client:load/>
+     </section>
     <Footer />
   </body>
 </html>
