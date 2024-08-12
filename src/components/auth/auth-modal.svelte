@@ -8,7 +8,9 @@
   import { auth } from "~/store/auth";
   import { onMount } from 'svelte';
   export let open = false
+  export let isLanding = false
   onMount(() => {
+    if (isLanding) return
     if (!$auth.isAuthorized) {
       init() // init ton
     }
@@ -29,7 +31,9 @@
 </script>
 <div id="ton-connect" class="hidden"></div>
 {#if $auth.isAuthorized}
-  <ProfileBtn name={$auth.user && $auth.user.name} address={$auth.user && $auth.user.address} />
+  {#if !isLanding}
+    <ProfileBtn name={$auth.user && $auth.user.name} address={$auth.user && $auth.user.address} />
+  {/if}
 {:else}
   <button on:click={() => open = true} class="font-medium bg-[#fff] text-black border py-[10px] active:border-[#fff] active:scale-95 active:bg-[#D9D9D9] transition-all px-[36px] rounded-[12px]">Log in</button>
 {/if}

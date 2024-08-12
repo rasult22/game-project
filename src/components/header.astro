@@ -17,86 +17,89 @@ const navItems: Array<NavItem> = [
   { title: "Whitepaper", url: githubPrefix + "#" },
 ];
 let currentUrl = Astro.url.pathname
+const transparent = Astro.props.transparent
 ---
 
 <header
   id="page-header"
-  class="absolute max-w-[1520px] left-[50%] bg-[#0D0D0F] translate-x-[-50%] mx-auto font-Inter flex items-center min-h-[100px] text-[20px] w-full justify-between  top-0 z-[100]  header-bg px-8 py-4 text-white"
+  class={`absolute left-[50%] ${transparent ? 'header-gradient' : 'bg-[#0D0D0F]' }  translate-x-[-50%] font-Inter  min-h-[100px] text-[20px] w-full top-0 z-[100] header-bg px-8 py-4 text-white`}
 >
-  <a class="flex items-center gap-3 hover:!text-default" href="#">
-    <img width="102" height="72" class="max-w-[102px]" src="/game-project/media/logo.svg" alt="logo">
-  </a>
-  <div>
-    <div class="flex items-center justify-between gap-6">
-      <nav class="sm:hidden block">
-        <ul class="flex items-center gap-6">
-          {
-            navItems.map(({ title, url }) => (
-              <li>
-                <a class={`text-[16px] transition-all hover:opacity-80 pb-1 ${currentUrl.includes(url) ? 'border-b-2 border-[#F97C0E]' : ''}`} href={url}>
-                  {title}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </nav>
-      <button
-        id="open-nav-button"
-        type="button"
-        class="btn hidden sm:block"
-        aria-label="Navigation"
-      >
-        <Icon name="mdi:menu" class="size-8" />
-      </button>
-    </div>
-
-    <div id="menu-modal" class="modal hidden" aria-hidden="true">
-      <div class="fixed w-full h-full left-0 top-0 bg-[rgba(0,0,0,0.4)]"></div>
-      <div id="drawer" class="fixed w-[80%] translate-x-[80%] right-0 top-0 h-[100vh] bg-default px-8 py-4 text-default menu-gradient">
-        <div class="space-y-4" role="dialog" aria-modal="true">
-          <header class="text-right">
-            <button
-              id="close-nav-button"
-              type="button"
-              class="btn"
-              aria-label="Close navigation"
-            >
-              <Icon name="mdi:close" class="size-8" />
-            </button>
-          </header>
-          <div class="flex justify-center py-[20px]">
-            <img width="206" height="45" class="max-w-[201px]" src="/game-project/media/optimized/logo.webp" alt="logo">
-          </div>
-          </div>
-          <nav>
-            <ul class="flex flex-col">
-              {
-                navItems.map(({ title, url }) => (
-                  <li>
-                    <a class="block py-4 text-center" href={url}>
-                      {title}
-                    </a>
-                  </li>
-                ))
-              }
-            </ul>
-          </nav>
-          <div class="mt-[20px] flex flex-col items-center">
-            <div class="py-1"></div>
+  <div class="flex items-center justify-between max-w-[1520px] mx-auto">
+    <a class="flex items-center gap-3 hover:!text-default" href="/game-project">
+      <img width="102" height="72" class="max-w-[102px]" src="/game-project/media/logo.svg" alt="logo">
+    </a>
+    <div>
+      <div class="flex items-center justify-between gap-6">
+        <nav class="sm:hidden block">
+          <ul class="flex items-center gap-6">
+            {
+              navItems.map(({ title, url }) => (
+                <li>
+                  <a class={`text-[16px] transition-all hover:opacity-80 pb-1 ${currentUrl.includes(url) ? 'border-b-2 border-[#F97C0E]' : ''}`} href={url}>
+                    {title}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+        <button
+          id="open-nav-button"
+          type="button"
+          class="btn hidden sm:block"
+          aria-label="Navigation"
+        >
+          <Icon name="mdi:menu" class="size-8" />
+        </button>
+      </div>
+  
+      <div id="menu-modal" class="modal hidden" aria-hidden="true">
+        <div class="fixed w-full h-full left-0 top-0 bg-[rgba(0,0,0,0.4)]"></div>
+        <div id="drawer" class="fixed w-[80%] translate-x-[80%] right-0 top-0 h-[100vh] bg-default px-8 py-4 text-default menu-gradient">
+          <div class="space-y-4" role="dialog" aria-modal="true">
+            <header class="text-right">
+              <button
+                id="close-nav-button"
+                type="button"
+                class="btn"
+                aria-label="Close navigation"
+              >
+                <Icon name="mdi:close" class="size-8" />
+              </button>
+            </header>
+            <div class="flex justify-center py-[20px]">
+              <img width="206" height="45" class="max-w-[201px]" src="/game-project/media/optimized/logo.webp" alt="logo">
+            </div>
+            </div>
+            <nav>
+              <ul class="flex flex-col">
+                {
+                  navItems.map(({ title, url }) => (
+                    <li>
+                      <a class="block py-4 text-center" href={url}>
+                        {title}
+                      </a>
+                    </li>
+                  ))
+                }
+              </ul>
+            </nav>
+            <div class="mt-[20px] flex flex-col items-center">
+              <div class="py-1"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="sm:hidden flex space-x-4 items-center">
-    <a class="cursor-pointer active:scale-95 transition-all"><TelegramIcon/></a>
-    <a class="cursor-pointer active:scale-95 transition-all"><TwitterIcon /></a>
-    <div>
-      <RequestModal client:idle />
-    </div>
-    <div>
-      <AuthModal client:only />
+      <div class="sm:hidden flex space-x-4 items-center">
+        <a class="cursor-pointer active:scale-95 transition-all"><TelegramIcon/></a>
+        <a class="cursor-pointer active:scale-95 transition-all"><TwitterIcon /></a>
+        <div>
+          <RequestModal client:idle />
+        </div>
+        <div>
+          <AuthModal client:only />
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -105,50 +108,54 @@ let currentUrl = Astro.url.pathname
   import MicroModal from "micromodal";
 import { animate } from "motion";
   import invariant from "tiny-invariant";
+  document.addEventListener('astro:after-swap', setupHeader)
+  setupHeader()
+  function setupHeader() {
+    const menuModalId = "menu-modal";
+  
+    const header = document.querySelector("#page-header") as HTMLElement;
+    const page = document.documentElement;
+    const menu = document.querySelector(`#${menuModalId} ul`);
+    const openNavButton = document.querySelector("#open-nav-button");
+    const closeNavButton = document.querySelector("#close-nav-button");
+  
+    invariant(header, "header should not be null");
+    invariant(menu, "menu should not be null");
+    invariant(openNavButton, "openNavButton should not be null");
+    invariant(closeNavButton, "closeNavButton should not be null");
+  
+    const openMenu = () => {
+      MicroModal.show(menuModalId, { disableScroll: true });
+  
+      animate("#drawer", {
+        transform: ['translateX(0px)']
+      })
+    };
+  
+    const closeMenu = () => {
+      animate("#drawer", {
+        transform: ['translateX(100%)']
+      })
+      setTimeout(() => {
+        MicroModal.close(menuModalId);
+      }, 400)
+    };
+  
+    openNavButton.addEventListener("click", openMenu);
+    closeNavButton.addEventListener("click", closeMenu);
+  
+    document.addEventListener("scroll", () => {
+      const d = page.clientHeight - page.scrollTop - header.offsetHeight;
+      header.classList.toggle("fixed-header", d < 0);
+    });
+  
+    menu.addEventListener("click", (event) => {
+      if ((event.target as HTMLElement).tagName === "A") {
+        closeMenu();
+      }
+    });
+  }
 
-  const menuModalId = "menu-modal";
-
-  const header = document.querySelector("#page-header") as HTMLElement;
-  const page = document.documentElement;
-  const menu = document.querySelector(`#${menuModalId} ul`);
-  const openNavButton = document.querySelector("#open-nav-button");
-  const closeNavButton = document.querySelector("#close-nav-button");
-
-  invariant(header, "header should not be null");
-  invariant(menu, "menu should not be null");
-  invariant(openNavButton, "openNavButton should not be null");
-  invariant(closeNavButton, "closeNavButton should not be null");
-
-  const openMenu = () => {
-    MicroModal.show(menuModalId, { disableScroll: true });
-
-    animate("#drawer", {
-      transform: ['translateX(0px)']
-    })
-  };
-
-  const closeMenu = () => {
-    animate("#drawer", {
-      transform: ['translateX(100%)']
-    })
-    setTimeout(() => {
-      MicroModal.close(menuModalId);
-    }, 400)
-  };
-
-  openNavButton.addEventListener("click", openMenu);
-  closeNavButton.addEventListener("click", closeMenu);
-
-  document.addEventListener("scroll", () => {
-    const d = page.clientHeight - page.scrollTop - header.offsetHeight;
-    header.classList.toggle("fixed-header", d < 0);
-  });
-
-  menu.addEventListener("click", (event) => {
-    if ((event.target as HTMLElement).tagName === "A") {
-      closeMenu();
-    }
-  });
 </script>
 
 <noscript>
@@ -166,5 +173,8 @@ import { animate } from "motion";
   }
   .modal.is-open {
     @apply block;
+  }
+  .header-gradient {
+    background: linear-gradient(180deg, #010101 0%, rgba(1, 1, 1, 0.00) 100%);
   }
 </style>
