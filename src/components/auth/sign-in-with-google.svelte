@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import { gapi } from "gapi-script";
   import { auth } from "~/store/auth";
+  export let authPopupIsOpen
 
   onMount(() => {
     function start() {
@@ -14,14 +15,18 @@
         .then(() => {
           const authInstance = gapi.auth2.getAuthInstance();
           let user = authInstance.currentUser.get();
-          $auth = {
-            authType: 'google',
-            isAuthorized: true,
-            user: {
-              name: user.Ad,
-              address: user.cu,
-              image: user.hK
+          if (user) {
+            let profile = user.getBasicProfile()
+            $auth = {
+              authType: 'google',
+              isAuthorized: true,
+              user: {
+                name: profile.Ad,
+                address: profile.cu,
+                image: profile.hK
+              }
             }
+            authPopupIsOpen = false
           }
           console.log('authInstance', authInstance)
           console.log('user', user)
@@ -32,8 +37,20 @@
 
   function signIn() {
     gapi.auth2.getAuthInstance().signIn().then(user => {
+      let profile = user.getBasicProfile()
+
+      $auth = {
+        authType: 'google',
+        isAuthorized: true,
+        user: {
+          name: profile.Ad,
+          address: profile.cu,
+          image: profile.hK
+        }
+      }
       console.log(user, 'user')
-      console.log('User signed in:', user.getBasicProfile());
+      console.log('User signed in:', profile);
+      authPopupIsOpen = false
     });
   }
 </script>

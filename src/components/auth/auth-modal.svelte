@@ -67,7 +67,7 @@
             <div class="text-[#888888]">Or</div>
             <div class="border-t w-[30%] border-[#888888]"></div>
           </div>
-          <SignInWithGoogle />
+          <SignInWithGoogle bind:authPopupIsOpen={open} />
         </div>
       </div>
     </div>
