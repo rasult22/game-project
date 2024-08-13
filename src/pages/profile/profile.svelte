@@ -4,6 +4,7 @@
   import ProfileCard from '~/components/profile-page/profile-card.svelte';
   import {dragscroll} from '@svelte-put/dragscroll'
   import { auth } from '~/store/auth';
+  import { items } from '../gamehub/mock';
   $: {
     if(!$auth.isAuthorized) {
       const link = document.createElement('a')
@@ -22,13 +23,9 @@
 <div class="bg-[#1C1C1E] rounded-[20px] p-4 mt-4">
   <div class="text-[24px] font-medium">My Games</div>
   <div use:dragscroll class="flex min-h-[382px] gap-[10px] mt-4 overflow-x-auto pb-3" >
-    <GameCard />
-    <GameCard />
-    <GameCard />
-    <GameCard />
-    <GameCard />
-    <GameCard />
-    <GameCard />
+    {#each items as game}
+      <GameCard name={game.game_info.name} img={game.banner} networks={game.networks} tags={game.game_info.tags} />
+    {/each}
   </div>
 </div>
 

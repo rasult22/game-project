@@ -26,8 +26,16 @@
             <img width="20" height="20" src="/game-project/media/solana-icon.svg" alt="">
           {:else if network === 'ton'}
             <img width="20" height="20" src="/game-project/media/ton-icon.svg" alt="">
+          {:else if network === 'polygon'}
+            <img width="20" height="20" src="/game-project/media/polygon-icon.svg" alt="">
+          {:else if network === 'avax'}
+            <img width="20" height="20" src="/game-project/media/avax-icon.svg" alt="">
+          {:else if network === 'ronin'}
+            <img width="20" height="20" src="/game-project/media/ronin-icon.svg" alt="">
           {:else if network === 'eth'}
             <img width="20" height="20" src="/game-project/media/ethereum-icon.svg" alt="">
+          {:else if network === 'moonbeam'}
+            <img width="20" height="20" src="/game-project/media/moonbeam-icon.svg" alt="">
           {:else if network === 'bsc'}
             <img width="20" height="20" src="/game-project/media/bnb-icon.svg" alt="">
           {:else}
