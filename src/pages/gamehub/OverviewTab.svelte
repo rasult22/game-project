@@ -5,6 +5,7 @@
   import { moneyFormatter } from "~/utils/utils";
   export let backedBy;
   export let on_chain_performance;
+  export let team_profile;
 
   $: volume_rank = on_chain_performance.volume_rank || 'N/A'
   $: volume_24h_changed = on_chain_performance.volume_24h_changed || null
@@ -12,54 +13,7 @@
   $: current_roi = on_chain_performance.current_roi
   $: current_roi_7d_changed = on_chain_performance.current_roi_7d_changed
   $: circulating_supply = on_chain_performance.circulating_supply
-  
-  let teamMembers = [
-    {
-      avatar: "/game-project/media/avatar.png",
-      name: "Maxholding007",
-      position: "CEO",
-      links: [
-        {
-          type: "telegram",
-          link: "",
-        },
-        {
-          type: "instagram",
-          link: "",
-        },
-      ],
-    },
-    {
-      avatar: "/game-project/media/avatar.png",
-      name: "Maxholding007",
-      position: "Dev Team",
-      links: [
-        {
-          type: "telegram",
-          link: "",
-        },
-        {
-          type: "linkedin",
-          link: "",
-        },
-      ],
-    },
-    {
-      avatar: "/game-project/media/avatar.png",
-      name: "Maxholding007",
-      position: "CMO",
-      links: [
-        {
-          type: "linkedin",
-          link: "",
-        },
-        {
-          type: "facebook",
-          link: "",
-        },
-      ],
-    },
-  ];
+
 </script>
 
 <div transition:fade>
@@ -104,13 +58,13 @@
           <div class="text-[20px] font-semibold">Team profile</div>
           <div class="text-[#B0B0B2]">Highly experienced and skilled</div>
         </div>
-        <BizzonRating rating="SSS+" />
+        <BizzonRating rating={team_profile.rank} />
       </div>
       <!-- list -->
       <div class="mt-6 space-y-4">
-        {#each teamMembers as member}
+        {#each (team_profile.staffs || []) as member}
           <div class="flex items-center">
-            <img src={member.avatar} width="45" alt="" />
+            <img class="rounded-full" src={member.avatar ? 'https://d1j2c9jkfhu70p.cloudfront.net/' + member.avatar : '/game-project/media/avatar.png'} width="45" alt="" />
             <div class="ml-2">
               <div class="text-[14px] leading-[100%] font-medium">
                 {member.name}
@@ -120,7 +74,18 @@
               </div>
             </div>
             <div class="flex space-x-1 ml-auto">
-              {#each member.links as link}
+              <a
+              target="_blank"
+              class="active:scale-95 active:opacity-80 transition-all"
+              href={member.link}
+            >
+              <img
+                width="24"
+                src="/game-project/media/linkedin-icon.svg"
+                alt=""
+              />
+            </a>
+              <!-- {#each member.links as link}
                 {#if link.type === "telegram"}
                   <a
                     class="active:scale-95 active:opacity-80 transition-all"
@@ -144,16 +109,7 @@
                   >
                 {/if}
                 {#if link.type === "linkedin"}
-                  <a
-                    class="active:scale-95 active:opacity-80 transition-all"
-                    href={link.link}
-                  >
-                    <img
-                      width="24"
-                      src="/game-project/media/linkedin-icon.svg"
-                      alt=""
-                    />
-                  </a>
+                 
                 {/if}
                 {#if link.type === "facebook"}
                   <a
@@ -166,7 +122,7 @@
                     /></a
                   >
                 {/if}
-              {/each}
+              {/each} -->
             </div>
           </div>
         {/each}

@@ -46,7 +46,7 @@
 
 <div class="mt-9">
   {#if activeTab === 'overview'}
-    <OverviewTab on_chain_performance={game.on_chain_performance.data} backedBy={game.game_info.backed_by} />
+    <OverviewTab team_profile={game.team_profile} on_chain_performance={game.on_chain_performance.data} backedBy={game.game_info.backed_by} />
   {/if}
   {#if activeTab === 'about'}
     <AboutTab />
