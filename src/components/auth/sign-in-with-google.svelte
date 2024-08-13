@@ -22,7 +22,7 @@
 
   function signIn() {
     gapi.auth2.getAuthInstance().signIn().then(user => {
-      googleUser = user;
+      console.log(user, 'user')
       console.log('User signed in:', user.getBasicProfile());
     });
   }
