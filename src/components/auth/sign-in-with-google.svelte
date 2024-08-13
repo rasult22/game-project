@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import { gapi } from "gapi-script";
+  import { auth } from "~/store/auth";
 
   onMount(() => {
     function start() {
@@ -13,6 +14,15 @@
         .then(() => {
           const authInstance = gapi.auth2.getAuthInstance();
           let user = authInstance.currentUser.get();
+          $auth = {
+            authType: 'google',
+            isAuthorized: true,
+            user: {
+              name: user.Ad,
+              address: user.cu,
+              image: user.hK
+            }
+          }
           console.log('authInstance', authInstance)
           console.log('user', user)
         });

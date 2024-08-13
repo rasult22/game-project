@@ -27,6 +27,9 @@
     {#if $auth.authType === 'metamask'}
       <img src="/game-project/media/metamask-icon.png" width="24" alt="">
     {/if}
+    {#if $auth.authType === 'google'}
+      <img src="/game-project/media/google-icon.png" width="24" alt="">
+    {/if}
     {#if $auth.authType === 'trustwallet'}
       <img src="/game-project/media/trustwallet-icon.png" width="24" alt="">
     {/if}
