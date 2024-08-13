@@ -50,7 +50,12 @@ export const items =[
       "polygon"
     ],
     "players_count": null,
-    "star_rating": 4,
+    "star_rating": {
+      "collection_id": "08c1027f-4984-487a-a968-3c710ef2bd00",
+      "collection_type": "games",
+      "ratings": 18,
+      "star_rating": 4
+    },
     "on_chain_performance": {
       "data": {
         "game_id": "08c1027f-4984-487a-a968-3c710ef2bd00",
@@ -199,6 +204,46 @@ export const items =[
         "circulating_supply": 76.14106420744407
       }
     },
+    "team_profile": {
+      "staffs": [
+        {
+          "link": "https://www.linkedin.com/in/arthurmadrid",
+          "name": "Arthur Madrid",
+          "avatar": "2502c3d6-0c9e-4a58-a562-986536e68f52.jpg",
+          "position": "CEO/Co-founder",
+          "description": "Co-founder and CEO at Pixowl, Board Member at Animoca Brands."
+        },
+        {
+          "link": "https://www.linkedin.com/in/borgetsebastien/",
+          "name": "Sebastien Borget",
+          "avatar": "6afb0f5b-7ff6-4de8-a9d1-c4c4b19830e8.jpg",
+          "position": "COO/Co-founder",
+          "description": "Co-founder and COO at Pixowl, former COO at Wixi Inc and 1-Click Media Networks, President of the Blockchain Game Alliance."
+        },
+        {
+          "link": "https://www.linkedin.com/in/lshrewsbury/",
+          "name": "Lucas Shrewsberry",
+          "avatar": "e46c84da-27e9-4617-8b06-0dd95eff8519.jpg",
+          "position": "CTO",
+          "description": "CTO at Pixowl, former Technical Lead at Gameloft.\n"
+        },
+        {
+          "link": "https://www.linkedin.com/in/marcelosanturio/",
+          "name": "Marcelo Santurio",
+          "avatar": "",
+          "position": "CFO",
+          "description": "Former Lead of BD at Partypoker LIVE, Co-founder and CEO at Segulink.com, Managing Director at Convergia.\n"
+        },
+        {
+          "link": "https://www.linkedin.com/in/alejandro-andes-01183827/",
+          "name": "Alejandro Andes",
+          "avatar": "",
+          "position": "Engine Team Lead",
+          "description": ""
+        }
+      ],
+      "rank": "S"
+    },
     "game_info": {
       "name": "The Sandbox",
       "studio": "The Sandbox Team",
@@ -249,7 +294,12 @@ export const items =[
       "ronin"
     ],
     "players_count": null,
-    "star_rating": 4,
+    "star_rating": {
+      "collection_id": "f96d0db8-d551-40c3-905c-e6e002c920e3",
+      "collection_type": "games",
+      "ratings": 59,
+      "star_rating": 4
+    },
     "on_chain_performance": {
       "data": {
         "game_id": "f96d0db8-d551-40c3-905c-e6e002c920e3",
@@ -396,6 +446,46 @@ export const items =[
         "circulating_supply": 55.0015731237523
       }
     },
+    "team_profile": {
+      "staffs": [
+        {
+          "link": "https://www.linkedin.com/in/trungfinity/",
+          "name": "Trung Thanh Nguyen",
+          "avatar": "7cea5aff-f556-4727-8582-b421f3e459f4.jpg",
+          "position": "CEO",
+          "description": "Trung is involved in all key decisions from product to marketing and leads the company in Vietnam."
+        },
+        {
+          "link": "https://www.linkedin.com/in/psycheout86/",
+          "name": "Aleksander Leonard Larsen",
+          "avatar": "4f099df4-08b5-4b10-8d57-ff42e39c9548.jpg",
+          "position": "COO",
+          "description": "Aleksander is responsible for all things business-related in Axie Infinity. He also serves on the board of directors in the Blockchain Game Alliance and holds the secretary position."
+        },
+        {
+          "link": "https://www.linkedin.com/in/tu-doan-677a60159/",
+          "name": "Tu Doan",
+          "avatar": "385f9337-dc04-40df-b182-55e14f861c26.jpg",
+          "position": "Art Director and Game Designer",
+          "description": "Tu runs the art team in Vietnam and designed the original Axies. He is responsible for the art direction and many game design concepts."
+        },
+        {
+          "link": "https://www.linkedin.com/in/viet-anh-ho-0560bb33/",
+          "name": "Andy Ho",
+          "avatar": "",
+          "position": "CTO",
+          "description": "Andy leads our engineering team and is responsible for our technical strategy and engineering operations."
+        },
+        {
+          "link": "https://www.linkedin.com/in/jeffzirlin/",
+          "name": "Jeffrey Zirlin",
+          "avatar": "",
+          "position": "Growth Lead",
+          "description": "Jeff AKA \"Jihoz\" is responsible for growth and community development. He also spearheads token design and works closely with the product team."
+        }
+      ],
+      "rank": "S"
+    },
     "game_info": {
       "name": "Axie Infinity",
       "studio": "Sky Mavis",
@@ -481,7 +571,12 @@ export const items =[
       "bsc"
     ],
     "players_count": null,
-    "star_rating": 4,
+    "star_rating": {
+      "collection_id": "149b050a-f391-4397-8dc0-163ea2e14138",
+      "collection_type": "games",
+      "ratings": 70,
+      "star_rating": 4
+    },
     "on_chain_performance": {
       "data": {
         "game_id": "149b050a-f391-4397-8dc0-163ea2e14138",
@@ -629,6 +724,67 @@ export const items =[
         "circulating_supply": 27.044036585714288
       }
     },
+    "team_profile": {
+      "staffs": [
+        {
+          "link": "",
+          "name": "Khanh Nguyen",
+          "avatar": "",
+          "position": "CEO/Founder - Head of Game Design",
+          "description": "CEO Wolffun Game\nFormer CEO Bikasolution"
+        },
+        {
+          "link": "",
+          "name": "Danny Đoan",
+          "avatar": "",
+          "position": "COO/Blockchain Economy Design",
+          "description": "CEO K300 Ventures G.P\nCo-founder OnSky"
+        },
+        {
+          "link": "",
+          "name": "Tuan Tran",
+          "avatar": "",
+          "position": "Blockchain Solution Advisor",
+          "description": "Blockchian Engineer Lead at Spores\nFormer Cofounder VIC Community"
+        },
+        {
+          "link": "",
+          "name": "Hoang So",
+          "avatar": "",
+          "position": "CTO/Co-founder Wolffun Game",
+          "description": "Over 8 years EXP on PvP Game"
+        },
+        {
+          "link": "",
+          "name": "Yoko",
+          "avatar": "",
+          "position": "CFO/Founder Wolffun Game",
+          "description": "Head of Game Design\nWolffun Game"
+        },
+        {
+          "link": "",
+          "name": "Hannie Tran",
+          "avatar": "",
+          "position": "Business Development Manager",
+          "description": "Head of Business Development\nWolffun Game"
+        },
+        {
+          "link": "",
+          "name": "Duc Dinh",
+          "avatar": "",
+          "position": "Game Performance Manager",
+          "description": "Head of Game Performance Wolffun Game"
+        },
+        {
+          "link": "",
+          "name": "Dai Quoc",
+          "avatar": "",
+          "position": "Art Leader",
+          "description": "Head of Visual Art "
+        }
+      ],
+      "rank": "S"
+    },
     "game_info": {
       "name": "Thetan Arena",
       "studio": "Wolffun Game",
@@ -705,7 +861,12 @@ export const items =[
       "polygon"
     ],
     "players_count": null,
-    "star_rating": 4,
+    "star_rating": {
+      "collection_id": "5293cb42-c26e-4a32-b80e-f595adc07083",
+      "collection_type": "games",
+      "ratings": 117,
+      "star_rating": 4
+    },
     "on_chain_performance": {
       "data": {
         "game_id": "5293cb42-c26e-4a32-b80e-f595adc07083",
@@ -853,6 +1014,10 @@ export const items =[
         "circulating_supply": 86.87113118881938
       }
     },
+    "team_profile": {
+      "staffs": null,
+      "rank": "S"
+    },
     "game_info": {
       "name": "League of Kingdoms",
       "studio": "NOD Games",
@@ -921,7 +1086,12 @@ export const items =[
       "eth"
     ],
     "players_count": null,
-    "star_rating": 4,
+    "star_rating": {
+      "collection_id": "04054d55-b1ec-4234-9f10-c789b3b56065",
+      "collection_type": "games",
+      "ratings": 416,
+      "star_rating": 4
+    },
     "on_chain_performance": {
       "data": {
         "game_id": "04054d55-b1ec-4234-9f10-c789b3b56065",
@@ -1067,6 +1237,53 @@ export const items =[
         "circulating_supply": 41.2710683492448
       }
     },
+    "team_profile": {
+      "staffs": [
+        {
+          "link": "https://www.linkedin.com/in/dan-khomenko-36687967/",
+          "name": "Dan Khomenko",
+          "avatar": "Dan_Khomenko_e5a89e9cb6.png",
+          "position": "Co-Founder, CEO",
+          "description": "Graduating from the University of Melbourne, Dan has vast experience in multiple industries, including FinTech, banking, property development, blockchain and crypto."
+        },
+        {
+          "link": "",
+          "name": "Dmitry Andreev",
+          "avatar": "Dmitry_Andreev_94784cc127.png",
+          "position": "Co-Founder, Art Director",
+          "description": "Graduating from the Moscow Academy of Architecture, Tokyo Shibaura institute of technologies and the Gnesin Russian Academy of Music, Dmitry has extensive knowledge and experience in a variety of domains."
+        },
+        {
+          "link": "https://www.linkedin.com/in/povolotski/",
+          "name": "Roman Povolotski",
+          "avatar": "Roman_povolotski_6a538d4a4e.png",
+          "position": "Co-Founder, Game Producer",
+          "description": "Roman is a game producer with over 17 years of experience. He contributed to the release of more than 10 gaming products, 4 of which exceeded the 10m user mark and one that has attracted over 25m players."
+        },
+        {
+          "link": "",
+          "name": "Djenan Ramchilovich",
+          "avatar": "Djenan_Ramchilovich_c9b2ec8ff1.png",
+          "position": "Co-Founder, CTO",
+          "description": "Working since 2013 in the industry, Djenan completes the full cycle of project development and implementation of digital, mobile and PC applications."
+        },
+        {
+          "link": "",
+          "name": "Anastasia Medvedeva",
+          "avatar": "Anastasia_Medvedeva_2029588525.png",
+          "position": "Business Development Manager",
+          "description": "Founder of PRO-BRAND agency. She worked with Procter & Gamble, PwC, Nestle, Reckitt Benckiser, International Olympic Committee."
+        },
+        {
+          "link": "https://www.linkedin.com/in/anthony-checo-287587163/",
+          "name": "Antony Checo",
+          "avatar": "Antony_Checo_f90a93f9c8.png",
+          "position": "Chief of External Affairs",
+          "description": "Antony has over 6 years of experience in strategic management. In 2017, he got into crypto and since then, has helped over 30 projects to build a development strategy and achieve their goals."
+        }
+      ],
+      "rank": "S"
+    },
     "game_info": {
       "name": "Sidus Heroes",
       "studio": "SIDUS GAMES",
@@ -1136,7 +1353,12 @@ export const items =[
       "bsc"
     ],
     "players_count": null,
-    "star_rating": 4,
+    "star_rating": {
+      "collection_id": "b0b1271c-7b48-4bdc-a555-6ce95fc8bdfe",
+      "collection_type": "games",
+      "ratings": 1378,
+      "star_rating": 4
+    },
     "on_chain_performance": {
       "data": {
         "game_id": "b0b1271c-7b48-4bdc-a555-6ce95fc8bdfe",
@@ -1284,6 +1506,42 @@ export const items =[
         "circulating_supply": 14.841630676084764
       }
     },
+    "team_profile": {
+      "staffs": [
+        {
+          "link": "https://www.linkedin.com/in/tuanle0804/",
+          "name": "Tuan Le ",
+          "position": " Founder",
+          "description": "He is a serial entrepreneur with demonstrated performance to deliver large-scale projects. After a few years in FPT Software, the largest IT company in Vietnam, he founded and was the CEO then Chairman of SotaTek - an IT consulting and development company with 600 employees, providing services to customers worldwide. He is in the founding team in some tech giants in VietNam as Ekoios, IceTea Labs (PolkaFoundry/Red Kite/GameFi.org) and also in the founding team and CEO of SotaNext Corporation, an IT company that specializes in blockchain consulting and development services.\nWith almost 15 years of experience in all kinds of software development projects, and a very strong knowledge in blockchain technology he knows how to manage a world-class business based on blockchain successfully to bring true value to customers.\n"
+        },
+        {
+          "link": "https://www.linkedin.com/in/mai-thang-a35257125/",
+          "name": "Victor Thang ",
+          "avatar": null,
+          "position": "CEO/ The Project Owner",
+          "description": "He has had nearly 15 years of experience in working and developing gaming products. Previously, he won the 3rd prize in the Mobilabs 2008 competition held by FPT for the mobile application and has taken various important roles in all companies he has worked for, from Team Code Leader to Project Manager and Product Manager. As PO of Monsterra NFT Game, he has built an amazing game development team from artwork to engineering and smart contracts with the desire to build Monsterra game to become the game revolution for GameFi 2022.\n\n"
+        },
+        {
+          "link": "https://www.linkedin.com/in/trinhquangtu/",
+          "name": "Brian Trinh ",
+          "position": "Head of Game Operation",
+          "description": "As a strategic role player, he managed the entire operation and testing of Casual, SLG, and MMORPG games, on both PC and mobile platforms, at the biggest game companies and studios in Vietnam, such as VTC Intecom, ABI Game Studio, VALOFE, etc.\nAlso, he has over 3 years experience in community operations and organizing online and offline events, ranging from private VIPs to large gaming communities.\n"
+        },
+        {
+          "link": "https://www.linkedin.com/in/irismarketing2110/",
+          "name": "IRIS LE",
+          "position": "CMO",
+          "description": "She is definitely a growth hacking expert with a 5+ year  solid track record as Marketing Manager & Consutant in e-Commerce, Blockchain, NFTs and Gaming.  \n\nHer depth of expertise includes project management, community building, social media boosting, partnership expansion, and growth-hack strategies. Working in an international environment (Europe, Singapore, and Vietnam) opens various opportunities for her to be exposed to other languages and cultures, nurturing her communication and marketing skills on a global scale. With the mission to bring valuable community benefits, during her years of hard work, Iris has supported many startups to achieve 300% growth on social media, expanded cooperation with many trusted partners, and successfully raised capital in seed and private rounds. \n\nHer broad experience and brilliant mind in Marketing Strategy and Business Development will help build and develop a valuable Monsterra  community while maximizing potential reach with new users, traffic, and product market matching.\n\nThanks to the great leadership of the core team, Monsterra's team of 68 people can work together and dedicate themselves to achieving success. Above all, we build a long-term vision and share a deep passion about P2E games together. The whole team spent months conducting research, investigating the market and analyzing existing games to be able to design the best product with attractive gameplay, balanced in-game economy and magnificent graphics. \n\n"
+        },
+        {
+          "link": "https://www.linkedin.com/in/loandt111",
+          "name": "LE DO",
+          "position": "Partnership Manager",
+          "description": "An Inquisitive, Motivated & Result-Driven Individual with 9+ years of experience in Marketing, Partnership Management and Professional  Communication.  I will prepare detailed plans and analyses to throw myself into practical executions, encounter challenges and overcome them with a can-do mindset.\nAs a crypto lover & web3 enthusiast, I have been attached with Monsterra NFT Game since the beginning of January 2023 for 14 months till now for partnership expansion & development to contribute to the greater success of the project & CrescentShine Studio.\n"
+        }
+      ],
+      "rank": "A"
+    },
     "game_info": {
       "name": "Monsterra",
       "studio": "CrescentShine Studio",
@@ -1326,8 +1584,8 @@ export const items =[
         }
       ],
       "tags": [
-        "Turn-based",
         "Idle",
+        "Turn-based",
         "Adventure"
       ],
       "description": "Monsterra is the #1 Multi-chain P2E on #BNB, #Avalanche & #OKX with Free to Play & Earn Model. \n\nPowered by CrescentShine Studio this game is one of the Top GameFi projects on BNB Chain(By DappRadar) & Avalanche & OKC with 350K ++ Gamers till now. The game sets foot in a fictional world and revolves around farming, property building, and battling with other lands with the magical creatures named Mongen. The revolutionized design of Monsterra is a combination of free-to-play and free-to-earn models which allows millions of gaming enthusiasts to enjoy fun and have a high-profit stream with no prior investment.  ",
@@ -1349,7 +1607,12 @@ export const items =[
       "eth"
     ],
     "players_count": null,
-    "star_rating": 4,
+    "star_rating": {
+      "collection_id": "3a0e8a04-255b-435b-856c-0723c01f08db",
+      "collection_type": "games",
+      "ratings": 12,
+      "star_rating": 4
+    },
     "on_chain_performance": {
       "data": {
         "game_id": "3a0e8a04-255b-435b-856c-0723c01f08db",
@@ -1486,6 +1749,45 @@ export const items =[
         "market_rank": 46.48985959438377
       }
     },
+    "team_profile": {
+      "staffs": [
+        {
+          "link": "https://twitter.com/rio_noborderz",
+          "name": "Rio Noborderz",
+          "avatar": "xana_rio_dd6987406d.png",
+          "position": "CEO",
+          "description": "Rio started his career as a music producer/DJ debut from Japan's largest record label avex, producing several known anime songs such as Initial D. \nAfter independence from avex, Rio established his own company and started a world tour with his DJ Group named NOBORDERZ over 200 cities around the globe, including renowned festivals such as Summer sonic.\nIn 2017, Rio was awarded an International cultural award from the ex-royal family Japan.\nIn 2018, Rio established Company NOBORDERZ to cross over his entertainment with the latest technologies such as Blochcian and Metaverse.\nIn 2019, The company started the XANA Project."
+        },
+        {
+          "link": "https://www.linkedin.com/in/piyushsingh09/",
+          "name": "Piyush Singh",
+          "avatar": "ee5a1ab3-1f27-4623-bfeb-e95ca174bf9e.jpg",
+          "position": "Director Of Business Development"
+        },
+        {
+          "link": "",
+          "name": "Kaz",
+          "avatar": "xana_kaz_db71cc20d6.png",
+          "position": "COO Global",
+          "description": ""
+        },
+        {
+          "link": "",
+          "name": "Nakamoto",
+          "avatar": "xana_nakamoto_86385384bd.png",
+          "position": "COO Asia",
+          "description": ""
+        },
+        {
+          "link": "",
+          "name": "Ramy",
+          "avatar": "xana_ramy_054e53a8dc.png",
+          "position": "CFO",
+          "description": ""
+        }
+      ],
+      "rank": "B"
+    },
     "game_info": {
       "name": "XANA",
       "studio": "NOBORDERZ",
@@ -1527,7 +1829,12 @@ export const items =[
       "eth"
     ],
     "players_count": null,
-    "star_rating": 4,
+    "star_rating": {
+      "collection_id": "d3bf9ecf-58f1-488d-a3dc-8bead33eb930",
+      "collection_type": "games",
+      "ratings": 3,
+      "star_rating": 4
+    },
     "on_chain_performance": {
       "data": {
         "game_id": "d3bf9ecf-58f1-488d-a3dc-8bead33eb930",
@@ -1676,6 +1983,116 @@ export const items =[
         "circulating_supply": 59.27867062272125
       }
     },
+    "team_profile": {
+      "staffs": [
+        {
+          "link": "https://www.linkedin.com/in/kieran-warwick-66194b79/",
+          "name": "Kieran Warwick",
+          "avatar": "cf23c0a2-bffb-4796-8d03-015cf6974086.jpg",
+          "position": "Co-founder",
+          "description": "Kieran is a proven serial entrepreneur. Working alongside his brother Kain Warwick in e-commerce, Kieran was exposed to Bitcoin and Ethereum early on. His enthusiasm for the crypto space led to joining Blueshyft. While there, Kieran successfully onboarded major Australian Exchanges and started the world’s first OTC cryptocurrency exchange."
+        },
+        {
+          "link": "https://www.linkedin.com/in/aaron-warwick-9b655823/",
+          "name": "Aaron Warwick",
+          "avatar": "1388536c-c7be-4654-a7cc-334d98d2a6c5.jpg",
+          "position": "Co-founder",
+          "description": "While studying Computer Engineering and Physics at the University of Wollongong in Australia, Aaron found himself obsessed with building and programming games. An avid seeker of scientific knowledge and the philosophical implications of technology his interest in artificial intelligence sprouted at an early age. Aaron's unique knowledge of world-building and game lore has guided Illuvium’s vision to create the world's first AAA game built on the Ethereum blockchain."
+        },
+        {
+          "link": "https://www.linkedin.com/in/john-avery-b8281b31/",
+          "name": "John Avery",
+          "avatar": "bce57bb8-1211-4d70-a604-1d60a508ad04.jpg",
+          "position": "CTO",
+          "description": "John has a 20-year career in both the gaming and the financial services industries. His game development career started when he began producing games for the App Store in the late 2000s, and since then, his games have reached over 1 million users. His company JNA Mobile was also one of the top Unity Asset Store publishers at the time."
+        },
+        {
+          "link": "",
+          "name": "Grant Warwick",
+          "avatar": "",
+          "position": "Co-founder",
+          "description": ""
+        },
+        {
+          "link": "https://www.linkedin.com/in/gorin/?originalSubdomain=ua",
+          "name": "Basil Gorin",
+          "avatar": "",
+          "position": "Blockchain Director",
+          "description": "Basil has over 15 years of experience as a full-stack developer, with experience as a solution architect, tech designer and software engineer. He has a strong background in Java, Web, and Blockchain tech stacks."
+        },
+        {
+          "link": "https://www.linkedin.com/in/dannywilsonmba/",
+          "name": "Danny Wilson",
+          "avatar": "",
+          "position": "CFO",
+          "description": "Danny is a business executive and partnership leader with over 20 years of success in amplifying business performance to hit top goals. Danny has held multiple director and leadership roles in varying retail and tech-based organisations, making him an invaluable asset to Illuvium."
+        },
+        {
+          "link": "",
+          "name": "Nate Wells",
+          "avatar": "",
+          "position": "Game Producer",
+          "description": "With 20+ years in the gaming industry, Nate Wells is known for his work in Bioshock & Bioshock Infinite. He was also a Lead Game Producer on The Last of Us, and Rise of the Tomb Raider. As an art direction and UX consultant, Nate aims to help projects find their visual focus."
+        },
+        {
+          "link": "https://beek-art.artstation.com/",
+          "name": "Rogier van de Beek",
+          "avatar": "",
+          "position": "Lead Concept Artist",
+          "description": "For over 10 years, Rogier has been a freelance concept artist and illustrator, who’s worked on a wide variety of projects, ranging from print, film, toys, theme parks, and of course, games."
+        },
+        {
+          "link": "https://aleks_kirilenko.artstation.com/",
+          "name": "Aleksandr Kirilenko",
+          "avatar": "",
+          "position": "Lead Modeler",
+          "description": "Aleksandr has worked in the advertisement industry as a freelance 3D modeller for such giants as Pepsi, Sony, and Toyota. Aleksandr's creative flair and skill is an essential asset to Illuvium, as he has worked on character/creature development game cinematics at Platigue Image. He also worked as a digital sculptor for Prime 1 Studio and a senior character artist at Ninja Theory."
+        },
+        {
+          "link": "https://chucco.tumblr.com/",
+          "name": "Alexandre Belbari",
+          "avatar": "",
+          "position": "Lead Animator",
+          "description": "Alexandre began learning animation in the South of France in 2008. After graduating in 2010, he began working with Marvel on projects, (like X-Men!), and over the next four years, he was able to learn from some of the best animators in the industry. With his wealth of experience under his belt, Alexandre then moved to ILM Lucasfilm, where he worked on notable projects including Transformers, Avengers, Guardians of the Galaxies, Godzilla and Ready Player One."
+        },
+        {
+          "link": "https://www.artstation.com/ermperson",
+          "name": "Petr Ermolaev",
+          "avatar": "",
+          "position": "Lead VFX Artist",
+          "description": "\"I am from Russia, the city of Moscow. I am a VFX artist. In early 2021, I was lucky enough to get into the Illuvium team. It is interesting to observe the development of the project from the very beginning.\""
+        },
+        {
+          "link": "https://www.behance.net/dmitriytn",
+          "name": "Dmitriy Ten",
+          "avatar": "",
+          "position": "Environmental Artist",
+          "description": "Dmitriy Ten took the print advertising world by storm when he became the lead artist at Cream Electric Art in Sydney, Australia, one of the world's most renowned and respected print advertising firms."
+        },
+        {
+          "link": "https://www.linkedin.com/in/pedro-bergamini-611496160/",
+          "name": "Pedro Bergamini",
+          "avatar": "",
+          "position": "Senior Solidity Engineer",
+          "description": "Pedro is a full-stack engineer experienced in B2B, using NodeJS and AWS services like Lambda, DynamoDB and Cognito. His knowledge of creating expert user interfaces via React is outstanding (it's no wonder since he has been coding since the age of 13!).\n\n"
+        },
+        {
+          "link": "https://twitter.com/Lionel84173978",
+          "name": "Lionel Pinkhard",
+          "avatar": "",
+          "position": "Game Developer",
+          "description": "Lionel is a software engineer with over 19 years of experience in software development across various industries, particularly gaming, cryptography and telecommunications. His experience is paramount to our success.\n\n"
+        },
+        {
+          "link": "https://www.linkedin.com/in/awalldigital/",
+          "name": "Andrew Wall",
+          "avatar": "",
+          "position": "Head of Video",
+          "description": "A seasoned gaming, finance and media executive Andrew Wall aka 'Awall', co-founded the largest gaming creator network of all-time, TGN. Over the past 15 years, he has produced 5000+ gaming videos that generated over a billion views, live streamed full-time on Twitch, and has personally advised 100s of the top content creators and finance publishing companies.\n\n"
+        }
+      ],
+      "rank": "B"
+    },
     "game_info": {
       "name": "Illuvium",
       "studio": "Illuvium Team",
@@ -1745,7 +2162,12 @@ export const items =[
       "polygon"
     ],
     "players_count": null,
-    "star_rating": 4,
+    "star_rating": {
+      "collection_id": "7310dd6c-e4c9-413d-83d8-fe830f9e5487",
+      "collection_type": "games",
+      "ratings": 19,
+      "star_rating": 4
+    },
     "on_chain_performance": {
       "data": {
         "game_id": "7310dd6c-e4c9-413d-83d8-fe830f9e5487",
@@ -1883,6 +2305,46 @@ export const items =[
         "market_rank": 23.400936037441497
       }
     },
+    "team_profile": {
+      "staffs": [
+        {
+          "link": "https://www.linkedin.com/in/karl-blomsterwall-768a4742/",
+          "name": "Karl Blomsterwall",
+          "avatar": "b6330467-7518-4015-8002-998b141ccec2.jpg",
+          "position": "CEO",
+          "description": ""
+        },
+        {
+          "link": "https://www.linkedin.com/in/felixbengtsson/",
+          "name": "Felix Bengtsson",
+          "avatar": "83bdcc2b-f5d9-4b53-a7a8-24c4fbd714c8.jpg",
+          "position": "MASTER OF COIN & CO FOUNDER",
+          "description": ""
+        },
+        {
+          "link": "https://www.linkedin.com/in/lukas-alexandersson-00ba2b6a/",
+          "name": "Lukas Alexandersson",
+          "avatar": "9b7bfcb9-c9e9-4874-811f-829558330c88.jpg",
+          "position": "CPO",
+          "description": ""
+        },
+        {
+          "link": "",
+          "name": "Sebastian Ramseid Foss",
+          "avatar": "",
+          "position": "COO",
+          "description": ""
+        },
+        {
+          "link": "",
+          "name": "Douglas Nordwall",
+          "avatar": "",
+          "position": "TECH LEAD",
+          "description": ""
+        }
+      ],
+      "rank": "B"
+    },
     "game_info": {
       "name": "Planet IX",
       "studio": "Nibiru Software",
@@ -1915,7 +2377,12 @@ export const items =[
       "bsc"
     ],
     "players_count": null,
-    "star_rating": 5,
+    "star_rating": {
+      "collection_id": "4630dd56-bb38-42a0-ac9a-c34d928dfeb1",
+      "collection_type": "games",
+      "ratings": 16,
+      "star_rating": 5
+    },
     "on_chain_performance": {
       "data": {
         "game_id": "4630dd56-bb38-42a0-ac9a-c34d928dfeb1",
@@ -2061,6 +2528,17 @@ export const items =[
         "circulating_supply": 15.987373199999999
       }
     },
+    "team_profile": {
+      "staffs": [
+        {
+          "link": "https://twitter.com/realminhthong?fbclid=IwAR0I5JiCY0T4mBhO5M2AzNFQcYchE2u9oriqfFt1eM3PLjdSttR0U0MaCeA",
+          "name": "Shayne",
+          "avatar": "c62de378-53f0-478b-9463-159421d5fd4d.jpg",
+          "position": "CEO"
+        }
+      ],
+      "rank": "C"
+    },
     "game_info": {
       "name": "ASPO World",
       "studio": "ASPO team",
@@ -2084,8 +2562,8 @@ export const items =[
       ],
       "tags": [
         "Card",
-        "Digital collectible",
-        "Turn-based"
+        "Turn-based",
+        "Digital collectible"
       ],
       "description": "ASPO is expected as a game universe backed by a strong and talented Vietnamese team with the hope of turning P2E games into the future of digital assets",
       "game_logo": "https://d1j2c9jkfhu70p.cloudfront.net/token_4d09cb1cc5.png"
@@ -2103,7 +2581,12 @@ export const items =[
       "bsc"
     ],
     "players_count": null,
-    "star_rating": 4,
+    "star_rating": {
+      "collection_id": "0f9abc34-1d34-46fc-8885-9dd5ed324692",
+      "collection_type": "games",
+      "ratings": 6159,
+      "star_rating": 4
+    },
     "on_chain_performance": {
       "data": {
         "game_id": "0f9abc34-1d34-46fc-8885-9dd5ed324692",
@@ -2249,6 +2732,28 @@ export const items =[
         "circulating_supply": 7.8225714275
       }
     },
+    "team_profile": {
+      "staffs": [
+        {
+          "link": "https://www.linkedin.com/in/hoanghiepgunstar/",
+          "name": "Hoang Hiep",
+          "avatar": "47b11103-52f4-4152-ac57-165c78732512.jpg",
+          "position": "CEO"
+        },
+        {
+          "link": "https://www.linkedin.com/in/dieptrantuan88/",
+          "name": "Tuan Diep",
+          "position": "CTO"
+        },
+        {
+          "link": "https://www.linkedin.com/in/minh-nhat-9701b4146/",
+          "name": "Minh Nhat",
+          "avatar": "748f3c65-f2f3-4dbd-88cf-b7ec675286f2.jpg",
+          "position": "CMO"
+        }
+      ],
+      "rank": "A"
+    },
     "game_info": {
       "name": "Gunstar Metaverse",
       "studio": "Gunstar Labs",
@@ -2295,9 +2800,9 @@ export const items =[
         }
       ],
       "tags": [
-        "Turn-based",
         "Role-playing",
-        "Idle"
+        "Idle",
+        "Turn-based"
       ],
       "description": "Gunstar Metaverse (Gunstar) is a massively multiplayer online role-playing (RPG) and turn-based strategy NFT Game that gives you the real value of enjoyment and excitement in gaming and the real value provided through the blockchain platform",
       "game_logo": "https://d1j2c9jkfhu70p.cloudfront.net/Gunstart_tokenicon_9500675829.png"
@@ -2323,7 +2828,12 @@ export const items =[
       "bsc"
     ],
     "players_count": null,
-    "star_rating": 4,
+    "star_rating": {
+      "collection_id": "a74b81ac-36d7-4538-a1b4-6f90cdcc34ea",
+      "collection_type": "games",
+      "ratings": 1847,
+      "star_rating": 4
+    },
     "on_chain_performance": {
       "data": {
         "game_id": "a74b81ac-36d7-4538-a1b4-6f90cdcc34ea",
@@ -2465,6 +2975,9 @@ export const items =[
         "circulating_supply": 28.168696100596
       }
     },
+    "team_profile": {
+      "staffs": null
+    },
     "game_info": {
       "name": "Eldarune",
       "studio": "Eldarune",
@@ -2474,11 +2987,11 @@ export const items =[
       "devices": [],
       "backed_by": [],
       "tags": [
-        "Strategy",
-        "Action",
-        "Digital collectible",
         "Role-playing",
-        "NFT"
+        "Strategy",
+        "NFT",
+        "Action",
+        "Digital collectible"
       ],
       "description": " Eldarune is a medieval themed, Action Role Playing Game with 4K graphics, clan and season system.\nAlso there are four different game modes in Eldarune. \n While playing campaign mode players will travel to 21 islands, fight in hundreds of dungeons, and defeat the strongest monsters in the Elymnias world with your clan.\nThere are also PvP Battles to test your capability against your opponents both alone and with your clan. Players can use weapons, dragons, and battleships to defeat their opponents..\n",
       "game_logo": "https://d1j2c9jkfhu70p.cloudfront.net/ebd67b1f-46aa-4f1c-8486-f84fbb5fcfdf.jpg"
@@ -2500,7 +3013,12 @@ export const items =[
       "bsc"
     ],
     "players_count": null,
-    "star_rating": 4,
+    "star_rating": {
+      "collection_id": "9e2def2a-f701-4721-a2c7-925b83018adf",
+      "collection_type": "games",
+      "ratings": 12,
+      "star_rating": 4
+    },
     "on_chain_performance": {
       "data": {
         "game_id": "9e2def2a-f701-4721-a2c7-925b83018adf",
@@ -2644,6 +3162,10 @@ export const items =[
         "market_rank": 31.357254290171603
       }
     },
+    "team_profile": {
+      "staffs": null,
+      "rank": "B"
+    },
     "game_info": {
       "name": "BinaryX",
       "studio": "BinaryX",
@@ -2684,7 +3206,12 @@ export const items =[
       "polygon"
     ],
     "players_count": null,
-    "star_rating": 5,
+    "star_rating": {
+      "collection_id": "85cdb41b-0849-4028-beda-1462011ae6a1",
+      "collection_type": "games",
+      "ratings": 2,
+      "star_rating": 5
+    },
     "on_chain_performance": {
       "data": {
         "game_id": "85cdb41b-0849-4028-beda-1462011ae6a1",
@@ -2831,6 +3358,74 @@ export const items =[
         "circulating_supply": 24.482392502561964
       }
     },
+    "team_profile": {
+      "staffs": [
+        {
+          "link": "https://www.linkedin.com/in/nhudinhtuan/",
+          "name": "Naka Nhu",
+          "avatar": "image5_0034db43f3.png",
+          "position": "Co-Founder and Chief Executive Officer ",
+          "description": "Ex-Facebook Tech Lead"
+        },
+        {
+          "link": "https://www.linkedin.com/in/jake-ttran/",
+          "name": "Jake Tran",
+          "avatar": "image8_adc838415b.png",
+          "position": "Co-Founder and Chief Technology Officer",
+          "description": "Ex-Google Senior Engineer"
+        },
+        {
+          "link": "https://www.linkedin.com/in/adam-hodgson-752aba10b/",
+          "name": "Adam Hodgson",
+          "avatar": "image19_29a525fcf2.png",
+          "position": "Lead Front End Development",
+          "description": ""
+        },
+        {
+          "link": "https://www.linkedin.com/in/jennygd/",
+          "name": "Jenny Duong",
+          "avatar": "image17_ae09d0d52f.png",
+          "position": "Chief Growth Officer",
+          "description": ""
+        },
+        {
+          "link": "https://www.linkedin.com/in/cong-le-a932707b/",
+          "name": "Cong Le",
+          "avatar": "image22_b56f2253aa.png",
+          "position": "Chief Operation Officer",
+          "description": "Ex-Garena Operation Lead"
+        },
+        {
+          "link": "https://www.linkedin.com/in/quynhhuongngo/",
+          "name": "Vicky",
+          "avatar": "image4_2958076ab8.png",
+          "position": "Marketing & Communication Lead",
+          "description": ""
+        },
+        {
+          "link": "https://www.linkedin.com/in/robbie-cochrane-b015ab91/",
+          "name": "Robbeh",
+          "avatar": "image24_5eaf8fc377.png",
+          "position": "Boost Innovation Labs - Europe BD",
+          "description": ""
+        },
+        {
+          "link": "https://www.linkedin.com/in/idon-liu-268bb818a/",
+          "name": "Idon Liu",
+          "avatar": "image12_da9ff1c833.png",
+          "position": "Boost Innovation Labs - North America BD",
+          "description": ""
+        },
+        {
+          "link": "https://www.linkedin.com/in/saeed-ebrahimi-222a8ba8/",
+          "name": "Saed",
+          "avatar": "image11_2677a432e4.png",
+          "position": "Lead Designer",
+          "description": ""
+        }
+      ],
+      "rank": "A"
+    },
     "game_info": {
       "name": "Blockchain Monster Hunt",
       "studio": "Ambros Technology",
@@ -2910,7 +3505,6 @@ export const items =[
     }
   }
 ]
-
 export let ranking = items.map((game) => {
   return {
     id: game.id,

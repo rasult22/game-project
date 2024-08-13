@@ -72,6 +72,20 @@ function sleep (ms) {
     setTimeout(r, ms)
   })
 }
+
+async function getTeamProfile(slug) {
+  const url = `${API_BASE_URL}/games/${slug}/top-game-studios`;
+  const data = await fetchData(url);
+  if (data.data && data.data.items[0]) {
+    let rank;
+    if (data.data.metadata && data.data.metadata.others) {
+      if (data.data.metadata.others.team_rank) {
+        rank = data.data.metadata.others.team_rank
+      }
+    }
+    return {staffs: data.data.items[0].staffs, rank }
+  }
+}
 // TEAM PROFILE
 // https://v3.gamefi.org/api/v1/games/the-sandbox/top-game-studios
 
@@ -107,6 +121,7 @@ async function parseGameData(gameName) {
   const socialLevel = await getSocialScore(slug);
   const starRating = await getStarRating(slug);
   const onChainPerformance = await getAnalyticData(slug)
+  const teamProfile = await getTeamProfile(slug)
 
   return {
     id: slug,
@@ -117,6 +132,7 @@ async function parseGameData(gameName) {
     players_count: null,
     star_rating: starRating,
     on_chain_performance: onChainPerformance,
+    team_profile: teamProfile,
     game_info: {
       name: name,
       studio: studio,
