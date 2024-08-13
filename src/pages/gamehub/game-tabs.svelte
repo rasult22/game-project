@@ -2,6 +2,7 @@
   export let game_id
   import OverviewTab from "./OverviewTab.svelte";
   import AboutTab from "./AboutTab.svelte";
+  import OcpTab from "./OCPTab.svelte";
   import { onMount } from "svelte";
 
   export let game
@@ -50,5 +51,8 @@
   {/if}
   {#if activeTab === 'about'}
     <AboutTab />
+  {/if}
+  {#if activeTab === 'ocp'}
+    <OcpTab on_chain_performance={game.on_chain_performance.data} />
   {/if}
 </div>
