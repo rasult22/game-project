@@ -28,6 +28,11 @@ async function getGameByName(name) {
   return await fetchData(url);
 }
 
+async function getAnalyticData(name) {
+  const url = `${API_BASE_URL}/games/${name}/on-chain-performance`
+  return await fetchData(url)
+}
+
 // Fetch studio name for a game
 async function getStudio(name) {
   const url = `${API_BASE_URL}/games/${name}/top-game-studios`;
@@ -55,13 +60,20 @@ async function getSocialScore(slug) {
 async function getStarRating(slug) {
   const url = `${API_BASE_URL}/games/${slug}/counts-ratings`;
   const data = await fetchData(url);
-  return data?.data?.star_rating || null;
+  return data?.data || null;
 }
 
 // Normalize text (e.g., capitalize)
 function textNormalize(text) {
   return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
 }
+function sleep (ms) {
+  return new Promise((r) => {
+    setTimeout(r, ms)
+  })
+}
+// TEAM PROFILE
+// https://v3.gamefi.org/api/v1/games/the-sandbox/top-game-studios
 
 // Parse game data and structure it
 async function parseGameData(gameName) {
@@ -94,6 +106,7 @@ async function parseGameData(gameName) {
   const galleries = await getGalleries(slug);
   const socialLevel = await getSocialScore(slug);
   const starRating = await getStarRating(slug);
+  const onChainPerformance = await getAnalyticData(slug)
 
   return {
     id: slug,
@@ -103,6 +116,7 @@ async function parseGameData(gameName) {
     networks: networks,
     players_count: null,
     star_rating: starRating,
+    on_chain_performance: onChainPerformance,
     game_info: {
       name: name,
       studio: studio,
@@ -120,13 +134,29 @@ async function parseGameData(gameName) {
 
 // Main function to handle processing of all games
 async function main() {
-  const tasks = GAMES.map(GAME => parseGameData(GAME));
-  const results = await Promise.allSettled(tasks);
-  const successfulResults = results
-    .filter(result => result.status === 'fulfilled')
-    .map(result => result.value);
+  let gameArray = []
+  for (const GAME of GAMES) {
+    try {
+      const gameData = await parseGameData(GAME);
+      if (gameData) {
+        gameArray.push(gameData)
+        console.log('parsed: '+ GAME);
+      }
+    } catch(error) {
+      console.error(`Failed to fetch data for ${GAME}:`, error.message);
+    }
+    await sleep(10000)
+  }
 
-  fs.writeFileSync('parsed.json', JSON.stringify(successfulResults, null, 2));
+
+
+  // const tasks = GAMES.map(GAME => parseGameData(GAME));
+  // const results = await Promise.allSettled(tasks);
+  // const successfulResults = results
+  //   .filter(result => result.status === 'fulfilled')
+  //   .map(result => result.value);
+
+  fs.writeFileSync('parsed.json', JSON.stringify(gameArray, null, 2));
 }
 
 main().catch(console.error);

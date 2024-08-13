@@ -49,18 +49,16 @@
   </div>
 {/if}
 <div class="relative w-full">
-  <div class="absolute left-[-5px] top-[5px] h-full w-[10px] z-10 bg-[#2A2A2A]"></div>
   <svg class="w-full relative h-[80px]" preserveAspectRatio="none" viewBox="0 0 100 80">
     <path
-      d={`M0,${80} ${createPathTest(data, 80)} L100,${80} Z`}
+      d={createPath(data, 80)}
       fill={direction === "positive" ? "url(#paint0_linear_205_2534)" : "rgba(255,0,0,0.2)"}
       />
     <path
-      d={`M0,${80-2} ${createPathTest(data, 80)}`}
+      d={createPath(data, 80)}
       fill="transparent"
       stroke={direction === "positive" ? "#0FFF18" : "#EB122C"}
-      stroke-width="2"
-       stroke-linecap="round"
+      stroke-width="1"
       />
     <defs>
       <linearGradient id="paint0_linear_205_2534" x1="101" y1="1" x2="101" y2="76.6977" gradientUnits="userSpaceOnUse">

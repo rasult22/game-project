@@ -2,7 +2,17 @@
   import BizzonRating from "~/components/bizzon-rating.svelte";
   import Chart from "./chart.svelte";
   import { fade } from "svelte/transition";
+  import { moneyFormatter } from "~/utils/utils";
   export let backedBy;
+  export let on_chain_performance;
+
+  $: volume_rank = on_chain_performance.volume_rank || 'N/A'
+  $: volume_24h_changed = on_chain_performance.volume_24h_changed || null
+  $: market_cap_7d_changed = on_chain_performance.market_cap_7d_changed || null
+  $: current_roi = on_chain_performance.current_roi
+  $: current_roi_7d_changed = on_chain_performance.current_roi_7d_changed
+  $: circulating_supply = on_chain_performance.circulating_supply
+  
   let teamMembers = [
     {
       avatar: "/game-project/media/avatar.png",
@@ -222,35 +232,37 @@
         <!-- head -->
         <div class="flex justify-between">
           <div class="font-semibold">Volume 24h</div>
-          <BizzonRating rating="D" />
+          <BizzonRating rating={volume_rank} />
         </div>
         <!-- chart -->
         <div class="ml-[-5px]">
           <!-- <Chart direction="positive" data={[120, 24,32,22,101,120,90,150, 24,32,22,101,120,90, 200]} /> -->
-          <Chart
-            direction="negative"
-            data={[
-              -24, -32, -22, 101, -120, -90, 150, 24, 32, 22, -101, -120, -90,
-              -200, 0,
-            ]}
-          />
+          {#if volume_24h_changed}
+            <Chart
+              direction={volume_24h_changed < 0 ? 'negative' : 'positive'}
+              string={moneyFormatter(1).format(volume_24h_changed)}
+              data={on_chain_performance.token_price_30d_timeseries.map(el => el.token_price)}
+            />
+          {/if}
         </div>
       </div>
       <div class="p-[14px] bg-[#2A2A2A] rounded-[16px] overflow-hidden">
         <!-- head -->
         <div class="flex justify-between">
           <div class="font-semibold">Market Cap</div>
-          <BizzonRating rating="B" />
+          <BizzonRating rating={on_chain_performance.market_cap_rank} />
         </div>
         <!-- chart -->
         <div class="ml-[-5px]">
-          <Chart
-            direction="positive"
-            string="$4.9M"
-            data={[
-              20, 24, 32, 22, 101, 120, 90, 250, 24, 32, 22, 101, 120, 90, 400,
-            ]}
-          />
+          {#if market_cap_7d_changed}
+            <Chart
+              direction={market_cap_7d_changed > -1 ? 'positive' : 'negative'}
+              string={moneyFormatter(0).format(market_cap_7d_changed)}
+              data={[
+                20, 24, 32, 22, 101, 120, 90, 250, 24, 32, 22, 101, 120, 90, 400,
+              ]}
+            />
+          {/if}
           <!-- <Chart direction="negative" data={[-24,-32,-22,101,-120,-90,150, 24,32,22,-101,-120,-90, -200, 0]} /> -->
         </div>
       </div>
@@ -306,15 +318,14 @@
           </div>
           <!-- chart -->
           <div class="flex items-center mt-6">
-            <div class="text-[32px] w-[91%]">$0.223</div>
-            <Chart
-              direction="positive"
-              hasText={false}
-              data={[
-                120, 24, 32, 22, 101, 120, 90, 150, 24, 32, 22, 101, 120, 90,
-                200,
-              ]}
-            />
+            <div class="text-[32px] w-[91%]">{current_roi ? moneyFormatter(3).format(current_roi) : 'N/A'}</div>
+            {#if current_roi_7d_changed}
+              <Chart
+                direction={current_roi_7d_changed < 0 ? 'negative' : 'positive'}
+                hasText={false}
+                data={on_chain_performance.token_price_30d_timeseries.map(el => el.token_price)}
+              />
+            {/if}
           </div>
         </div>
         <!-- Circulating supply -->
@@ -326,10 +337,10 @@
             <div class="font-semibold">Circulating supply</div>
           </div>
           <!-- chart -->
-          <div class="text-[32px] w-[91%] mt-4">85.29%</div>
+          <div class="text-[32px] w-[91%] mt-4">{circulating_supply ? circulating_supply.toFixed(1) : 'N/A'}%</div>
           <div class="relative mt-4">
             <div class="bg-[#888888] w-full h-[5px] rounded-[2px]">
-              <div class="w-[50%] rounded-[2pxs] h-[5px] bg-[#0FFF18]"></div>
+              <div style={`width: ${circulating_supply ? circulating_supply.toFixed(1) : 0}%`} class="rounded-[2pxs] h-[5px] bg-[#0FFF18]"></div>
             </div>
             <div class="text-[14px] text-[#888888] flex justify-between mt-3">
               <span>0%</span>

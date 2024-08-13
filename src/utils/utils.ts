@@ -24,3 +24,11 @@ export const formatDate = (date: Date) => {
   // Combine date and time parts
   return `${datePart}, ${timePart}`;
 }
+
+export const moneyFormatter = (fraction) => new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  notation: 'compact',
+  minimumFractionDigits: 0,
+  maximumFractionDigits: fraction
+});

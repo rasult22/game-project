@@ -2,6 +2,7 @@
   export let game_id
   import OverviewTab from "./OverviewTab.svelte";
   import AboutTab from "./AboutTab.svelte";
+  import { onMount } from "svelte";
 
   export let game
 
@@ -24,6 +25,9 @@
       key: 'sl'
     },
   ]
+  onMount(async () => {
+    console.log(game)
+  })
 </script>
 
 <b>{game_id}</b>
@@ -42,7 +46,7 @@
 
 <div class="mt-9">
   {#if activeTab === 'overview'}
-    <OverviewTab backedBy={game.game_info.backed_by} />
+    <OverviewTab on_chain_performance={game.on_chain_performance.data} backedBy={game.game_info.backed_by} />
   {/if}
   {#if activeTab === 'about'}
     <AboutTab />
