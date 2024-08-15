@@ -24,6 +24,7 @@ specifiers:
   pocketbase: ^0.21.4
   prettier: ^3.1.1
   prettier-plugin-astro: ^0.12.3
+  prettier-plugin-svelte: ^3.2.6
   prettier-plugin-tailwindcss: ^0.5.11
   rimraf: ^5.0.5
   sharp: ^0.33.1
@@ -68,7 +69,8 @@ devDependencies:
   pocketbase: 0.21.4
   prettier: 3.2.5
   prettier-plugin-astro: 0.12.3
-  prettier-plugin-tailwindcss: 0.5.14_fh3tdm7dy526eugcr3cbptvgda
+  prettier-plugin-svelte: 3.2.6_5nhelybze3lo75yihszmgj57a4
+  prettier-plugin-tailwindcss: 0.5.14_tm2ed5omlwjzqcrhghqbyvlchi
   rimraf: 5.0.5
   tailwindcss-fluid-type: 2.0.6_tailwindcss@3.4.3
 
@@ -2006,7 +2008,6 @@ packages:
       acorn: 8.11.3
       estree-walker: 3.0.3
       periscopic: 3.1.0
-    dev: false
 
   /color-convert/1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
@@ -3279,7 +3280,6 @@ packages:
     resolution: {integrity: sha512-v3rht/LgVcsdZa3O2Nqs+NMowLOxeOm7Ay9+/ARQ2F+qEoANRcqrjAZKGN0v8ymUetZGgkp26LTnGT7H0Qo9Pg==}
     dependencies:
       '@types/estree': 1.0.5
-    dev: false
 
   /is-retry-allowed/1.2.0:
     resolution: {integrity: sha512-RUbUeKwvm3XG2VYamhJL1xFktgjvPzL0Hq8C+6yrWIswDy3BIXGqCxhxkc30N9jqK311gVU137K8Ei55/zVJRg==}
@@ -3433,7 +3433,6 @@ packages:
 
   /locate-character/3.0.0:
     resolution: {integrity: sha512-SW13ws7BjaeJ6p7Q6CO2nchbYEc3X3J6WrmTTDto7yMPqVSZTUyY5Tjbid+Ab8gLnATtygYtiDIJGQRRn2ZOiA==}
-    dev: false
 
   /locate-path/5.0.0:
     resolution: {integrity: sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==}
@@ -4350,7 +4349,6 @@ packages:
       '@types/estree': 1.0.5
       estree-walker: 3.0.3
       is-reference: 3.0.2
-    dev: false
 
   /picocolors/1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
@@ -4516,7 +4514,17 @@ packages:
       sass-formatter: 0.7.9
     dev: true
 
-  /prettier-plugin-tailwindcss/0.5.14_fh3tdm7dy526eugcr3cbptvgda:
+  /prettier-plugin-svelte/3.2.6_5nhelybze3lo75yihszmgj57a4:
+    resolution: {integrity: sha512-Y1XWLw7vXUQQZmgv1JAEiLcErqUniAF2wO7QJsw8BVMvpLET2dI5WpEIEJx1r11iHVdSMzQxivyfrH9On9t2IQ==}
+    peerDependencies:
+      prettier: ^3.0.0
+      svelte: ^3.2.0 || ^4.0.0-next.0 || ^5.0.0-next.0
+    dependencies:
+      prettier: 3.2.5
+      svelte: 4.2.15
+    dev: true
+
+  /prettier-plugin-tailwindcss/0.5.14_tm2ed5omlwjzqcrhghqbyvlchi:
     resolution: {integrity: sha512-Puaz+wPUAhFp8Lo9HuciYKM2Y2XExESjeT+9NQoVFXZsPPnc9VYss2SpxdQ6vbatmt8/4+SN0oe0I1cPDABg9Q==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
@@ -4570,6 +4578,7 @@ packages:
     dependencies:
       prettier: 3.2.5
       prettier-plugin-astro: 0.12.3
+      prettier-plugin-svelte: 3.2.6_5nhelybze3lo75yihszmgj57a4
     dev: true
 
   /prettier/3.2.5:
@@ -5253,7 +5262,6 @@ packages:
       locate-character: 3.0.0
       magic-string: 0.30.9
       periscopic: 3.1.0
-    dev: false
 
   /svelte2tsx/0.6.27_svelte@4.2.15:
     resolution: {integrity: sha512-E1uPW1o6VsbRz+nUk3fznZ2lSmCITAJoNu8AYefWSvIwE2pSB01i5sId4RMbWNzfcwCQl1DcgGShCPcldl4rvg==}
