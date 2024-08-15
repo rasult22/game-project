@@ -56,6 +56,35 @@ async function getSocialScore(slug) {
   return data?.data?.item?.social_score || 0;
 }
 
+async function getSocialData(slug) {
+  const twitter_url_7d = `https://biz.companionai.tech/api/social/twitter/${slug}/stat?time=7d`
+  const twitter_url_30d = `https://biz.companionai.tech/api/social/twitter/${slug}/stat?time=30d`
+  const tg_group_url_7d = `https://biz.companionai.tech/api/social/tg/group/${slug}/stat?time=7d`
+  const tg_group_url_30d = `https://biz.companionai.tech/api/social/tg/group/${slug}/stat?time=30d`
+  const tg_channel_url_7d = `https://biz.companionai.tech/api/social/tg/channel/${slug}/stat?time=7d`
+  const tg_channel_url_30d = `https://biz.companionai.tech/api/social/tg/channel/${slug}/stat?time=30d`
+  try {
+
+    const twitter_data_7d = await fetchData(twitter_url_7d)
+    const twitter_data_30d = await fetchData(twitter_url_30d)
+    const tg_group_data_7d = await fetchData(tg_group_url_7d)
+    const tg_group_data_30d = await fetchData(tg_group_url_30d)
+    const tg_channel_data_7d = await fetchData(tg_channel_url_7d)
+    const tg_channel_data_30d = await fetchData(tg_channel_url_30d)
+ 
+    return {
+      twitter_data_7d,
+      twitter_data_30d,
+      tg_group_data_7d,
+      tg_group_data_30d,
+      tg_channel_data_7d,
+      tg_channel_data_30d
+    }
+  } catch(e) {
+    console.error('error with game: ', slug, ' | error:', e)
+  }
+}
+
 // Fetch star rating for a game
 async function getStarRating(slug) {
   const url = `${API_BASE_URL}/games/${slug}/counts-ratings`;
@@ -122,6 +151,7 @@ async function parseGameData(gameName) {
   const starRating = await getStarRating(slug);
   const onChainPerformance = await getAnalyticData(slug)
   const teamProfile = await getTeamProfile(slug)
+  const social_data = await getSocialData(slug)
 
   return {
     id: slug,
@@ -133,6 +163,7 @@ async function parseGameData(gameName) {
     star_rating: starRating,
     on_chain_performance: onChainPerformance,
     team_profile: teamProfile,
+    social_data,
     game_info: {
       name: name,
       studio: studio,

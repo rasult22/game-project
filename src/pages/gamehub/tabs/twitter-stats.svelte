@@ -1,0 +1,99 @@
+<script>
+  import { getRelativeTime, numberFormatter } from "~/utils/utils";
+
+  export let stats
+</script>
+<div class="bg-[#2A2A2A] p-4 rounded-[12px] mt-6">
+  <div class="flex items-center gap-2">
+    <img width="24" src="/game-project/media/x-icon.svg" alt="">
+    <span class="font-semibold text-[24px]">
+      X
+    </span>
+  </div>
+  <div class="mt-6 gap-4 grid grid-cols-2">
+    <div class="bg-[#464648] min-w-[228px] p-3 rounded-[16px]">
+      <div class="font-medium">Total followers</div>
+      <div class="flex justify-between mt-6">
+        <div>
+          <div class="text-[24px] font-medium">{stats.followers ? numberFormatter.format(stats.followers) : 'N/A'}</div>
+          <!-- <div class="mt-[10px]">2.4%</div> -->
+        </div>
+        <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.5" width="50" height="50" rx="25" fill="#D9D9D9"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M25.4987 14.3334C26.2351 14.3334 26.832 14.9303 26.832 15.6667V23.6667H34.832C35.5684 23.6667 36.1654 24.2637 36.1654 25C36.1654 25.7364 35.5684 26.3334 34.832 26.3334H26.832V34.3334C26.832 35.0698 26.2351 35.6667 25.4987 35.6667C24.7623 35.6667 24.1654 35.0698 24.1654 34.3334V26.3334H16.1654C15.429 26.3334 14.832 25.7364 14.832 25C14.832 24.2637 15.429 23.6667 16.1654 23.6667H24.1654V15.6667C24.1654 14.9303 24.7623 14.3334 25.4987 14.3334Z" fill="#141517"/>
+        </svg>
+          
+      </div>
+    </div>
+    <div class="bg-[#464648] min-w-[228px] p-3 rounded-[16px]">
+      <div class="font-medium">Total views</div>
+      <div class="flex justify-between mt-6">
+        <div>
+          <div class="text-[24px] font-medium">{stats.views ? numberFormatter.format(stats.views) : 'N/A'}</div>
+          <!-- <div class="mt-[10px]">2.4%</div> -->
+        </div>
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="50" height="50" rx="25" fill="#D9D9D9"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2118 25C16.5424 30.5074 20.4824 33 24.9987 33C29.515 33 33.455 30.5074 36.7856 25C33.455 19.4927 29.515 17 24.9987 17C20.4824 17 16.5424 19.4927 13.2118 25ZM10.5077 24.3385C14.2083 17.8628 19.0253 14.3334 24.9987 14.3334C30.972 14.3334 35.7891 17.8628 39.4897 24.3385C39.7239 24.7484 39.7239 25.2517 39.4897 25.6616C35.7891 32.1372 30.972 35.6667 24.9987 35.6667C19.0253 35.6667 14.2083 32.1372 10.5077 25.6616C10.2735 25.2517 10.2735 24.7484 10.5077 24.3385ZM24.9987 23.6667C24.2623 23.6667 23.6654 24.2637 23.6654 25C23.6654 25.7364 24.2623 26.3334 24.9987 26.3334C25.7351 26.3334 26.332 25.7364 26.332 25C26.332 24.2637 25.7351 23.6667 24.9987 23.6667ZM20.9987 25C20.9987 22.7909 22.7896 21 24.9987 21C27.2078 21 28.9987 22.7909 28.9987 25C28.9987 27.2092 27.2078 29 24.9987 29C22.7896 29 20.9987 27.2092 20.9987 25Z" fill="#141517"/>
+        </svg>
+      </div>
+    </div>
+    <div class="bg-[#464648] min-w-[228px] p-3 rounded-[16px]">
+      <div class="font-medium">Total tweets</div>
+      <div class="flex justify-between mt-6">
+        <div>
+          <div class="text-[24px] font-medium">{stats.total_tweets ? numberFormatter.format(stats.total_tweets) : 'N/A'}</div>
+          <!-- <div class="mt-[10px]">2.4%</div> -->
+        </div>
+        <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.5" width="50" height="50" rx="25" fill="#D9D9D9"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M37.1082 17.3905C37.6289 17.9112 37.6289 18.7554 37.1082 19.2761L23.7748 32.6095C23.2541 33.1302 22.4099 33.1302 21.8892 32.6095L15.2226 25.9428C14.7019 25.4221 14.7019 24.5779 15.2226 24.0572C15.7433 23.5365 16.5875 23.5365 17.1082 24.0572L22.832 29.781L35.2226 17.3905C35.7433 16.8698 36.5875 16.8698 37.1082 17.3905Z" fill="#141517"/>
+        </svg>
+      </div>
+    </div>
+    <div class="bg-[#464648] min-w-[228px] p-3 rounded-[16px]">
+      <div class="font-medium">Account age</div>
+      <div class="flex justify-between mt-6">
+        <div>
+          <div class="text-[24px] font-medium">{stats.created_time ? getRelativeTime(new Date(stats.created_time)) : 'N/A'}</div>
+        </div>
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="50" height="50" rx="25" fill="#D9D9D9"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.8989 12.6816C21.5165 12.0115 23.2503 11.6666 25.0013 11.6666C26.7523 11.6666 28.4861 12.0115 30.1037 12.6816C31.7214 13.3516 33.1913 14.3338 34.4294 15.5719C35.6675 16.81 36.6496 18.2798 37.3197 19.8975C37.9898 21.5152 38.3346 23.249 38.3346 25C38.3346 26.7509 37.9898 28.4847 37.3197 30.1024C36.6496 31.7201 35.6675 33.1899 34.4294 34.428C34.1958 34.6617 33.9539 34.8861 33.7044 35.1012C33.6653 35.1388 33.6237 35.1743 33.5798 35.2072C32.5376 36.0831 31.3657 36.7957 30.1037 37.3184C28.4861 37.9884 26.7523 38.3333 25.0013 38.3333C23.2503 38.3333 21.5165 37.9884 19.8989 37.3184C18.2812 36.6483 16.8113 35.6662 15.5732 34.428C14.3351 33.1899 13.353 31.7201 12.6829 30.1024C12.0128 28.4847 11.668 26.7509 11.668 25C11.668 23.249 12.0128 21.5152 12.6829 19.8975C13.353 18.2798 14.3351 16.81 15.5732 15.5719C16.8113 14.3338 18.2812 13.3516 19.8989 12.6816ZM33.1548 31.8773C33.8611 31.0399 34.4354 30.0973 34.856 29.0819C35.3921 27.7878 35.668 26.4007 35.668 25C35.668 23.5992 35.3921 22.2121 34.856 20.918C34.32 19.6239 33.5343 18.448 32.5438 17.4575C31.5533 16.467 30.3774 15.6813 29.0833 15.1452C27.7891 14.6092 26.4021 14.3333 25.0013 14.3333C23.6005 14.3333 22.2135 14.6092 20.9193 15.1452C19.6252 15.6813 18.4493 16.467 17.4588 17.4575C16.4683 18.448 15.6826 19.6239 15.1466 20.918C14.6105 22.2121 14.3346 23.5992 14.3346 25C14.3346 26.4007 14.6105 27.7878 15.1466 29.0819C15.5672 30.0974 16.1415 31.04 16.8479 31.8774C17.2592 31.2821 17.7673 30.7539 18.3554 30.3166C19.5058 29.4613 20.9011 28.9996 22.3346 29M18.8442 33.7101C19.1178 33.2222 19.4923 32.7942 19.9464 32.4566C20.6367 31.9434 21.474 31.6664 22.3342 31.6666H27.6679C28.5292 31.6663 29.368 31.944 30.0588 32.4584C30.5118 32.7958 30.8855 33.2231 31.1586 33.71C30.513 34.1664 29.8171 34.5507 29.0833 34.8547C27.7891 35.3907 26.4021 35.6666 25.0013 35.6666C23.6005 35.6666 22.2135 35.3907 20.9193 34.8547C20.1855 34.5507 19.4897 34.1665 18.8442 33.7101ZM33.1548 31.8773C32.7445 31.2834 32.2379 30.7563 31.6514 30.3196C30.5003 29.4624 29.1032 28.9996 27.6679 29C27.6678 29 27.6681 29 27.6679 29H22.3346M21.2301 18.5621C22.2303 17.5619 23.5868 17 25.0013 17C26.4158 17 27.7723 17.5619 28.7725 18.5621C29.7727 19.5623 30.3346 20.9188 30.3346 22.3333C30.3346 23.7478 29.7727 25.1043 28.7725 26.1045C27.7723 27.1047 26.4158 27.6666 25.0013 27.6666C23.5868 27.6666 22.2303 27.1047 21.2301 26.1045C20.2299 25.1043 19.668 23.7478 19.668 22.3333C19.668 20.9188 20.2299 19.5623 21.2301 18.5621ZM25.0013 19.6666C24.2941 19.6666 23.6158 19.9476 23.1157 20.4477C22.6156 20.9478 22.3346 21.626 22.3346 22.3333C22.3346 23.0405 22.6156 23.7188 23.1157 24.2189C23.6158 24.719 24.2941 25 25.0013 25C25.7085 25 26.3868 24.719 26.8869 24.2189C27.387 23.7188 27.668 23.0405 27.668 22.3333C27.668 21.626 27.387 20.9478 26.8869 20.4477C26.3868 19.9476 25.7085 19.6666 25.0013 19.6666Z" fill="#141517"/>
+        </svg>
+          
+          
+      </div>
+    </div>
+    <div class="bg-[#464648] min-w-[228px] p-3 rounded-[16px]">
+      <div class="flex justify-between">
+        <div class="font-medium">Avg tweets/day</div>
+        <div class="font-medium">New tweets</div>
+      </div>
+      <div class="flex justify-between mt-6">
+        <div>
+          <div class="text-[24px] font-medium">{stats.avg_daily_tweets ? numberFormatter.format(stats.avg_daily_tweets) : 'N/A'}</div>
+        </div>
+        <div>
+          <div class="text-[24px] font-medium">{stats.new_tweets ? numberFormatter.format(stats.new_tweets) : 'N/A'}</div>
+        </div>      
+      </div>
+    </div>
+    <div class="bg-[#464648] min-w-[228px] p-3 rounded-[16px]">
+      <div class="flex justify-between">
+        <div class="font-medium">Total Likes</div>
+        <div class="font-medium">Total retweets</div>
+      </div>
+      <div class="flex justify-between mt-6">
+        <div>
+          <div class="text-[24px] font-medium">{stats.likes ? numberFormatter.format(stats.likes) : 'N/A'}</div>
+        </div>
+        <div>
+          <div class="text-[24px] font-medium">{stats.retweets ? numberFormatter.format(stats.retweets) : 'N/A'}</div>
+        </div>      
+      </div>
+    </div>
+  </div>
+  <div class="bg-[#1B1B1B] h-[350px] rounded-[12px] mt-6">
+  </div>
+</div>

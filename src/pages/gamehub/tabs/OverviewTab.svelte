@@ -61,9 +61,9 @@
         <BizzonRating rating={team_profile.rank} />
       </div>
       <!-- list -->
-      <div class="mt-6 space-y-4">
+      <div class="mt-6 space-y-4 max-h-[180px] -mr-4 pr-4 overflow-auto">
         {#each (team_profile.staffs || []) as member}
-          <div class="flex items-center">
+          <div class="flex items-center border-b border-[#3F3F3F] pb-2">
             <img class="rounded-full" src={member.avatar ? 'https://d1j2c9jkfhu70p.cloudfront.net/' + member.avatar : '/game-project/media/avatar.png'} width="45" alt="" />
             <div class="ml-2">
               <div class="text-[14px] leading-[100%] font-medium">

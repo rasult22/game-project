@@ -3,13 +3,9 @@
 
   export let on_chain_performance;
 
-  $: volume_rank = on_chain_performance.volume_rank || 'N/A'
   $: volume_24h_changed = on_chain_performance.volume_24h_changed || null
   $: market_cap = on_chain_performance.market_cap
   $: market_cap_7d_changed = on_chain_performance.market_cap_7d_changed || null
-  $: current_roi = on_chain_performance.current_roi
-  $: current_roi_7d_changed = on_chain_performance.current_roi_7d_changed
-  $: circulating_supply = on_chain_performance.circulating_supply
   $: token_price = on_chain_performance.token_price
 </script>
 <div class="grid grid-cols-3 gap-4">

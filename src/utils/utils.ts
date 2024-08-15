@@ -32,3 +32,34 @@ export const moneyFormatter = (fraction) => new Intl.NumberFormat('en-US', {
   minimumFractionDigits: 0,
   maximumFractionDigits: fraction
 });
+
+export const numberFormatter = new Intl.NumberFormat('en-US',{
+  style: 'decimal',
+  notation: 'standard',
+  maximumFractionDigits: 2
+})
+
+export const getRelativeTime = (date: Date) => {
+  const now = new Date();
+  const { value, unit } = getTimeDifference(date, now);
+  const rtf = new Intl.RelativeTimeFormat('en', { numeric: 'auto' });
+
+  return rtf.format(-value, unit as any).replace(' ago', '')
+}
+
+function getTimeDifference(date1: Date, date2: Date) {
+  const seconds = Math.floor((date2 - date1) / 1000);
+  const minutes = Math.floor(seconds / 60);
+  const hours = Math.floor(minutes / 60);
+  const days = Math.floor(hours / 24);
+  const months = Math.floor(days / 30);
+  const years = Math.floor(days / 365);
+  console.log(seconds)
+
+  if (years > 0) return { value: years, unit: 'year' };
+  if (months > 0) return { value: months, unit: 'month' };
+  if (days > 0) return { value: days, unit: 'day' };
+  if (hours > 0) return { value: hours, unit: 'hour' };
+  if (minutes > 0) return { value: minutes, unit: 'minute' };
+  return { value: seconds, unit: 'second' };
+}

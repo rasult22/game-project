@@ -1,8 +1,9 @@
 <script>
   export let game_id
-  import OverviewTab from "./OverviewTab.svelte";
-  import AboutTab from "./AboutTab.svelte";
-  import OcpTab from "./OCPTab.svelte";
+  import OverviewTab from "./tabs/OverviewTab.svelte";
+  import AboutTab from "./tabs/AboutTab.svelte";
+  import OcpTab from "./tabs/OCPTab.svelte";
+  import SlTab from "./tabs/SLTab.svelte";
   import { onMount } from "svelte";
 
   export let game
@@ -31,8 +32,6 @@
   })
 </script>
 
-<b>{game_id}</b>
-
 <div class="flex">
   <div class="border-b border-[#464648] leading-[150%] flex space-x-6">
     {#each tabs as tab (tab.key)}
@@ -54,5 +53,8 @@
   {/if}
   {#if activeTab === 'ocp'}
     <OcpTab on_chain_performance={game.on_chain_performance.data} />
+  {/if}
+  {#if activeTab === 'sl'}
+    <SlTab social_data={game.social_data} />
   {/if}
 </div>
