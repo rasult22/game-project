@@ -1,21 +1,34 @@
 <script>
   export let error = false;
   export let value = '';
+  export let type = 'text'
   export let placeholder = 'Text'
   export let id = 'floating_filled'
   export let required = false
 </script>
 
 <div class="relative w-full">
-  <input
-    bind:value={value}
-    required={required}
-    type="text"
-    id={id}
-    class:border-red-500={error}
-    class="w-full block bg-transparent border focus:outline-none focus:border-[#D9D9D9] placeholder:text-[#888888] border-[#888] py-[14px] px-3 rounded-[12px] appearance-none peer"
-    placeholder=" "
-  />
+  {#if type === 'email'}
+    <input
+      bind:value={value}
+      required={required}
+      type="email"
+      id={id}
+      class:border-red-500={error}
+      class="w-full block bg-transparent border focus:outline-none focus:border-[#D9D9D9] placeholder:text-[#888888] border-[#888] py-[14px] px-3 rounded-[12px] appearance-none peer"
+      placeholder=" "
+    />
+  {:else}
+    <input
+      bind:value={value}
+      required={required}
+      type="text"
+      id={id}
+      class:border-red-500={error}
+      class="w-full block bg-transparent border focus:outline-none focus:border-[#D9D9D9] placeholder:text-[#888888] border-[#888] py-[14px] px-3 rounded-[12px] appearance-none peer"
+      placeholder=" "
+    />
+  {/if}
   <label
     for={id}
     class:text-red-500={error}

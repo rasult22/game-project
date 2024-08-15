@@ -20,7 +20,7 @@
           </button>
         </div>
         <!-- body -->
-        <RequestForm />
+        <RequestForm on:done={() => open = false} />
       </div>
     </div>
   </div>
