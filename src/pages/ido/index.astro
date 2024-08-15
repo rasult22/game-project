@@ -1,0 +1,111 @@
+---
+import "@fontsource-variable/inter";
+import "@fontsource/oxanium/500.css";
+import "@fontsource/oxanium/600.css";
+import "@fontsource/oxanium/800.css";
+import "~/styles/global.css";
+import Footer from "~/components/footer.astro";
+import Header from "~/components/header.astro";
+import { ViewTransitions } from "astro:transitions";
+const { generator, site } = Astro;
+const image = new URL("optimized/social.webp", site);
+const description =
+  "AI based communication voice avatars, which can be used as different professional assistants – psychologist, fitness coach, nutrition counselor, Wide range of topics communicating Companion";
+---
+
+<!doctype html>
+<html
+  lang="en"
+  class="h-full bg-app-bg font-Inter motion-safe:scroll-smooth"
+  data-theme="dark"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.png" type="image/svg+xml" />
+    <meta name="generator" content={generator} />
+    <meta
+      http-equiv="cache-control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <title>CompAI - your best AI generated friend</title>
+    <meta name="description" content={description} />
+    <ViewTransitions />
+    <!-- social media -->
+    <meta
+      property="og:title"
+      content="CompAI - your best AI generated friend"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={site} />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head><body class="overflow-x-hidden bg-[#0D0D0F] text-white">
+    <Header />
+    <div class="mx-auto max-w-[1520px] space-x-4 px-6 pt-[150px]">
+      <div class="max-w-[1520px]">
+        <div
+          class="h-[450px] w-full rounded-[12px] bg-[url(/game-project/optimized/ido-bg.webp)] bg-cover p-8"
+        >
+          <div
+            class="app-text-gradient-bg max-w-[660px] font-Oxanium text-[64px] uppercase leading-[120%]"
+          >
+            Web3 Future Crafting Station
+          </div>
+          <div class="mt-6 opacity-60">
+            Invest in your favourite games with confidence, leave the rest to us
+          </div>
+        </div>
+        <div class="mt-[100px]">
+          <div class="text-[36px] font-medium font-Oxanium leading-[100%] uppercase">
+            IDo cards is coming
+          </div>
+          <div class="flex gap-4 mt-[50px]">
+            <img src="/game-project/optimized/ido-card-1.webp" alt="">
+            <img src="/game-project/optimized/ido-card-2.webp" alt="">
+            <img src="/game-project/optimized/ido-card-3.webp" alt="">
+            <img src="/game-project/optimized/ido-card-4.webp" alt="">
+            <img src="/game-project/optimized/ido-card-5.webp" alt="">
+            <img src="/game-project/optimized/ido-card-6.webp" alt="">
+          </div>
+        </div>
+        <div class="h-[100vh] max-h-[1200px] flex items-center">
+          <div class="flex">
+            <div class="text-[48px] shrink-0 pr-24 font-Oxanium font-medium leading-[120%] uppercase text-[#404648]">Bizzon station</div>
+            <div class="space-y-4 pl-12 border-l border-[#A3A3A3]">
+              <p>
+                <span class="app-text-gradient-bg">BIZZON STATION is a tool for the initial sale of tokens.</span> With the help of such a tool, modern crypto-gaming projects attract investments at the very start.
+              </p>
+              <p>
+                We provide an opportunity for smart investors to catalyse the future of WEB3 by contributing to the success of promising game projects and share the benefits of early participation.
+              </p>
+              <p>
+                <span class="app-text-gradient-bg">No agents, no borders</span> – just direct connections between creators and supporters, enabling direct interaction through blockchain technology.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="pb-10">
+          <div class="text-[48px] font-medium font-Oxanium uppercase">
+            Advantages
+          </div>
+          <div class="flex gap-4 mt-[50px]">
+            <div class="w-full flex flex-col items-start bg-cover p-5 bg-[url(/game-project/optimized/advantage-1.webp)] h-[400px]">
+              <div class="rounded-[32px] py-3 text-[20px] font-semibold px-6 backdrop-blur-[16px]">Developers</div>
+              <div class="mt-auto -mb-5 -mx-5 py-10 px-5 bg-gradient-to-b from-[#0D0D0F00] to-[#0D0D0FB2] text-[#E9E9E9]">
+                Developers apply for tokensale through Bizzon Station and provide a certain volume of coins at a fixed price, and users block their funds in exchange for these tokens through the Bizzon Stake and Ranking system</div>
+            </div>
+            <div class="w-full flex flex-col items-start bg-cover p-5 bg-[url(/game-project/optimized/advantage-2.webp)] h-[400px]">
+              <div class="rounded-[32px] py-3 text-[20px] font-semibold px-6 backdrop-blur-[16px]">Gamers</div>
+              <div class="mt-auto -mb-5 -mx-5 py-10 px-5 bg-gradient-to-b from-[#0D0D0F00] to-[#0D0D0FB2] text-[#E9E9E9]">
+                At the moment the BizzonGames team is developing an exclusive lottery system of IDO cards with which our users will get the exclusive right to become an early investor in game projects
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <Footer />
+  </body>
+</html>
