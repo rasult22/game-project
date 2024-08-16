@@ -1,0 +1,57 @@
+---
+import type { NavItem } from "~/types";
+let currentUrl = Astro.url.pathname
+
+const githubPrefix = '/game-project'
+const navItems: Array<NavItem> = [
+  { title: "Ranking", url: githubPrefix + "/ranking" },
+  { title: "Staking", url: githubPrefix + "/staking" },
+  { title: "GameHub", url: githubPrefix + "/gamehub" },
+  { title: "IDO", url: githubPrefix + "/ido" },
+  { title: "Blog", url: githubPrefix + "/blog" },
+  { title: "About", url: githubPrefix + "/about" },
+  { title: "Whitepaper", url: githubPrefix + "/whitepaper" },
+];
+---
+
+<footer class="z-[5] text-[#182126] min-h-[650px] relative pt-[48px] bg-[url(/game-project/media/footer-bg-3.jpeg)] bg-cover bg-center mt-[150px] md:px-[40px] px-[40px] sm:px-[24px] pb-[100px] sm:pb-[44px] ">
+  <div class="max-w-[1520px] mx-auto">
+    <div class=" max-w-[60%] font-Oxanium text-[64px] uppercase leading-[120%]">
+      Would you like to host on our platform?
+    </div>
+    <div>
+      Fill out the form below and we will review your application shortly
+    </div>
+    
+    <button class="bg-white font-medium rounded-[12px] mt-9 anim-btn py-4 px-20">
+      Get Listing
+    </button>
+    <div class="my-7 h-[1px] w-full  opacity-80" />
+  </div>
+</footer>
+<div class=" bg-[#252935]">
+  <nav class="max-w-[1420px] mx-auto px-4 py-8 flex items-center">
+    <ul class="flex items-center gap-6 max-w-[680px]">
+      {
+        navItems.map(({ title, url }) => (
+          <li>
+            <a class={`text-[16px] transition-all hover:opacity-80 pb-1 ${currentUrl.includes(url) ? 'border-b-2 border-[#F97C0E]' : ''}`} href={url}>
+              {title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="ml-auto flex gap-6">
+      <a class="opacity-50 hover:underline" href="#">
+        Terms of use
+      </a>
+      <a class="opacity-50 hover:underline" href="#">
+        User Agreement
+      </a>
+      <a class="opacity-50 hover:underline" href="#">
+        Privacy policy
+      </a>
+    </div>
+  </nav>
+</div>
