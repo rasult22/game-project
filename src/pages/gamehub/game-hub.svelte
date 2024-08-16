@@ -10,6 +10,44 @@
   import {items} from './mock'
   let tab = 'gamehub'
 
+  let search = ''
+  let genreFilter = []
+  let networkFilter = []
+  const clearSearch = () => {
+    search = ''
+  }
+
+  $: filtered_items = items.filter(item => {
+    let networkFilterIsTurnedOn = networkFilter.length > 0
+    let genreFilterIsTurnedOn = genreFilter.length > 0
+    const tags_string = item.game_info.tags.join(' | ').toLowerCase()
+    let gameIsInFilter = genreFilter.some(genre => tags_string.includes(genre.name.toLowerCase()))
+    const networks_string = item.networks.join(' | ').toLowerCase()
+    let isInNetwork = networkFilter.some(n => networks_string.includes(n.key))
+
+    if (search) {
+      genreFilter = []
+      networkFilter = []
+      return item.game_info.name.toLowerCase().includes(search.toLowerCase())
+    }
+
+    if (!networkFilterIsTurnedOn && !genreFilterIsTurnedOn) {
+      return true
+    }
+    if (networkFilterIsTurnedOn && !genreFilterIsTurnedOn) {
+      return isInNetwork
+    }
+    
+    if (genreFilterIsTurnedOn && !networkFilterIsTurnedOn) {
+      return gameIsInFilter
+    }
+
+    if (genreFilterIsTurnedOn && networkFilterIsTurnedOn) {
+      return gameIsInFilter && isInNetwork
+    }
+
+    return gameIsInFilter 
+  })
   $: game_table_data = items.map(game => {
     return {
       id: game.id,
@@ -62,11 +100,11 @@
       </div>
       <!-- Genre Filter -->
       <div class="mt-6">
-        <GenreFilter />
+        <GenreFilter bind:genreFilter={genreFilter} />
       </div>
       <!-- Network Filter -->
       <div class="mt-6">
-        <NetworkFilter />
+        <NetworkFilter bind:networkFilter={networkFilter} />
       </div>
       <!-- Device Filter -->
       <div class="mt-6">
@@ -106,14 +144,20 @@
     <div class="w-full">
       <!-- header -->
       <div class="flex items-center justify-between">
-        <Search />
+        <Search bind:value={search} on:click={clearSearch}/>
         <Dropdown />
       </div> 
-      <div class="mt-[50px] p-4 gap-3 grid grid-cols-4 bg-[#1C1C1E] rounded-[16px]">
-        {#each items as card, index }
-          <GameCardBasic link={'/game-project/gamehub/' + card.id} img={card.banner} name={card.game_info.name} networks={card.networks} players={card.players_count} rank={index + 1} tags={card.game_info.tags} />
-        {/each}
-      </div>
+      {#if filtered_items.length}
+        <div class="mt-[50px] p-4 gap-3 grid grid-cols-4 bg-[#1C1C1E] rounded-[16px]">
+          {#each filtered_items as card, index }
+            <GameCardBasic link={'/game-project/gamehub/' + card.id} img={card.banner} name={card.game_info.name} networks={card.networks} players={card.players_count} rank={index + 1} tags={card.game_info.tags} />
+          {/each}
+        </div>
+      {:else}
+        <div class="py-36 flex font-Oxanium font-semibold items-center justify-center text-[20px] uppercase opacity-60">
+          There is no games matching given criteria
+        </div>
+      {/if}
     </div>
   </div>
   {:else}

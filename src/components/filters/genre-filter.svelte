@@ -3,20 +3,20 @@
 	import BaseChip from '../base/base-chip.svelte';
 let items = [
   {
-    name: 'Casual',
-    key: 'casual'
-  },
-  {
-    name: 'Arcade',
-    key: 'arcade'
+    name: 'Platform',
+    key: 'platform'
   },
   {
     name: 'Card',
-    key: 'card1'
+    key: 'card'
   },
   {
-    name: 'Card',
-    key: 'card2'
+    name: 'Action',
+    key: 'action'
+  },
+  {
+    name: 'Turn-based',
+    key: 'turn-based'
   },
   {
     name: 'NFT',
@@ -47,8 +47,8 @@ let items = [
     key: 'idle'
   },
   {
-    name: 'Sports',
-    key: 'sports'
+    name: 'Digital Collectible',
+    key: 'digital-collectible'
   },
   {
     name: 'Adventure',
@@ -60,6 +60,16 @@ let items = [
   }
 ];
   let open = true
+  export let genreFilter = []
+
+  const onSelect = (item) => {
+    if (genreFilter.find(el => el.key === item.key)) {
+      genreFilter = genreFilter.filter(x => x.key !== item.key)
+    } else {
+      genreFilter.push(item)
+      genreFilter = genreFilter
+    }
+  }
 </script>
 <div class="max-w-[500px] border-b border-[#464648] pb-4 select-none">
   <div on:click={() => open = !open} class="flex justify-between cursor-pointer">
@@ -71,7 +81,7 @@ let items = [
   {#if open}
     <div transition:fade class="flex gap-[10px] flex-wrap pt-4">
       {#each items as item (item.key) }
-        <BaseChip active={false}>
+        <BaseChip on:click={() => onSelect(item)} active={genreFilter.some(el => el.key === item.key)}>
           <span slot="text">
             {item.name}
           </span>

@@ -1,7 +1,7 @@
 <script>
   export let active = false
 </script>
-<button class="chip space-x-[6px] text-[14px]" class:chip-active={active}>
+<button on:click class="chip space-x-[6px] text-[14px]" class:chip-active={active}>
   <slot name="img">
     <img src="/game-project/media/ton-icon.svg" alt="">
   </slot>

@@ -18,11 +18,41 @@
       key: 'eth'
     },
     {
-      name: 'BCH',
+      name: 'BSC',
       img: '/game-project/media/bnb-icon.svg',
-      key: 'bnb'
+      key: 'bsc'
+    },
+    {
+      name: 'Ronin',
+      img: '/game-project/media/ronin-icon.svg',
+      key: 'ronin'
+    },
+    {
+      name: 'Polygon',
+      img: '/game-project/media/polygon-icon.svg',
+      key: 'polygon'
+    },
+    {
+      name: 'AVAX',
+      img: '/game-project/media/avax-icon.svg',
+      key: 'avax'
+    },
+    {
+      name: 'Moonbeam',
+      img: '/game-project/media/moonbeam-icon.svg',
+      key: 'moonbeam'
     },
   ]
+  export let networkFilter = []
+
+  const onSelect = (item) => {
+    if (networkFilter.find(el => el.key === item.key)) {
+      networkFilter = networkFilter.filter(x => x.key !== item.key)
+    } else {
+      networkFilter.push(item)
+      networkFilter = networkFilter
+    }
+  }
   let open = true
 </script>
 <div class="max-w-[500px] border-b border-[#464648] pb-4 select-none">
@@ -35,8 +65,8 @@
   {#if open}
     <div transition:fade class="flex gap-[10px] flex-wrap pt-4">
       {#each items as item (item.key) }
-        <NetworkChip active={false}>
-          <img slot="img" src={item.img} alt="">
+        <NetworkChip on:click={() => onSelect(item)} active={networkFilter.some(el => el.key === item.key)}>
+          <img width="32" slot="img" src={item.img} alt="">
           <span slot="text">
             {item.name}
           </span>
