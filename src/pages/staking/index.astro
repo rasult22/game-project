@@ -10,9 +10,7 @@ import Staking from './staking.svelte'
 import { ViewTransitions } from 'astro:transitions';
 const { generator, site } = Astro;
 const image = new URL("optimized/social.webp", site);
-const description =
-  "AI based communication voice avatars, which can be used as different professional assistants – psychologist, fitness coach, nutrition counselor, Wide range of topics communicating Companion";
-
+import {description, title} from '~/site'
 ---
 
 <!doctype html>
@@ -30,13 +28,13 @@ const description =
       http-equiv="cache-control"
       content="no-cache, no-store, must-revalidate"
     />
-    <title>CompAI - your best AI generated friend</title>
+    <title>{title}</title>
     <meta name="description" content={description} />
     <ViewTransitions />
     <!-- social media -->
     <meta
       property="og:title"
-      content="CompAI - your best AI generated friend"
+      content={title}
     />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={description} />

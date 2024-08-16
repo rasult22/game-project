@@ -6,15 +6,11 @@ import "@fontsource/oxanium/800.css";
 import "~/styles/global.css";
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
-import JoinRequestPopup from '~/components/join-request-modal.svelte'
 import { ViewTransitions } from 'astro:transitions';
+import {description, title} from '~/site'
 
 const { generator, site } = Astro;
 const image = new URL("optimized/social.webp", site);
-
-const description =
-  "A single platform for crypto-gaming: develop, explore, play and earn";
-
 ---
 
 <!doctype html>
@@ -32,13 +28,13 @@ const description =
       http-equiv="cache-control"
       content="no-cache, no-store, must-revalidate"
     />
-    <title>Bizzon Games</title>
+    <title>{title}</title>
     <meta name="description" content={description} />
 
     <!-- social media -->
     <meta
       property="og:title"
-      content="Bizzon Games"
+      content={title}
     />
     <ViewTransitions />
     <meta property="og:type" content="website" />

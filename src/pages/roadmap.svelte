@@ -111,25 +111,21 @@
         <div class="ml-[300px] flex space-x-4">
           <ul class="max-w-[468px] list-disc leading-[150%]">
             <li>Team organization</li>
-            <li>Web development</li>
-            <li>Social Media Resources</li>
-            <li>Aggregator (GameHUB Gen 1)</li>
-            <li>Development of the first BIZZON Games game</li>
-            <li>Integration of MM TW SP C98 wallet development</li>
-            <li>Prototyping of 9 ranked ranking rendition system</li>
-            <li>Release of the first beta version of the BIZZON Games</li>
+            <li>Web Resources development</li>
+            <li>Social Media development</li>
+            <li>Aggregator Gen1 (GameHUB v 1.0) development</li>
+            <li>Launching the first original game on BizzonGames</li>
+            <li>Integration of Web3 solutions</li>
+            <li>Development of first 10 indicators of BizzonGames ranking system</li>
+            <li>Release of BizzonGames Platform v 1.0</li>
           </ul>
           <ul class="max-w-[478px] list-disc leading-[150%]">
-            <li>Private demo of BIZZON beta at cryptocurrency conference</li>
-            <li>Initial funding round</li>
-            <li>Aggregator (GameHUB Gen 2)</li>
-            <li>Active community development</li>
-            <li>
-              Preparation of game product from AI project partner (Beta Quest to
-              earn)
-            </li>
-            <li>BIZZON STATION partnership with game projects</li>
-            <li>BIZZON ID system (Basiс)</li>
+            <li>Demonstration and popularization of BizzonGames at crypto events</li>
+            <li>Seed funding Round start</li>
+            <li>Aggregator Gen2 development</li>
+            <li>Active community expansion</li>
+            <li>Game designers’ partnership activities</li>
+            <li>BizzonID system implementation</li>
           </ul>
         </div>
       </div>
@@ -141,23 +137,11 @@
         </div>
         <div class="ml-[300px] flex space-x-4">
           <ul class="max-w-[468px] list-disc leading-[150%]">
-            <li>BIZZON Open Minnet</li>
-            <li>Integration for Gen v2.0 wallet development</li>
-            <li>Game product demo from AI project partner</li>
-            <li>Official launch of the first game from BIZZON Games</li>
-            <li>cross-chain technology development</li>
-            <li>Support for 3 chains (TON / BSC / ERC / SOL)</li>
-            <li>Staking</li>
-          </ul>
-          <ul class="max-w-[478px] list-disc leading-[150%]">
-            <li>Active involvement of crypto game developers</li>
-            <li>Aggregator (GameHUB Gen 3)</li>
-            <li>Improvement of the ranking system prototype</li>
-            <li>Development of BIZZON Games' second game (#2)</li>
-            <li>
-              Start of development of revolutionary cross-economy of BIZZON
-              Games games
-            </li>
+            <li>Launch of 2nd and 3rd original games form Bizzon</li>
+            <li>Expansion of game devs partnerships</li>
+            <li>Bizzon Cross-economy development</li>
+            <li>Expanding on-chain support on BizzonGames Platform</li>
+            <li>Staking events launch</li>
           </ul>
         </div>
       </div>
@@ -172,22 +156,11 @@
         </div>
         <div class="ml-[300px] flex space-x-4">
           <ul class="max-w-[468px] list-disc leading-[150%]">
-            <li>EARN</li>
-            <li>New UI/UX Ver2</li>
-            <li>Active attraction of gold influencers</li>
-            <li>Launch of Private/Pre-sale rounds</li>
-            <li>Steaking Event 1.0 (Limited Steaking)</li>
-            <li>Launch of beta test of the second game BIZZON Games</li>
-            <li>
-              Beta testing of BIZZON Games' revolutionary cross-economy games
-            </li>
-          </ul>
-          <ul class="max-w-[478px] list-disc leading-[150%]">
-            <li>
-              BIZZON ID system (Creation of NFT collection of commons, epics,
-              legendaries)
-            </li>
-            <li>Release of the first NFT BIZZON collection</li>
+            <li>Expanding game devs involvement activity</li>
+            <li>Aggregator Gen3 upgrades</li>
+            <li>New BizzonGames original games launch</li>
+            <li>Producing Center active promotion</li>
+            <li>Active IDO Launchpad promotion</li>
           </ul>
         </div>
       </div>
@@ -201,14 +174,10 @@
         </div>
         <div class="ml-[300px] flex space-x-4">
           <ul class="max-w-[468px] list-disc leading-[150%]">
-            <li>BIZZON Games #2 open mynet</li>
-            <li>
-              Development of BIZZON Games #3 (a revolutionary game that combines
-              genres: Tower defense, Strategy with RPG elements)
-            </li>
-            <li>Scaling up the BIZZON team</li>
-            <li>BIZZON Games cross-economy launch</li>
-            <li>Roadmap v 2.0</li>
+            <li>BizzonGames NFT collection development</li>
+            <li>BizzonID system improvements</li>
+            <li>Producing Center complete business activity</li>
+            <li>IDO Launchpad active listing phase</li>
           </ul>
         </div>
       </div>

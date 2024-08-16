@@ -8,6 +8,7 @@ import {formatDate} from '~/utils/utils'
 import FooterTwo from "~/components/footer-two.astro";
 import Header from "~/components/header.astro";
 const { generator, site } = Astro;
+import {description, title} from '~/site'
 import { ViewTransitions } from 'astro:transitions';
 import pb from "~/pocketbase";
 const image = new URL("optimized/social.webp", site);
@@ -20,8 +21,6 @@ type Post = {
   title: string,
   recommended_posts: Post[]
 }
-const description =
-  "AI based communication voice avatars, which can be used as different professional assistants – psychologist, fitness coach, nutrition counselor, Wide range of topics communicating Companion";
 
 const list = await pb.collection('games_posts').getFullList<Post>({
     expand: 'games_posts'
@@ -52,13 +51,13 @@ const items = list.map(post => {
       http-equiv="cache-control"
       content="no-cache, no-store, must-revalidate"
     />
-    <title>CompAI - your best AI generated friend</title>
+    <title>{title}</title>
     <meta name="description" content={description} />
 
     <!-- social media -->
     <meta
       property="og:title"
-      content="CompAI - your best AI generated friend"
+      content={title}
     />
     <ViewTransitions />
     <meta property="og:type" content="website" />
