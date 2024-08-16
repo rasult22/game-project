@@ -310,11 +310,11 @@
     <div class="mt-6">
       <div class="text-[20px] font-semibold">Top sale exchanges</div>
       <div class="flex gap-4 mt-4">
-        <img width="64" src="/game-project/media/sale-1.png" alt="" />
-        <img width="64" src="/game-project/media/sale-2.png" alt="" />
-        <img width="64" src="/game-project/media/sale-3.png" alt="" />
-        <img width="64" src="/game-project/media/sale-4.png" alt="" />
-        <img width="64" src="/game-project/media/sale-5.png" alt="" />
+        <img width="64" src="/game-project/optimized/sale-1.webp" alt="" />
+        <img width="64" src="/game-project/optimized/sale-2.webp" alt="" />
+        <img width="64" src="/game-project/optimized/sale-3.webp" alt="" />
+        <img width="64" src="/game-project/optimized/sale-4.webp" alt="" />
+        <img width="64" src="/game-project/optimized/sale-5.webp" alt="" />
       </div>
     </div>
   </div>

@@ -1,8 +1,5 @@
 ---
-import { Icon } from "astro-icon/components";
-import type { FooterLink, NavItem } from "~/types";
-import TelegramIcon from '~/components/icons/TelegramIcon.svelte'
-import TwitterIcon from '~/components/icons/TwitterIcon.svelte'
+import type { NavItem } from "~/types";
 let currentUrl = Astro.url.pathname
 
 const githubPrefix = '/game-project'
@@ -17,7 +14,7 @@ const navItems: Array<NavItem> = [
 ];
 ---
 
-<footer class="z-[5] relative pt-[48px] bg-[url(/game-project/media/footer-bg-2.png)] bg-cover mt-[150px] md:px-[40px] px-[40px] sm:px-[24px] pb-[100px] sm:pb-[44px] ">
+<footer class="z-[5] relative pt-[48px] bg-[url(/game-project/optimized/footer-bg-2.webp)] bg-cover mt-[150px] md:px-[40px] px-[40px] sm:px-[24px] pb-[100px] sm:pb-[44px] ">
   <div class="max-w-[1520px] mx-auto">
     <div class="app-text-gradient-bg max-w-[60%] font-Oxanium text-[64px] uppercase leading-[120%]">
       Follow us on social

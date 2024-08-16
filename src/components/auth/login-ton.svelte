@@ -31,7 +31,7 @@ onMount(() => {
     await tonConnectUI.openModal();
   }
 }} class="w-full bg-[#464648] active:scale-95 active:bg-[#58585B] transition-all rounded-[24px] px-4 py-[10px] flex items-center">
-  <img src="/game-project/media/ton-icon.png" width="48" height="48" alt="">
+  <img src="/game-project/optimized/ton-icon.webp" width="48" height="48" alt="">
   <div class="ml-4 font-medium">
     Ton wallet
   </div>

@@ -19,5 +19,5 @@
       {/if}
     </div>
   </div>
-  <img width="45" height="45" src="/game-project/media/avatar.png" alt="">
+  <img width="45" height="45" src="/game-project/optimized/avatar.webp" alt="">
 </a>

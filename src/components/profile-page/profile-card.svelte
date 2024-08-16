@@ -20,18 +20,18 @@
 </script>
 <div class="bg-[#1C1C1E] relative w-full flex-wrap justify-center flex flex-col items-center p-6 rounded-[20px] space-y-3">
   <div class="rounded-full w-[120px] h-[120px] border-4 border-orange-400">
-    <img class="w-full" width="120" height="120" src="/game-project/media/avatar.png" alt="">
+    <img class="w-full" width="120" height="120" src="/game-project/optimized/avatar.webp" alt="">
   </div>
   <!-- auth type -->
   <div class="flex justify-center">
     {#if $auth.authType === 'metamask'}
-      <img src="/game-project/media/metamask-icon.png" width="24" alt="">
+      <img src="/game-project/optimized/metamask-icon.webp" width="24" alt="">
     {/if}
     {#if $auth.authType === 'google'}
-      <img src="/game-project/media/google-icon.png" width="24" alt="">
+      <img src="/game-project/optimized/google-icon.webp" width="24" alt="">
     {/if}
     {#if $auth.authType === 'trustwallet'}
-      <img src="/game-project/media/trustwallet-icon.png" width="24" alt="">
+      <img src="/game-project/optimized/trustwallet-icon.webp" width="24" alt="">
     {/if}
   </div>
   <!-- name -->

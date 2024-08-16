@@ -61,19 +61,19 @@
     <img
       width="320"
       class="max-w-[320px] hover:scale-105 active:scale-[0.99] transition-all cursor-pointer"
-      src="/game-project/media/common-box.png"
+      src="/game-project/optimized/common-box.webp"
       alt=""
     />
     <img
       width="320"
       class="max-w-[320px] hover:scale-105 active:scale-[0.99] transition-all cursor-pointer"
-      src="/game-project/media/epic-box.png"
+      src="/game-project/optimized/epic-box.webp"
       alt=""
     />
     <img
       width="320"
       class="max-w-[320px] hover:scale-105 active:scale-[0.99] transition-all cursor-pointer"
-      src="/game-project/media/legendary-box.png"
+      src="/game-project/optimized/legendary-box.webp"
       alt=""
     />
   </div>
@@ -99,7 +99,7 @@
             <span class="text-[#787575]">{index + 1}</span>
           </span>
           <div class="flex items-center space-x-4">
-            <img width="50" src="/game-project/media/metamask-icon.png" alt="">
+            <img width="50" src="/game-project/optimized/metamask-icon.webp" alt="">
             <span class="font-semibold">–</span>
           </div>
         </div>

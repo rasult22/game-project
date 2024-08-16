@@ -42,7 +42,7 @@ class="bg-gradient-to-r from-[#FDFC47] to-[#24FE41] text-black rounded-[20px] py
         Channel</div>
         <img width="32" src="/game-project/media/tg-icon.svg" alt="">
     </div>
-    <img class="mt-10" src="/game-project/media/social-media-rate.png" alt="">
+    <img class="mt-10" src="/game-project/optimized/social-media-rate.webp" alt="">
   </div>
   <div class="bg-[#2A2A2A] w-full p-4 rounded-[12px]">
     <div class="flex justify-between">
@@ -51,7 +51,7 @@ class="bg-gradient-to-r from-[#FDFC47] to-[#24FE41] text-black rounded-[20px] py
       </div>
       <img width="24" src="/game-project/media/x-icon.svg" alt="">
     </div>
-    <img class="mt-10" src="/game-project/media/social-media-rate.png" alt="">
+    <img class="mt-10" src="/game-project/optimized/social-media-rate.webp" alt="">
   </div>
 </div>
 

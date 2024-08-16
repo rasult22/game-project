@@ -194,6 +194,6 @@
     </div>
   </div>
   <div class="mt-9">
-    <img src="/game-project/media/play-to-earn.png" alt="">
+    <img src="/game-project/optimized/play-to-earn.webp" alt="">
   </div>  
 </div>

@@ -8,7 +8,7 @@
 {#if open}
   <div transition:fade on:click={() => open = false} class="fixed cursor-pointer flex items-center justify-center left-[50%] translate-x-[-50%] top-0 bg-[rgba(0,0,0,0.5)] backdrop-blur-sm w-[100vw] h-[100vh] z-[150]">
     <div on:click|stopPropagation class="flex max-w-[1200px] z-[150] cursor-default rounded-[24px] overflow-hidden">
-      <img width="600" class="w-[50%]" src="/game-project/media/join-us.png" alt="">
+      <img width="600" class="w-[50%]" src="/game-project/optimized/join-us.webp" alt="">
       <div class="bg-[#2A2A2A] w-full p-6">
         <!-- header -->
         <div class="flex items-center justify-between">

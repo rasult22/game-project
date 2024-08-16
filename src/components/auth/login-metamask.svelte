@@ -92,7 +92,7 @@
 
 
 <button disabled={!isAvailable || isConflict} on:click={authorize} class="w-full disabled:opacity-35 disabled:cursor-not-allowed bg-[#464648] active:scale-95 active:bg-[#58585B] transition-all rounded-[24px] px-4 py-[10px] flex items-center">
-  <img src="/game-project/media/metamask-icon.png" width="48" height="48" alt="">
+  <img src="/game-project/optimized/metamask-icon.webp" width="48" height="48" alt="">
   <div class="ml-4 font-medium">
     Metamask
     {#if !isAvailable}
