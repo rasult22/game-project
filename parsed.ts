@@ -17,7 +17,7 @@ export default [
       "eth",
       "polygon"
     ],
-    "players_count": null,
+    "players_count": 2312,
     "star_rating": {
       "collection_id": "08c1027f-4984-487a-a968-3c710ef2bd00",
       "collection_type": "games",
@@ -424,7 +424,7 @@ export default [
       "social_level": 98.00399780273438,
       "bizzon_rating": null,
       "release_date": "2022-10-04T11:22:08.537Z",
-      "devices": [],
+      "devices": ["Desktop"],
       "backed_by": [
         {
           "name": "Animoca Brands KK",
@@ -467,7 +467,7 @@ export default [
       "eth",
       "ronin"
     ],
-    "players_count": null,
+    "players_count": 24322,
     "star_rating": {
       "collection_id": "f96d0db8-d551-40c3-905c-e6e002c920e3",
       "collection_type": "games",
@@ -870,7 +870,7 @@ export default [
       "social_level": 93.1614761352539,
       "bizzon_rating": null,
       "release_date": "2022-05-19T08:51:05.974Z",
-      "devices": [],
+      "devices": ["Android", "Desktop", "iOS"],
       "backed_by": [
         {
           "name": "Andreessen Horowitz (a16z)",
@@ -948,7 +948,7 @@ export default [
     "networks": [
       "bsc"
     ],
-    "players_count": null,
+    "players_count": 4312,
     "star_rating": {
       "collection_id": "149b050a-f391-4397-8dc0-163ea2e14138",
       "collection_type": "games",
@@ -1377,7 +1377,7 @@ export default [
       "social_level": 70.21869659423828,
       "bizzon_rating": null,
       "release_date": "2022-05-19T09:23:01.182Z",
-      "devices": [],
+      "devices": ["Desktop", "iOS", "Android"],
       "backed_by": [
         {
           "name": "Animoca Brands KK",
@@ -1446,7 +1446,7 @@ export default [
       "eth",
       "polygon"
     ],
-    "players_count": null,
+    "players_count": 32122,
     "star_rating": {
       "collection_id": "5293cb42-c26e-4a32-b80e-f595adc07083",
       "collection_type": "games",
@@ -1816,7 +1816,7 @@ export default [
       "social_level": 79,
       "bizzon_rating": null,
       "release_date": "2022-05-19T09:09:57.063Z",
-      "devices": [],
+      "devices": ["Desktop", "iOS", "Android"],
       "backed_by": [
         {
           "name": "Andreessen Horowitz (a16z)",
@@ -1877,7 +1877,7 @@ export default [
     "networks": [
       "eth"
     ],
-    "players_count": null,
+    "players_count": 3422,
     "star_rating": {
       "collection_id": "04054d55-b1ec-4234-9f10-c789b3b56065",
       "collection_type": "games",
@@ -2293,7 +2293,7 @@ export default [
       "social_level": 91.90189361572266,
       "bizzon_rating": null,
       "release_date": "2022-05-19T08:03:15.545Z",
-      "devices": [],
+      "devices": ["Web"],
       "backed_by": [
         {
           "name": "Asteroid Capital",
@@ -2355,7 +2355,7 @@ export default [
       "avax",
       "bsc"
     ],
-    "players_count": null,
+    "players_count": 10232,
     "star_rating": {
       "collection_id": "b0b1271c-7b48-4bdc-a555-6ce95fc8bdfe",
       "collection_type": "games",
@@ -2760,7 +2760,7 @@ export default [
       "social_level": 84.5909652709961,
       "bizzon_rating": null,
       "release_date": "2022-05-19T08:38:34.482Z",
-      "devices": [],
+      "devices": ["iOS", "Android"],
       "backed_by": [
         {
           "name": "Red Kite",
@@ -2818,7 +2818,7 @@ export default [
       "avax",
       "eth"
     ],
-    "players_count": null,
+    "players_count": 2330,
     "star_rating": {
       "collection_id": "3a0e8a04-255b-435b-856c-0723c01f08db",
       "collection_type": "games",
@@ -3218,7 +3218,7 @@ export default [
       "social_level": 98.20185852050781,
       "bizzon_rating": null,
       "release_date": "2022-06-17T07:53:21.36Z",
-      "devices": [],
+      "devices": ["Android"],
       "backed_by": [
         {
           "name": "DAO Maker",
@@ -3252,7 +3252,7 @@ export default [
     "networks": [
       "eth"
     ],
-    "players_count": null,
+    "players_count": 233,
     "star_rating": {
       "collection_id": "d3bf9ecf-58f1-488d-a3dc-8bead33eb930",
       "collection_type": "games",
@@ -3734,7 +3734,7 @@ export default [
       "social_level": 99,
       "bizzon_rating": null,
       "release_date": "2022-10-12T05:01:24.288Z",
-      "devices": [],
+      "devices": ["Web"],
       "backed_by": [
         {
           "name": "Delphi Digital",
@@ -3796,7 +3796,7 @@ export default [
       "eth",
       "polygon"
     ],
-    "players_count": null,
+    "players_count": 232,
     "star_rating": {
       "collection_id": "7310dd6c-e4c9-413d-83d8-fe830f9e5487",
       "collection_type": "games",
@@ -4191,7 +4191,7 @@ export default [
       "social_level": 81,
       "bizzon_rating": null,
       "release_date": "2022-11-09T04:48:53.861Z",
-      "devices": [],
+      "devices": ["Web"],
       "backed_by": [],
       "tags": [
         "Metaverse",
@@ -4216,7 +4216,7 @@ export default [
     "networks": [
       "bsc"
     ],
-    "players_count": null,
+    "players_count": 2112,
     "star_rating": {
       "collection_id": "4630dd56-bb38-42a0-ac9a-c34d928dfeb1",
       "collection_type": "games",
@@ -4590,7 +4590,7 @@ export default [
       "social_level": 69.4904556274414,
       "bizzon_rating": null,
       "release_date": "2022-05-19T07:33:13.863Z",
-      "devices": [],
+      "devices": ["Desktop", "iOS", "Android"],
       "backed_by": [
         {
           "name": "Hashed Fund",
@@ -4625,7 +4625,7 @@ export default [
     "networks": [
       "bsc"
     ],
-    "players_count": null,
+    "players_count": 15233,
     "star_rating": {
       "collection_id": "0f9abc34-1d34-46fc-8885-9dd5ed324692",
       "collection_type": "games",
@@ -5010,7 +5010,7 @@ export default [
       "social_level": 73.09784698486328,
       "bizzon_rating": null,
       "release_date": "2022-05-19T07:52:50.693Z",
-      "devices": [],
+      "devices": ["iOS", "Android"],
       "backed_by": [
         {
           "name": "Black Ventures",
@@ -5077,7 +5077,7 @@ export default [
     "networks": [
       "bsc"
     ],
-    "players_count": null,
+    "players_count": 3212,
     "star_rating": {
       "collection_id": "a74b81ac-36d7-4538-a1b4-6f90cdcc34ea",
       "collection_type": "games",
@@ -5446,7 +5446,7 @@ export default [
       "social_level": 98.21154022216797,
       "bizzon_rating": null,
       "release_date": "2023-03-13T05:00:00Z",
-      "devices": [],
+      "devices": ["Desktop"],
       "backed_by": [],
       "tags": [
         "Strategy",
@@ -5474,7 +5474,7 @@ export default [
     "networks": [
       "bsc"
     ],
-    "players_count": null,
+    "players_count": 300,
     "star_rating": {
       "collection_id": "9e2def2a-f701-4721-a2c7-925b83018adf",
       "collection_type": "games",
@@ -5840,7 +5840,7 @@ export default [
       "social_level": 97.46955108642578,
       "bizzon_rating": null,
       "release_date": "2022-12-19T04:39:18.931Z",
-      "devices": [],
+      "devices": ["Web"],
       "backed_by": [
         {
           "name": "Binance Labs",
@@ -5873,7 +5873,7 @@ export default [
       "moonbeam",
       "polygon"
     ],
-    "players_count": null,
+    "players_count": 210,
     "star_rating": {
       "collection_id": "85cdb41b-0849-4028-beda-1462011ae6a1",
       "collection_type": "games",
@@ -6307,7 +6307,7 @@ export default [
       "social_level": 83.45889282226562,
       "bizzon_rating": null,
       "release_date": "2022-07-08T08:36:29.464Z",
-      "devices": [],
+      "devices": ["Web"],
       "backed_by": [
         {
           "name": "Animoca Brands KK",
