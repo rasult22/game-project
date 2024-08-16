@@ -1,4 +1,5 @@
 <script>
+	import { fade } from 'svelte/transition';
   import GenreFilter from "~/components/filters/genre-filter.svelte";
   import NetworkFilter from "~/components/filters/network-filter.svelte";
   import DeviceFilter from "~/components/filters/device-filter.svelte";
@@ -68,9 +69,12 @@
   })
 </script>
 
-<div class="flex space-x-4">
+<div class="relative group flex space-x-4 w-[200px]">
   <a on:click|preventDefault={() => tab = 'gamehub'} class:border-b-2={tab === 'gamehub'} class="pb-[5px] cursor-pointer">Gamehub</a>
   <a on:click|preventDefault={() => tab = 'ranking'} class:border-b-2={tab === 'ranking'} class="pb-[5px] cursor-pointer">Ranking</a>
+  <div in:fade class="absolute transition-all rounded-[12px] hidden group-hover:block top-10 left- bg-[#252E37] w-[320px] p-4">
+    The games displayed and the game data shown are for demonstration purposes only and do not reflect actual performance. If you are the copyright holder of the displayed games, please contact us
+  </div>
 </div>
 
 {#if tab === 'gamehub'}

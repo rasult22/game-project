@@ -22,7 +22,18 @@ const data: Data = Astro.props.data
   <!-- header -->
   <div class="flex">
     <div>
-      <div class="text-[40px] leading-[120%] font-medium font-Oxanium">{data.name}</div>
+      <div class="flex space-x-2">
+        <div class="text-[40px] leading-[120%] font-medium font-Oxanium">{data.name}</div>
+        <div class="relative group">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0003 3.33464C6.31843 3.33464 3.33366 6.3194 3.33366 10.0013C3.33366 13.6832 6.31843 16.668 10.0003 16.668C13.6822 16.668 16.667 13.6832 16.667 10.0013C16.667 6.3194 13.6822 3.33464 10.0003 3.33464ZM1.66699 10.0013C1.66699 5.39893 5.39795 1.66797 10.0003 1.66797C14.6027 1.66797 18.3337 5.39893 18.3337 10.0013C18.3337 14.6037 14.6027 18.3346 10.0003 18.3346C5.39795 18.3346 1.66699 14.6037 1.66699 10.0013ZM9.16699 6.66797C9.16699 6.20773 9.54009 5.83464 10.0003 5.83464H10.0087C10.4689 5.83464 10.842 6.20773 10.842 6.66797C10.842 7.12821 10.4689 7.5013 10.0087 7.5013H10.0003C9.54009 7.5013 9.16699 7.12821 9.16699 6.66797ZM8.33366 10.0013C8.33366 9.54106 8.70675 9.16797 9.16699 9.16797H10.0003C10.4606 9.16797 10.8337 9.54106 10.8337 10.0013V12.5013C11.2939 12.5013 11.667 12.8744 11.667 13.3346C11.667 13.7949 11.2939 14.168 10.8337 14.168H10.0003C9.54009 14.168 9.16699 13.7949 9.16699 13.3346V10.8346C8.70675 10.8346 8.33366 10.4615 8.33366 10.0013Z" fill="white" fill-opacity="0.5"/>
+          </svg>
+          <div class="absolute transition-all rounded-[12px] hidden group-hover:block top-10 left- bg-[#252E37] w-[320px] p-4">
+            The games displayed and the game data shown are for demonstration purposes only and do not reflect actual performance. If you are the copyright holder of the displayed games, please contact us
+          </div>
+        </div>
+          
+      </div>
       <div class="flex items-center space-x-2 mt-2">
         <div class="flex gap-[2px]">
           {
