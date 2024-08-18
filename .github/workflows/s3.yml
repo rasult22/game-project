@@ -1,0 +1,37 @@
+name: Push-to-S3
+
+env:
+  DEPLOY_PACKAGE_NAME: "gameproject_build_${{ github.sha }}.zip"
+
+on:
+  push:
+    branches:
+      - deploy
+
+jobs:
+  deploy:
+    name: Deploy to s3 on deploy branch push
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the files
+        uses: actions/checkout@v3
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1-node16
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-east-1
+
+      - name: Build
+        id: build-image
+        run: |
+          npm i
+          npm run build
+
+      - name: Create ZIP
+        run: zip -r ${{ env.DEPLOY_PACKAGE_NAME }} ./dist -x *.git*
+
+      - name: Deploy static site to S3 bucket
+        run: aws s3 sync dist/ s3://bizon.io --delete
