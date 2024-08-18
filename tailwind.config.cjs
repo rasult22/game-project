@@ -105,7 +105,6 @@ module.exports = {
       },
       fontFamily: {
         Inter: ["Inter Variable"],
-        Poppins: ["Poppins"],
         Oxanium: ["Oxanium"],
       },
       textColor: {
@@ -121,8 +120,8 @@ module.exports = {
       },
       screens: {
         "custom-screen": { raw: "(max-height: 670px)" },
-        lg: { min: "1200px" },
-        md: { max: "1200px", min: "700px" },
+        lg: { min: "1000px" },
+        md: { max: "1000px", min: "700px" },
         sm: { max: "700px", min: "0px" },
         "3xl": { min: "2000px" },
       },
