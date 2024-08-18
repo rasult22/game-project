@@ -6,7 +6,7 @@ env:
 on:
   push:
     branches:
-      - deploy
+      - s3
 
 jobs:
   deploy:
