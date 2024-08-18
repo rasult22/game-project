@@ -38,10 +38,10 @@
   >
     <div
       on:click|stopPropagation
-      class="z-[150] w-[600px] sm:max-h-[80vh] sm:overflow-auto  cursor-default overflow-hidden rounded-[16px] bg-[#0D0D0F] p-4"
+      class="z-[150] w-[600px] sm:max-h-[80vh] max-h-[90vh] overflow-auto sm:overflow-auto  cursor-default rounded-[16px] bg-[#0D0D0F] px-4 pb-4"
     >
       <div
-        class="flex w-full items-center justify-between text-[40px] leading-[120%]"
+        class="flex w-full pt-4 sticky top-0 bg-[#0D0D0F] items-center justify-between text-[40px] leading-[120%]"
       >
         <span> Оставить заявку </span>
         <svg
