@@ -3,7 +3,7 @@
 </script>
 <button on:click class="chip space-x-[6px] text-[14px]" class:chip-active={active}>
   <slot name="img">
-    <img src="/game-project/media/ton-icon.svg" alt="">
+    <img src="/media/ton-icon.svg" alt="">
   </slot>
   <span>
     <slot name="text">

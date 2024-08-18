@@ -29,7 +29,7 @@
   </div>
 </div>
 
-<div class="bg-[url(/game-project/optimized/footer-bg-2.webp)] bg-cover bg-center mt-4 p-6 rounded-[20px]  h-[317px]">
+<div class="bg-[url(/optimized/footer-bg-2.webp)] bg-cover bg-center mt-4 p-6 rounded-[20px]  h-[317px]">
   <div class="text-[32px] font-semibold app-text-gradient-bg-2 font-Oxanium uppercase">Stay with us in social media</div>
   <div class="mt-7 flex space-x-4">
     <a class="hover:opacity-70 anim-btn" href="https://x.com/bizzongames" target="_blank">

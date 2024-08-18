@@ -73,7 +73,7 @@ const items = list.map(post => {
       <div class="mt-[50px] space-y-6 max-w-[912px]">
         {
           items.map((article) => (
-            <a href={'/game-project/blog/' + article.id} class="bg-[#272727] hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer py-2 pl-2 pr-4 flex space-x-[36px] max-w-[912px] rounded-[12px]">
+            <a href={'/blog/' + article.id} class="bg-[#272727] hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer py-2 pl-2 pr-4 flex space-x-[36px] max-w-[912px] rounded-[12px]">
               <div transition:name={article.id} style={`background-image: url(${article.pic});`} class="bg-cover shrink-0 rounded-[8px] bg-center h-[257px] w-[410px]">
               </div>
               <div class="w-full justify-center flex flex-col text-white">

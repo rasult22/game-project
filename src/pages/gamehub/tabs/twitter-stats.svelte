@@ -5,7 +5,7 @@
 </script>
 <div class="bg-[#2A2A2A] p-4 rounded-[12px] mt-6">
   <div class="flex items-center gap-2">
-    <img width="24" src="/game-project/media/x-icon.svg" alt="">
+    <img width="24" src="/media/x-icon.svg" alt="">
     <span class="font-semibold text-[24px]">
       X
     </span>
