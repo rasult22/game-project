@@ -8,6 +8,7 @@
   import Dropdown from "~/components/filters/dropdown.svelte";
   import GameCardBasic from "~/components/game-card-basic.svelte";
   import GamesTable from '~/components/games-table.svelte'
+  import FilterModal from './FilterModal.svelte';
   import {items} from './mock'
   let tab = 'gamehub'
 
@@ -78,7 +79,7 @@
 </div>
 
 {#if tab === 'gamehub'}
-  <div class="flex mt-[50px] space-x-4 h-full">
+  <div class="flex mt-[50px] space-x-4 sm:space-x-0 md:space-x-0 h-full">
     <!-- sidebar -->
     <div class="max-w-[280px] md:hidden sm:hidden flex flex-col ">
       <!-- Filters -->
@@ -147,9 +148,14 @@
     <!-- main -->
     <div class="w-full">
       <!-- header -->
-      <div class="flex items-center justify-between">
+      <div class="flex items-center">
         <Search bind:value={search} on:click={clearSearch}/>
-        <Dropdown />
+        <div class="ml-2 hidden sm:block md:block">
+          <FilterModal bind:genreFilter={genreFilter} bind:networkFilter={networkFilter} />
+        </div>
+        <div class="ml-auto">
+          <Dropdown />
+        </div>
       </div> 
       {#if filtered_items.length}
         <div class="mt-[50px] p-4 gap-3 grid md:grid-cols-3 sm:grid-cols-1 grid-cols-4 bg-[#1C1C1E] rounded-[16px]">
