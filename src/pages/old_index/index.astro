@@ -1,0 +1,297 @@
+---
+import "@fontsource-variable/inter";
+import "@fontsource/oxanium/500.css";
+import "@fontsource/oxanium/600.css";
+import "@fontsource/oxanium/800.css";
+import "~/styles/global.css";
+import Footer from "~/components/footer-three.astro";
+import Header from "~/components/header.astro";
+import JoinRequestModal from "~/components/join-request-modal.svelte";
+import AuthModal from "~/components/auth/auth-modal.svelte";
+import Roadmap from "../roadmap.svelte";
+const { generator, site } = Astro;
+const image = new URL("optimized/social.webp", site);
+import {description, title} from '~/site'
+---
+
+<!doctype html>
+<html
+  lang="en"
+  class="h-full font-Inter motion-safe:scroll-smooth"
+  data-theme="dark"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.png" type="image/svg+xml" />
+    <meta name="generator" content={generator} />
+    <meta
+      http-equiv="cache-control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- social media -->
+    <meta
+      property="og:title"
+      content={title}
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={site} />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head><body
+    class="h-full overflow-x-hidden bg-[#0D0D0F] text-base text-white"
+  >
+    <Header transparent />
+    <!-- main -->
+    <video id="bg-video" class="absolute z-[1] top-0 sm:hidden w-full left-[50%] translate-x-[-50%] min-w-[110vw] xl:min-w-[2100px] object-cover" autoplay loop muted id="bg">
+      <source src="/game-project/bg-video.webm">
+    </video>
+    <section
+      class="xl:min-h-[1000px] bg-cover bg-center bg-no-repeat px-10 pt-[100px] mb-[50px]"
+    >
+      <div
+        class="relative z-10 mx-auto flex xl:min-h-[1000px] lg:min-h-[100vh] max-w-[1520px] flex-col items-start justify-center"
+      >
+        <div
+          class="app-text-gradient-bg max-w-[809px] font-Oxanium text-[64px] xl:text-[96px] uppercase leading-[100%]"
+        >
+          Station of your rewards
+        </div>
+        <div class="pb-12">
+          A single platform for crypto-gaming: develop, explore, play and earn
+        </div>
+        <div class="flex items-start gap-4">
+          <AuthModal isLanding client:only />
+          <div class="flex flex-col">
+            <JoinRequestModal client:load />
+            <span class="mt-3 text-[14px] opacity-50"
+              >For investors and developers</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- our games -->
+    <section>
+      <div class="relative z-10 mx-auto max-w-[1520px] pt-[130px]">
+        <div class="font-Oxanium text-[40px] font-medium uppercase">
+          Our games
+        </div>
+        <div class="mt-6 flex gap-4">
+          <img
+            width="448"
+            class="max-w-[448px] cursor-pointer transition-all hover:opacity-80"
+            src="/game-project/optimized/game-1.webp"
+            alt=""
+          />
+          <img
+            width="448"
+            class="max-w-[448px] cursor-pointer transition-all hover:opacity-80"
+            src="/game-project/optimized/game-2.webp"
+            alt=""
+          />
+          <img
+            width="448"
+            class="max-w-[448px] cursor-pointer transition-all hover:opacity-80"
+            src="/game-project/optimized/game-3.webp"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <!-- opportunity -->
+    <section>
+      <div class="relative z-10 mx-auto mt-[130px] max-w-[1520px]">
+        <div class="font-Oxanium text-[40px] font-medium uppercase">
+          Opportunity
+        </div>
+        <div class="flex gap-4 pt-[16px]">
+          <div
+            class="card-gradient group relative min-h-[350px] w-full overflow-hidden rounded-[12px] bg-cover bg-center p-6 transition-all"
+            style="background-color: #1F2324;"
+          >
+            <div
+              class="app-text-gradient-bg z-[2] max-w-[319px] font-Oxanium text-[32px] font-medium uppercase leading-[120%] group-hover:hidden group-hover:bg-none"
+            >
+              Detailed analytics of each project
+            </div>
+            <div
+              class="z-[2] hidden max-w-[319px] font-Oxanium text-[32px] font-medium uppercase leading-[120%] group-hover:block group-hover:bg-none"
+            >
+              Detailed analytics of each project
+            </div>
+            <div class="z-[2] mt-6 max-w-[510px]">
+              We give a detailed analysis of each project so that you can get
+              not only pleasure, but also the maximum profit from the game
+            </div>
+            <img
+              width="496"
+              class="absolute left-[50%] top-[50%] z-[1] max-w-[496px] translate-x-[-50%] translate-y-[-50%] opacity-30 transition-all group-hover:left-[70%] group-hover:opacity-70 group-hover:blur-[6px]"
+              src="/game-project/optimized/card-bg.webp"
+              alt=""
+            />
+          </div>
+          <div
+            class="card-gradient group relative min-h-[350px] w-full overflow-hidden rounded-[12px] bg-cover bg-center p-6 transition-all"
+            style="background-color: #1F2324;"
+          >
+            <div
+              class="app-text-gradient-bg z-[2] max-w-[349px] font-Oxanium text-[32px] font-medium uppercase leading-[120%] group-hover:hidden group-hover:bg-none"
+            >
+              In-house skilled development team
+            </div>
+            <div
+              class="z-[2] hidden max-w-[349px] font-Oxanium text-[32px] font-medium uppercase leading-[120%] group-hover:block group-hover:bg-none"
+            >
+              In-house skilled development team
+            </div>
+            <div class="z-[2] mt-6 max-w-[515px]">
+              We have a team of developers with 15 years of experience. The team
+              includes only professionals who are passionate about creating an
+              excellent product
+            </div>
+            <img
+              width="496"
+              class="absolute left-[50%] top-[50%] z-[1] max-w-[496px] translate-x-[-50%] translate-y-[-50%] opacity-30 transition-all group-hover:left-[70%] group-hover:opacity-70 group-hover:blur-[6px]"
+              src="/game-project/optimized/card-bg.webp"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="flex gap-4 pt-[16px]">
+          <div
+            class="card-gradient group relative min-h-[350px] w-full overflow-hidden rounded-[12px] bg-cover bg-center p-6 transition-all"
+            style="background-color: #1F2324;"
+          >
+            <div
+              class="app-text-gradient-bg z-[2] max-w-[419px] font-Oxanium text-[32px] font-medium uppercase leading-[120%] group-hover:hidden group-hover:bg-none"
+            >
+              Fair in-game economy
+            </div>
+            <div
+              class="z-[2] hidden max-w-[419px] font-Oxanium text-[32px] font-medium uppercase leading-[120%] group-hover:block group-hover:bg-none"
+            >
+              Fair in-game economy
+            </div>
+            <div class="z-[2] mt-6 max-w-[510px]">
+              We always think about the fairness of all processes on the
+              platform, so we make a fair system of earning in-game tokens
+            </div>
+            <img
+              width="496"
+              class="absolute left-[50%] top-[50%] z-[1] max-w-[496px] translate-x-[-50%] translate-y-[-50%] opacity-30 transition-all group-hover:left-[70%] group-hover:opacity-70 group-hover:blur-[6px]"
+              src="/game-project/optimized/card-bg.webp"
+              alt=""
+            />
+          </div>
+          <div
+            class="card-gradient group relative min-h-[350px] w-full overflow-hidden rounded-[12px] bg-cover bg-center p-6 transition-all"
+            style="background-color: #1F2324;"
+          >
+            <div
+              class="app-text-gradient-bg z-[2] max-w-[349px] font-Oxanium text-[32px] font-medium uppercase leading-[120%] group-hover:hidden group-hover:bg-none"
+            >
+              Producing centre
+            </div>
+            <div
+              class="z-[2] hidden max-w-[349px] font-Oxanium text-[32px] font-medium uppercase leading-[120%] group-hover:block group-hover:bg-none"
+            >
+              Producing centre
+            </div>
+            <div class="z-[2] mt-6 max-w-[515px]">
+              We are always happy to see new projects on our platform, so we
+              provide the best methods to promote your projects
+            </div>
+            <img
+              width="496"
+              class="absolute left-[50%] top-[50%] z-[1] max-w-[496px] translate-x-[-50%] translate-y-[-50%] opacity-30 transition-all group-hover:left-[70%] group-hover:opacity-70 group-hover:blur-[6px]"
+              src="/game-project/optimized/card-bg.webp"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- our mission -->
+    <section>
+      <div class="relative z-10 mx-auto mt-[130px] max-w-[1520px]">
+        <div class="font-Oxanium text-[64px] font-medium uppercase">
+          Our mission
+        </div>
+        <div class="flex">
+          <div class="pt-12 text-[40px] leading-[120%]">
+            <span class="text-[#FD4E07]"
+              >To promote blockchain technologies and empower users to select
+              games tailored to their preferences.</span
+            >
+            Our platform features the most engaging games with innovative and equitable
+            reward systems
+            <div class="mt-9 text-[16px] leading-[120%]">
+              To make BIZZON not just one of the most attractive and popular
+              platforms for a narrow crypto audience, but also to attract a
+              broad mass of users unfamiliar with the cryptocurrency world in
+              order to introduce them the most fast growing industry of our
+              time. To teach them how to understand and use blockchain solutions
+              based on the most widespread and at the same time the simplest
+              application - <span class="app-text-gradient-bg"
+                >gamification</span
+              >
+            </div>
+          </div>
+          <img
+            width="729"
+            class="max-w-[729px]"
+            src="/game-project/optimized/mission-image.webp"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <!-- game world -->
+    <section class="mt-[150px] overflow-hidden">
+      <div class="text-center font-Oxanium text-[48px] font-medium uppercase">
+        Game World
+      </div>
+      <div class="mt-[48px] flex animate-walk">
+        <img src="/game-project/optimized/game-landing-1.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-2.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-3.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-4.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-5.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-6.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-7.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-8.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-1.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-2.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-3.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-4.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-5.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-6.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-7.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-8.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-1.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-2.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-3.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-4.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-5.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-6.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-7.webp" alt="" />
+        <img src="/game-project/optimized/game-landing-8.webp" alt="" />
+      </div>
+    </section>
+    <!-- roadmap -->
+    <section class="mt-[118px] overflow-hidden">
+      <div
+        class="mx-auto max-w-[1520px] font-Oxanium text-[48px] font-medium uppercase"
+      >
+        Our RoadMap
+      </div>
+      <Roadmap client:load />
+    </section>
+    <Footer />
+  </body>
+</html>
