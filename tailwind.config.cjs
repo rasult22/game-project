@@ -120,7 +120,8 @@ module.exports = {
       },
       screens: {
         "custom-screen": { raw: "(max-height: 670px)" },
-        lg: { min: "1000px" },
+        xl: { min: "1800px"},
+        lg: { min: "1000px", max: "1800px" },
         md: { max: "1000px", min: "700px" },
         sm: { max: "700px", min: "0px" },
         "3xl": { min: "2000px" },
