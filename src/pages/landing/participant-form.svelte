@@ -38,7 +38,7 @@
   >
     <div
       on:click|stopPropagation
-      class="z-[150] w-[600px] cursor-default overflow-hidden rounded-[16px] bg-[#0D0D0F] p-4"
+      class="z-[150] w-[600px] sm:max-h-[80vh] sm:overflow-auto  cursor-default overflow-hidden rounded-[16px] bg-[#0D0D0F] p-4"
     >
       <div
         class="flex w-full items-center justify-between text-[40px] leading-[120%]"
