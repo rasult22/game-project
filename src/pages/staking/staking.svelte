@@ -18,7 +18,7 @@
 </div>
 
 {#if tab === "staking"}
-  <div in:fade class="font-Oxanium mt-[50px] flex">
+  <div in:fade class="font-Oxanium mt-[50px] sm:bg-[#28282C] sm:space-y-6 sm:p-4 sm:-mx-4 flex sm:flex-wrap ">
     <div>
       <div class="flex items-center gap-1">
         <span class="font-medium"> Round ends </span>
@@ -38,41 +38,41 @@
           />
         </svg>
       </div>
-      <div class="text-[32px] font-medium mt-3">12:42:21</div>
+      <div class="text-[32px] md:text-[24px] sm:text-[24px] font-medium mt-3">12:42:21</div>
     </div>
-    <div class="ml-[70px]">
+    <div class="ml-[70px] sm:w-full sm:ml-0">
       <div class="flex items-center gap-1">
         <span class="font-medium"> Staking pool </span>
       </div>
-      <div class="text-[32px] font-medium mt-3 flex items-center gap-4">
-        <img width="48" src="/media/staking.svg" alt="" />
+      <div class="text-[32px] md:text-[24px] sm:text-[24px] font-medium mt-3 flex items-center gap-4 md:gap-2 sm:gap-2">
+        <img class="md:w-[24px] sm:w-[24px]" width="48" src="/media/staking.svg" alt="" />
         <span>1.200.000 / 1.200.000</span>
       </div>
     </div>
-    <div class="ml-[70px]">
+    <div class="ml-[70px] sm:ml-0 sm:w-full">
       <div class="flex items-center gap-1">
         <span class="font-medium"> Your staking rank </span>
       </div>
-      <div class="text-[32px] font-medium mt-2">–</div>
+      <div class="text-[32px] md:text-[24px] sm:text-[24px] font-medium mt-2">–</div>
     </div>
   </div>
 
-  <div in:fade class="flex -ml-9 -space-x-9 mt-[45px]">
+  <div in:fade class="flex sm:flex-col sm:items-center sm:ml-0 -ml-9 sm:space-x-0 -space-x-9 mt-[45px]">
     <img
       width="320"
-      class="max-w-[320px] hover:scale-105 active:scale-[0.99] transition-all cursor-pointer"
+      class="max-w-[320px] sm:max-w-none sm:w-full md:max-w-[215px] hover:scale-105 active:scale-[0.99] transition-all cursor-pointer"
       src="/optimized/common-box.webp"
       alt=""
     />
     <img
       width="320"
-      class="max-w-[320px] hover:scale-105 active:scale-[0.99] transition-all cursor-pointer"
+      class="max-w-[320px] sm:max-w-none sm:w-full md:max-w-[215px] hover:scale-105 active:scale-[0.99] transition-all cursor-pointer"
       src="/optimized/epic-box.webp"
       alt=""
     />
     <img
       width="320"
-      class="max-w-[320px] hover:scale-105 active:scale-[0.99] transition-all cursor-pointer"
+      class="max-w-[320px] sm:max-w-none sm:w-full md:max-w-[215px] hover:scale-105 active:scale-[0.99] transition-all cursor-pointer"
       src="/optimized/legendary-box.webp"
       alt=""
     />
@@ -82,18 +82,18 @@
 {#if tab === "ratings"}
   <div in:fade class="mt-[50px]">
     <div
-      class="grid border-b border-[#787575] mb-4 text-center grid-cols-5 items-center py-2 text-sm group d"
+      class="grid border-b border-[#787575] mb-4 text-center grid-cols-5 sm:grid-cols-3 items-center py-2 text-sm group d"
     >
       <div class="col-span-2 flex space-x-[36px]">
         <div class="text-left text-[#787575]">Rank</div>
         <div class="text-left">Metamask Name</div>
       </div>
-      <div>Stake Name</div>
-      <div>Staking Points</div>
+      <div class="sm:hidden">Stake Name</div>
+      <div class="sm:hidden">Staking Points</div>
       <div>Rewards</div>
     </div>
     {#each {length: 3} as i, index}
-      <div class="grid border-b border-[#787575] grid-cols-5 items-center py-2 text-sm group d">
+      <div class="grid border-b border-[#787575] grid-cols-5 sm:grid-cols-3 items-center py-2 text-sm group d">
         <div class="col-span-2 flex items-center gap-[24px]">
           <span class="w-14 text-left">
             <span class="text-[#787575]">{index + 1}</span>
@@ -103,10 +103,10 @@
             <span class="font-semibold">–</span>
           </div>
         </div>
-        <div class="text-center">
+        <div class="text-center sm:hidden">
           <span>–</span>
         </div>
-        <div class="text-center">
+        <div class="text-center sm:hidden">
           <span>–</span>
         </div>
         <div class="text-center">
@@ -115,7 +115,7 @@
       </div>
     {/each}
   </div>
-  <div in:fade class="text-[96px] opacity-55 uppercase font-Oxanium flex items-center justify-center mt-[200px]">
+  <div in:fade class="text-[96px] md:text-[64px] sm:text-[40px] opacity-55 uppercase font-Oxanium flex items-center justify-center mt-[200px]">
     Coming soon...
   </div>
 {/if}

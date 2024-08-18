@@ -80,7 +80,7 @@
 {#if tab === 'gamehub'}
   <div class="flex mt-[50px] space-x-4 h-full">
     <!-- sidebar -->
-    <div class="max-w-[280px] flex flex-col ">
+    <div class="max-w-[280px] md:hidden sm:hidden flex flex-col ">
       <!-- Filters -->
       <div class="flex items-center space-x-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
