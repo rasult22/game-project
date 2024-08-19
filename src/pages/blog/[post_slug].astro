@@ -79,7 +79,7 @@ const {post_data} = Astro.props
   </head>
   <body class="overflow-x-hidden bg-[#0D0D0F] text-white">
     <Header />
-    <div class="pt-[150px] px-6 max-w-[1520px] mx-auto flex items-center gap-4">
+    <div class="pt-[150px] px-6 max-w-[1520px] mx-auto flex flex-wrap items-center gap-4">
       <a class="text-[#888888] hover:text-[white] hover:underline" href="/game-project/">Home</a>
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M6.91203 4.41075C7.23744 4.08531 7.76503 4.08531 8.09045 4.41075L13.0901 9.41075C13.4155 9.73619 13.4155 10.2638 13.0901 10.5893L8.09045 15.5893C7.76503 15.9147 7.23744 15.9147 6.91203 15.5893C6.58662 15.2638 6.58662 14.7362 6.91203 14.4108L11.3224 10L6.91203 5.58926C6.58662 5.26382 6.58662 4.73619 6.91203 4.41075Z" fill="#888888"/>
@@ -90,9 +90,9 @@ const {post_data} = Astro.props
       </svg>
       <a>{post_data.title}</a>
     </div>
-    <div class=" max-w-[920px] mx-auto mt-[50px]">
-      <h1 class="text-[40px] block leading-[120%] font-medium font-Inter">{post_data.title}</h1>
-      <div class="mt-[50px] flex items-center space-x-2">
+    <div class=" max-w-[920px] md:px-4 sm:px-4 mx-auto mt-[50px]">
+      <h1 class="text-[40px] sm:text-[24px] block leading-[120%] font-medium font-Inter">{post_data.title}</h1>
+      <div class="mt-[50px] sm:mt-6 flex items-center space-x-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 6C12.5523 6 13 6.44772 13 7V12C13 12.1974 12.9416 12.3904 12.8321 12.5547L10.8321 15.5547C10.5257 16.0142 9.90483 16.1384 9.4453 15.8321C8.98577 15.5257 8.8616 14.9048 9.16795 14.4453L11 11.6972V7C11 6.44772 11.4477 6 12 6Z" fill="white"/>
         </svg>
@@ -103,11 +103,9 @@ const {post_data} = Astro.props
       <div class="mt-[30px]">
         {post_data.excerpt}
       </div>
-      <div transition:name={post_data.id} class="mt-[30px] w-full rounded-[8px] h-[442px] bg-center bg-cover" style={`background-image: url(${post_data.pic})`}>
-
+      <div transition:name={post_data.id} class="mt-[30px] w-full rounded-[8px] h-[442px] md:sm:h-[45vw] sm:h-[45vw] bg-center bg-cover" style={`background-image: url(${post_data.pic})`}>
       </div>
       <div set:html={post_data.content} class="mt-[50px] whitespace-pre-line space-y-6 max-w-[912px]">
-        
       </div>
       <h2 class="text-[36px] my-[50px] uppercase block leading-[120%] font-medium font-Oxanium">Read Also</h1>
       {post_data.recommended_posts.map(item => {
@@ -120,7 +118,7 @@ const {post_data} = Astro.props
               <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 6C12.5523 6 13 6.44772 13 7V12C13 12.1974 12.9416 12.3904 12.8321 12.5547L10.8321 15.5547C10.5257 16.0142 9.90483 16.1384 9.4453 15.8321C8.98577 15.5257 8.8616 14.9048 9.16795 14.4453L11 11.6972V7C11 6.44772 11.4477 6 12 6Z" fill="white"/>
             </svg>
             <span class="text-[#B0B0B2]">
-              {item.updated}
+              {formatDate(new Date(item.updated))}
             </span>
           </div>
         </a>
