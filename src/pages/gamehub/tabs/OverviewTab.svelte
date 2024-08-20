@@ -49,9 +49,9 @@
   </div>
 
   <!-- 2 -->
-  <div class="flex space-x-4 mt-4">
+  <div class="flex md:flex-wrap sm:space-x-0 md:space-x-0 md:gap-4 sm:gap-4 sm:flex-wrap space-x-4 mt-4">
     <!-- team profile -->
-    <div class="p-[20px] min-w-[292px] border border-[#888] rounded-[20px]">
+    <div class="p-[20px] min-w-[292px] md:max-w-none sm:max-w-none md:w-full sm:w-full border border-[#888] rounded-[20px]">
       <!-- head -->
       <div class="flex">
         <div class="w-[50%] mr-auto">
@@ -129,7 +129,7 @@
       </div>
     </div>
     <!-- top bakers -->
-    <div class="p-[20px] border border-[#888] rounded-[20px]">
+    <div class="p-[20px] md:max-w-none sm:max-w-none md:w-full sm:w-full border border-[#888] rounded-[20px]">
       <!-- head -->
       <div class="flex space-x-[32px]">
         <div class="w-[50%]">
@@ -183,8 +183,8 @@
     </div>
 
     <!-- cards -->
-    <div class="flex gap-4 mt-6">
-      <div class="p-[14px] bg-[#2A2A2A] rounded-[16px] overflow-hidden">
+    <div class="flex md:flex-wrap sm:flex-wrap gap-4 mt-6">
+      <div class="p-[14px] md:w-full sm:w-full bg-[#2A2A2A] rounded-[16px] overflow-hidden">
         <!-- head -->
         <div class="flex justify-between">
           <div class="font-semibold">Volume 24h</div>
@@ -202,7 +202,7 @@
           {/if}
         </div>
       </div>
-      <div class="p-[14px] bg-[#2A2A2A] rounded-[16px] overflow-hidden">
+      <div class="p-[14px] md:w-full sm:w-full bg-[#2A2A2A] rounded-[16px] overflow-hidden">
         <!-- head -->
         <div class="flex justify-between">
           <div class="font-semibold">Market Cap</div>
@@ -222,7 +222,7 @@
           <!-- <Chart direction="negative" data={[-24,-32,-22,101,-120,-90,150, 24,32,22,-101,-120,-90, -200, 0]} /> -->
         </div>
       </div>
-      <div class="p-[14px] bg-[#2A2A2A] rounded-[16px] overflow-hidden">
+      <div class="p-[14px] md:w-full sm:w-full bg-[#2A2A2A] rounded-[16px] overflow-hidden">
         <!-- head -->
         <div class="flex justify-between">
           <div class="font-semibold">Quarterly close</div>
@@ -246,10 +246,10 @@
     <!-- token price -->
     <div class="mt-6">
       <div class="text-[20px] font-semibold">Token price</div>
-      <div class="flex gap-4 mt-3">
+      <div class="flex sm:flex-wrap gap-4 mt-3">
         <!-- Volume 24h -->
         <div
-          class="p-[14px] w-[50%] bg-[#2A2A2A] rounded-[16px] overflow-hidden"
+          class="p-[14px] sm:w-full w-[50%] bg-[#2A2A2A] rounded-[16px] overflow-hidden"
         >
           <!-- head -->
           <div class="flex justify-between">
@@ -286,7 +286,7 @@
         </div>
         <!-- Circulating supply -->
         <div
-          class="p-[14px] w-[50%] bg-[#2A2A2A] rounded-[16px] overflow-hidden"
+          class="p-[14px] sm:w-full w-[50%] bg-[#2A2A2A] rounded-[16px] overflow-hidden"
         >
           <!-- head -->
           <div class="flex justify-between">
@@ -332,7 +332,7 @@
       <BizzonRating rating="S+" />
     </div>
     <!-- cards -->
-    <div class="flex justify-between mt-4">
+    <div class="flex md:grid md:grid-cols-2 md:gap-4 sm:grid sm:grid-cols-2 sm:gap-4 justify-between mt-4">
       <div
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
@@ -376,7 +376,7 @@
       <BizzonRating rating="SS" />
     </div>
     <!-- cards -->
-    <div class="flex gap-4 mt-6">
+    <div class="flex sm:grid sm:grid-cols-2 gap-4 mt-6">
       <div
         class="bg-[#2A2A2A] min-w-[170px] text-white opacity-90 rounded-[16px] p-[14px]"
       >
