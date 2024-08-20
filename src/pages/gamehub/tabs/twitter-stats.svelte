@@ -10,7 +10,7 @@
       X
     </span>
   </div>
-  <div class="mt-6 gap-4 grid grid-cols-2">
+  <div class="mt-6 gap-4 grid sm:grid-cols-1 grid-cols-2">
     <div class="bg-[#464648] min-w-[228px] p-3 rounded-[16px]">
       <div class="font-medium">Total followers</div>
       <div class="flex justify-between mt-6">

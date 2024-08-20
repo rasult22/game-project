@@ -8,7 +8,7 @@
   $: market_cap_7d_changed = on_chain_performance.market_cap_7d_changed || null
   $: token_price = on_chain_performance.token_price
 </script>
-<div class="grid grid-cols-3 gap-4">
+<div class="grid grid-cols-3 sm:grid-cols-1 gap-4">
   <div class="min-w-[140px] border border-white p-4 rounded-[12px]">
     <div class="flex items-center justify-between">
       <div>Volume 24h</div>
@@ -81,7 +81,7 @@
     </div>
   </div>
 </div>
-<div class="grid grid-cols-2 gap-4 mt-4">
+<div class="grid grid-cols-2 sm:grid-cols-1 gap-4 mt-4">
   <div class="min-w-[140px] border border-white p-4 rounded-[12px]">
     <div class="flex items-center justify-between">
       <div>Active players <span class="opacity-50">/24 h</span></div>
