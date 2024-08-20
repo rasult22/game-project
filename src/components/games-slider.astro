@@ -2,12 +2,12 @@
 type Data = {images: string[]}
 const data: Data = Astro.props.data;
 ---
-<div class="flex space-x-8 w-full">
-  <div thumbsSlider="" style="padding: 0; margin:0;" class="swiper shrink-0 mySwiper2 max-w-[130px] max-h-[320px] text-black">
+<div class="flex sm:flex-col sm:space-x-0 sm:gap-6 md:flex-col items-center md:space-x-0 md:gap-6 space-x-8 w-full">
+  <div thumbsSlider="" style="padding: 0; margin:0;" class="md:!hidden sm:!hidden swiper shrink-0 mySwiper2 max-w-[130px] max-h-[320px] text-black">
     <div class="swiper-wrapper">
       {
         data.images.map((image, index) => (
-          <div data-index={index} class="swiper-slide border-2 border-transparent">
+          <div data-thumb-1-index={index} class="swiper-slide border-2 border-transparent">
             <img
               width="130"
               class="w-[130px] h-[74px] object-cover cursor-pointer rounded-[8px]"
@@ -19,14 +19,14 @@ const data: Data = Astro.props.data;
       }
     </div>
   </div>
-  <div class="swiper mySwiper max-w-[778px]">
+  <div class="swiper mySwiper max-w-[778px] sm:max-w-[90vw]">
     <div class="swiper-wrapper">
       {
         data.images.map((image) => (
           <div class="swiper-slide">
             <img
               width="778"
-              class="w-[778px] h-[320px] object-cover rounded-[32px]"
+              class="w-[778px] sm:w-full sm:h-[200px] h-[320px] object-cover rounded-[32px]"
               src={image}
               alt=""
             />
@@ -34,7 +34,7 @@ const data: Data = Astro.props.data;
         ))
       }
     </div>
-    <svg class="swiper-button-prev top-0 left-0 absolute active:opacity-80 transition-all rounded-l-[32px] z-20 cursor-pointer" width="60" height="320" viewBox="0 0 60 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="swiper-button-prev sm:hidden top-0 left-0 absolute active:opacity-80 transition-all rounded-l-[32px] z-20 cursor-pointer" width="60" height="320" viewBox="0 0 60 320" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="60" height="320" fill="url(#paint0_linear_732_767)" fill-opacity="0.2"/>
       <g opacity="0.5">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M35.5607 149.939C36.1464 150.525 36.1464 151.475 35.5607 152.061L27.6213 160L35.5607 167.939C36.1464 168.525 36.1464 169.475 35.5607 170.061C34.9749 170.646 34.0251 170.646 33.4393 170.061L24.4393 161.061C23.8536 160.475 23.8536 159.525 24.4393 158.939L33.4393 149.939C34.0251 149.354 34.9749 149.354 35.5607 149.939Z" fill="white"/>
@@ -46,7 +46,7 @@ const data: Data = Astro.props.data;
       </linearGradient>
       </defs>
     </svg>
-    <svg class="swiper-button-next top-0 right-0 absolute active:opacity-80 transition-all rounded-r-[32px] z-20 cursor-pointer"  width="60" height="320" viewBox="0 0 60 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="swiper-button-next sm:hidden top-0 right-0 absolute active:opacity-80 transition-all rounded-r-[32px] z-20 cursor-pointer"  width="60" height="320" viewBox="0 0 60 320" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="60" height="320" transform="matrix(-1 0 0 1 60 0)" fill="url(#paint0_linear_732_770)" fill-opacity="0.2"/>
       <g opacity="0.5">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M24.4393 149.939C23.8536 150.525 23.8536 151.475 24.4393 152.061L32.3787 160L24.4393 167.939C23.8536 168.525 23.8536 169.475 24.4393 170.061C25.0251 170.646 25.9749 170.646 26.5607 170.061L35.5607 161.061C36.1464 160.475 36.1464 159.525 35.5607 158.939L26.5607 149.939C25.9749 149.354 25.0251 149.354 24.4393 149.939Z" fill="white"/>
@@ -59,6 +59,22 @@ const data: Data = Astro.props.data;
       </defs>
     </svg>
   </div>
+  <div thumbsSlider="" style="padding: 0; margin:0;" class="!hidden md:!block sm:!block swiper mySwiper3 max-w-[90vw] text-black">
+    <div class="swiper-wrapper">
+      {
+        data.images.map((image, index) => (
+          <div data-thumb-2-index={index} class="swiper-slide border-2 border-transparent">
+            <img
+              width="172"
+              class="w-[100%] object-cover cursor-pointer rounded-[8px]"
+              src={image}
+              alt=""
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
 </div>
 
 <script>
@@ -68,6 +84,7 @@ const data: Data = Astro.props.data;
   document.addEventListener('astro:after-swap', setupSlider)
   function setupSlider() {
       var thumbTree = document.querySelector('.mySwiper2')
+      var thumbTree2 = document.querySelector('.mySwiper3')
       var btnNext = document.querySelector('.swiper-button-next')
       var btnPrev = document.querySelector('.swiper-button-prev')
       var thumb = new Swiper(".mySwiper2", {
@@ -77,11 +94,22 @@ const data: Data = Astro.props.data;
         freeMode: true,
         watchSlidesProgress: true,
       });
+      let index = 1;
+      var thumb2 = new Swiper(".mySwiper3", {
+        spaceBetween: 5,
+        slidesPerView: 4,
+      });
+      if (window.innerWidth < 1000) {
+        thumb = thumb2
+        thumbTree = thumbTree2
+        index = 2
+      }
       var swiper = new Swiper(".mySwiper", {
         effect: "fade",
         fadeEffect: {
           crossFade: true,
         },
+        slidesPerView: 1,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'
@@ -91,7 +119,7 @@ const data: Data = Astro.props.data;
         }
       });
     
-      thumbTree?.querySelector?.(`[data-index="0"]`)?.classList.add('active-slide')
+      thumbTree?.querySelector?.(`[data-thumb-${index}-index="0"]`)?.classList.add('active-slide')
     
       if (btnNext && btnPrev) {
         btnNext.addEventListener('click',() => {
@@ -105,14 +133,15 @@ const data: Data = Astro.props.data;
         thumbTree?.querySelectorAll('.swiper-slide').forEach(el => {
           el.classList.remove('active-slide')
         })
-        const current = thumbTree?.querySelector(`[data-index="${s.activeIndex}"]`)
+        const current = thumbTree?.querySelector(`[data-thumb-${index}-index="${s.activeIndex}"]`)
+        console.log(current)
         current?.classList.add('active-slide')
       })
       thumb.on('click', function(s) {
         thumbTree?.querySelectorAll('.swiper-slide').forEach(el => {
           el.classList.remove('active-slide')
         })
-        const current = thumbTree?.querySelector(`[data-index="${s.clickedIndex}"]`)
+        const current = thumbTree?.querySelector(`[data-thumb-${index}-index="${s.clickedIndex}"]`)
         current?.classList.add('active-slide')
         thumb.slideTo(s.clickedIndex)
         swiper.slideTo(s.clickedIndex)
