@@ -46,7 +46,7 @@
 </div>
 <form class="py-4 space-y-4" on:submit|preventDefault={onSubmit}>
   <BaseInput bind:value={name_or_project_name} id="name" placeholder={activeTab === 'investor' ? 'Name' : 'Project Name'} required />
-  <div class="flex space-x-4">
+  <div class="flex sm:flex-col sm:space-x-0 sm:gap-4 space-x-4">
     <BaseInput bind:value={telegram} id="telegram" placeholder="Telegram" required />
     <BaseInput type="email" bind:value={email} id="mail" placeholder="Mail" required />
   </div>

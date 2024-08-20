@@ -16,7 +16,7 @@ const navItems: Array<NavItem> = [
 
 <footer class="z-[5] relative pt-[48px] bg-[url(/game-project/optimized/footer-bg-2.webp)] bg-cover mt-[150px] md:px-[40px] px-[40px] sm:px-[24px] pb-[100px] sm:pb-[44px] ">
   <div class="max-w-[1520px] mx-auto">
-    <div class="app-text-gradient-bg max-w-[60%] font-Oxanium text-[64px] uppercase leading-[120%]">
+    <div class="app-text-gradient-bg max-w-[60%] font-Oxanium text-[64px] md:text-[48px] sm:text-[48px] uppercase leading-[120%]">
       Follow us on social
       networks
     </div>
@@ -41,8 +41,8 @@ const navItems: Array<NavItem> = [
   </div>
 </footer>
 <div class=" bg-[#252935]">
-  <nav class="max-w-[1420px] mx-auto px-4 py-8 flex items-center">
-    <ul class="flex items-center gap-6 max-w-[680px]">
+  <nav class="max-w-[1420px] mx-auto px-4 py-8 flex md:flex-col sm:flex-col sm:mx-0 md:mx-0 sm:items-start md:items-start items-center">
+    <ul class="flex sm:flex-wrap items-center gap-6 max-w-[680px]">
       {
         navItems.map(({ title, url }) => (
           <li>
@@ -53,7 +53,7 @@ const navItems: Array<NavItem> = [
         ))
       }
     </ul>
-    <div class="ml-auto flex gap-6">
+    <div class="ml-auto md:ml-0 md:mt-6 sm:mt-6 sm:ml-0 flex gap-6">
       <a class="opacity-50 hover:underline" href="#">
         Terms of use
       </a>
