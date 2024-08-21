@@ -30,7 +30,7 @@ const transparent = Astro.props.transparent
     </a>
     <div>
       <div class="flex items-center justify-between gap-6">
-        <nav class="sm:hidden block">
+        <nav class="sm:hidden md:hidden block">
           <ul class="flex items-center gap-[48px]">
             {
               navItems.map(({ title, url }) => (
@@ -46,7 +46,7 @@ const transparent = Astro.props.transparent
         <button
           id="open-nav-button"
           type="button"
-          class="btn hidden sm:block"
+          class="btn hidden md:block sm:block"
           aria-label="Navigation"
         >
           <Icon name="mdi:menu" class="size-8" />
@@ -55,7 +55,7 @@ const transparent = Astro.props.transparent
   
       <div id="menu-modal" class="modal hidden" aria-hidden="true">
         <div class="fixed w-full h-full left-0 top-0 bg-[rgba(0,0,0,0.4)]"></div>
-        <div id="drawer" class="fixed w-[80%] translate-x-[80%] right-0 top-0 h-[100vh] bg-default px-8 py-4 text-default menu-gradient">
+        <div  class="fixed w-[100%] right-0 top-0 h-[100vh] bg-[#0D0D0F] px-8 py-4 text-default">
           <div class="space-y-4" role="dialog" aria-modal="true">
             <header class="text-right">
               <button
@@ -68,20 +68,26 @@ const transparent = Astro.props.transparent
               </button>
             </header>
             <div class="flex justify-center py-[20px]">
-              <img width="206" height="45" class="max-w-[201px]" src="/game-project/media/optimized/logo.webp" alt="logo">
+              <img width="206" height="45" class="max-w-[201px]" src="/game-project/optimized/logo-sm.webp" alt="logo">
             </div>
             </div>
             <nav>
-              <ul class="flex flex-col">
+              <ul class="flex flex-col items-center">
                 {
                   navItems.map(({ title, url }) => (
-                    <li>
-                      <a class="block py-4 text-center" href={url}>
+                    <li class="py-4">
+                      <a class={`${currentUrl.includes(url) ? 'border-b-2 leading-[200%] border-[#F97C0E]' : ''} text-center`} href={url}>
                         {title}
                       </a>
                     </li>
                   ))
                 }
+                <div class="mt-8">
+                  <RequestModal client:idle />
+                </div>
+                <div class="mt-8">
+                  <AuthModal client:only />
+                </div>
               </ul>
             </nav>
             <div class="mt-[20px] flex flex-col items-center">
@@ -90,7 +96,7 @@ const transparent = Astro.props.transparent
           </div>
         </div>
       </div>
-      <div class="sm:hidden flex space-x-4 items-center">
+      <div class="sm:hidden md:hidden flex space-x-4 items-center">
         <a target="_blank" href="https://t.me/BIZZONGames" class="cursor-pointer  hover:opacity-70 active:scale-95 transition-all"><TelegramIcon/></a>
         <a target="_blank" href="https://x.com/bizzongames" class="cursor-pointer hover:opacity-70  active:scale-95 transition-all"><TwitterIcon /></a>
         <div>
@@ -106,7 +112,6 @@ const transparent = Astro.props.transparent
 
 <script>
   import MicroModal from "micromodal";
-import { animate } from "motion";
   import invariant from "tiny-invariant";
   document.addEventListener('astro:after-swap', setupHeader)
   setupHeader()
@@ -126,16 +131,9 @@ import { animate } from "motion";
   
     const openMenu = () => {
       MicroModal.show(menuModalId, { disableScroll: true });
-  
-      animate("#drawer", {
-        transform: ['translateX(0px)']
-      })
     };
   
     const closeMenu = () => {
-      animate("#drawer", {
-        transform: ['translateX(100%)']
-      })
       setTimeout(() => {
         MicroModal.close(menuModalId);
       }, 400)

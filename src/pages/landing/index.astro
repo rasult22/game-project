@@ -1,0 +1,343 @@
+---
+import "~/styles/global.css";
+import "@fontsource-variable/inter";
+import "~/styles/bebasneue/bebasneue.css";
+const { generator, site } = Astro;
+import ParticipantForm from './participant-form.svelte'
+import ButtonHandler from './button-handler.svelte'
+const image = new URL("/game-project/optimized/ru-landing-bg.webp", site);
+import { description, title } from "~/site";
+---
+
+<!doctype html>
+<html
+  lang="en"
+  class="h-full font-Inter motion-safe:scroll-smooth"
+  data-theme="dark"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.png" type="image/svg+xml" />
+    <meta name="generator" content={generator} />
+    <meta
+      http-equiv="cache-control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- social media -->
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={site} />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head><body
+    style="font-family: Bebas Neue;"
+    class="h-full overflow-x-hidden bg-[#0D0D0F] text-base text-[#ECE8CF]"
+  >
+    <ParticipantForm client:load />
+    <header
+      class="fixed left-0 top- z-30 h-[100px] w-full bg-gradient-to-t from-[#01010100] to-[#010101]"
+    >
+      <div
+        class="mx-auto px-4 sm:px-4 flex max-w-[1520px] items-center justify-between py-[20px]"
+      >
+        <svg
+          class="sm:max-w-[121px]"
+          xmlns="http://www.w3.org/2000/svg"
+          width="216"
+          height="64"
+          viewBox="0 0 216 64"
+          fill="none"
+        >
+          <path
+            d="M0 0.0195611C10.9535 14.5526 21.5159 11.8924 40.1369 11.8924C41.5648 11.8924 42.445 13.4768 41.6821 14.6895C29.1051 36.8313 25.6822 28.401 44.2445 47.1394V64L23.4328 43.1883C21.5159 41.2714 21.1834 38.2787 22.6504 35.9902L29.3594 25.5257C30.0831 24.3912 29.2812 22.9046 27.9315 22.9046C9.46699 24.1369 5.73105 15.3154 0 0V0.0195611Z"
+            fill="#FF2600"></path>
+          <path
+            d="M91.0128 0.0195611C80.0593 14.5526 69.4969 11.8924 50.8759 11.8924C49.448 11.8924 48.5678 13.4768 49.3307 14.6895C61.9077 36.8313 65.3307 28.401 46.7683 47.1394V64L67.5801 43.1883C69.4969 41.2714 69.8294 38.2787 68.3624 35.9902L61.6534 25.5257C60.9297 24.3912 61.7316 22.9046 63.0813 22.9046C81.5458 24.1369 85.2818 15.3154 91.0128 0V0.0195611Z"
+            fill="#FF2600"></path>
+          <path
+            d="M99.0117 36.1458V12.5923C100.857 12.4784 104.183 12.2733 107.258 12.2733C112.952 12.2733 118.169 12.9112 118.169 18.3781C118.169 23.8451 116.87 22.4556 114.183 23.4806V23.549C117.121 24.3918 118.898 26.6697 118.898 29.2893C118.898 34.5285 114.957 36.4419 105.299 36.4419C95.6404 36.4419 100.538 36.2597 99.0117 36.123V36.1458ZM107.189 21.4533C109.855 21.4533 110.538 20.7244 110.538 19.5399C110.538 18.3554 109.604 17.9681 108.442 17.9681C107.28 17.9681 107.053 18.0364 106.529 18.082V21.4761H107.189V21.4533ZM110.971 28.6515C110.971 27.0797 109.672 26.5102 108.169 26.5102H106.529V30.6788C107.007 30.7244 107.508 30.6788 108.101 30.6788C110.265 30.6788 110.971 29.6993 110.971 28.6515Z"
+            fill="white"></path>
+          <path
+            d="M120.538 12.3873H128.146V36.2597H120.538V12.3873Z"
+            fill="white"></path>
+          <path
+            d="M130.195 31.9545L138.829 18.7882V18.6743H131.038L131.38 12.3873H148.327V16.9203L140.013 29.8816V29.9499H148.464L148.145 36.2369H130.195V31.9317V31.9545Z"
+            fill="white"></path>
+          <path
+            d="M149.626 31.9545L158.259 18.7882V18.6743H150.469L150.811 12.3873H167.758V16.9203L159.444 29.8816V29.9499H167.895L167.576 36.2369H149.626V31.9317V31.9545Z"
+            fill="white"></path>
+          <path
+            d="M168.875 24.369C168.875 17.7403 172.725 12 180.378 12C188.032 12 191.836 17.877 191.836 24.0501C191.836 30.2232 188.123 36.6241 180.378 36.6241C172.634 36.6241 168.875 30.8838 168.875 24.369ZM183.864 24.2779C183.864 20.041 182.634 18.082 180.378 18.082C178.123 18.082 176.848 19.8588 176.848 24.3007C176.848 28.7426 178.009 30.4738 180.378 30.4738C182.747 30.4738 183.864 28.697 183.864 24.2551V24.2779Z"
+            fill="white"></path>
+          <path
+            d="M194.091 12.3873H202.907C204.729 16.3964 206.164 19.7221 208.123 24.8702H208.26L208.078 19.7677V12.3873H215.162V36.2597H207.053C201.813 25.9636 201.472 24.278 201.153 23.0934H201.039L201.176 28.2643V36.2597H194.091V12.3873Z"
+            fill="white"></path>
+          <path
+            d="M99.0117 46.2825C99.0117 42.4328 101.586 40.2688 105.367 40.2688C109.148 40.2688 108.055 40.5194 108.761 40.8155L108.283 43.754C107.531 43.4807 106.734 43.2757 105.504 43.2757C104.274 43.2757 102.816 43.8907 102.816 46.1458C102.816 48.4009 103.932 49.0388 105.367 49.0388H105.549V47.7631H104.57L104.729 44.8702H109.08V51.4078C108.169 51.7039 106.506 52 105.23 52C100.492 52 99.0117 49.1982 99.0117 46.2825Z"
+            fill="white"></path>
+          <path
+            d="M112.862 40.4283H117.737L120.812 51.8861H116.849L116.439 49.8588H114.024L113.637 51.8861H109.81L112.862 40.4283ZM115.915 47.057L115.277 43.7996L115.208 43.2529H115.186L115.14 43.7996L114.593 47.057H115.937H115.915Z"
+            fill="white"></path>
+          <path
+            d="M121.927 40.4283H126.528L126.961 42.41L127.986 46.9203H128.009L129.034 42.41L129.467 40.4283H134.068L134.478 51.8861H131.061L130.993 48.3554L130.902 45.5535H130.856L129.512 51.8861H126.483L125.139 45.5535H125.093L125.002 48.3554L124.934 51.8861H121.517L121.927 40.4283Z"
+            fill="white"></path>
+          <path
+            d="M136.051 40.4283H143.978L143.818 43.4123H139.718V44.5968H143.591L143.431 47.5581H139.718V48.8793H144.206L144.046 51.8861H136.074V40.4283H136.051Z"
+            fill="white"></path>
+          <path
+            d="M145.23 51.4533L145.64 48.4237C146.506 48.7654 147.782 49.0388 148.852 49.0388C149.923 49.0388 149.991 48.9249 149.991 48.5604C149.991 47.3759 145.276 47.3759 145.276 43.8224C145.276 40.2688 147.258 40.2233 150.105 40.2233C152.952 40.2233 152.383 40.4283 153.249 40.7927L152.77 43.7312C152.064 43.5034 151.039 43.2301 150.037 43.2301C149.034 43.2301 148.921 43.3212 148.921 43.6857C148.921 44.7791 153.704 44.6652 153.704 48.287C153.704 51.9089 151.927 52 148.761 52C145.595 52 145.891 51.7039 145.185 51.385L145.23 51.4533Z"
+            fill="white"></path>
+        </svg>
+        <nav class="font-Inter md:hidden sm:hidden">
+          <ul class="flex space-x-[54px]">
+            <li><a href="#main">Главная</a></li>
+            <li><a href="#presentation">Презентация</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="flex items-center space-x-6">
+          <ButtonHandler classes="ml-6" client:load>
+            <button
+              class="anim-btn flex sm:text-[16px] items-center rounded-[12px] bg-[#ECE8CF] px-[48px] pb-[12px] pt-[16px] text-[24px] font-bold leading-[120%] text-[#2A2A2A]"
+            >
+              <span> Принять учаcтие</span>
+            </button>
+          </ButtonHandler>
+        </div>
+      </div>
+    </header>
+    <!-- main -->
+    <section id="main"
+      class="flex h-[90vh] items-end justify-center lg:bg-[url(/game-project/optimized/ru-landing-bg.webp)] 3xl:bg-[url(/game-project/optimized/ru-landing-bg.webp)] xl:bg-[url(/game-project/optimized/ru-landing-bg.webp)] bg-[url(/game-project/optimized/md-ru-landing-bg.webp)] bg-cover bg-center md:bg-top"
+    >
+      <div
+        class="w-full  bg-gradient-to-b from-[#0D0D0F00] to-[#0D0D0F] pt-[190px]"
+      >
+        <div class="flex justify-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="217"
+            height="76"
+            viewBox="0 0 217 76"
+            fill="none"
+          >
+            <path
+              d="M0.128906 0.0230739C13.0495 17.166 25.5087 14.0281 47.4737 14.0281C49.158 14.0281 50.1963 15.897 49.2965 17.3275C34.4608 43.4456 30.4231 33.5013 52.319 55.6048V75.4933L27.7698 50.9442C25.5087 48.683 25.1165 45.153 26.8469 42.4535L34.7608 30.1097C35.6145 28.7714 34.6685 27.0179 33.0765 27.0179C11.296 28.4715 6.88916 18.0658 0.128906 0V0.0230739Z"
+              fill="#ECE8CF"></path>
+            <path
+              d="M107.485 0.0230739C94.5644 17.166 82.1052 14.0281 60.1402 14.0281C58.4559 14.0281 57.4176 15.897 58.3174 17.3275C73.1531 43.4456 77.1908 33.5013 55.2949 55.6048V75.4933L79.8441 50.9442C82.1052 48.683 82.4974 45.153 80.767 42.4535L72.8531 30.1097C71.9994 28.7714 72.9454 27.0179 74.5374 27.0179C96.3179 28.4715 100.725 18.0658 107.485 0V0.0230739Z"
+              fill="#ECE8CF"></path>
+            <path
+              d="M99.2251 59.3889V35.5319C101.094 35.4165 104.463 35.2088 107.577 35.2088C113.345 35.2088 118.629 35.8549 118.629 41.3923C118.629 46.9297 117.314 45.5223 114.591 46.5605V46.6298C117.568 47.4834 119.367 49.7907 119.367 52.444C119.367 57.7507 115.376 59.6888 105.593 59.6888C95.8104 59.6888 100.771 59.5042 99.2251 59.3658V59.3889ZM107.508 44.5071C110.208 44.5071 110.9 43.7688 110.9 42.569C110.9 41.3692 109.954 40.977 108.777 40.977C107.6 40.977 107.37 41.0462 106.839 41.0923V44.5302H107.508V44.5071ZM111.338 51.798C111.338 50.206 110.023 49.6292 108.5 49.6292H106.839V53.8515C107.324 53.8976 107.831 53.8515 108.431 53.8515C110.623 53.8515 111.338 52.8593 111.338 51.798Z"
+              fill="#ECE8CF"></path>
+            <path
+              d="M121.027 35.3241H128.734V59.5042H121.027V35.3241Z"
+              fill="#ECE8CF"></path>
+            <path
+              d="M130.808 55.1435L139.553 41.8075V41.6922H131.662L132.008 35.3241H149.174V39.9156L140.752 53.0438V53.1131H149.312L148.989 59.4811H130.808V55.1204V55.1435Z"
+              fill="#ECE8CF"></path>
+            <path
+              d="M150.492 55.1435L159.237 41.8075V41.6922H151.346L151.692 35.3241H168.858V39.9156L160.436 53.0438V53.1131H168.996L168.673 59.4811H150.492V55.1204V55.1435Z"
+              fill="#ECE8CF"></path>
+            <path
+              d="M169.988 47.4603C169.988 40.7462 173.887 34.9319 181.639 34.9319C189.392 34.9319 193.245 40.8847 193.245 47.1373C193.245 53.39 189.484 59.8734 181.639 59.8734C173.795 59.8734 169.988 54.0591 169.988 47.4603ZM185.17 47.368C185.17 43.0765 183.924 41.0923 181.639 41.0923C179.355 41.0923 178.063 42.892 178.063 47.3911C178.063 51.8902 179.24 53.6438 181.639 53.6438C184.039 53.6438 185.17 51.8441 185.17 47.345V47.368Z"
+              fill="#ECE8CF"></path>
+            <path
+              d="M195.529 35.3241H204.458C206.304 39.3849 207.757 42.7535 209.741 47.9679H209.88L209.695 42.7996V35.3241H216.871V59.5042H208.657C203.35 49.0754 203.004 47.368 202.681 46.1682H202.566L202.704 51.4057V59.5042H195.529V35.3241Z"
+              fill="#ECE8CF"></path>
+            <path
+              d="M99.2251 69.656C99.2251 65.7567 101.832 63.5649 105.662 63.5649C109.492 63.5649 108.385 63.8187 109.1 64.1186L108.616 67.095C107.854 66.8181 107.047 66.6104 105.801 66.6104C104.555 66.6104 103.078 67.2334 103.078 69.5176C103.078 71.8018 104.209 72.4478 105.662 72.4478H105.847V71.1557H104.855L105.016 68.2255H109.423V74.8473C108.5 75.1473 106.816 75.4472 105.524 75.4472C100.725 75.4472 99.2251 72.6093 99.2251 69.656Z"
+              fill="#ECE8CF"></path>
+            <path
+              d="M113.251 63.7263H118.188L121.303 75.3318H117.289L116.873 73.2783H114.428L114.035 75.3318H110.159L113.251 63.7263ZM116.343 70.4404L115.697 67.141L115.627 66.5873H115.604L115.558 67.141L115.004 70.4404H116.366H116.343Z"
+              fill="#ECE8CF"></path>
+            <path
+              d="M122.437 63.7264H127.097L127.536 65.7337L128.574 70.3021H128.597L129.635 65.7337L130.074 63.7264H134.734L135.15 75.3319H131.689L131.62 71.7556L131.527 68.9177H131.481L130.12 75.3319H127.051L125.69 68.9177H125.644L125.552 71.7556L125.482 75.3319H122.021L122.437 63.7264Z"
+              fill="#ECE8CF"></path>
+            <path
+              d="M136.741 63.7263H144.77L144.608 66.7488H140.455V67.9486H144.378L144.216 70.948H140.455V72.2862H145.001L144.839 75.3318H136.764V63.7263H136.741Z"
+              fill="#ECE8CF"></path>
+            <path
+              d="M146.04 74.8934L146.455 71.8248C147.332 72.1709 148.624 72.4477 149.708 72.4477C150.793 72.4477 150.862 72.3324 150.862 71.9632C150.862 70.7634 146.086 70.7634 146.086 67.1641C146.086 63.5648 148.093 63.5187 150.977 63.5187C153.861 63.5187 153.285 63.7263 154.161 64.0955L153.677 67.0718C152.962 66.8411 151.923 66.5643 150.908 66.5643C149.893 66.5643 149.778 66.6565 149.778 67.0257C149.778 68.1332 154.623 68.0178 154.623 71.6863C154.623 75.3549 152.823 75.4472 149.616 75.4472C146.409 75.4472 146.709 75.1472 145.994 74.8242L146.04 74.8934Z"
+              fill="#ECE8CF"></path>
+          </svg>
+        </div>
+        <div class="text-center text-[128px] sm:text-[64px] font-bold uppercase">
+          14:00, Mocква
+        </div>
+        <div class="hidden mb-[-50px] md:flex sm:flex sm:px-4 justify-center">
+          <ButtonHandler client:load>
+            <button
+              class="anim-btn sm:w-full sm:justify-center flex items-center rounded-[12px] bg-[#ECE8CF] px-[48px] pb-[10px] pt-[14px] text-[24px] font-bold leading-[120%] text-[#2A2A2A]"
+            >
+              <span> Принять учаcтие</span>
+            </button>
+          </ButtonHandler>
+        </div>
+      </div>
+    </section>
+    <!--  bizzon -->
+    <section class="mx-auto px-4 sm:overflow-hidden sm:relative md:mb-[-100px] md:mt-[120px] sm:mt-[100px] md:px-4 sm:px-4 md:flex-wrap sm:flex-wrap flex max-w-[1512px] items-center py-[70px]">
+      <div class="w-[50%] md:w-[60%] sm:w-full shrink-0">
+        <div class="text-[96px] md:text-[64px] sm:text-[48px] font-bold uppercase leading-[100%]">
+          Открой дверь в мир Web3 и GameFi вместе с BIZZON GAMES
+        </div>
+        <div class="font-Inter sm:mt-6 text-[24px] md:text-[16px] sm:text-[16px] leading-[140%] text-[#6B7476]">
+          Приглашаем Вас на презентацию революционного продукта в мире DeFi-игр
+        </div>
+        <ButtonHandler client:load>
+            <button
+              class="sm:absolute sm:bottom-0 sm:w-[90%] sm:justify-center sm:translate-x-[-50%] sm:left-[50%] anim-btn mt-[48px] flex items-center rounded-[12px] bg-[#ECE8CF] px-[48px] sm:pt-[14px] sm:pb-[10px] pb-[16px] pt-[20px] text-[24px] font-bold leading-[120%] text-[#2A2A2A]"
+            >
+              <span> Принять учаcтие</span>
+            </button>
+        </ButtonHandler>
+      </div>
+      <img
+        class="w-full md:translate-x-[30%] md:translate-y-[-30%] sm:translate-x-[30%] sm:translate-y-[-00%] translate-x-[-20%]"
+        src="/game-project/optimized/bizzon.webp"
+        alt=""
+      />
+    </section>
+    <!-- presentation -->
+    <section id="presentation" class="relative px-4">
+      <svg
+        class="absolute md:hidden sm:hidden left-[39%] top-0 max-w-[1512px] translate-x-[-50%]"
+        width="1654"
+        height="1726"
+        viewBox="0 0 1654 1726"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g filter="url(#filter0_f_106_52)">
+          <ellipse
+            cx="826.742"
+            cy="862.956"
+            rx="440.452"
+            ry="632.094"
+            transform="rotate(-39.4494 826.742 862.956)"
+            fill="#FF2600"
+            fill-opacity="0.2"></ellipse>
+        </g>
+        <defs>
+          <filter
+            id="filter0_f_106_52"
+            x="0.438965"
+            y="0.225586"
+            width="1652.6"
+            height="1725.46"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="BackgroundImageFix"
+              result="shape"></feBlend>
+            <feGaussianBlur
+              stdDeviation="150"
+              result="effect1_foregroundBlur_106_52"></feGaussianBlur>
+          </filter>
+        </defs>
+      </svg>
+
+      <div class="mx-auto sm:mt-[90px] max-w-[1512px] md:px-4 sm:px-4">
+        <div
+          class="max-w-[795px] text-[150px] md:text-[96px] sm:text-[64px] font-bold leading-[100%] text-[#FF2600]"
+        >
+          Что будет на презентации
+        </div>
+        <div class="text-[48px] sm:text-[32px] font-bold text-[#FF2600]">
+          Вместе с CEO и Co-Founders вы:
+        </div>
+        <div>
+          <ol
+            class="mt-[64px] md:mt-[36px] sm:mt-[36px]  space-y-12 md:space-y-6 sm:space-y-5 pl-20 md:pl-14 sm:pl-10 text-[64px] sm:text-[24px] md:text-[40px] font-bold leading-[120%]"
+          >
+            <li class="border-b-2 border-[#ECE8CF] pb-6 md:pb-4 sm:pb-4" type="1">
+              Первыми узнаете о возможностях нашей инновационной платформы
+            </li>
+            <li class="border-b-2 border-[#ECE8CF] pb-6 md:pb-4 sm:pb-4" type="1">
+              Познакомьтесь с ведущими разработчиками Bizzon Games
+            </li>
+            <li class="border-b-2 border-[#ECE8CF] pb-6 md:pb-4 sm:pb-4" type="1">
+              Получите эксклюзивный доступ к  первой игре от наших команды
+            </li>
+            <li class="border-b-2 border-[#ECE8CF] pb-6 md:pb-4 sm:pb-4" type="1">
+              Окажитесь в кругу единомышленников, интересующихся Web3 и GameFi
+            </li>
+            <li class="border-b-2 border-[#ECE8CF] pb-6 md:pb-4 sm:pb-4" type="1">
+              Получите привилегированное право на раннее участие в проекте
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <!-- ??? -->
+    <section
+      class="relative border-b border-[#2A2A2A] sm:overflow-hidden flex h-[100vh] flex-wrap items-center justify-center"
+    >
+      <svg
+        class="absolute md:max-w-[1500px] sm:max-w-[1000px] md:top-[-10%] top-0 sm:top-[-10%]"
+        width="2168"
+        height="1275"
+        viewBox="0 0 2168 1275"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g filter="url(#filter0_f_109_32)">
+          <ellipse
+            cx="1084"
+            cy="637.5"
+            rx="684"
+            ry="237.5"
+            fill="#FF2600"
+            fill-opacity="0.2"></ellipse>
+        </g>
+        <defs>
+          <filter
+            id="filter0_f_109_32"
+            x="0"
+            y="0"
+            width="2168"
+            height="1275"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="BackgroundImageFix"
+              result="shape"></feBlend>
+            <feGaussianBlur
+              stdDeviation="200"
+              result="effect1_foregroundBlur_109_32"></feGaussianBlur>
+          </filter>
+        </defs>
+      </svg>
+
+      <div class="z-[1]">
+        <div
+          class="mx-auto w-full max-w-[1137px] md:max-w-[700px] sm:max-w-[90%] text-center text-[96px] md:text-[48px] sm:text-[36px] font-bold leading-[100%] text-[#FF2600]"
+        >
+          Bizzon Games - открывает новые возможности для разработчиков и
+          пользователей WEB3 игр
+        </div>
+        <ButtonHandler client:load>
+          <button
+            class="anim-btn mx-auto mt-[48px] flex items-center rounded-[12px] bg-[#ECE8CF] px-[48px] pb-[16px] pt-[20px] text-[24px] font-bold leading-[120%] text-[#2A2A2A]"
+          >
+            <span> Принять учаcтие</span>
+          </button>
+        </ButtonHandler>
+      </div>
+    </section>
+  </body>
+</html>
