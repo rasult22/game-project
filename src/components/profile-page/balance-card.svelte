@@ -3,7 +3,7 @@
 </script>
 <div class="bg-[#1C1C1E] w-full p-6 rounded-[20px] space-y-3">
 
-  <div class="flex gap-3">
+  <div class="flex sm:grid sm:grid-cols-1 gap-3">
     <!-- Balance -->
     <div class="text-[#1B1B1B] w-full flex flex-col py-3 px-4 rounded-[16px] bg-gradient-to-r from-[#FFE259] to-[#FFA751]">
       <!-- header -->

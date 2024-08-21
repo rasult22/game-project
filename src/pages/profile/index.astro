@@ -4,7 +4,7 @@ import "@fontsource/oxanium/500.css";
 import "@fontsource/oxanium/600.css";
 import "@fontsource/oxanium/800.css";
 import "~/styles/global.css";
-import Footer from "~/components/footer.astro";
+import Footer from "~/components/footer-two.astro";
 import Header from "~/components/header.astro";
 import Profile from './profile.svelte'
 import { ViewTransitions } from 'astro:transitions';
@@ -45,11 +45,11 @@ const image = new URL("optimized/social.webp", site);
     <meta property="og:url" content={site} />
     <meta name="twitter:card" content="summary_large_image" />
   </head>
-  <body class="h-full py-[150px] overflow-x-hidden bg-[#0D0D0F] text-white">
+  <body class="h-full pt-[150px] sm:pt-[100px] overflow-x-hidden bg-[#0D0D0F] text-white">
     <Header />
-    <div class="flex flex-col space-x-4 px-9 max-w-[1520px] mx-auto">
+    <div class="flex flex-col space-x-4 px-9 sm:px-4 max-w-[1520px] mx-auto">
       <Profile client:only />
     </div>
-    <!-- <Footer /> -->
+    <Footer />
   </body>
 </html>

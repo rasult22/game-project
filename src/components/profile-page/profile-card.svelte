@@ -50,9 +50,9 @@
     }} width="24" height="24" src="/game-project/media/copy-icon.svg" alt="">
   </div>
   {#if edit}
-    <div transition:fade class="h-full w-[50%]">
+    <div transition:fade class="h-full sm:hidden w-[50%]">
     </div>
-    <div transition:fade class="absolute p-2 text-black space-y-6 flex flex-col justify-center items-start right-0 -top-3 rounded-[20px] w-[50%] h-full bg-white">
+    <div transition:fade class="absolute p-2 text-black space-y-6 flex flex-col justify-center items-start right-0 -top-3 rounded-[20px] w-[50%] sm:w-full h-full bg-white">
       <div class="flex  items-center space-x-2">
         <img src="/game-project/media/edit-icon-black.svg" alt="">
         <span class="text-[20px] font-semibold">Edit</span>
