@@ -23,12 +23,16 @@
   };
 </script>
 
-<div class="mx-auto min-h-[596px] w-full max-w-[1520px] pt-[241px]">
+<div class="mx-auto sm:hidden min-h-[596px] w-full max-w-[1520px] pt-[241px]">
   <div
     class:translate-x-[0%]={active === "3Q"}
+    class:md:translate-x-[-20vw]={active === "3Q"}
     class:translate-x-[-30%]={active === "4Q"}
+    class:md:translate-x-[-80vw]={active === "4Q"}
     class:translate-x-[-60%]={active === "4Q1Q"}
+    class:md:translate-x-[-150vw]={active === "4Q1Q"}
     class:translate-x-[-90%]={active === "2Q"}
+    class:md:translate-x-[-200vw]={active === "2Q"}
     class="relative z-[2] transition-transform duration-700"
   >
     <div
@@ -105,10 +109,10 @@
   <div class="mt-[48px] pl-[72px]">
     {#if active === "3Q"}
       <div in:fade={{ duration: 700 }} class="flex">
-        <div class="shrink-0 text-[40px] font-medium text-[#37373D]">
+        <div class="shrink-0 text-[40px] md:hidden font-medium text-[#37373D]">
           3Q 2024
         </div>
-        <div class="ml-[300px] flex space-x-4">
+        <div class="ml-[300px] md:ml-0 flex space-x-4">
           <ul class="max-w-[468px] list-disc leading-[150%]">
             <li>Team organization</li>
             <li>Web Resources development</li>
@@ -132,10 +136,10 @@
     {/if}
     {#if active === "4Q"}
       <div in:fade={{ duration: 700 }} class="flex">
-        <div class="shrink-0 text-[40px] font-medium text-[#37373D]">
+        <div class="shrink-0 text-[40px] md:hidden font-medium text-[#37373D]">
           4Q 2024
         </div>
-        <div class="ml-[300px] flex space-x-4">
+        <div class="ml-[300px] md:ml-0 flex space-x-4">
           <ul class="max-w-[468px] list-disc leading-[150%]">
             <li>Launch of 2nd and 3rd original games form Bizzon</li>
             <li>Expansion of game devs partnerships</li>
@@ -149,12 +153,12 @@
     {#if active === "4Q1Q"}
       <div in:fade={{ duration: 700 }} class="flex">
         <div
-          class="shrink-0 text-[40px] font-medium leading-[140%] text-[#37373D]"
+          class="shrink-0 text-[40px] md:hidden font-medium leading-[140%] text-[#37373D]"
         >
           4Q 2024 <br />
           – 1Q 2025
         </div>
-        <div class="ml-[300px] flex space-x-4">
+        <div class="ml-[300px] md:ml-0 flex space-x-4">
           <ul class="max-w-[468px] list-disc leading-[150%]">
             <li>Expanding game devs involvement activity</li>
             <li>Aggregator Gen3 upgrades</li>
@@ -168,11 +172,11 @@
     {#if active === "2Q"}
       <div in:fade={{ duration: 700 }} class="flex">
         <div
-          class="shrink-0 text-[40px] font-medium leading-[140%] text-[#37373D]"
+          class="shrink-0 text-[40px] md:hidden font-medium leading-[140%] text-[#37373D]"
         >
           2Q 2025
         </div>
-        <div class="ml-[300px] flex space-x-4">
+        <div class="ml-[300px] md:ml-0 flex space-x-4">
           <ul class="max-w-[468px] list-disc leading-[150%]">
             <li>BizzonGames NFT collection development</li>
             <li>BizzonID system improvements</li>
@@ -184,7 +188,7 @@
     {/if}
   </div>
 </div>
-<div class="mt-10 flex justify-center gap-9">
+<div class="mt-10 sm:hidden flex justify-center gap-9">
   <button
     disabled={active === "3Q"}
     class:text-[#414141]={active === "3Q"}
@@ -227,6 +231,83 @@
       />
     </svg>
   </button>
+</div>
+<!-- mobile -->
+<div class="hidden sm:flex">
+  <div class="w-[4px] bg-[#FF2600] shrink-0 relative">
+    <div class="w-[32px] h-[32px] bg-white rounded-full absolute left-[-350%] top-[54px]" />
+  </div>
+  <div class="ml-7 mt-[58px]">
+    <div class="text-[24px] leading-[120%] font-medium">
+      3Q <span class="text-[16px] ml-1">2024</span>
+    </div>
+    <ul class="text-[#888888] list-disc pl-6 mt-6">
+      <li>Team organization</li>
+      <li>Web Resources development</li>
+      <li>Social Media development</li>
+      <li>Aggregator Gen1 (GameHUB v 1.0) development</li>
+      <li>Launching the first original game on BizzonGames</li>
+      <li>Integration of Web3 solutions</li>
+      <li>Development of first 10 indicators of BizzonGames ranking system</li>
+      <li>Release of BizzonGames Platform v 1.0</li>
+      <li>Demonstration and popularization of BizzonGames at crypto events</li>
+      <li>Seed funding Round start</li>
+      <li>Aggregator Gen2 development</li>
+      <li>Active community expansion</li>
+      <li>Game designers’ partnership activities</li>
+      <li>BizzonID system implementation</li>
+    </ul>
+  </div>
+</div>
+<div class="hidden sm:flex">
+  <div class="w-[4px] bg-[#FF2600] shrink-0 relative">
+    <div class="w-[32px] h-[32px] bg-white rounded-full absolute left-[-350%] top-[34px]" />
+  </div>
+  <div class="ml-7 mt-[38px]">
+    <div class="text-[24px] leading-[120%] font-medium">
+      4Q <span class="text-[16px] ml-1">2024</span>
+    </div>
+    <ul class="text-[#888888] list-disc pl-6 mt-6">
+      <li>Launch of 2nd and 3rd original games form Bizzon</li>
+      <li>Expansion of game devs partnerships</li>
+      <li>Bizzon Cross-economy development</li>
+      <li>Expanding on-chain support on BizzonGames Platform</li>
+      <li>Staking events launch</li>
+    </ul>
+  </div>
+</div>
+<div class="hidden sm:flex">
+  <div class="w-[4px] bg-[#FF2600] shrink-0 relative">
+    <div class="w-[32px] h-[32px] bg-white rounded-full absolute left-[-350%] top-[34px]" />
+  </div>
+  <div class="ml-7 mt-[38px]">
+    <div class="text-[24px] leading-[120%] font-medium">
+      4Q-1Q <span class="text-[16px] ml-1">2024-2025</span>
+    </div>
+    <ul class="text-[#888888] list-disc pl-6 mt-6">
+      <li>Expanding game devs involvement activity</li>
+      <li>Aggregator Gen3 upgrades</li>
+      <li>New BizzonGames original games launch</li>
+      <li>Producing Center active promotion</li>
+      <li>Active IDO Launchpad promotion</li>
+    </ul>
+  </div>
+</div>
+<div class="hidden sm:flex">
+  <div class="w-[4px] bg-[#FF2600] shrink-0 relative">
+    <div class="w-[32px] h-[32px] bg-white rounded-full absolute left-[-350%] top-[34px]" />
+  </div>
+  <div class="ml-7 mt-[38px] pb-4">
+    <div class="text-[24px] leading-[120%] font-medium">
+      2Q <span class="text-[16px] ml-1">2025</span>
+    </div>
+    <ul class="text-[#888888] list-disc pl-6 mt-6">
+      <li>BizzonGames NFT collection development</li>
+      <li>BizzonID system improvements</li>
+      <li>Producing Center complete business activity</li>
+      <li>IDO Launchpad active listing phase</li>
+    </ul>
+  </div>
 </div>
 
 <style>

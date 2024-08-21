@@ -4,7 +4,7 @@ import "@fontsource/oxanium/500.css";
 import "@fontsource/oxanium/600.css";
 import "@fontsource/oxanium/800.css";
 import "~/styles/global.css";
-import Footer from "~/components/footer-three.astro";
+import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
 import JoinRequestModal from "~/components/join-request-modal.svelte";
 import AuthModal from "~/components/auth/auth-modal.svelte";
@@ -47,21 +47,21 @@ import {description, title} from '~/site'
   >
     <Header transparent />
     <!-- main -->
-    <video id="bg-video" class="absolute z-[1] top-0 sm:hidden w-full left-[50%] translate-x-[-50%] min-w-[110vw] xl:min-w-[2100px] object-cover" autoplay loop muted id="bg">
+    <video id="bg-video" class="absolute z-[1] md:min-w-[200vw] sm:min-w-[250vw] sm:left-[30%] md:left-[35%] top-0 w-full left-[50%] translate-x-[-50%] min-w-[110vw] xl:min-w-[2100px] object-cover" autoplay loop muted id="bg">
       <source src="/game-project/bg-video.webm">
     </video>
     <section
-      class="xl:min-h-[1000px] bg-cover bg-center bg-no-repeat px-10 pt-[100px] mb-[50px]"
+      class="xl:min-h-[1000px] md:min-h-[100vh] sm:min-h-[100vh] sm:flex sm:items-end md:flex md:items-end bg-cover bg-center bg-no-repeat px-10 pt-[100px] mb-[50px]"
     >
       <div
-        class="relative z-10 mx-auto flex xl:min-h-[1000px] lg:min-h-[100vh] max-w-[1520px] flex-col items-start justify-center"
+        class="relative z-10 mx-auto flex min-h-[40vw] max-w-[1520px] flex-col items-start justify-center"
       >
         <div
-          class="app-text-gradient-bg max-w-[809px] font-Oxanium text-[64px] xl:text-[96px] uppercase leading-[100%]"
+          class="app-text-gradient-bg max-w-[809px] font-Oxanium text-[64px] md:text-[64px] sm:text-[40px] xl:text-[96px] uppercase leading-[100%]"
         >
           Station of your rewards
         </div>
-        <div class="pb-12">
+        <div class="pb-12 mt-6">
           A single platform for crypto-gaming: develop, explore, play and earn
         </div>
         <div class="flex items-start gap-4">
@@ -76,27 +76,27 @@ import {description, title} from '~/site'
       </div>
     </section>
     <!-- our games -->
-    <section>
-      <div class="relative z-10 mx-auto max-w-[1520px] pt-[130px]">
-        <div class="font-Oxanium text-[40px] font-medium uppercase">
+    <section class="px-4">
+      <div class="relative z-10 mx-auto overflow-hidden max-w-[1520px] pt-[130px]">
+        <div class="font-Oxanium text-[40px] md:text-[32px] sm:text-[32px] font-medium uppercase">
           Our games
         </div>
         <div class="mt-6 flex gap-4">
           <img
             width="448"
-            class="max-w-[448px] cursor-pointer transition-all hover:opacity-80"
+            class="max-w-[448px] md:max-w-[300px] sm:max-w-[160px] sm:h-[200px] sm:object-cover sm:rounded-[12px] cursor-pointer transition-all hover:opacity-80"
             src="/game-project/optimized/game-1.webp"
             alt=""
           />
           <img
             width="448"
-            class="max-w-[448px] cursor-pointer transition-all hover:opacity-80"
+            class="max-w-[448px] md:max-w-[300px] sm:max-w-[160px] sm:h-[200px] sm:object-cover sm:rounded-[12px] cursor-pointer transition-all hover:opacity-80"
             src="/game-project/optimized/game-2.webp"
             alt=""
           />
           <img
             width="448"
-            class="max-w-[448px] cursor-pointer transition-all hover:opacity-80"
+            class="max-w-[448px] md:max-w-[300px] sm:max-w-[160px] sm:h-[200px] sm:object-cover sm:rounded-[12px] cursor-pointer transition-all hover:opacity-80"
             src="/game-project/optimized/game-3.webp"
             alt=""
           />
@@ -104,23 +104,23 @@ import {description, title} from '~/site'
       </div>
     </section>
     <!-- opportunity -->
-    <section>
+    <section class="px-4">
       <div class="relative z-10 mx-auto mt-[130px] max-w-[1520px]">
-        <div class="font-Oxanium text-[40px] font-medium uppercase">
+        <div class="font-Oxanium text-[40px] md:text-[32px] sm:text-[32px] font-medium uppercase">
           Opportunity
         </div>
-        <div class="flex gap-4 pt-[16px]">
+        <div class="flex sm:grid sm:grid-cols-1 md:grid md:grid-cols-1 gap-4 pt-[16px]">
           <div
             class="card-gradient group relative min-h-[350px] w-full overflow-hidden rounded-[12px] bg-cover bg-center p-6 transition-all"
             style="background-color: #1F2324;"
           >
             <div
-              class="app-text-gradient-bg z-[2] max-w-[319px] font-Oxanium text-[32px] font-medium uppercase leading-[120%] group-hover:hidden group-hover:bg-none"
+              class="app-text-gradient-bg z-[2] max-w-[319px] font-Oxanium text-[32px] sm:text-[24px] font-medium uppercase leading-[120%] group-hover:hidden group-hover:bg-none"
             >
               Detailed analytics of each project
             </div>
             <div
-              class="z-[2] hidden max-w-[319px] font-Oxanium text-[32px] font-medium uppercase leading-[120%] group-hover:block group-hover:bg-none"
+              class="z-[2] hidden max-w-[319px] font-Oxanium text-[32px] sm:text-[24px] font-medium uppercase leading-[120%] group-hover:block group-hover:bg-none"
             >
               Detailed analytics of each project
             </div>
@@ -140,12 +140,12 @@ import {description, title} from '~/site'
             style="background-color: #1F2324;"
           >
             <div
-              class="app-text-gradient-bg z-[2] max-w-[349px] font-Oxanium text-[32px] font-medium uppercase leading-[120%] group-hover:hidden group-hover:bg-none"
+              class="app-text-gradient-bg z-[2] max-w-[349px] font-Oxanium text-[32px] sm:text-[24px] font-medium uppercase leading-[120%] group-hover:hidden group-hover:bg-none"
             >
               In-house skilled development team
             </div>
             <div
-              class="z-[2] hidden max-w-[349px] font-Oxanium text-[32px] font-medium uppercase leading-[120%] group-hover:block group-hover:bg-none"
+              class="z-[2] hidden max-w-[349px] font-Oxanium text-[32px] sm:text-[24px] font-medium uppercase leading-[120%] group-hover:block group-hover:bg-none"
             >
               In-house skilled development team
             </div>
@@ -162,18 +162,18 @@ import {description, title} from '~/site'
             />
           </div>
         </div>
-        <div class="flex gap-4 pt-[16px]">
+        <div class="flex sm:grid sm:grid-cols-1 md:grid md:grid-cols-1 gap-4 pt-[16px]">
           <div
             class="card-gradient group relative min-h-[350px] w-full overflow-hidden rounded-[12px] bg-cover bg-center p-6 transition-all"
             style="background-color: #1F2324;"
           >
             <div
-              class="app-text-gradient-bg z-[2] max-w-[419px] font-Oxanium text-[32px] font-medium uppercase leading-[120%] group-hover:hidden group-hover:bg-none"
+              class="app-text-gradient-bg z-[2] max-w-[419px] font-Oxanium text-[32px] sm:text-[24px] font-medium uppercase leading-[120%] group-hover:hidden group-hover:bg-none"
             >
               Fair in-game economy
             </div>
             <div
-              class="z-[2] hidden max-w-[419px] font-Oxanium text-[32px] font-medium uppercase leading-[120%] group-hover:block group-hover:bg-none"
+              class="z-[2] hidden max-w-[419px] font-Oxanium text-[32px] sm:text-[24px] font-medium uppercase leading-[120%] group-hover:block group-hover:bg-none"
             >
               Fair in-game economy
             </div>
@@ -193,12 +193,12 @@ import {description, title} from '~/site'
             style="background-color: #1F2324;"
           >
             <div
-              class="app-text-gradient-bg z-[2] max-w-[349px] font-Oxanium text-[32px] font-medium uppercase leading-[120%] group-hover:hidden group-hover:bg-none"
+              class="app-text-gradient-bg z-[2] max-w-[349px] font-Oxanium text-[32px] sm:text-[24px] font-medium uppercase leading-[120%] group-hover:hidden group-hover:bg-none"
             >
               Producing centre
             </div>
             <div
-              class="z-[2] hidden max-w-[349px] font-Oxanium text-[32px] font-medium uppercase leading-[120%] group-hover:block group-hover:bg-none"
+              class="z-[2] hidden max-w-[349px] font-Oxanium text-[32px] sm:text-[24px] font-medium uppercase leading-[120%] group-hover:block group-hover:bg-none"
             >
               Producing centre
             </div>
@@ -217,13 +217,13 @@ import {description, title} from '~/site'
       </div>
     </section>
     <!-- our mission -->
-    <section>
+    <section class="px-4">
       <div class="relative z-10 mx-auto mt-[130px] max-w-[1520px]">
-        <div class="font-Oxanium text-[64px] font-medium uppercase">
+        <div class="font-Oxanium text-[64px] md:text-[32px] sm:text-[32px] font-medium uppercase">
           Our mission
         </div>
         <div class="flex">
-          <div class="pt-12 text-[40px] leading-[120%]">
+          <div class="pt-12 text-[40px] md:text-[24px] sm:text-[20px] leading-[120%]">
             <span class="text-[#FD4E07]"
               >To promote blockchain technologies and empower users to select
               games tailored to their preferences.</span
@@ -244,7 +244,7 @@ import {description, title} from '~/site'
           </div>
           <img
             width="729"
-            class="max-w-[729px]"
+            class="max-w-[729px] md:hidden sm:hidden"
             src="/game-project/optimized/mission-image.webp"
             alt=""
           />
@@ -253,7 +253,7 @@ import {description, title} from '~/site'
     </section>
     <!-- game world -->
     <section class="mt-[150px] overflow-hidden">
-      <div class="text-center font-Oxanium text-[48px] font-medium uppercase">
+      <div class="text-center font-Oxanium text-[48px] md:text-[32px] sm:text-[32px] font-medium uppercase">
         Game World
       </div>
       <div class="mt-[48px] flex animate-walk">
@@ -284,11 +284,11 @@ import {description, title} from '~/site'
       </div>
     </section>
     <!-- roadmap -->
-    <section class="mt-[118px] overflow-hidden">
+    <section class="mt-[118px] overflow-hidden px-4">
       <div
-        class="mx-auto max-w-[1520px] font-Oxanium text-[48px] font-medium uppercase"
+        class="mx-auto max-w-[1520px] font-Oxanium text-[48px] md:text-[32px] sm:text-[32px] font-medium uppercase"
       >
-        Our RoadMap
+        RoadMap
       </div>
       <Roadmap client:load />
     </section>
