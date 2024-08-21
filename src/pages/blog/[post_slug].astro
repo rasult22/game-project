@@ -105,7 +105,7 @@ const {post_data} = Astro.props
       </div>
       <div transition:name={post_data.id} class="mt-[30px] w-full rounded-[8px] h-[442px] md:sm:h-[45vw] sm:h-[45vw] bg-center bg-cover" style={`background-image: url(${post_data.pic})`}>
       </div>
-      <div set:html={post_data.content} class="mt-[50px] whitespace-pre-line space-y-6 max-w-[912px]">
+      <div set:html={post_data.content} class="mt-[50px] max-w-[912px]">
       </div>
       <h2 class="text-[36px] my-[50px] uppercase block leading-[120%] font-medium font-Oxanium">Read Also</h1>
       {post_data.recommended_posts.map(item => {

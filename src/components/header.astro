@@ -30,7 +30,7 @@ const transparent = Astro.props.transparent
       <img width="215" height="72" class="max-w-[215px] hidden md:inline" src="/game-project/optimized/logo-sm.webp" alt="logo">
       <img width="161" height="72" class="max-w-[161px] hidden sm:inline" src="/game-project/optimized/logo-sm.webp" alt="logo">
     </a>
-    <div>
+    <div class="ml-[64px]">
       <div class="flex items-center justify-between gap-6 md:gap-4">
         <nav class="sm:hidden md:hidden block">
           <ul class="flex items-center gap-[32px]">
@@ -104,10 +104,10 @@ const transparent = Astro.props.transparent
           </div>
         </div>
       </div>
-      <div class="sm:hidden md:hidden flex space-x-4 items-center">
-        <a target="_blank" href="https://t.me/BIZZONGames" class="cursor-pointer  hover:opacity-70 active:scale-95 transition-all"><TelegramIcon/></a>
-        <a target="_blank" href="https://x.com/bizzongames" class="cursor-pointer hover:opacity-70  active:scale-95 transition-all"><TwitterIcon /></a>
-        <div>
+      <div class="sm:hidden md:hidden ml-[64px] flex space-x-4 items-center">
+        <a target="_blank" href="https://t.me/BIZZONGames" class="13-inch:hidden cursor-pointer  hover:opacity-70 active:scale-95 transition-all"><TelegramIcon/></a>
+        <a target="_blank" href="https://x.com/bizzongames" class="13-inch:hidden cursor-pointer hover:opacity-70  active:scale-95 transition-all"><TwitterIcon /></a>
+        <div class="shrink-0">
           <RequestModal client:idle />
         </div>
         <div>

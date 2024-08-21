@@ -3,7 +3,7 @@
   import RequestForm from './request-form.svelte';
   export let open = false
 </script>
-<button on:click={() => open = true} class="font-medium border py-[10px] active:border-[#fff] active:scale-95 transition-all px-[36px] rounded-[12px]">Send request</button>
+<button on:click={() => open = true} class="font-medium shrink-0 border py-[9px] active:border-[#fff] active:scale-95 transition-all 13-inch:px-6 px-[36px] break-keep rounded-[12px]">Send request</button>
 
 {#if open}
   <div transition:fade on:click={() => open = false} class="fixed cursor-pointer flex items-center justify-center left-[50%] translate-x-[-50%] top-0 bg-[rgba(0,0,0,0.5)] backdrop-blur-sm w-[100vw] h-[100vh] z-[150]">

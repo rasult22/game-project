@@ -80,3 +80,8 @@ img {
 .card-gradient:hover {
   background: linear-gradient(105deg, #F97C0E 0%, #FF3D00 100%), linear-gradient(105deg, #6A839D 0%, #252E37 100%);
 }
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 24px 0;
+}

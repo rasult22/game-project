@@ -27,7 +27,7 @@ module.exports = {
     },
     extend: {
       animation: {
-        text: "text 10s ease-in infinite",
+        text: "text 7s ease-in infinite",
         walk: "30s linear 0s infinite normal none running walk",
       },
       keyframes: {
@@ -121,7 +121,7 @@ module.exports = {
       screens: {
         "custom-screen": { raw: "(max-height: 670px)" },
         xl: { min: "1800px"},
-        '13-inch': {min: "1000", max: "1280px"},
+        '13-inch': {min: "1000px", max: "1280px"},
         '14-inch': {min: "1440px", max: "1520px"},
         lg: { min: "1000px", max: "1800px" },
         md: { max: "1000px", min: "700px" },
