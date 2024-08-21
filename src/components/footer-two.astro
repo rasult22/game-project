@@ -46,7 +46,7 @@ const navItems: Array<NavItem> = [
       {
         navItems.map(({ title, url }) => (
           <li>
-            <a class={`text-[16px] transition-all hover:opacity-80 pb-1 ${currentUrl.includes(url) ? 'border-b-2 border-[#F97C0E]' : ''}`} href={url}>
+            <a class={`text-[16px] transition-all hover:opacity-80 pb-1`} href={url}>
               {title}
             </a>
           </li>
