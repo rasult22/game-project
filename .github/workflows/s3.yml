@@ -6,7 +6,7 @@ env:
 on:
   push:
     branches:
-      - s3
+      - main
 
 jobs:
   deploy:
@@ -44,6 +44,6 @@ jobs:
           aws-region: us-east-1  # Specify your AWS region
       
       - name: Invalidate CloudFront Cache
-        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id E2W2PXTIA9E3CW --paths "/*"
 
 
