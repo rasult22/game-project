@@ -70,7 +70,7 @@
           </svg>
         </div>
         <div
-          class="mt-[20px] flex h-[150px] w-full items-end rounded-[12px] bg-[url(/game-project/optimized/ru-landing-banner.webp)] bg-cover bg-center"
+          class="mt-[20px] flex h-[150px] w-full items-end rounded-[12px] bg-[url(/optimized/ru-landing-banner.webp)] bg-cover bg-center"
         >
           <div
             class="flex w-full justify-between px-4 pb-1 text-[32px] font-bold leading-[100%] text-[#EBB957]"

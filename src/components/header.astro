@@ -6,7 +6,7 @@ import RequestModal from '~/components/join-request-modal.svelte'
 import AuthModal from '~/components/auth/auth-modal.svelte'
 import TelegramIcon from '~/components/icons/TelegramIcon.svelte'
 import TwitterIcon from '~/components/icons/TwitterIcon.svelte'
-const githubPrefix = '/game-project'
+const githubPrefix = ''
 const navItems: Array<NavItem> = [
   { title: "Ranking", url: githubPrefix + "/ranking" },
   { title: "Staking", url: githubPrefix + "/staking" },
@@ -25,10 +25,10 @@ const transparent = Astro.props.transparent
   class={`absolute left-[50%] ${transparent ? 'header-gradient' : 'bg-[#0D0D0F]' }  translate-x-[-50%] font-Inter  min-h-[100px] sm:min-h-[50px] text-[20px] w-full top-0 z-[100] header-bg px-8 md:px-4 sm:px-4 py-4 text-white`}
 >
   <div class="flex overflow-hidden items-center justify-between max-w-[1520px] mx-auto">
-    <a class="flex items-center gap-3 hover:!text-default" href="/game-project">
-      <img width="102" height="72" class="max-w-[102px] md:hidden sm:hidden" src="/game-project/media/logo.svg" alt="logo">
-      <img width="215" height="72" class="max-w-[215px] hidden md:inline" src="/game-project/optimized/logo-sm.webp" alt="logo">
-      <img width="161" height="72" class="max-w-[161px] hidden sm:inline" src="/game-project/optimized/logo-sm.webp" alt="logo">
+    <a class="flex items-center gap-3 hover:!text-default" href="/">
+      <img width="102" height="72" class="max-w-[102px] md:hidden sm:hidden" src="/media/logo.svg" alt="logo">
+      <img width="215" height="72" class="max-w-[215px] hidden md:inline" src="/optimized/logo-sm.webp" alt="logo">
+      <img width="161" height="72" class="max-w-[161px] hidden sm:inline" src="/optimized/logo-sm.webp" alt="logo">
     </a>
     <div class="ml-[64px]">
       <div class="flex items-center justify-between gap-6 md:gap-4">
@@ -76,7 +76,7 @@ const transparent = Astro.props.transparent
               </button>
             </header>
             <div class="flex justify-center py-[20px]">
-              <img width="206" height="45" class="max-w-[201px]" src="/game-project/optimized/logo-sm.webp" alt="logo">
+              <img width="206" height="45" class="max-w-[201px]" src="/optimized/logo-sm.webp" alt="logo">
             </div>
             </div>
             <nav>

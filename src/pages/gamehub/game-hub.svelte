@@ -160,7 +160,7 @@
       {#if filtered_items.length}
         <div class="mt-[50px] sm:mt-6 p-4 sm:p-0 gap-3 grid md:grid-cols-3 sm:grid-cols-1 grid-cols-4 bg-[#1C1C1E] rounded-[16px]">
           {#each filtered_items as card, index }
-            <GameCardBasic link={'/game-project/gamehub/' + card.id} img={card.banner} name={card.game_info.name} networks={card.networks} players={card.players_count} rank={index + 1} tags={card.game_info.tags} />
+            <GameCardBasic link={'/gamehub/' + card.id} img={card.banner} name={card.game_info.name} networks={card.networks} players={card.players_count} rank={index + 1} tags={card.game_info.tags} />
           {/each}
         </div>
       {:else}

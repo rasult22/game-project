@@ -16,8 +16,7 @@ export default defineConfig({
     //   }
     // }
   },
-  base: 'game-project',
-  site: "https://rasult22.github.io",
+  site: "https://bizzon.io",
   integrations: [tailwind(), icon(), svelte()],
 });
 

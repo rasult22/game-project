@@ -4,42 +4,42 @@
   let items = [
     {
       name: 'TON',
-      img: '/game-project/media/ton-icon.svg',
+      img: '/media/ton-icon.svg',
       key: 'ton'
     },
     {
       name: 'Solana',
-      img: '/game-project/media/solana-icon.svg',
+      img: '/media/solana-icon.svg',
       key: 'solana'
     },
     {
       name: 'Ethereum',
-      img: '/game-project/media/ethereum-icon.svg',
+      img: '/media/ethereum-icon.svg',
       key: 'eth'
     },
     {
       name: 'BSC',
-      img: '/game-project/media/bnb-icon.svg',
+      img: '/media/bnb-icon.svg',
       key: 'bsc'
     },
     {
       name: 'Ronin',
-      img: '/game-project/media/ronin-icon.svg',
+      img: '/media/ronin-icon.svg',
       key: 'ronin'
     },
     {
       name: 'Polygon',
-      img: '/game-project/media/polygon-icon.svg',
+      img: '/media/polygon-icon.svg',
       key: 'polygon'
     },
     {
       name: 'AVAX',
-      img: '/game-project/media/avax-icon.svg',
+      img: '/media/avax-icon.svg',
       key: 'avax'
     },
     {
       name: 'Moonbeam',
-      img: '/game-project/media/moonbeam-icon.svg',
+      img: '/media/moonbeam-icon.svg',
       key: 'moonbeam'
     },
   ]

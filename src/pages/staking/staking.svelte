@@ -45,7 +45,7 @@
         <span class="font-medium"> Staking pool </span>
       </div>
       <div class="text-[32px] md:text-[24px] sm:text-[24px] font-medium mt-3 flex items-center gap-4 md:gap-2 sm:gap-2">
-        <img class="md:w-[24px] sm:w-[24px]" width="48" src="/game-project/media/staking.svg" alt="" />
+        <img class="md:w-[24px] sm:w-[24px]" width="48" src="/media/staking.svg" alt="" />
         <span>1.200.000 / 1.200.000</span>
       </div>
     </div>
@@ -61,19 +61,19 @@
     <img
       width="320"
       class="max-w-[320px] sm:max-w-none sm:w-full md:max-w-[215px] hover:scale-105 active:scale-[0.99] transition-all cursor-pointer"
-      src="/game-project/optimized/common-box.webp"
+      src="/optimized/common-box.webp"
       alt=""
     />
     <img
       width="320"
       class="max-w-[320px] sm:max-w-none sm:w-full md:max-w-[215px] hover:scale-105 active:scale-[0.99] transition-all cursor-pointer"
-      src="/game-project/optimized/epic-box.webp"
+      src="/optimized/epic-box.webp"
       alt=""
     />
     <img
       width="320"
       class="max-w-[320px] sm:max-w-none sm:w-full md:max-w-[215px] hover:scale-105 active:scale-[0.99] transition-all cursor-pointer"
-      src="/game-project/optimized/legendary-box.webp"
+      src="/optimized/legendary-box.webp"
       alt=""
     />
   </div>
@@ -99,7 +99,7 @@
             <span class="text-[#787575]">{index + 1}</span>
           </span>
           <div class="flex items-center space-x-4">
-            <img width="50" src="/game-project/optimized/metamask-icon.webp" alt="">
+            <img width="50" src="/optimized/metamask-icon.webp" alt="">
             <span class="font-semibold">–</span>
           </div>
         </div>

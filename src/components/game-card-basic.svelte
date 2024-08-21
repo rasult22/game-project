@@ -24,21 +24,21 @@
       <div class="flex -space-x-2">
         {#each  networks as network }
           {#if network === 'solana'}
-            <img width="20" height="20" src="/game-project/media/solana-icon.svg" alt="">
+            <img width="20" height="20" src="/media/solana-icon.svg" alt="">
           {:else if network === 'ton'}
-            <img width="20" height="20" src="/game-project/media/ton-icon.svg" alt="">
+            <img width="20" height="20" src="/media/ton-icon.svg" alt="">
           {:else if network === 'polygon'}
-            <img width="20" height="20" src="/game-project/media/polygon-icon.svg" alt="">
+            <img width="20" height="20" src="/media/polygon-icon.svg" alt="">
           {:else if network === 'avax'}
-            <img width="20" height="20" src="/game-project/media/avax-icon.svg" alt="">
+            <img width="20" height="20" src="/media/avax-icon.svg" alt="">
           {:else if network === 'ronin'}
-            <img width="20" height="20" src="/game-project/media/ronin-icon.svg" alt="">
+            <img width="20" height="20" src="/media/ronin-icon.svg" alt="">
           {:else if network === 'eth'}
-            <img width="20" height="20" src="/game-project/media/ethereum-icon.svg" alt="">
+            <img width="20" height="20" src="/media/ethereum-icon.svg" alt="">
           {:else if network === 'moonbeam'}
-            <img width="20" height="20" src="/game-project/media/moonbeam-icon.svg" alt="">
+            <img width="20" height="20" src="/media/moonbeam-icon.svg" alt="">
           {:else if network === 'bsc'}
-            <img width="20" height="20" src="/game-project/media/bnb-icon.svg" alt="">
+            <img width="20" height="20" src="/media/bnb-icon.svg" alt="">
           {:else}
           {network}
           {/if}

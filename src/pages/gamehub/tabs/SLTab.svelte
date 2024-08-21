@@ -31,7 +31,7 @@ class="bg-gradient-to-r from-[#FDFC47] to-[#24FE41] text-black rounded-[20px] py
   </div>
 </div>
 <div>
-  <img src="/game-project/media/green-ranking.svg" alt="" />
+  <img src="/media/green-ranking.svg" alt="" />
 </div>
 </div>
 
@@ -40,18 +40,18 @@ class="bg-gradient-to-r from-[#FDFC47] to-[#24FE41] text-black rounded-[20px] py
     <div class="flex justify-between">
       <div class="font-semibold leading-[120%]">Telegram<br/>
         Channel</div>
-        <img width="32" src="/game-project/media/tg-icon.svg" alt="">
+        <img width="32" src="/media/tg-icon.svg" alt="">
     </div>
-    <img class="mt-10" src="/game-project/optimized/social-media-rate.webp" alt="">
+    <img class="mt-10" src="/optimized/social-media-rate.webp" alt="">
   </div>
   <div class="bg-[#2A2A2A] w-full p-4 rounded-[12px]">
     <div class="flex justify-between">
       <div class="font-semibold leading-[120%]">X
         <br/>‎ 
       </div>
-      <img width="24" src="/game-project/media/x-icon.svg" alt="">
+      <img width="24" src="/media/x-icon.svg" alt="">
     </div>
-    <img class="mt-10" src="/game-project/optimized/social-media-rate.webp" alt="">
+    <img class="mt-10" src="/optimized/social-media-rate.webp" alt="">
   </div>
 </div>
 

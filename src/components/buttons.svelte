@@ -69,19 +69,19 @@
   </span>
 </button>
 <button class="bg-[#464648] active:scale-95 active:bg-[#58585B] transition-all rounded-[24px] px-4 py-[10px] flex items-center">
-  <img src="/game-project/optimized/metamask-icon.webp" width="48" height="48" alt="">
+  <img src="/optimized/metamask-icon.webp" width="48" height="48" alt="">
   <div class="ml-4 font-medium">
     Metamask
   </div>
 </button>
 <button class="bg-[#464648] active:scale-95 active:bg-[#58585B] transition-all rounded-[24px] px-4 py-[10px] flex items-center">
-  <img src="/game-project/optimized/trustwallet-icon.webp" width="48" height="48" alt="">
+  <img src="/optimized/trustwallet-icon.webp" width="48" height="48" alt="">
   <div class="ml-4 font-medium">
     TrustWallet
   </div>
 </button>
 <button class="bg-[#464648] active:scale-95 active:bg-[#58585B] transition-all rounded-[24px] px-4 py-[10px] flex items-center">
-  <img src="/game-project/optimized/ton-icon.webp" width="48" height="48" alt="">
+  <img src="/optimized/ton-icon.webp" width="48" height="48" alt="">
   <div class="ml-4 font-medium">
     Ton wallet
   </div>

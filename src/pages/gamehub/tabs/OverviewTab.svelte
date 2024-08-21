@@ -44,7 +44,7 @@
       </div>
     </div>
     <div>
-      <img src="/game-project/media/green-ranking.svg" alt="" />
+      <img src="/media/green-ranking.svg" alt="" />
     </div>
   </div>
 
@@ -64,7 +64,7 @@
       <div class="mt-6 space-y-4 max-h-[180px] -mr-4 pr-4 overflow-auto">
         {#each (team_profile.staffs || []) as member}
           <div class="flex items-center border-b border-[#3F3F3F] pb-2">
-            <img class="rounded-full" src={member.avatar ? 'https://d1j2c9jkfhu70p.cloudfront.net/' + member.avatar : '/game-project/media/avatar.png'} width="45" alt="" />
+            <img class="rounded-full" src={member.avatar ? 'https://d1j2c9jkfhu70p.cloudfront.net/' + member.avatar : '/media/avatar.png'} width="45" alt="" />
             <div class="ml-2">
               <div class="text-[14px] leading-[100%] font-medium">
                 {member.name}
@@ -81,7 +81,7 @@
             >
               <img
                 width="24"
-                src="/game-project/media/linkedin-icon.svg"
+                src="/media/linkedin-icon.svg"
                 alt=""
               />
             </a>
@@ -92,7 +92,7 @@
                     href={link.link}
                     ><img
                       width="24"
-                      src="/game-project/media/telegram-icon.svg"
+                      src="/media/telegram-icon.svg"
                       alt=""
                     /></a
                   >
@@ -103,7 +103,7 @@
                     href={link.link}
                     ><img
                       width="24"
-                      src="/game-project/media/instagram-icon.svg"
+                      src="/media/instagram-icon.svg"
                       alt=""
                     /></a
                   >
@@ -117,7 +117,7 @@
                     href={link.link}
                     ><img
                       width="24"
-                      src="/game-project/media/facebook-icon.svg"
+                      src="/media/facebook-icon.svg"
                       alt=""
                     /></a
                   >
@@ -310,11 +310,11 @@
     <div class="mt-6">
       <div class="text-[20px] font-semibold">Top sale exchanges</div>
       <div class="flex gap-4 mt-4">
-        <img width="64" src="/game-project/optimized/sale-1.webp" alt="" />
-        <img width="64" src="/game-project/optimized/sale-2.webp" alt="" />
-        <img width="64" src="/game-project/optimized/sale-3.webp" alt="" />
-        <img width="64" src="/game-project/optimized/sale-4.webp" alt="" />
-        <img width="64" src="/game-project/optimized/sale-5.webp" alt="" />
+        <img width="64" src="/optimized/sale-1.webp" alt="" />
+        <img width="64" src="/optimized/sale-2.webp" alt="" />
+        <img width="64" src="/optimized/sale-3.webp" alt="" />
+        <img width="64" src="/optimized/sale-4.webp" alt="" />
+        <img width="64" src="/optimized/sale-5.webp" alt="" />
       </div>
     </div>
   </div>
@@ -433,6 +433,6 @@
   </div>
 
   <div class="mt-12">
-    <img src="/game-project/media/reviews.svg" alt="" />
+    <img src="/media/reviews.svg" alt="" />
   </div>
 </div>
