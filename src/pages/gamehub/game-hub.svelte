@@ -79,7 +79,7 @@
 </div>
 
 {#if tab === 'gamehub'}
-  <div class="flex mt-[50px] space-x-4 sm:space-x-0 md:space-x-0 h-full">
+  <div class="flex mt-[50px] sm:mt-[24px] space-x-4 sm:space-x-0 md:space-x-0 h-full">
     <!-- sidebar -->
     <div class="max-w-[280px] md:hidden sm:hidden flex flex-col ">
       <!-- Filters -->
@@ -148,9 +148,9 @@
     <!-- main -->
     <div class="w-full">
       <!-- header -->
-      <div class="flex items-center">
+      <div class="flex sm:flex-wrap items-center sm:gap-4">
         <Search bind:value={search} on:click={clearSearch}/>
-        <div class="ml-2 hidden sm:block md:block">
+        <div class="ml-2 sm:ml-0 sm:w-[40%] hidden sm:block md:block">
           <FilterModal bind:genreFilter={genreFilter} bind:networkFilter={networkFilter} />
         </div>
         <div class="ml-auto">
@@ -158,7 +158,7 @@
         </div>
       </div> 
       {#if filtered_items.length}
-        <div class="mt-[50px] p-4 gap-3 grid md:grid-cols-3 sm:grid-cols-1 grid-cols-4 bg-[#1C1C1E] rounded-[16px]">
+        <div class="mt-[50px] sm:mt-6 p-4 sm:p-0 gap-3 grid md:grid-cols-3 sm:grid-cols-1 grid-cols-4 bg-[#1C1C1E] rounded-[16px]">
           {#each filtered_items as card, index }
             <GameCardBasic link={'/game-project/gamehub/' + card.id} img={card.banner} name={card.game_info.name} networks={card.networks} players={card.players_count} rank={index + 1} tags={card.game_info.tags} />
           {/each}

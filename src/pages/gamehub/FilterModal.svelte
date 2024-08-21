@@ -12,7 +12,8 @@
   let open = false
 </script>
 
-<button on:click={() => open = true} class="p-[11px] anim-btn bg-[#464648] rounded-[8px]">
+<button on:click={() => open = true} class="p-[11px] anim-btn bg-[#464648] rounded-[8px] flex items-center gap-2">
+  <span class="hidden sm:inline">Filters</span>
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C13.4477 5 13 5.44772 13 6C13 6.55228 13.4477 7 14 7C14.5523 7 15 6.55228 15 6C15 5.44772 14.5523 5 14 5ZM11 5C11.4118 3.83481 12.6938 3 14 3C15.3062 3 16.5882 3.83481 17 5H20C20.5523 5 21 5.44772 21 6C21 6.55228 20.5523 7 20 7H17C16.5882 8.16519 15.3062 9 14 9C12.6938 9 11.4118 8.16519 11 7H4C3.44772 7 3 6.55228 3 6C3 5.44772 3.44772 5 4 5H11ZM8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13C8.55228 13 9 12.5523 9 12C9 11.4477 8.55228 11 8 11ZM5 11C5.41184 9.83481 6.69378 9 8 9C9.30622 9 10.5882 9.83481 11 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H11C10.5882 14.1652 9.30622 15 8 15C6.69378 15 5.41184 14.1652 5 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H5ZM17 17C16.4477 17 16 17.4477 16 18C16 18.5523 16.4477 19 17 19C17.5523 19 18 18.5523 18 18C18 17.4477 17.5523 17 17 17ZM14 17C14.4118 15.8348 15.6938 15 17 15C18.3062 15 19.5882 15.8348 20 17C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19C19.5882 20.1652 18.3062 21 17 21C15.6938 21 14.4118 20.1652 14 19H4C3.44772 19 3 18.5523 3 18C3 17.4477 3.44772 17 4 17H14Z" fill="white"/>
   </svg>
@@ -20,7 +21,7 @@
 
 {#if open}
   <div transition:fade on:click={() => open = false} class="fixed cursor-pointer flex items-center justify-center left-[50%] translate-x-[-50%] top-0 bg-[rgba(0,0,0,0.5)] backdrop-blur-sm w-[100vw] h-[100vh] z-[150]">
-    <div on:click|stopPropagation class="flex md:max-h-[80vh] sm:max-h-[80vh] sm:overflow-auto md:overflow-auto flex-col max-w-[1200px] w-[90vw] pt-4 pb-6 px-6 z-[150] cursor-default rounded-[24px] overflow-hidden bg-[#26262A]">
+    <div on:click|stopPropagation class="flex md:max-h-[80vh] sm:max-h-[80vh] sm:overflow-auto md:overflow-auto flex-col max-w-[1200px] w-[90vw] pt-4 pb-6 px-6 sm:px-4 z-[150] cursor-default rounded-[24px] overflow-hidden bg-[#26262A]">
       <div class="flex justify-between">
         <div class="flex items-center gap-2">
           <div>

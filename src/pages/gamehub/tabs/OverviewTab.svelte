@@ -362,7 +362,7 @@
 
   <!-- 5: metrics -->
   <div
-    class="mt-6 p-[20px] bg-gradient-to-r from-[#78EBFF] via-[#12D8FA] to-[#1FA2FF] rounded-[20px] text-[#1B1B1B]"
+    class="mt-6 p-[20px] sm:p-3 bg-gradient-to-r from-[#78EBFF] via-[#12D8FA] to-[#1FA2FF] rounded-[20px] text-[#1B1B1B]"
   >
     <!-- head  -->
     <div class="flex items-center">
@@ -378,7 +378,7 @@
     <!-- cards -->
     <div class="flex sm:grid sm:grid-cols-2 gap-4 mt-6">
       <div
-        class="bg-[#2A2A2A] min-w-[170px] text-white opacity-90 rounded-[16px] p-[14px]"
+        class="bg-[#2A2A2A] min-w-[170px] sm:min-w-[126px] text-white opacity-90 rounded-[16px] p-[14px]"
       >
         <div class="font-semibold">Retention</div>
         <div class="ml-[-5px]">
@@ -391,7 +391,7 @@
         </div>
       </div>
       <div
-        class="bg-[#2A2A2A] min-w-[170px] text-white opacity-90 rounded-[16px] p-[14px]"
+        class="bg-[#2A2A2A] min-w-[170px] sm:min-w-[126px] text-white opacity-90 rounded-[16px] p-[14px]"
       >
         <div class="font-semibold">Session Lenght</div>
         <div class="ml-[-5px]">
@@ -404,7 +404,7 @@
         </div>
       </div>
       <div
-        class="bg-[#2A2A2A] min-w-[170px] text-white opacity-90 rounded-[16px] p-[14px]"
+        class="bg-[#2A2A2A] min-w-[170px] sm:min-w-[126px] text-white opacity-90 rounded-[16px] p-[14px]"
       >
         <div class="font-semibold">ARPDAU</div>
         <div class="ml-[-5px]">
@@ -417,7 +417,7 @@
         </div>
       </div>
       <div
-        class="bg-[#2A2A2A] min-w-[170px] text-white opacity-90 rounded-[16px] p-[14px]"
+        class="bg-[#2A2A2A] min-w-[170px] sm:min-w-[126px] text-white opacity-90 rounded-[16px] p-[14px]"
       >
         <div class="font-semibold">Churn Rate</div>
         <div class="ml-[-5px]">

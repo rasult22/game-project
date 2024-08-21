@@ -44,9 +44,9 @@ import {description, title} from '~/site'
     <meta property="og:url" content={site} />
     <meta name="twitter:card" content="summary_large_image" />
   </head>
-  <body class="h-full pt-[150px] overflow-x-hidden bg-[#0D0D0F] text-white">
+  <body class="h-full pt-[150px] sm:pt-[100px] overflow-x-hidden bg-[#0D0D0F] text-white">
     <Header />
-    <div class="flex flex-col space-x-4 px-9 max-w-[1520px] mx-auto">
+    <div class="flex flex-col space-x-4 px-9 sm:px-4 max-w-[1520px] mx-auto">
       <GameHub client:load/>
     </div>
     <FooterTwo />

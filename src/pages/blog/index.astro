@@ -67,10 +67,10 @@ const items = list.map(post => {
     <meta name="twitter:card" content="summary_large_image" />
   </head><body class="overflow-x-hidden bg-[#0D0D0F] text-white">
     <Header />
-    <div class="pt-[150px] space-x-4 max-w-[920px] mx-auto">
+    <div class="pt-[150px] sm:pt-[100px] space-x-4 max-w-[920px] mx-auto">
       <h1 class="text-[36px] font-medium uppercase sm:px-4 md:px-4 font-Oxanium">Blog</h1>
 
-      <div class="mt-[50px] sm:grid justify-center space-y-6 max-w-[912px] sm:px-4 md:px-4">
+      <div class="mt-[50px] sm:mt-6 sm:grid justify-center space-y-6 max-w-[912px] sm:px-4 md:px-4">
         {
           items.map((article) => (
             <a href={'/game-project/blog/' + article.id} class="bg-[#272727] hover:scale-[1.01] sm:max-w-[340px] active:scale-[0.99] transition-all cursor-pointer py-2 pl-2 pr-4 flex sm:flex-wrap sm:space-x-0 space-x-[36px] md:space-x-[20px] max-w-[912px] rounded-[12px]">
