@@ -11,9 +11,9 @@
 
 <style>
   .chip {
-    @apply border py-2 px-[10px] rounded-[12px] flex active:bg-white active:text-black active:scale-95 transition-all;
+    @apply border border-[#464648] py-2 px-[10px] rounded-[12px] flex active:bg-white active:text-black active:scale-95 transition-all;
   }
   .chip-active {
-    @apply border py-2 px-[10px] rounded-[12px] flex bg-white text-black active:scale-95 transition-all;
+    @apply border border-[#464648] py-2 px-[10px] rounded-[12px] flex bg-white text-black active:scale-95 transition-all;
   }
 </style>
