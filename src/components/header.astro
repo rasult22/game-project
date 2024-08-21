@@ -26,12 +26,14 @@ const transparent = Astro.props.transparent
 >
   <div class="flex overflow-hidden items-center justify-between max-w-[1520px] mx-auto">
     <a class="flex items-center gap-3 hover:!text-default" href="/game-project">
-      <img width="102" height="72" class="max-w-[102px]" src="/game-project/media/logo.svg" alt="logo">
+      <img width="102" height="72" class="max-w-[102px] md:hidden sm:hidden" src="/game-project/media/logo.svg" alt="logo">
+      <img width="215" height="72" class="max-w-[215px] hidden md:inline" src="/game-project/optimized/logo-sm.webp" alt="logo">
+      <img width="161" height="72" class="max-w-[161px] hidden sm:inline" src="/game-project/optimized/logo-sm.webp" alt="logo">
     </a>
     <div>
       <div class="flex items-center justify-between gap-6">
         <nav class="sm:hidden md:hidden block">
-          <ul class="flex items-center gap-[48px]">
+          <ul class="flex items-center gap-[32px]">
             {
               navItems.map(({ title, url }) => (
                 <li>
@@ -43,6 +45,12 @@ const transparent = Astro.props.transparent
             }
           </ul>
         </nav>
+        <div class="hidden md:block">
+          <RequestModal client:idle />
+        </div>
+        <div class="hidden md:block">
+          <AuthModal client:only />
+        </div>
         <button
           id="open-nav-button"
           type="button"
@@ -55,7 +63,7 @@ const transparent = Astro.props.transparent
   
       <div id="menu-modal" class="modal hidden" aria-hidden="true">
         <div class="fixed w-full h-full left-0 top-0 bg-[rgba(0,0,0,0.4)]"></div>
-        <div  class="fixed w-[100%] right-0 top-0 h-[100vh] bg-[#0D0D0F] px-8 py-4 text-default">
+        <div  class="fixed w-[100%] right-0 top-0 overflow-auto h-[100vh] bg-[#0D0D0F] px-8 py-4 text-default">
           <div class="space-y-4" role="dialog" aria-modal="true">
             <header class="text-right">
               <button
@@ -82,10 +90,10 @@ const transparent = Astro.props.transparent
                     </li>
                   ))
                 }
-                <div class="mt-8">
+                <div class="mt-8 md:hidden">
                   <RequestModal client:idle />
                 </div>
-                <div class="mt-8">
+                <div class="mt-8 md:hidden">
                   <AuthModal client:only />
                 </div>
               </ul>
