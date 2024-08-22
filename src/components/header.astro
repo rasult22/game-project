@@ -6,6 +6,9 @@ import RequestModal from '~/components/join-request-modal.svelte'
 import AuthModal from '~/components/auth/auth-modal.svelte'
 import TelegramIcon from '~/components/icons/TelegramIcon.svelte'
 import TwitterIcon from '~/components/icons/TwitterIcon.svelte'
+import SmMenuBtn from '~/components/auth/sm-menu-btn.svelte'
+import Footer from "./footer.astro";
+
 const githubPrefix = ''
 const navItems: Array<NavItem> = [
   { title: "Ranking", url: githubPrefix + "/ranking" },
@@ -63,44 +66,42 @@ const transparent = Astro.props.transparent
   
       <div id="menu-modal" class="modal hidden" aria-hidden="true">
         <div class="fixed w-full h-full left-0 top-0 bg-[rgba(0,0,0,0.4)]"></div>
-        <div  class="fixed w-[100%] right-0 top-0 overflow-auto h-[100vh] bg-[#0D0D0F] px-8 sm:px-4 py-4 text-default">
+        <div  class="fixed w-[100%] right-0 top-0 overflow-auto h-[100vh] bg-[#0D0D0F] px-8 sm:px-0 md:px-0 py-4 text-default">
           <div class="space-y-4" role="dialog" aria-modal="true">
-            <header class="text-right">
+            <header class="flex px-4 items-center justify-between">
+              <div class="flex justify-center py-[20px]">
+                <img width="206" height="45" class="max-w-[201px]" src="/optimized/logo-sm.webp" alt="logo">
+              </div>
               <button
                 id="close-nav-button"
                 type="button"
                 class="btn"
                 aria-label="Close navigation"
               >
-                <Icon name="mdi:close" class="size-8" />
+                <Icon name="mdi:close" class="size-10" />
               </button>
             </header>
-            <div class="flex justify-center py-[20px]">
-              <img width="206" height="45" class="max-w-[201px]" src="/optimized/logo-sm.webp" alt="logo">
-            </div>
-            </div>
-            <nav>
+          </div>
+          <div class="flex justify-center px-4">
+            <SmMenuBtn client:only />
+          </div>
+          <nav>
               <ul class="flex flex-col items-center">
                 {
                   navItems.map(({ title, url }) => (
-                    <li class="py-4">
-                      <a class={`${currentUrl.includes(url) ? 'border-b-2 leading-[200%] border-[#F97C0E]' : ''} text-center`} href={url}>
+                    <li class="border-b w-full flex">
+                      <a class={`w-full p-4`} href={url}>
                         {title}
                       </a>
                     </li>
                   ))
                 }
-                <div class="mt-8 md:hidden">
-                  <RequestModal client:idle />
-                </div>
-                <div class="mt-8 md:hidden">
-                  <AuthModal client:only />
-                </div>
               </ul>
             </nav>
-            <div class="mt-[20px] flex flex-col items-center">
-              <div class="py-1"></div>
+            <div class="mt-[40px] flex flex-col items-center">
+              <RequestModal client:idle />
             </div>
+            <Footer />
           </div>
         </div>
       </div>

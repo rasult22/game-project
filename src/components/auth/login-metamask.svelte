@@ -61,6 +61,7 @@
             authType: 'metamask'
           }
           authPopupIsOpen = false
+          $auth.popupIsOpen = false
         }
       } catch (error) {
         console.error(error);

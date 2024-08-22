@@ -26,6 +26,7 @@
                 image: profile.hK
               }
             }
+            $auth.popupIsOpen = false
             authPopupIsOpen = false
           }
           console.log('authInstance', authInstance)
@@ -50,6 +51,7 @@
       }
       console.log(user, 'user')
       console.log('User signed in:', profile);
+      $auth.popupIsOpen = false
       authPopupIsOpen = false
     });
   }

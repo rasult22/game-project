@@ -1,6 +1,7 @@
 import { writable } from "svelte/store";
 
 type AuthScheme = {
+  popupIsOpen: boolean,
   user: {
     address_full: string,
     address: string,
@@ -13,6 +14,7 @@ type AuthScheme = {
 
 // default state
 let store: AuthScheme = {
+  popupIsOpen: false,
   user:  null,
   authType: null,
   isAuthorized: false
