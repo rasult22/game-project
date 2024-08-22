@@ -134,7 +134,7 @@
       <div class="flex space-x-[32px]">
         <div class="w-[50%]">
           <div class="flex items-center space-x-[10px]">
-            <span class="text-[20px] font-semibold">TOP Bakers</span>
+            <span class="text-[20px] font-semibold">TOP Funds</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
