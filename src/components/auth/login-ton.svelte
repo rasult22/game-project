@@ -20,7 +20,6 @@ onMount(() => {
         }
         selected = true
         authPopupIsOpen = false
-        $auth.popupIsOpen = false
       }
     }
   })

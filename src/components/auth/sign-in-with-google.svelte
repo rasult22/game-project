@@ -17,18 +17,16 @@
           let user = authInstance.currentUser.get();
           if (user) {
             let profile = user.getBasicProfile()
-            if (profile) {
-              $auth = {
-                authType: 'google',
-                isAuthorized: true,
-                user: {
-                  name: profile.Ad,
-                  address: profile.cu,
-                  image: profile.hK
-                }
+            if (!profile) return
+            $auth = {
+              authType: 'google',
+              isAuthorized: true,
+              user: {
+                name: profile.Ad,
+                address: profile.cu,
+                image: profile.hK
               }
             }
-            $auth.popupIsOpen = false
             authPopupIsOpen = false
           }
           console.log('authInstance', authInstance)
@@ -53,7 +51,6 @@
       }
       console.log(user, 'user')
       console.log('User signed in:', profile);
-      $auth.popupIsOpen = false
       authPopupIsOpen = false
     });
   }

@@ -1,51 +1,20 @@
 <script>
-  import { init } from '~/utils/ton';
-	import ProfileBtn from './profile-btn.svelte';
+	import { auth_modal_is_open } from './state.ts';
   import { fade } from "svelte/transition";
   import LoginMetamask from "./login-metamask.svelte";
   import LoginTrustwallet from './login-trustwallet.svelte';
   import SignInWithGoogle from './sign-in-with-google.svelte';
   import LoginTon from './login-ton.svelte'
-  import { auth } from "~/store/auth";
-  import { onMount } from 'svelte';
-  export let open = false
-  export let isLanding = false
-  onMount(() => {
-    if (isLanding) return
-    if (!$auth.isAuthorized) {
-      init() // init ton
-    }
-    if (window.ethereum) {
-      window.ethereum.on('accountsChanged', (acc) => {
-        if (!acc.length) {
-          $auth = {
-            ...$auth,
-            isAuthorized: false,
-            user: null
-          }
-        }
-      })
-    }
-  })
 
   $: isConflict = window.ethereum && window.ethereum.isTrustWallet && window.ethereum.isMetaMask
 
   const closePopup = () => {
-    open = false
-    $auth.popupIsOpen = false
+    $auth_modal_is_open = false
   }
 </script>
-<div id="ton-connect" class="hidden"></div>
-{#if $auth.isAuthorized}
-  {#if !isLanding}
-    <ProfileBtn name={$auth.user && $auth.user.name} address={$auth.user && $auth.user.address} />
-  {/if}
-{:else}
-  <button on:click={() => open = true} class="font-medium bg-[#fff] text-black border py-[9px] active:border-[#fff] active:scale-95 active:bg-[#D9D9D9] transition-all px-[36px] 13-inch:px-4 rounded-[12px]">Log in</button>
-{/if}
-{#if open || $auth.popupIsOpen}
-  <div transition:fade on:click={closePopup} class="fixed cursor-pointer flex items-center justify-center top-0 left-[50%] translate-x-[-50%] bg-[rgba(0,0,0,0.5)] backdrop-blur-sm w-[100vw] h-[100vh] z-10">
-    <div on:click|stopPropagation class="flex w-[600px] cursor-default z-50 rounded-[24px] overflow-hidden">
+{#if $auth_modal_is_open}
+  <div transition:fade on:click={closePopup} class="fixed z-[155] cursor-pointer flex items-center justify-center top-0 left-[50%] translate-x-[-50%] bg-[rgba(0,0,0,0.5)] backdrop-blur-sm w-[100vw] h-[100vh]">
+    <div on:click|stopPropagation class="flex w-[600px] cursor-default z-[160] rounded-[24px] overflow-hidden">
       <div class="bg-[#2A2A2A] w-full p-6">
         <!-- header -->
         <div class="flex items-center justify-between">
@@ -64,15 +33,15 @@
         {/if}
         <!-- body -->
         <div class="space-y-4 mt-4">
-          <LoginMetamask bind:authPopupIsOpen={open}/>
-          <LoginTrustwallet bind:authPopupIsOpen={open} />
-          <LoginTon bind:authPopupIsOpen={open} />
+          <LoginMetamask bind:authPopupIsOpen={$auth_modal_is_open}/>
+          <LoginTrustwallet bind:authPopupIsOpen={$auth_modal_is_open} />
+          <LoginTon bind:authPopupIsOpen={$auth_modal_is_open} />
           <div class="flex items-center justify-center space-x-4">
             <div class="border-t w-[30%] border-[#888888]"></div>
             <div class="text-[#888888]">Or</div>
             <div class="border-t w-[30%] border-[#888888]"></div>
           </div>
-          <SignInWithGoogle bind:authPopupIsOpen={open} />
+          <SignInWithGoogle bind:authPopupIsOpen={$auth_modal_is_open} />
         </div>
       </div>
     </div>

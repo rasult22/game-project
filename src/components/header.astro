@@ -5,6 +5,7 @@ import type { NavItem } from "~/types";
 import RequestModal from '~/components/join-request/join-request-modal.svelte'
 import RequestModalBtn from '~/components/join-request/join-request-btn.svelte'
 import AuthModal from '~/components/auth/auth-modal.svelte'
+import AuthModalBtn from '~/components/auth/auth-modal-btn.svelte'
 import TelegramIcon from '~/components/icons/TelegramIcon.svelte'
 import TwitterIcon from '~/components/icons/TwitterIcon.svelte'
 import SmMenuBtn from '~/components/auth/sm-menu-btn.svelte'
@@ -53,7 +54,7 @@ const transparent = Astro.props.transparent
           <RequestModalBtn client:idle />
         </div>
         <div class="hidden md:block">
-          <AuthModal client:only />
+          <AuthModalBtn client:only />
         </div>
         <button
           id="open-nav-button"
@@ -113,13 +114,15 @@ const transparent = Astro.props.transparent
           <RequestModalBtn client:load/>
         </div>
         <div>
-          <AuthModal client:only />
+          <AuthModalBtn client:only/>
         </div>
       </div>
     </div>
   </div>
 </header>
 <RequestModal client:load />
+<AuthModal client:only />
+
 
 <script>
   import MicroModal from "micromodal";
