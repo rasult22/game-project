@@ -318,10 +318,10 @@
     @apply text-[32px] font-medium leading-[120%] text-white;
   }
   .text {
-    @apply font-semibold text-[#37373D];
+    @apply font-semibold text-[16px] text-[#37373D];
   }
   .text-active {
-    @apply font-semibold text-white;
+    @apply font-semibold text-[16px] text-white;
   }
   .container {
     @apply bottom-[-10px];
