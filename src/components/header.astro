@@ -2,7 +2,8 @@
 import { Icon } from "astro-icon/components";
 // import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
-import RequestModal from '~/components/join-request-modal.svelte'
+import RequestModal from '~/components/join-request/join-request-modal.svelte'
+import RequestModalBtn from '~/components/join-request/join-request-btn.svelte'
 import AuthModal from '~/components/auth/auth-modal.svelte'
 import TelegramIcon from '~/components/icons/TelegramIcon.svelte'
 import TwitterIcon from '~/components/icons/TwitterIcon.svelte'
@@ -49,7 +50,7 @@ const transparent = Astro.props.transparent
           </ul>
         </nav>
         <div class="hidden md:block">
-          <RequestModal client:idle />
+          <RequestModalBtn client:idle />
         </div>
         <div class="hidden md:block">
           <AuthModal client:only />
@@ -99,7 +100,7 @@ const transparent = Astro.props.transparent
               </ul>
             </nav>
             <div class="mt-[40px] flex flex-col items-center">
-              <RequestModal client:idle />
+              <RequestModalBtn client:load/>
             </div>
             <Footer />
           </div>
@@ -109,7 +110,7 @@ const transparent = Astro.props.transparent
         <a target="_blank" href="https://t.me/BIZZONGames" class="13-inch:hidden cursor-pointer  hover:opacity-70 active:scale-95 transition-all"><TelegramIcon/></a>
         <a target="_blank" href="https://x.com/bizzongames" class="13-inch:hidden cursor-pointer hover:opacity-70  active:scale-95 transition-all"><TwitterIcon /></a>
         <div class="shrink-0">
-          <RequestModal client:idle />
+          <RequestModalBtn client:load/>
         </div>
         <div>
           <AuthModal client:only />
@@ -118,6 +119,7 @@ const transparent = Astro.props.transparent
     </div>
   </div>
 </header>
+<RequestModal client:load />
 
 <script>
   import MicroModal from "micromodal";

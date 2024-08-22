@@ -17,13 +17,15 @@
           let user = authInstance.currentUser.get();
           if (user) {
             let profile = user.getBasicProfile()
-            $auth = {
-              authType: 'google',
-              isAuthorized: true,
-              user: {
-                name: profile.Ad,
-                address: profile.cu,
-                image: profile.hK
+            if (profile) {
+              $auth = {
+                authType: 'google',
+                isAuthorized: true,
+                user: {
+                  name: profile.Ad,
+                  address: profile.cu,
+                  image: profile.hK
+                }
               }
             }
             $auth.popupIsOpen = false

@@ -6,8 +6,6 @@ import "@fontsource/oxanium/800.css";
 import "~/styles/global.css";
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
-import JoinRequestModal from "~/components/join-request-modal.svelte";
-import AuthModal from "~/components/auth/auth-modal.svelte";
 import Roadmap from "./roadmap.svelte";
 const { generator, site } = Astro;
 const image = new URL("optimized/social.webp", site);
@@ -65,7 +63,7 @@ import {description, title} from '~/site'
     </video>
     <!-- sm  -->
     <video id="bg-video" class="absolute hidden sm:block z-[1] top-0 w-full left-[50%] translate-x-[-50%] " muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
-      <source src="/mobile-bg-op.mp4">
+      <source src="/tablet-bg-op.mp4">
     </video>
     <section
       class="xl:min-h-[1000px] md:min-h-[80vh] sm:min-h-[85vh] sm:flex sm:items-end md:flex md:items-end bg-cover bg-center bg-no-repeat px-10 13-inch:px-[72px] 14-inch:px-[72px] pt-[100px] mb-[50px]"
