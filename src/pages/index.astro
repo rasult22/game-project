@@ -47,12 +47,28 @@ import {description, title} from '~/site'
   >
     <Header transparent />
     <!-- main -->
-    <video id="bg-video" class="absolute z-[1] md:min-w-[200vw] sm:min-w-[250vw] sm:left-[20%] md:left-[35%] top-0 w-full left-[50%] translate-x-[-50%] min-w-[110vw] xl:min-w-[2100px] object-cover" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
-      <source src="/bg-video.webm">
-      <source src="/bg-video.mp4">
+     <!-- base -->
+    <video id="bg-video" class="absolute xl:hidden 13-inch:hidden 14-inch:hidden md:hidden sm:hidden z-[1] top-0 w-full left-[50%] translate-x-[-50%] min-w-[100vw] object-cover" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
+      <source src="/base-bg-op.mp4">
+    </video>
+    <!-- xl -->
+    <video id="bg-video" class="hidden xl:block absolute z-[1] top-0 w-full left-[50%] translate-x-[-50%] min-w-[100vw] object-cover" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
+      <source src="/extra-large-bg-op.mp4">
+    </video>
+    <!-- 14 inch -->
+    <video id="bg-video" class="absolute hidden 13-inch:block 14-inch:block z-[1] top-0 w-full left-[50%] translate-x-[-50%] min-w-[100vw] object-cover" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
+      <source src="/14-inch-bg-op.mp4">
+    </video>
+    <!-- md -->
+    <video id="bg-video" class="absolute hidden md:block 14-inch:block z-[1] top-0 w-full left-[50%] translate-x-[-50%] min-w-[100vw] object-cover" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
+      <source src="/tablet-bg-op.mp4">
+    </video>
+    <!-- sm  -->
+    <video id="bg-video" class="absolute hidden sm:block z-[1] top-0 w-full left-[50%] translate-x-[-50%] " muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
+      <source src="/mobile-bg-op.mp4">
     </video>
     <section
-      class="xl:min-h-[1000px] md:min-h-[100vh] sm:min-h-[85vh] sm:flex sm:items-end md:flex md:items-end bg-cover bg-center bg-no-repeat px-10 13-inch:px-[72px] 14-inch:px-[72px] pt-[100px] mb-[50px]"
+      class="xl:min-h-[1000px] md:min-h-[80vh] sm:min-h-[85vh] sm:flex sm:items-end md:flex md:items-end bg-cover bg-center bg-no-repeat px-10 13-inch:px-[72px] 14-inch:px-[72px] pt-[100px] mb-[50px]"
     >
       <div
         class="relative z-10 mx-auto flex min-h-[40vw] max-w-[1520px] flex-col items-start justify-center"
@@ -65,9 +81,9 @@ import {description, title} from '~/site'
         <div class="pb-12 mt-6">
           A joint platform for cryptogaming: Play, Earn, Invest, Develop
         </div>
-        <div class="flex items-start gap-4">
-          <button class="font-medium bg-[#fff] text-black border py-[9px] active:border-[#fff] active:scale-95 active:bg-[#D9D9D9] transition-all px-[24px] rounded-[12px]">Get Listed</button>
-          <button class="py-[9px] anim-btn px-[24px] rounded-[12px] border border-[#888888]">
+        <div class="flex sm:flex-col items-start sm:w-full gap-4">
+          <button class="font-medium sm:w-full bg-[#fff] text-black border py-[9px] active:border-[#fff] active:scale-95 active:bg-[#D9D9D9] transition-all px-[24px] rounded-[12px]">Get Listed</button>
+          <button class="py-[9px] anim-btn sm:w-full px-[24px] rounded-[12px] border border-[#888888]">
             Ambassador Programme
           </button>
         </div>
