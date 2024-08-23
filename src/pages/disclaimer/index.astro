@@ -1,0 +1,85 @@
+---
+import "@fontsource-variable/inter";
+import "@fontsource/oxanium/500.css";
+import "@fontsource/oxanium/600.css";
+import "@fontsource/oxanium/800.css";
+import "~/styles/global.css";
+import Footer from "~/components/footer.astro";
+import Header from "~/components/header.astro";
+import { ViewTransitions } from "astro:transitions";
+const { generator, site } = Astro;
+const image = new URL("optimized/social.webp", site);
+import {description, title} from '~/site'
+---
+
+<!doctype html>
+<html
+  lang="en"
+  class="h-full bg-app-bg font-Inter motion-safe:scroll-smooth"
+  data-theme="dark"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.png" type="image/svg+xml" />
+    <meta name="generator" content={generator} />
+    <meta
+      http-equiv="cache-control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <ViewTransitions />
+    <!-- social media -->
+    <meta
+      property="og:title"
+      content={title}
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={site} />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head><body class="overflow-x-hidden bg-[#0D0D0F] text-white">
+    <Header />
+    <div class="mx-auto select-none max-w-[912px] md:px-4 sm:px-4 pt-[150px] sm:pt-[100px]">
+      <div class="text-[48px] md:text-[36px] sm:text-[32px] font-medium font-Oxanium leading-[120%]">
+        DISCLAIMER
+      </div>
+      <div class="mt-[50px]">
+        <div class="text-[32px] font-medium leading-[120%] md:text-[24px] sm:text-[20px]">No investment advice</div>
+        <div class="mt-6 space-y-6 text-[#B0B0B2]">
+          <p>
+            This website, also known as the BizzonGames Platform, does not and cannot provide any investment, financial, or legal advice. All information on this website/Platform is provided for informational purposes only. Bizzon.io is not responsible for any investment decisions made by users based on the information provided. We strongly recommend that you conduct your own research and consult with qualified professionals before taking any action based on the information found on our website.
+          </p>
+        </div>
+      </div>
+      <div class="mt-[50px]">
+        <div class="text-[32px] font-medium leading-[120%] md:text-[24px] sm:text-[20px]">Accuracy of information</div>
+        <div class="mt-6 space-y-6 text-[#B0B0B2]">
+          <p>
+            All information, videos, and graphics on this site are provided with the permission of their respective owners, except for the demonstration period content, which is intended to illustrate the future development of our Platform. Data provided during the “DEMO” period may be incomplete or inaccurate. If you are the copyright holder of any games/materials presented on the Platform, please contact us. Bizzon.io does not guarantee the completeness, reliability, or accuracy of the information provided. Under no circumstances shall Bizzon.io be liable for any loss or damage of any kind resulting from the use of materials provided on the site/platform.
+          </p>
+        </div>
+      </div>
+      <div class="mt-[50px]">
+        <div class="text-[32px] font-medium leading-[120%] md:text-[24px] sm:text-[20px]">Consent</div>
+        <div class="mt-6 space-y-6 text-[#B0B0B2]">
+          <p>
+            By using our website/platform, you fully agree to and accept the terms of this disclaimer.
+          </p>
+        </div>
+      </div>
+      <div class="mt-[50px]">
+        <div class="text-[32px] font-medium leading-[120%] md:text-[24px] sm:text-[20px]">Updates</div>
+        <div class="mt-6 space-y-6 text-[#B0B0B2]">
+          <p>
+            We reserve the right to make changes, additions, or updates to this document. All changes will be posted immediately on this page. We recommend regularly checking this section to stay informed of the current terms and conditions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <Footer />
+  </body>
+</html>
+
