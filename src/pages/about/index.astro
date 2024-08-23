@@ -46,7 +46,7 @@ const image = new URL("optimized/social.webp", site);
   <body class="h-full pt-[150px] overflow-x-hidden bg-[#0D0D0F] text-white">
     <Header />
     <div class="px-9 xl:px-0 max-w-[1376px] mx-auto">
-      <div class="min-h-[600px] pt-[45px]">
+      <div class="min-h-[500px] pt-[45px]">
         <div class="text-[36px] sm:text-[24px] font-Oxanium" >WE CREATE</div>
         <div class="max-h-[120px] sm:max-h-[55px] sm:-mt-1 md:-mt-2 md:max-h-[85px] sm:py-2 py-4 overflow-hidden">
           <div class="text-[96px] sm:text-[48px] md:text-[64px] sm:h-[55px] md:h-[85px] h-[120px] animate-text uppercase leading-[100%] font-Oxanium app-text-gradient-bg-3">Bright</div>
@@ -56,10 +56,7 @@ const image = new URL("optimized/social.webp", site);
         <div class="text-[96px] sm:text-[40px] md:text-[64px] uppercase font-Oxanium leading-[100%]">web3 solutions in</div>
         <div class="text-[96px] sm:text-[40px] md:text-[64px] uppercase font-Oxanium leading-[100%]">the industry</div>
       </div>
-      <div class="flex justify-center">
-        <img id="block-2-btn" class="anim-btn cursor-pointer" src="/media/arrow-down.svg" alt="">
-      </div>
-      <div id="block-2" class="opacity-0 min-h-[550px] max-w-[910px] mt-[180px] scroll-m-[200px] mx-auto">
+      <div id="block-2" class="opacity-0 max-w-[910px] mt-[200px] scroll-m-[200px] mx-auto">
         <div class="sm:text-[32px] text-[40px] leading-[120%] font-Oxanium" >
           BizzonGames is a team of experts brought together from a diverse range of specialized fields
         </div>
@@ -70,10 +67,7 @@ const image = new URL("optimized/social.webp", site);
           These professionals have come together to build a comprehensive Web3 gaming platform that caters to a wide array of interests, from players and game developers to investors and crypto enthusiasts
         </div>
       </div>
-      <div class="flex justify-center">
-        <img id="block-3-btn" class="anim-btn cursor-pointer" src="/media/arrow-down.svg" alt="">
-      </div>
-      <div id="block-3" class="opacity-0 min-h-[550px] max-w-[910px] mt-[140px] scroll-m-[200px] mx-auto">
+      <div id="block-3" class="opacity-0 max-w-[910px] mt-[200px] scroll-m-[200px] mx-auto">
         <div class="sm:text-[32px] text-[40px] leading-[120%] font-Oxanium" >In-house first all-in-game Platform</div>
         <div class="text-[#B0B0B2] mt-7 ">
           By combining the extensive experience and creative potential of our team, we have embarked on creating BizzonGames—the first all-in-one Game Playground. As a leading representative of Web3 solutions, our platform will offer a wide range of functionalities, including analytical metrics for game products, a robust ranking system, staking capabilities, IDO events, and much more.
@@ -82,10 +76,7 @@ const image = new URL("optimized/social.webp", site);
           Our goal is to provide diverse gaming content that delivers maximum enjoyment and fair rewards for all users who engage with our platform
         </div>
       </div>
-      <div class="flex justify-center">
-        <img id="block-4-btn" class="anim-btn cursor-pointer" src="/media/arrow-down.svg" alt="">
-      </div>
-      <div id="block-4" class="opacity-0 min-h-[550px] max-w-[910px] mt-[140px] scroll-m-[200px] mx-auto">
+      <div id="block-4" class="opacity-0 max-w-[910px] mt-[200px] scroll-m-[200px] mx-auto">
         <div class="sm:text-[32px] text-[40px] leading-[120%] font-Oxanium" >Our Vision</div>
         <div class="text-[#B0B0B2] mt-7 ">
           We believe that every participant on our platform should experience high-quality design, intuitive mechanics, and full immersion in the gaming crypto world. Users will enjoy fair rewards for their time and effort, while also having the chance to connect with new friends through exciting gaming events.
@@ -94,7 +85,7 @@ const image = new URL("optimized/social.webp", site);
           Our platform partners will benefit from unique services designed to promote their game content, while investors will have access to the tools they need to make informed decisions aimed at maximizing profits.
         </div>
       </div>
-      <div class="min-h-[550px] max-w-[910px] mt-[140px] scroll-m-[200px] mx-auto">
+      <div class="max-w-[910px] mt-[200px] scroll-m-[200px] mx-auto">
         <div class="sm:text-[32px] text-[40px] leading-[120%] font-Oxanium" >Our team</div>
         <div class="mt-[30px] grid grid-cols-4 sm:grid-cols-2 gap-4">
           <div class="overflow-hidden group rounded-[12px] max-w-[216px]">
@@ -165,33 +156,13 @@ const image = new URL("optimized/social.webp", site);
 
       function setupAnimations() {
         let block2 = document.querySelector('#block-2')
-        let block2btn = document.querySelector('#block-2-btn')
   
         let block3 = document.querySelector('#block-3')
-        let block3btn =document.querySelector('#block-3-btn')
   
         let block4 = document.querySelector('#block-4')
-        let block4btn = document.querySelector('#block-4-btn')
   
-        if (block2 && block2btn && block3 && block3btn && block4 && block4btn) {
-          block2btn.addEventListener('click', function() {
-            block2.scrollIntoView({
-              block: 'start',
-              behavior: 'smooth'
-            })
-          })
-          block3btn.addEventListener('click', function() {
-            block3.scrollIntoView({
-              block: 'start',
-              behavior: 'smooth'
-            })
-          })
-          block4btn.addEventListener('click', function() {
-            block4.scrollIntoView({
-              block: 'start',
-              behavior: 'smooth'
-            })
-          })
+        if (block2 && block3 &&  block4) {
+       
           inView(block2, function(b) {
             animate(b.target, {
               opacity: 1,
