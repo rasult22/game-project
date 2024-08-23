@@ -23,7 +23,7 @@
   };
 </script>
 
-<div class="mx-auto sm:hidden min-h-[596px] w-full max-w-[1520px] pt-[241px]">
+<div class="mx-auto sm:hidden min-h-[596px] w-full max-w-[1376px] pt-[241px]">
   <div
     class:translate-x-[0%]={active === "3Q"}
     class:md:translate-x-[-20vw]={active === "3Q"}
@@ -113,7 +113,7 @@
           3Q 2024
         </div>
         <div class="ml-[300px] md:ml-0 flex space-x-4">
-          <ul class="max-w-[468px] list-disc leading-[150%]">
+          <ul class="max-w-[468px] list-disc pr-8 leading-[150%]">
             <li>Team organization</li>
             <li>Web Resources development</li>
             <li>Social Media development</li>
