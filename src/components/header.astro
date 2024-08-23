@@ -13,9 +13,9 @@ import Footer from "./footer.astro";
 
 const githubPrefix = ''
 const navItems: Array<NavItem> = [
-  { title: "Ranking", url: githubPrefix + "/ranking" },
+  { title: "Ranking", url: githubPrefix + "/ranking", demo: true },
   { title: "Staking", url: githubPrefix + "/staking" },
-  { title: "GameHub", url: githubPrefix + "/gamehub" },
+  { title: "GameHub", url: githubPrefix + "/gamehub", demo: true },
   { title: "IDO", url: githubPrefix + "/ido" },
   { title: "Blog", url: githubPrefix + "/blog" },
   { title: "About", url: githubPrefix + "/about" },
@@ -30,20 +30,21 @@ const transparent = Astro.props.transparent
   class={`absolute left-[50%] ${transparent ? 'header-gradient' : 'bg-[#0D0D0F]' }  translate-x-[-50%] font-Inter  min-h-[100px] sm:min-h-[50px] text-[20px] w-full top-0 z-[100] header-bg px-8 md:px-4 sm:px-4 py-4 text-white`}
 >
   <div class="flex overflow-hidden items-center justify-between max-w-[1376px] mx-auto">
-    <a class="flex items-center gap-3 hover:!text-default" href="/">
+    <a class="flex shrink-0 mr-auto items-center gap-3 hover:!text-default" href="/">
       <img width="102" height="72" class="max-w-[102px] md:hidden sm:hidden" src="/media/logo.svg" alt="logo">
       <img width="215" height="72" class="max-w-[215px] hidden md:inline" src="/optimized/logo-sm.webp" alt="logo">
       <img width="161" height="72" class="max-w-[161px] hidden sm:inline" src="/optimized/logo-sm.webp" alt="logo">
     </a>
-    <div class="ml-[64px]">
-      <div class="flex items-center justify-between gap-6 md:gap-4">
-        <nav class="sm:hidden md:hidden block">
-          <ul class="flex items-center gap-[32px]">
+    <div class="w-full md:w-auto sm:w-auto max-w-[680px]">
+      <div class="flex items-center w-full justify-between gap-6 md:gap-4">
+        <nav class="sm:hidden md:hidden block w-full">
+          <ul class="flex w-full items-center justify-between">
             {
-              navItems.map(({ title, url }) => (
+              navItems.map(({ title, url, demo }) => (
                 <li>
-                  <a class={`text-[16px] transition-all hover:opacity-80 pb-1 ${currentUrl.includes(url) ? 'border-b-2 border-[#F97C0E]' : ''}`} href={url}>
+                  <a class={`text-[16px] relative transition-all hover:opacity-80 pb-1 ${currentUrl.includes(url) ? 'border-b-2 border-[#F97C0E]' : ''}`} href={url}>
                     {title}
+                    <div class={`${demo ? 'block' : 'hidden'} absolute top-[-100%] right-[-40%] bg-[#436A7B] rounded-[2px] py-[2px] px-[6px] text-[12px]`}>Demo</div>
                   </a>
                 </li>
               ))
@@ -90,10 +91,11 @@ const transparent = Astro.props.transparent
           <nav>
               <ul class="flex flex-col items-center">
                 {
-                  navItems.map(({ title, url }) => (
+                  navItems.map(({ title, url, demo }) => (
                     <li class="border-b w-full flex">
-                      <a class={`w-full p-4`} href={url}>
+                      <a class={`w-full p-4 flex items-start gap-2 relative`} href={url}>
                         {title}
+                        <div class={`${demo ? 'block' : 'hidden'} top-[-100%] right-[-40%] bg-[#436A7B] rounded-[2px] py-[2px] px-[6px] text-[12px]`}>Demo</div>
                       </a>
                     </li>
                   ))
@@ -107,7 +109,7 @@ const transparent = Astro.props.transparent
           </div>
         </div>
       </div>
-      <div class="sm:hidden md:hidden ml-[64px] flex space-x-4 items-center">
+      <div class="sm:hidden md:hidden shrink-0 flex ml-auto space-x-4 items-center">
         <a target="_blank" href="https://t.me/BIZZONGames" class="13-inch:hidden cursor-pointer  hover:opacity-70 active:scale-95 transition-all"><TelegramIcon/></a>
         <a target="_blank" href="https://x.com/bizzongames" class="13-inch:hidden cursor-pointer hover:opacity-70  active:scale-95 transition-all"><TwitterIcon /></a>
         <div class="shrink-0">
@@ -156,10 +158,10 @@ const transparent = Astro.props.transparent
     openNavButton.addEventListener("click", openMenu);
     closeNavButton.addEventListener("click", closeMenu);
   
-    document.addEventListener("scroll", () => {
-      const d = page.clientHeight - page.scrollTop - header.offsetHeight;
-      header.classList.toggle("fixed-header", d < 0);
-    });
+    // document.addEventListener("scroll", () => {
+    //   const d = page.clientHeight - page.scrollTop - header.offsetHeight;
+    //   header.classList.toggle("fixed-header", d < -400);
+    // });
   
     menu.addEventListener("click", (event) => {
       if ((event.target as HTMLElement).tagName === "A") {
@@ -187,6 +189,6 @@ const transparent = Astro.props.transparent
     @apply block;
   }
   .header-gradient {
-    background: linear-gradient(180deg, #010101 0%, rgba(1, 1, 1, 0.00) 100%);
+    background: linear-gradient(180deg, #010101 60%, rgba(1, 1, 1, 0.00) 100%);
   }
 </style>
