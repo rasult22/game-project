@@ -55,5 +55,5 @@ class="bg-gradient-to-r from-[#FDFC47] to-[#24FE41] text-black rounded-[20px] py
   </div>
 </div>
 
-<TwitterStats stats={social_data.twitter_data} />
-<TelegramStats stats={social_data.tg_group_data} />
+<TwitterStats stats={social_data.twitter_data_30d} />
+<TelegramStats stats={social_data.tg_group_data_30d} />
