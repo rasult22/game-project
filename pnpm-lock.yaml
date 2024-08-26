@@ -15,6 +15,7 @@ specifiers:
   astro-icon: ^1.0.2
   axios: ^1.7.3
   chart.js: ^4.4.3
+  editorjs-parser: ^1.5.3
   ethers: ^6.12.0
   gapi-script: ^1.2.0
   imagemin: ^8.0.1
@@ -44,6 +45,7 @@ dependencies:
   '@svelte-put/dragscroll': 3.0.1_svelte@4.2.15
   '@tonconnect/ui': 2.0.6
   chart.js: 4.4.3
+  editorjs-parser: 1.5.3
   ethers: 6.12.0
   gapi-script: 1.2.0
   micromodal: 0.4.10
@@ -2391,6 +2393,10 @@ packages:
 
   /eastasianwidth/0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
+
+  /editorjs-parser/1.5.3:
+    resolution: {integrity: sha512-ypc6mku0A55ycxdTHjijy/rRtQ060bwQKyEGMDPbnEglRAR/DE/4GJNdKtMGvUWNTGT6Fe25L/AoEQ5bhasQAg==}
+    dev: false
 
   /electron-to-chromium/1.4.738:
     resolution: {integrity: sha512-lwKft2CLFztD+vEIpesrOtCrko/TFnEJlHFdRhazU7Y/jx5qc4cqsocfVrBg4So4gGe9lvxnbLIoev47WMpg+A==}

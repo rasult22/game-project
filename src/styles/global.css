@@ -85,3 +85,26 @@ h3 {
   font-weight: bold;
   padding: 24px 0;
 }
+.fig-img {
+  margin: 24px 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.paragraph {
+  margin: 16px 0;
+  color: #B0B0B2;
+}
+.paragraph b {
+  color: white;
+}
+
+.game-tabs ul {
+  color: #B0B0B2;
+  padding-left: 24px;
+  list-style-type: disc;
+}
+.game-tabs ol {
+  color: #B0B0B2;
+  list-style-type: decimal;
+}

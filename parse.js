@@ -11,6 +11,21 @@ const GAMES = [
 
 const API_BASE_URL = 'https://v3.gamefi.org/api/v1';
 
+async function getAboutData (name) {
+  console.log(name)
+  const url = `https://gamefi.org/_next/data/tXDdh8MBBD4dngKMHDr0s/games/${name}.json`;
+  const data = await fetchData(url);
+
+  return {
+    introduction: data.pageProps.gameData.introduction,
+    roadmap_text: data.pageProps.gameData.roadmap_text,
+    features_text: data.pageProps.gameData.features_text,
+    play_mode: data.pageProps.gameData.play_mode,
+    play_to_earn_model: data.pageProps.gameData.play_to_earn_model,
+    white_paper: data.pageProps.gameData.white_paper,
+  }
+}
+
 // Utility to perform HTTP GET request with error handling
 async function fetchData(url) {
   try {
@@ -152,6 +167,7 @@ async function parseGameData(gameName) {
   const onChainPerformance = await getAnalyticData(slug)
   const teamProfile = await getTeamProfile(slug)
   const social_data = await getSocialData(slug)
+  const about = await getAboutData(slug)
 
   return {
     id: slug,
@@ -159,11 +175,12 @@ async function parseGameData(gameName) {
     images: galleries,
     top: top,
     networks: networks,
-    players_count: null,
+    players_count: Number((Math.random() * 10000).toFixed(0)),
     star_rating: starRating,
     on_chain_performance: onChainPerformance,
     team_profile: teamProfile,
     social_data,
+    about,
     game_info: {
       name: name,
       studio: studio,

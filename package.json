@@ -38,6 +38,7 @@
     "@svelte-put/dragscroll": "^3.0.1",
     "@tonconnect/ui": "^2.0.6",
     "chart.js": "^4.4.3",
+    "editorjs-parser": "^1.5.3",
     "ethers": "^6.12.0",
     "gapi-script": "^1.2.0",
     "micromodal": "^0.4.10",
