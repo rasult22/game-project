@@ -15,7 +15,7 @@
       <div class="font-medium">Total followers</div>
       <div class="flex justify-between mt-6">
         <div>
-          <div class="text-[24px] font-medium">{stats.followers ? numberFormatter.format(stats.followers) : 'N/A'}</div>
+          <div class="text-[24px] font-medium">{stats?.followers ? numberFormatter.format(stats.followers) : 'N/A'}</div>
           <!-- <div class="mt-[10px]">2.4%</div> -->
         </div>
         <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
