@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
+    "run-pb": "./server/pocketbase serve",
     "start": "astro dev",
     "build": "rm -rf ./dist && astro build",
     "preview": "astro preview",
