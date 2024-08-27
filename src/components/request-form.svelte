@@ -48,7 +48,7 @@
   <BaseInput bind:value={name_or_project_name} id="name" placeholder={activeTab === 'investor' ? 'Name' : 'Project Name'} required />
   <div class="flex sm:flex-col sm:space-x-0 sm:gap-4 space-x-4">
     <BaseInput bind:value={telegram} id="telegram" placeholder="Telegram" required />
-    <BaseInput type="email" bind:value={email} id="mail" placeholder="Mail" required />
+    <BaseInput type="email" bind:value={email} id="mail" placeholder="Email" required />
   </div>
   <div>
     <textarea bind:value={about} placeholder="About your project (Optional)" class="w-full block bg-transparent border focus:outline-none focus:border-white placeholder:text-[#888888] border-[#888] py-[14px] px-3 rounded-[12px] appearance-none peer" />
