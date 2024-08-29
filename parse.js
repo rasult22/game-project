@@ -107,6 +107,17 @@ async function getStarRating(slug) {
   return data?.data || null;
 }
 
+async function getComments(slug) {
+  const data = await getStarRating(slug)
+  if (data) {
+    let url = `https://v3.gamefi.org/api/v1/reviews?collection=games&collection_id=${data.collection_id}`
+    const comments = await fetchData(url)
+
+    return comments.data.items
+  }
+  return null
+}
+
 // Normalize text (e.g., capitalize)
 function textNormalize(text) {
   return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
@@ -168,6 +179,7 @@ async function parseGameData(gameName) {
   const teamProfile = await getTeamProfile(slug)
   const social_data = await getSocialData(slug)
   const about = await getAboutData(slug)
+  const comments  = await getComments(slug)
 
   return {
     id: slug,
@@ -181,6 +193,7 @@ async function parseGameData(gameName) {
     team_profile: teamProfile,
     social_data,
     about,
+    comments,
     game_info: {
       name: name,
       studio: studio,
