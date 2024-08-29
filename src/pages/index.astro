@@ -46,23 +46,26 @@ import {description, title} from '~/site'
     <Header transparent />
     <!-- main -->
      <!-- base -->
-    <video id="bg-video" class="absolute xl:hidden 13-inch:hidden 14-inch:hidden md:hidden sm:hidden z-[1] top-0 w-full left-[50%] translate-x-[-50%] min-w-[100vw] object-cover" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
-      <source src="/base-bg-op.mp4">
+    <video id="bg-video" class="absolute xl:hidden 1920:hidden 13-inch:hidden 14-inch:hidden md:hidden sm:hidden z-[1] top-0 w-full left-[50%] translate-x-[-50%] min-w-[100vw] object-cover" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
+      <source src="/14-inch-bg-op.mp4">
+    </video>
+    <video id="bg-video" class="absolute 1920:block hidden z-[1] top-0 w-full left-[50%] translate-x-[-50%] min-w-[100vw] object-cover" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
+      <source src="/1920-op.mp4">
     </video>
     <!-- xl -->
-    <video id="bg-video" class="hidden xl:block absolute z-[1] top-0 w-full left-[50%] translate-x-[-50%] min-w-[100vw] object-cover" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
+    <video id="bg-video" class="hidden 1920:hidden xl:block absolute z-[1] top-0 w-full left-[50%] translate-x-[-50%] min-w-[100vw] object-cover" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
       <source src="/extra-large-bg-op.mp4">
     </video>
     <!-- 14 inch -->
-    <video id="bg-video" class="absolute hidden 13-inch:block 14-inch:block z-[1] top-0 w-full left-[50%] translate-x-[-50%] min-w-[100vw] object-cover" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
+    <video id="bg-video" class="absolute hidden 1920:hidden 13-inch:block 14-inch:block z-[1] top-0 w-full left-[50%] translate-x-[-50%] min-w-[100vw] object-cover" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
       <source src="/14-inch-bg-op.mp4">
     </video>
     <!-- md -->
-    <video id="bg-video" class="absolute hidden md:block z-[1] top-0 w-full left-[50%] translate-x-[-50%] min-w-[100vw] object-cover" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
+    <video id="bg-video" class="absolute hidden 1920:hidden md:block z-[1] top-0 w-full left-[50%] translate-x-[-50%] min-w-[100vw] object-cover" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
       <source src="/tablet-bg-op.mp4">
     </video>
     <!-- sm  -->
-    <video id="bg-video" class="absolute hidden sm:block z-[1] top-0 w-full left-[50%] translate-x-[-50%] " muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
+    <video id="bg-video" class="absolute hidden 1920:hidden sm:block z-[1] top-0 w-full left-[50%] translate-x-[-50%] " muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
       <source src="/tablet-bg-op.mp4">
     </video>
     <section
@@ -72,7 +75,7 @@ import {description, title} from '~/site'
         class="relative z-10 mx-auto flex min-h-[40vw] max-w-[1376px] flex-col items-start justify-center"
       >
         <div
-          class="app-text-gradient-bg max-w-[809px] font-Oxanium text-[64px] md:text-[64px] sm:text-[40px] xl:text-[96px] uppercase leading-[100%]"
+          class="app-text-gradient-bg max-w-[809px] font-Oxanium 13-inch:text-[64px] 14-inch:text-[84px] md:text-[64px] sm:text-[40px] text-[96px] uppercase leading-[100%]"
         >
           Station of your rewards
         </div>
