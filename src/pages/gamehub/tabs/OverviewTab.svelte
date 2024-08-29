@@ -44,7 +44,11 @@
       </div>
     </div>
     <div>
-      <img src="/media/green-ranking.svg" alt="" />
+      <svg width="106" height="106" viewBox="0 0 106 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="53" cy="53" r="48" stroke="black" stroke-opacity="0.3" stroke-width="10"/>
+        <path d="M52 101C64.7304 101 76.9394 95.9429 85.9411 86.9411C94.9429 77.9394 100 65.7304 100 53C100 40.2696 94.9429 28.0606 85.9411 19.0589C76.9394 10.0571 64.7304 5 52 5" stroke="white" stroke-width="10" stroke-linecap="round"/>
+        <path d="M29.8798 68H24.2548L34.4963 38.9091H41.002L51.2576 68H45.6326L37.8628 44.875H37.6355L29.8798 68ZM30.0645 56.5938H45.4054V60.8267H30.0645V56.5938ZM58.3851 68H52.7601L63.0016 38.9091H69.5073L79.763 68H74.138L66.3681 44.875H66.1408L58.3851 68ZM58.5698 56.5938H73.9107V60.8267H58.5698V56.5938Z" fill="#1B1B1B"/>
+      </svg>
     </div>
   </div>
 
