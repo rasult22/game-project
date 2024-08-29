@@ -58,7 +58,7 @@
           <div class="text-[20px] font-semibold">Team profile</div>
           <div class="text-[#B0B0B2]">Highly experienced and skilled</div>
         </div>
-        <BizzonRating rating={team_profile.rank} />
+        <BizzonRating rating="AA" />
       </div>
       <!-- list -->
       <div class="mt-6 space-y-4 max-h-[180px] -mr-4 pr-4 overflow-auto">
@@ -154,7 +154,7 @@
             Funds and investors invested in the project
           </div>
         </div>
-        <BizzonRating rating="SSS" />
+        <BizzonRating rating="AAA" />
       </div>
       <!-- bakers -->
       <div class="flex flex-wrap items-center justify-center gap-3 pt-10 mt-1">
@@ -179,7 +179,7 @@
           Better than N% of the market
         </div>
       </div>
-      <BizzonRating rating="SSS+" />
+      <BizzonRating rating="BB" />
     </div>
 
     <!-- cards -->
@@ -188,7 +188,7 @@
         <!-- head -->
         <div class="flex justify-between">
           <div class="font-semibold">Volume 24h</div>
-          <BizzonRating rating={volume_rank} />
+          <BizzonRating rating="C" />
         </div>
         <!-- chart -->
         <div class="ml-[-5px]">
@@ -206,7 +206,7 @@
         <!-- head -->
         <div class="flex justify-between">
           <div class="font-semibold">Market Cap</div>
-          <BizzonRating rating={on_chain_performance.market_cap_rank} />
+          <BizzonRating rating="CCC" />
         </div>
         <!-- chart -->
         <div class="ml-[-5px]">
@@ -226,7 +226,7 @@
         <!-- head -->
         <div class="flex justify-between">
           <div class="font-semibold">Quarterly close</div>
-          <BizzonRating rating="SS" />
+          <BizzonRating rating="B" />
         </div>
         <!-- chart -->
         <div class="ml-[-5px]">
@@ -329,7 +329,7 @@
           Ensure transparency in our project documentation with our data
         </div>
       </div>
-      <BizzonRating rating="S+" />
+      <BizzonRating rating="AA" />
     </div>
     <!-- cards -->
     <div class="flex md:grid md:grid-cols-2 md:gap-4 sm:grid sm:grid-cols-2 sm:gap-4 justify-between mt-4">
@@ -337,25 +337,25 @@
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
         <div class="font-semibold min-w-[138px] text-center">Whitepaper</div>
-        <BizzonRating rating="D" />
+        <BizzonRating rating="A" />
       </div>
       <div
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
         <div class="font-semibold min-w-[138px] text-center">Website</div>
-        <BizzonRating rating="D" />
+        <BizzonRating rating="AA" />
       </div>
       <div
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
         <div class="font-semibold min-w-[138px] text-center">Tokenomic</div>
-        <BizzonRating rating="D" />
+        <BizzonRating rating="A" />
       </div>
       <div
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
         <div class="font-semibold min-w-[138px] text-center">Fundraising</div>
-        <BizzonRating rating="D" />
+        <BizzonRating rating="AAA" />
       </div>
     </div>
   </div>
@@ -373,7 +373,7 @@
           statistics
         </div>
       </div>
-      <BizzonRating rating="SS" />
+      <BizzonRating rating="BB" />
     </div>
     <!-- cards -->
     <div class="flex sm:grid sm:grid-cols-2 gap-4 mt-6">
