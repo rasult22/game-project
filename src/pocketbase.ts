@@ -10,7 +10,7 @@ type Post = {
 }
 const pb = new pocketbase('https://rasult22.pockethost.io/')
 pb.autoCancellation(false)
-export const items = await pb.collection('games_posts').getFullList<Post>({
+export const get_items = async () => await pb.collection('games_posts').getFullList<Post>({
   expand: 'games_posts'
 })
 

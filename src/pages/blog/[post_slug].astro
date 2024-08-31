@@ -1,6 +1,6 @@
 ---
 import type { GetStaticPaths } from "astro";
-import pb, {items} from '~/pocketbase'
+import pb, {get_items} from '~/pocketbase'
 import {formatDate} from '~/utils/utils'
 import "@fontsource-variable/inter";
 import "@fontsource/oxanium/500.css";
@@ -24,6 +24,8 @@ type Post = {
 }
 
 export const getStaticPaths = ( async () => {
+  const items = await get_items()
+
   return items.map(post => {
     const recommended_posts = post.recommended_posts.map((p: any) => {
       return items.find(x => x.id === p) as Post
