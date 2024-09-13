@@ -23,6 +23,7 @@ type Post = {
 }
 
 const list = await pb.collection('games_posts').getFullList<Post>({
+    sort: '-created',
     expand: 'games_posts'
 })
 
