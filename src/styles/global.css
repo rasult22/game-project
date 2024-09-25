@@ -23,6 +23,12 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.app-text-gradient-bg-4 {
+  background:linear-gradient(90deg, #F97C0E 0%, #F95C0E 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .app-text-gradient-bg-3 {
   background: linear-gradient(135deg, #FB532E 0%, #EB122C 100%);
   background-clip: text;
@@ -112,4 +118,80 @@ h4 {
 .game-tabs ol {
   color: #B0B0B2;
   list-style-type: decimal;
+}
+
+.flatpickr-calendar {
+  background-color: #282828!important;
+  width: 350px!important;
+  font-family: 'Inter Variable';
+  box-shadow: none!important;
+  padding: 16px!important;
+  border-radius: 12px!important;
+} 
+
+.flatpickr-day, .flatpickr-weekday {
+  color: white!important;
+  display: flex!important;
+  align-items: center!important;
+}
+.flatpickr-day:hover {
+  border: none!important;
+  background-color: #F97C0E!important;
+}
+.flatpickr-day.today {
+  border-color: #F97C0E!important;
+}
+.flatpickr-day.selected {
+  background-color: #F97C0E!important;
+  border: none!important;
+  box-shadow: none!important;
+}
+
+.flatpickr-weekday {
+  font-size: 16px!important;
+}
+.flatpickr-current-month {
+  font-weight: 600!important;
+}
+.flatpickr-month {
+  color: #F97C0E!important;
+  font-size: 16px!important;
+  font-weight: 600!important;
+}
+.flatpickr-prev-month {
+  left: 16px!important;
+  top: 16px!important;
+}
+.flatpickr-prev-month svg {
+  fill: #F97C0E!important;
+  width: 16px!important;
+  height: 16px!important;
+}
+.flatpickr-next-month {
+  right: 16px!important;
+  top: 16px!important;
+}
+.flatpickr-next-month svg {
+  fill: #F97C0E!important;
+  width: 16px!important;
+  height: 16px!important;
+}
+.flatpickr-innerContainer {
+  margin-top: 12px;
+  margin-left: auto!important;
+  margin-right: auto!important;
+}
+.flatpickr-rContainer {
+  margin-left: auto!important;
+  margin-right: auto!important;
+}
+.dayContainer {
+  margin-top: 8px;
+}
+.numInput.cur-year {
+  font-weight: 600!important;
+}
+
+.flatpickr-monthDropdown-month {
+  background-color: #282828!important;
 }
