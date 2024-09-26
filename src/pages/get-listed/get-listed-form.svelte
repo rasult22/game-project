@@ -6,6 +6,7 @@
   import TokenIssued from "./form/token-issued.svelte";
   import TradedCex from "./form/traded-cex.svelte";
   import IsProjectListed from "./form/is-project-listed.svelte";
+  import ProjectFiles from "./form/project-files.svelte";
 </script>
 
 <div class="text-[36px] font-Oxanium font-medium uppercase">
@@ -93,6 +94,8 @@
   <!-- project-listed -->
   <IsProjectListed />
 
+  <!-- project files -->
+  <ProjectFiles />
 </form>
 
 <style>
