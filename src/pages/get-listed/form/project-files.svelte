@@ -28,7 +28,13 @@ let additionalFiles = []
     logoDragging = false
 
     const files = Array.from(e.dataTransfer.files)
-    logoFiles = files
+
+    files.forEach(element => {
+      console.log(element.type, element.size)
+    });
+    logoFiles = files.filter(file => {
+      return ['image/jpeg', 'image/png', 'image/gif'].includes(file.type) && file.size <= 20 * 1024 * 1024
+    })
   }}
   class:opacity-[0.5]={logoDragging}
   class="flex max-w-[380px] flex-col items-center justify-center">
@@ -57,7 +63,9 @@ let additionalFiles = []
   {#if !logoFiles.length}
     <input on:change={(e) => {
       logoFiles = e.target.files
-    }} bind:this={logoRef} class="hidden" type="file" />
+    }}
+    accept="image/jpeg, image/png, image/gif"
+    bind:this={logoRef} class="hidden" type="file" />
     <button on:click|preventDefault|stopPropagation={() => {
       if (logoRef) {
         logoRef.click()
@@ -80,7 +88,12 @@ on:drop|preventDefault={(e) => {
   additionalDragging = false
 
   const files = Array.from(e.dataTransfer.files)
-  additionalFiles = files
+  files.forEach(element => {
+      console.log(element.type, element.size)
+    });
+  additionalFiles = files.filter(file => {
+    return ['application/pdf', 'application/vnd.ms-powerpoint', 'application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/msword', 'image/png', 'image/jpeg', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'].includes(file.type) && file.size <= 100 * 1024 * 1024
+  })
 }}
 class:opacity-[0.5]={additionalDragging}
 class="flex max-w-[380px] flex-col items-center w-[50%] md:w-full sm:w-full mt-[32px]">
@@ -111,7 +124,12 @@ class="flex max-w-[380px] flex-col items-center w-[50%] md:w-full sm:w-full mt-[
     {/if}
   </div>
   {#if !additionalFiles.length}
-    <input bind:this={additionalRef} class="hidden" type="file">
+    <input
+    accept=".pdf, .doc, .docx, .xls, .xlsx, .txt"
+    on:change={(e) => {
+      additionalFiles = e.target.files
+    }}
+    bind:this={additionalRef} class="hidden" type="file">
     <button on:click|preventDefault|stopPropagation={() => {
       if (additionalRef) {
         additionalRef.click()
