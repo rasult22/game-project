@@ -31,6 +31,13 @@
     telegram: '',
     other: ''
   }
+
+  let project_launch_date = ''
+  
+  let project_status = {
+    value: 'alpha-beta',
+    name: 'Alpha/Beta'
+  }
 </script>
 
 <div class="text-[36px] font-Oxanium font-medium uppercase">
@@ -89,7 +96,7 @@
    <SocialMedia bind:discord={social_media.discord} bind:twitter={social_media.twitter} bind:facebook={social_media.facebook} bind:instagram={social_media.instagram} bind:telegram={social_media.telegram} bind:other={social_media.other} />
 
    <!-- project status -->
-   <ProjectStatus />
+   <ProjectStatus bind:active_status={project_status}/>
 
   <!-- launch date -->
  <div class="flex flex-col w-[50%] md:w-full sm:w-full mt-[32px]">
@@ -99,7 +106,7 @@
    </label>
    <div class="mt-2">
     <DatePicker on:date-select={(e) => {
-      console.log('hello', e.detail)
+      project_launch_date = e.detail
     }}/>
    </div>
  </div>

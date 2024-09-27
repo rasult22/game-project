@@ -8,7 +8,6 @@ onMount(() => {
   fp = flatpickr('#date-picker', {
     onChange: (dates, currentDateString, self, data) => {
       dispatch('date-select', currentDateString)
-      console.log(dates, currentDateString, self, data)
     }
   })
 })
