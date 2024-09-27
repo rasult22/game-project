@@ -1,5 +1,9 @@
 <script>
-  let radio = 'token-no'
+  export let radio = 'token-no'
+
+  export let network_of_issuance = ''
+  export let token_ticker = ''
+  export let contract_address = ''
 </script>
 <div class="flex flex-col w-[50%] md:w-full sm:w-full mt-[12px]">
   <label class="font-semibold">
@@ -47,7 +51,7 @@
       Network of Issuance
       <span class="text-[#FA5252]">*</span>
     </label>
-    <input type="text" id="network-issuance" required class="my-input mt-[6px]" placeholder="Enter Network">
+    <input bind:value={network_of_issuance} type="text" id="network-issuance" required class="my-input mt-[6px]" placeholder="Enter Network">
   </div>
 
   <!-- token-ticker -->
@@ -56,7 +60,7 @@
       Token Ticker
       <span class="text-[#FA5252]">*</span>
     </label>
-    <input type="text" id="token-ticker" required class="my-input mt-[6px]" placeholder="Enter token ticker">
+    <input bind:value={token_ticker} type="text" id="token-ticker" required class="my-input mt-[6px]" placeholder="Enter token ticker">
   </div>
   <!-- contract-address -->
   <div class="flex flex-col w-[50%] md:w-full sm:w-full mt-[20px]">
@@ -64,7 +68,7 @@
       Contract Address
       <span class="text-[#FA5252]">*</span>
     </label>
-    <input type="text" id="contract-address" required class="my-input mt-[6px]" placeholder="Enter contract adress">
+    <input bind:value={contract_address} type="text" id="contract-address" required class="my-input mt-[6px]" placeholder="Enter contract adress">
   </div>
 {/if}
 <style>

@@ -1,5 +1,7 @@
  <script>
-  let radio = 'traded-no'
+  export let radio = 'traded-no'
+
+  export let exchange_name = ''
  </script>
  <!-- traded cex/dex -->
  <div class="flex flex-col w-[50%] md:w-full sm:w-full mt-[12px]">
@@ -49,7 +51,7 @@
       Please specify where it is traded
       <span class="text-[#FA5252]">*</span>
     </label>
-    <input type="text" id="exchange-name" required class="my-input mt-[6px]" placeholder="Exchange name">
+    <input bind:value={exchange_name} type="text" id="exchange-name" required class="my-input mt-[6px]" placeholder="Exchange name">
   </div>
 {/if}
 

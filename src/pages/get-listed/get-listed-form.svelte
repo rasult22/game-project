@@ -38,6 +38,19 @@
     value: 'alpha-beta',
     name: 'Alpha/Beta'
   }
+
+  let token_issued_val = 'token-no'
+  let token_issued = {
+    network_of_issuance: '',
+    token_ticker: '',
+    contract_address: ''
+  }
+
+  let traded_cex_val = 'traded-no'
+  let exchange_name = ''
+
+  let project_listed_val = 'project-listed-no'
+  let aggregator_name = ''
 </script>
 
 <div class="text-[36px] font-Oxanium font-medium uppercase">
@@ -118,12 +131,12 @@
  </div>
 
  <!-- token issed -->
-  <TokenIssued />
+  <TokenIssued bind:radio={token_issued_val} bind:network_of_issuance={token_issued.network_of_issuance} bind:token_ticker={token_issued.token_ticker} bind:contract_address={token_issued.contract_address} />
 
-  <TradedCex />
+  <TradedCex bind:radio={traded_cex_val} bind:exchange_name={exchange_name} />
 
   <!-- project-listed -->
-  <IsProjectListed />
+  <IsProjectListed bind:radio={project_listed_val} bind:aggregator_name={aggregator_name} />
 
   <!-- project files -->
   <ProjectFiles />

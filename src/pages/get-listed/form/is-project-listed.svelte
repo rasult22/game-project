@@ -1,5 +1,7 @@
 <script>
-let radio = 'project-listed-no'
+export let radio = 'project-listed-no'
+
+export let aggregator_name = ''
 </script>
 
 <div class="flex flex-col w-[50%] md:w-full sm:w-full mt-[12px]">
@@ -49,7 +51,7 @@ let radio = 'project-listed-no'
       Please specify which aggregators
       <span class="text-[#FA5252]">*</span>
     </label>
-    <input type="text" id="aggregator-name" required class="my-input mt-[6px]" placeholder="Aggregator name">
+    <input bind:value={aggregator_name} type="text" id="aggregator-name" required class="my-input mt-[6px]" placeholder="Aggregator name">
   </div>
 {/if}
 
