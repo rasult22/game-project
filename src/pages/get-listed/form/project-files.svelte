@@ -70,7 +70,7 @@ let additionalFiles = []
       if (logoRef) {
         logoRef.click()
       }
-    }} class="bg-[#F97C0E] text-[#2A2A2A] mt-[10px] px-6 py-2 rounded-[12px]">
+    }} class="bg-[#F97C0E] anim-btn text-[#2A2A2A] mt-[10px] px-6 py-2 rounded-[12px]">
       Select file
     </button>
   {/if}
@@ -134,7 +134,7 @@ class="flex max-w-[380px] flex-col items-center w-[50%] md:w-full sm:w-full mt-[
       if (additionalRef) {
         additionalRef.click()
       }
-    }} class="bg-[#F97C0E] text-[#2A2A2A] mt-[10px] px-6 py-2 rounded-[12px]">
+    }} class="bg-[#F97C0E] anim-btn text-[#2A2A2A] mt-[10px] px-6 py-2 rounded-[12px]">
       Select file
     </button>
   {/if}
