@@ -1,5 +1,10 @@
 <script>
-
+export let discord = ''
+export let twitter = ''
+export let facebook = ''
+export let instagram = ''
+export let telegram = ''
+export let other = ''
 </script>
 
 <div class="flex flex-col w-[50%] md:w-full sm:w-full mt-[32px]">
@@ -14,7 +19,7 @@
           X (formerly Twitter)
         </span>
       </label>
-      <input type="text" required class="my-input mt-[10px]" placeholder="Enter URL">
+      <input bind:value={twitter} type="text" class="my-input mt-[10px]" placeholder="Enter URL">
     </div>
     <div class="flex flex-col w-full">
       <label class="flex gap-[6px]">
@@ -23,7 +28,7 @@
           Discord
         </span>
       </label>
-      <input type="text" required class="my-input mt-[10px]" placeholder="Enter URL">
+      <input bind:value={discord} type="text" class="my-input mt-[10px]" placeholder="Enter URL">
     </div>
     <div class="flex flex-col w-full">
       <label class="flex gap-[6px]">
@@ -32,7 +37,7 @@
           Facebook
         </span>
       </label>
-      <input type="text" required class="my-input mt-[10px]" placeholder="Enter URL">
+      <input bind:value={facebook} type="text" class="my-input mt-[10px]" placeholder="Enter URL">
     </div>
     <div class="flex flex-col w-full">
       <label class="flex gap-[6px]">
@@ -41,7 +46,7 @@
           Instagram
         </span>
       </label>
-      <input type="text" required class="my-input mt-[10px]" placeholder="Enter URL">
+      <input bind:value={instagram} type="text" class="my-input mt-[10px]" placeholder="Enter URL">
     </div>
     <div class="flex flex-col w-full">
       <label class="flex gap-[6px]">
@@ -50,7 +55,7 @@
           Telegram
         </span>
       </label>
-      <input type="text" required class="my-input mt-[10px]" placeholder="Enter URL">
+      <input bind:value={telegram} type="text" class="my-input mt-[10px]" placeholder="Enter URL">
     </div>
     <div class="flex flex-col w-full">
       <label class="flex gap-[6px]">
@@ -58,7 +63,7 @@
           Other
         </span>
       </label>
-      <input type="text" required class="my-input mt-[10px]" placeholder="Enter URL">
+      <input bind:value={other} type="text" class="my-input mt-[10px]" placeholder="Enter URL">
     </div>
   </div>
 </div>

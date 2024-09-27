@@ -16,6 +16,21 @@
   let genre = ''
   let project_description = ''
   let link_to_project = ''
+
+  let application_type = {
+    game: false,
+    application: false,
+    metaverse: false
+  }
+
+  let social_media = {
+    discord: '',
+    facebook: '',
+    twitter: '',
+    instagram: '',
+    telegram: '',
+    other: ''
+  }
 </script>
 
 <div class="text-[36px] font-Oxanium font-medium uppercase">
@@ -41,7 +56,7 @@
 
 
   <!-- Application type -->
-  <ApplicationType />
+  <ApplicationType bind:game_checked={application_type.game} bind:application_checked={application_type.application} bind:metaverse_checked={application_type.metaverse} />
 
   <!-- genre -->
   <div class="flex flex-col w-[50%] md:w-full sm:w-full mt-[32px]">
@@ -71,7 +86,7 @@
   </div>
 
    <!-- social media -->
-   <SocialMedia />
+   <SocialMedia bind:discord={social_media.discord} bind:twitter={social_media.twitter} bind:facebook={social_media.facebook} bind:instagram={social_media.instagram} bind:telegram={social_media.telegram} bind:other={social_media.other} />
 
    <!-- project status -->
    <ProjectStatus />
