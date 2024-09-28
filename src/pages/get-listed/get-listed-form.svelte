@@ -10,6 +10,7 @@
   import ProjectFiles from "./form/project-files.svelte";
   import Team from "./form/team.svelte";
 
+  let logoBlockRef
   let loading = false
   let done = false
   let agreed = false
@@ -73,7 +74,8 @@
   const onSubmit = async () => {
     if (!logoFiles.length) {
       // handle focusing and show required message
-      // 
+
+      logoBlockRef && logoBlockRef.scrollIntoView()
       return
     }
     loading = true
@@ -228,6 +230,7 @@
   <IsProjectListed bind:radio={project_listed_val} bind:aggregator_name={aggregator_name} />
 
   <!-- project files -->
+  <div bind:this={logoBlockRef} />
   <ProjectFiles bind:logoFiles={logoFiles} bind:additionalFiles={additionalFiles} />
 
   <div class="text-[24px] pt-16 font-medium">
