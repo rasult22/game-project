@@ -51,13 +51,29 @@
 
   let project_listed_val = 'project-listed-no'
   let aggregator_name = ''
+
+  let team = {
+    name: '',
+    role: '',
+    social_media: '',
+    email: '',
+    members: [{
+      name: '',
+      role: '',
+      social_media: ''
+    }]
+  }
+
+  const onSubmit = async () => {
+    // 
+  }
 </script>
 
 <div class="text-[36px] font-Oxanium font-medium uppercase">
   Send request
 </div>
 <div class="text-[#888888]">Fill out the form below and our manager will contact you as soon as possible</div>
-<form class="mt-6">
+<form on:submit|preventDefault={onSubmit} class="mt-6">
   <!-- project -->
   <div class="flex flex-col w-[50%] md:w-full sm:w-full mt-[32px]">
     <label for="project-name">
@@ -144,10 +160,10 @@
   <div class="text-[24px] pt-16 font-medium">
     Team
   </div>
-  <Team />
+  <Team bind:name={team.name} bind:role={team.role} bind:social_media={team.social_media} bind:email={team.email} bind:members={team.members} />
   
   <div class="my-8">
-    <label class="flex items-center space-x-2 cursor-pointer">
+    <label class="flex items-center space-x-2 cursor-pointer select-none">
       <!-- The wrapper span will contain the custom checkbox -->
       <span class="relative w-[20px] h-[20px] ">
         <input bind:checked={agreed} type="checkbox" class="opacity-0 absolute w-full h-full peer">
@@ -160,8 +176,13 @@
       <span>I agree to the Terms and Conditions</span>
     </label>
   </div>
-  <button disabled={!agreed} class="w-[50%] disabled:opacity-[0.5] disabled:cursor-not-allowed anim-btn rounded-[12px] py-[14px] px-9 bg-[#F97C0E]">
-    Submit
+  <button disabled={!agreed} class="w-[50%] flex justify-center gap-2 md:w-full sm:w-full disabled:opacity-[0.5] disabled:cursor-not-allowed anim-btn rounded-[12px] py-[14px] px-9 bg-[#F97C0E]">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2076 2.29292C22.4818 2.56708 22.5727 2.975 22.441 3.33967L15.9411 21.3397C15.9317 21.3657 15.9212 21.3914 15.9096 21.4166C15.786 21.6864 15.5875 21.9151 15.3377 22.0754C15.0879 22.2357 14.7974 22.3209 14.5006 22.3209C14.2038 22.3209 13.9132 22.2357 13.6634 22.0754C13.4196 21.9189 13.2246 21.6974 13.1005 21.4359L9.75514 14.7454L3.06468 11.4001C2.80325 11.276 2.58167 11.081 2.4252 10.8372C2.2649 10.5874 2.17969 10.2968 2.17969 10C2.17969 9.70323 2.2649 9.41267 2.4252 9.16288C2.5855 8.9131 2.81414 8.71458 3.08396 8.59094C3.10916 8.57939 3.13484 8.56889 3.16091 8.55947L21.1608 2.05947C21.5255 1.92779 21.9334 2.01876 22.2076 2.29292ZM11.7173 14.1975L14.4327 19.6283L19.037 6.8777L11.7173 14.1975ZM17.6228 5.46352L4.87231 10.0679L10.303 12.7833L17.6228 5.46352Z" fill="white"/>
+      </svg>
+    </div>
+    <span>Send</span>
   </button>
 </form>
 

@@ -1,10 +1,10 @@
 <script>
-  let name = ''
-  let role = ''
-  let social_media = ''
-  let email = ''
+  export let name = ''
+  export let role = ''
+  export let social_media = ''
+  export let email = ''
 
-  let members = [
+  export let members = [
     {
       name: '',
       role: '',
@@ -24,7 +24,7 @@
   <input bind:value={name} type="text" id="your-name" required class="my-input mt-[6px]" placeholder="Enter your name">
 </div>
 
-<div class="flex w-[50%] gap-3">
+<div class="flex w-[50%] md:w-full sm:w-full gap-3">
   <div class="flex flex-col w-[50%] md:w-full sm:w-full mt-[20px]">
     <label for="specify-role">
       Specify your Role in Project
@@ -58,7 +58,7 @@
       </label>
       <input bind:value={member.name} type="text" id="team-member-1" class="my-input mt-[6px]" placeholder="Enter name">
     </div>
-    <div class="flex w-[50%] gap-3">
+    <div class="flex w-[50%] md:w-full sm:w-full gap-3">
       <div class="flex flex-col w-[50%] md:w-full sm:w-full mt-[20px]">
         <label for="specify-role">
           Role in Project
@@ -75,7 +75,7 @@
   </div>
 {/each}
 
-<div class="w-[50%] mt-[32px]">
+<div class="w-[50%] md:w-full sm:w-full mt-[32px]">
   <button on:click|preventDefault={() => {
     members.push( {
       name: '',
