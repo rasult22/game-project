@@ -4,8 +4,8 @@ let additionalRef
 let logoDragging = false;
 let additionalDragging = false
 
-let logoFiles = []
-let additionalFiles = []
+export let logoFiles = []
+export let additionalFiles = []
 </script>
 
 <!-- project description -->
@@ -62,7 +62,7 @@ let additionalFiles = []
   </div>
   {#if !logoFiles.length}
     <input on:change={(e) => {
-      logoFiles = e.target.files
+      logoFiles = Array.from(e.target.files)
     }}
     accept="image/jpeg, image/png, image/gif"
     bind:this={logoRef} class="hidden" type="file" />
@@ -127,7 +127,7 @@ class="flex max-w-[380px] flex-col items-center w-[50%] md:w-full sm:w-full mt-[
     <input
     accept=".pdf, .doc, .docx, .xls, .xlsx, .txt"
     on:change={(e) => {
-      additionalFiles = e.target.files
+      additionalFiles = Array.from(e.target.files)
     }}
     bind:this={additionalRef} class="hidden" type="file">
     <button on:click|preventDefault|stopPropagation={() => {
