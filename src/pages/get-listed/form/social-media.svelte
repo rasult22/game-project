@@ -11,7 +11,7 @@ export let other = ''
   <label>
     Social Media
   </label>
-  <div class="grid grid-cols-2 gap-3 mt-3">
+  <div class="grid grid-cols-2 sm:grid-cols-1 gap-3 mt-3">
     <div class="flex flex-col w-full">
       <label class="flex gap-[6px]">
         <img width="24" src="/media/x.svg" alt="">

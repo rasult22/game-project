@@ -28,7 +28,7 @@
     Project Status
     <span class="text-[#FA5252]">*</span>
   </label>
-  <div class="flex gap-3 mt-3">
+  <div class="flex sm:flex-wrap gap-3 mt-3">
     {#each status_list as status (status.value)}
       <div class="inline-flex gap-2 items-center select-none">
         <label class="relative flex items-center cursor-pointer" for={status.value}>

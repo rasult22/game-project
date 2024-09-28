@@ -24,7 +24,7 @@
   <input bind:value={name} type="text" id="your-name" required class="my-input mt-[6px]" placeholder="Enter your name">
 </div>
 
-<div class="flex w-[50%] md:w-full sm:w-full gap-3">
+<div class="flex w-[50%] sm:flex-wrap md:w-full sm:w-full gap-3">
   <div class="flex flex-col w-[50%] md:w-full sm:w-full mt-[20px]">
     <label for="specify-role">
       Specify your Role in Project
@@ -32,7 +32,7 @@
     </label>
     <input bind:value={role} type="text" id="specify-role" required class="my-input mt-[6px]" placeholder="Enter your role in project">
   </div>
-  <div class="flex flex-col w-[50%] md:w-full sm:w-full mt-[20px]">
+  <div class="flex flex-col w-[50%] md:w-full sm:w-full sm:mt-0 mt-[20px]">
     <label for="team-social-media">
       Social Media
       <span class="text-[#FA5252]">*</span>
@@ -58,14 +58,14 @@
       </label>
       <input bind:value={member.name} type="text" id="team-member-1" class="my-input mt-[6px]" placeholder="Enter name">
     </div>
-    <div class="flex w-[50%] md:w-full sm:w-full gap-3">
+    <div class="flex w-[50%] sm:flex-wrap md:w-full sm:w-full gap-3">
       <div class="flex flex-col w-[50%] md:w-full sm:w-full mt-[20px]">
         <label for="specify-role">
           Role in Project
         </label>
         <input bind:value={member.role} type="text" id="specify-role" class="my-input mt-[6px]" placeholder="Enter your role in project">
       </div>
-      <div class="flex flex-col w-[50%] md:w-full sm:w-full mt-[20px]">
+      <div class="flex flex-col w-[50%] md:w-full sm:w-full sm:mt-0 mt-[20px]">
         <label for="team-social-media">
           Social Media
         </label>
