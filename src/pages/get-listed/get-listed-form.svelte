@@ -219,10 +219,11 @@
  <!-- token issed -->
   <TokenIssued bind:radio={token_issued_val} bind:network_of_issuance={token_issued.network_of_issuance} bind:token_ticker={token_issued.token_ticker} bind:contract_address={token_issued.contract_address} />
 
-  <TradedCex bind:radio={traded_cex_val} bind:exchange_name={exchange_name} />
-
-  <!-- project-listed -->
-  <IsProjectListed bind:radio={project_listed_val} bind:aggregator_name={aggregator_name} />
+  {#if token_issued_val === 'token-yes'}
+    <TradedCex bind:radio={traded_cex_val} bind:exchange_name={exchange_name} />
+    <!-- project-listed -->
+    <IsProjectListed bind:radio={project_listed_val} bind:aggregator_name={aggregator_name} />
+  {/if}
 
   <!-- project files -->
   <div bind:this={logoBlockRef} />
