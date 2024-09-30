@@ -1,4 +1,5 @@
 <script>
+	import SucceedModal from './succeed-modal.svelte';
 	import pb from '~/pocketbase';
   import DatePicker from "./date-picker.svelte";
   import ApplicationType from "./form/application-type.svelte";
@@ -119,30 +120,24 @@
     } catch(e) {
       // something went wrong
     } finally {
-      setTimeout(() => {
-        loading = false
-
-        done = false
-      }, 1000);
+      loading = false
     }
   }
 </script>
 {#if loading}
   <div class="fixed w-full h-full flex items-center justify-center top-[50%] translate-y-[-50%] backdrop-blur-sm z-[1000] left-[50%] translate-x-[-50%]">
     <div class="bg-[#1E1E1E] p-4 rounded-md">
-      {#if done}
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M41.4142 12.5858C42.1953 13.3668 42.1953 14.6332 41.4142 15.4142L21.4142 35.4142C20.6332 36.1953 19.3668 36.1953 18.5858 35.4142L8.58579 25.4142C7.80474 24.6332 7.80474 23.3668 8.58579 22.5858C9.36683 21.8047 10.6332 21.8047 11.4142 22.5858L20 31.1716L38.5858 12.5858C39.3668 11.8047 40.6332 11.8047 41.4142 12.5858Z" fill="#F97C0E"/>
-        </svg>
-      {:else}
         <svg class="animate-spin" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24ZM4.8 24C4.8 34.6039 13.3961 43.2 24 43.2C34.6039 43.2 43.2 34.6039 43.2 24C43.2 13.3961 34.6039 4.8 24 4.8C13.3961 4.8 4.8 13.3961 4.8 24Z" fill="#464648"/>
           <path d="M39.5154 42.3104C37.1109 44.3479 34.3286 45.8919 31.3273 46.8541C28.3261 47.8163 25.1647 48.178 22.0237 47.9185C18.8826 47.659 15.8235 46.7833 13.0209 45.3415C10.2183 43.8997 7.72711 41.92 5.68959 39.5154L9.35168 36.4124C10.9817 38.336 12.9746 39.9198 15.2167 41.0732C17.4588 42.2266 19.9061 42.9272 22.4189 43.1348C24.9317 43.3424 27.4609 43.0531 29.8619 42.2833C32.2628 41.5135 34.4887 40.2783 36.4124 38.6483L39.5154 42.3104Z" fill="#F97C0E"/>
         </svg>
-      {/if}
     </div>
   </div>
 {/if}
+{#if done}
+  <SucceedModal />
+{/if}
+
 
 <div class="text-[36px] font-Oxanium font-medium uppercase">
   Send request

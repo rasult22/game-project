@@ -14,7 +14,7 @@
       <label class="relative flex items-center cursor-pointer" for="traded-yes">
         <input
           bind:group={radio}
-          checked
+          name="traded-cex"
           value="traded-yes"
           type="radio"
           class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-amber-400 transition-all"
@@ -31,6 +31,7 @@
         <input
           bind:group={radio}
           value="traded-no"
+          name="traded-cex"
           type="radio"
           class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-amber-400 transition-all"
           id="traded-no"
