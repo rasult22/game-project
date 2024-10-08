@@ -119,6 +119,15 @@ h4 {
   color: #B0B0B2;
   list-style-type: decimal;
 }
+#blog-post ul {
+  color: #B0B0B2;
+  padding-left: 24px;
+  list-style-type: disc;
+}
+#blog-post ol {
+  color: #B0B0B2;
+  list-style-type: decimal;
+}
 
 .flatpickr-calendar {
   background-color: #282828!important;
