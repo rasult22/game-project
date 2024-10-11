@@ -134,7 +134,6 @@ const data: Data = Astro.props.data;
           el.classList.remove('active-slide')
         })
         const current = thumbTree?.querySelector(`[data-thumb-${index}-index="${s.activeIndex}"]`)
-        console.log(current)
         current?.classList.add('active-slide')
       })
       thumb.on('click', function(s) {

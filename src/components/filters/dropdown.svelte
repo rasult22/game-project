@@ -29,7 +29,6 @@
   function clickOutside (node) {
     const handleClick = event => {
         if (!node.contains(event.target) && open) {
-          console.log('executed')
           open = false
         }
     };

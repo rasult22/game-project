@@ -1,6 +1,7 @@
 ---
 import type { GetStaticPaths } from "astro";
 import pb, {get_items} from '~/pocketbase'
+import FetchLikes from "./fetch-likes.svelte";
 import {formatDate} from '~/utils/utils'
 import "@fontsource-variable/inter";
 import "@fontsource/oxanium/500.css";
@@ -12,6 +13,7 @@ import Header from "~/components/header.astro";
 const { generator, site } = Astro;
 import {description, title} from '~/site'
 import { ViewTransitions } from 'astro:transitions';
+import LikePost from "./like-post.svelte";
 const image = new URL("optimized/social.webp", site);
 type Post = {
   id: string,
@@ -81,6 +83,7 @@ const {post_data} = Astro.props
   </head>
   <body class="overflow-x-hidden bg-[#0D0D0F] text-white">
     <Header />
+    <FetchLikes client:load />
     <div class="pt-[150px] sm:pt-[100px] px-6 max-w-[1376px] mx-auto flex flex-wrap items-center gap-4">
       <a class="text-[#888888] hover:text-[white] hover:underline" href="/">Home</a>
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -101,6 +104,9 @@ const {post_data} = Astro.props
         <span class="text-[#B0B0B2]">
           {post_data.updated}
         </span>
+        <div class="ml-2">
+          <LikePost id={post_data.id} client:only/>
+        </div>
       </div>
       <div class="mt-[30px]">
         {post_data.excerpt}

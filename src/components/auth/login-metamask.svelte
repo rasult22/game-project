@@ -18,7 +18,6 @@
     isMMConnected = accounts.length > 0;
     isMMLoading = false;
     window.ethereum.on('accountsChanged', (acc) => {
-      console.log('worked')
       if (!acc.length) {
         $auth = {
           ...$auth,

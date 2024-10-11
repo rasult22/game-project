@@ -29,9 +29,6 @@ export let additionalFiles = []
 
     const files = Array.from(e.dataTransfer.files)
 
-    files.forEach(element => {
-      console.log(element.type, element.size)
-    });
     logoFiles = files.filter(file => {
       return ['image/jpeg', 'image/png', 'image/gif'].includes(file.type) && file.size <= 20 * 1024 * 1024
     })
@@ -88,9 +85,6 @@ on:drop|preventDefault={(e) => {
   additionalDragging = false
 
   const files = Array.from(e.dataTransfer.files)
-  files.forEach(element => {
-      console.log(element.type, element.size)
-    });
   additionalFiles = files.filter(file => {
     return ['application/pdf', 'application/vnd.ms-powerpoint', 'application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/msword', 'image/png', 'image/jpeg', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'].includes(file.type) && file.size <= 100 * 1024 * 1024
   })

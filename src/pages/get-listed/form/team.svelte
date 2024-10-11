@@ -12,9 +12,6 @@
     }
   ]
 
-  $: {
-    console.log(members)
-  }
 </script>
 <div class="flex flex-col w-[50%] md:w-full sm:w-full mt-[20px]">
   <label for="your-name">

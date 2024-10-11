@@ -4,7 +4,6 @@
   import AboutTab from "./tabs/AboutTab.svelte";
   import OcpTab from "./tabs/OCPTab.svelte";
   import SlTab from "./tabs/SLTab.svelte";
-  import { onMount } from "svelte";
 
   export let game
 
@@ -27,9 +26,6 @@
       key: 'sl'
     },
   ]
-  onMount(async () => {
-    console.log(game)
-  })
 </script>
 
 <div class="flex">

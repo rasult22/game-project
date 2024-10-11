@@ -24,13 +24,12 @@
               user: {
                 name: profile.Ad,
                 address: profile.cu,
+                address_full: profile.cu,
                 image: profile.hK
               }
             }
             authPopupIsOpen = false
           }
-          console.log('authInstance', authInstance)
-          console.log('user', user)
         });
     }
     gapi.load('client:auth2', start)
@@ -49,8 +48,6 @@
           image: profile.hK
         }
       }
-      console.log(user, 'user')
-      console.log('User signed in:', profile);
       authPopupIsOpen = false
     });
   }

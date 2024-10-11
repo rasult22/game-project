@@ -11,6 +11,8 @@ const { generator, site } = Astro;
 import {description, title} from '~/site'
 import { ViewTransitions } from 'astro:transitions';
 import pb from "~/pocketbase";
+import LikePost from "./like-post.svelte";
+import FetchLikes from "./fetch-likes.svelte";
 const image = new URL("optimized/social.webp", site);
 type Post = {
   id: string,
@@ -70,7 +72,7 @@ const items = list.map(post => {
     <Header />
     <div class="pt-[150px] sm:pt-[100px] max-w-[920px] mx-auto">
       <h1 class="text-[36px] font-medium uppercase sm:px-4 md:px-4 font-Oxanium">Blog</h1>
-
+      <FetchLikes client:load />
       <div class="mt-[50px] sm:mt-6 sm:grid justify-center space-y-6 max-w-[912px] sm:px-4 md:px-4">
         {
           items.map((article) => (
@@ -84,7 +86,10 @@ const items = list.map(post => {
                 <div class="text-[#B0B0B2] leading-[120%] mt-4">
                   {article.excerpt.slice(0, 120)}...
                 </div>
-                <button class="flex text-[20px] mt-4">Read more</button>
+                <div class="mt-auto flex justify-between items-center">
+                  <button class="flex text-[20px]">Read more</button>
+                  <LikePost id={article.id} client:only/>
+                </div>
               </div>
             </a>
           ))

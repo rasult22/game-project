@@ -54,7 +54,6 @@ function getTimeDifference(date1: Date, date2: Date) {
   const days = Math.floor(hours / 24);
   const months = Math.floor(days / 30);
   const years = Math.floor(days / 365);
-  console.log(seconds)
 
   if (years > 0) return { value: years, unit: 'year' };
   if (months > 0) return { value: months, unit: 'month' };
