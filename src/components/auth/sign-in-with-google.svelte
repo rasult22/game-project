@@ -15,7 +15,7 @@
         .then(() => {
           const authInstance = gapi.auth2.getAuthInstance();
           let user = authInstance.currentUser.get();
-          if (user) {
+          if (user && $auth.isAuthorized) {
             let profile = user.getBasicProfile()
             if (!profile) return
             $auth = {
