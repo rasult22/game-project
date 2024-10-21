@@ -16,7 +16,7 @@ export default defineConfig({
     //   }
     // }
   },
-  site: "https://bizzon.io",
+  site: "https://www.bizzon.io",
   integrations: [tailwind(), icon(), svelte()],
 });
 

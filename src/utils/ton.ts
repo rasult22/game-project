@@ -7,7 +7,7 @@ function init() {
     const isRegistered = customElements.get('tc-root')
     if (!isRegistered) {
       tonConnectUI = new TonConnectUI({
-        manifestUrl: 'https://bizzon.io/app_meta.json',
+        manifestUrl: 'https://www.bizzon.io/app_meta.json',
         buttonRootId: 'ton-connect'
       })
     }
