@@ -29,7 +29,7 @@
       <div class="font-medium">Total views</div>
       <div class="flex justify-between mt-6">
         <div>
-          <div class="text-[24px] font-medium">{stats.views ? numberFormatter.format(stats.views) : 'N/A'}</div>
+          <div class="text-[24px] font-medium">{stats?.views ? numberFormatter.format(stats.views) : 'N/A'}</div>
           <!-- <div class="mt-[10px]">2.4%</div> -->
         </div>
         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +42,7 @@
       <div class="font-medium">Total tweets</div>
       <div class="flex justify-between mt-6">
         <div>
-          <div class="text-[24px] font-medium">{stats.total_tweets ? numberFormatter.format(stats.total_tweets) : 'N/A'}</div>
+          <div class="text-[24px] font-medium">{stats?.total_tweets ? numberFormatter.format(stats.total_tweets) : 'N/A'}</div>
           <!-- <div class="mt-[10px]">2.4%</div> -->
         </div>
         <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,7 +55,7 @@
       <div class="font-medium">Account age</div>
       <div class="flex justify-between mt-6">
         <div>
-          <div class="text-[24px] font-medium">{stats.created_time ? getRelativeTime(new Date(stats.created_time)) : 'N/A'}</div>
+          <div class="text-[24px] font-medium">{stats?.created_time ? getRelativeTime(new Date(stats.created_time)) : 'N/A'}</div>
         </div>
         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="50" height="50" rx="25" fill="#D9D9D9"/>
@@ -72,10 +72,10 @@
       </div>
       <div class="flex justify-between mt-6">
         <div>
-          <div class="text-[24px] font-medium">{stats.avg_daily_tweets ? numberFormatter.format(stats.avg_daily_tweets) : 'N/A'}</div>
+          <div class="text-[24px] font-medium">{stats?.avg_daily_tweets ? numberFormatter.format(stats.avg_daily_tweets) : 'N/A'}</div>
         </div>
         <div>
-          <div class="text-[24px] font-medium">{stats.new_tweets ? numberFormatter.format(stats.new_tweets) : 'N/A'}</div>
+          <div class="text-[24px] font-medium">{stats?.new_tweets ? numberFormatter.format(stats.new_tweets) : 'N/A'}</div>
         </div>      
       </div>
     </div>
@@ -86,10 +86,10 @@
       </div>
       <div class="flex justify-between mt-6">
         <div>
-          <div class="text-[24px] font-medium">{stats.likes ? numberFormatter.format(stats.likes) : 'N/A'}</div>
+          <div class="text-[24px] font-medium">{stats?.likes ? numberFormatter.format(stats.likes) : 'N/A'}</div>
         </div>
         <div>
-          <div class="text-[24px] font-medium">{stats.retweets ? numberFormatter.format(stats.retweets) : 'N/A'}</div>
+          <div class="text-[24px] font-medium">{stats?.retweets ? numberFormatter.format(stats.retweets) : 'N/A'}</div>
         </div>      
       </div>
     </div>

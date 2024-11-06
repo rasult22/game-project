@@ -15,7 +15,7 @@
       <div class="font-medium">Total subscribers</div>
       <div class="flex justify-between mt-6">
         <div>
-          <div class="text-[24px] font-medium">{stats.users ? numberFormatter.format(stats.users) : 'N/A'}</div>
+          <div class="text-[24px] font-medium">{stats?.users ? numberFormatter.format(stats.users) : 'N/A'}</div>
           <!-- <div class="mt-[10px]">2.4%</div> -->
         </div>
         <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +29,7 @@
       <div class="font-medium">Average messages/day</div>
       <div class="flex justify-between mt-6">
         <div>
-          <div class="text-[24px] font-medium">{stats.avg_daily_messages ? numberFormatter.format(stats.avg_daily_messages) : 'N/A'}</div>
+          <div class="text-[24px] font-medium">{stats?.avg_daily_messages ? numberFormatter.format(stats.avg_daily_messages) : 'N/A'}</div>
           <!-- <div class="mt-[10px]">2.4%</div> -->
         </div>
         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +42,7 @@
       <div class="font-medium">Total messages</div>
       <div class="flex justify-between mt-6">
         <div>
-          <div class="text-[24px] font-medium">{stats.messages ? numberFormatter.format(stats.messages) : 'N/A'}</div>
+          <div class="text-[24px] font-medium">{stats?.messages ? numberFormatter.format(stats.messages) : 'N/A'}</div>
           <!-- <div class="mt-[10px]">2.4%</div> -->
         </div>
         <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,7 +67,7 @@
       <div class="font-medium">Average online</div>
       <div class="flex justify-between mt-6">
         <div>
-          <div class="text-[24px] font-medium">{stats.avg_active_users ? numberFormatter.format(stats.avg_active_users) : 'N/A'}</div>
+          <div class="text-[24px] font-medium">{stats?.avg_active_users ? numberFormatter.format(stats.avg_active_users) : 'N/A'}</div>
         </div>
         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="50" height="50" rx="25" fill="#D9D9D9"/>
