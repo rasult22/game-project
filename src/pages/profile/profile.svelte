@@ -5,6 +5,15 @@
   import {dragscroll} from '@svelte-put/dragscroll'
   import { auth } from '~/store/auth';
   import { items } from '../gamehub/mock';
+  import { onMount } from 'svelte';
+  
+  let fav_list = []
+  onMount(() => {
+    const fav_list_string = localStorage.getItem('favorite_list')
+    if (fav_list_string) {
+      fav_list = JSON.parse(fav_list_string)
+    }
+  })
   $: {
     if(!$auth.isAuthorized) {
       const link = document.createElement('a')
@@ -12,19 +21,34 @@
       link.click()
     }
   }
+
+  $: list = items.filter((game) => {
+    const inList = fav_list.find(game_id => game.id === game_id)
+    if (inList) {
+      return true
+    } else {
+      return false
+    }
+  })
 </script>
 {#if $auth.isAuthorized}
   <div class="w-full sm:grid md:grid sm:grid-cols-1 md:grid-cols-1 flex gap-4 rounded-[12px]">
     <ProfileCard />
-    <BalanceCard />
+    <BalanceCard games={list} />
   </div>
 {/if}
 
 <div class="bg-[#1C1C1E] rounded-[20px] p-4 mt-4">
   <div class="text-[24px] font-medium">My Games</div>
   <div use:dragscroll class="flex min-h-[382px] gap-[10px] mt-4 overflow-x-auto pb-3" >
-    {#each items as game}
+    {#each list as game}
       <GameCard name={game.game_info.name} img={game.banner} networks={game.networks} tags={game.game_info.tags} />
     {/each}
+
+    {#if list.length < 1}
+      <div class="text-[32px] flex items-center justify-center w-full opacity-[0.52]">
+        You don't have favorite games yet
+      </div>
+    {/if}
   </div>
 </div>

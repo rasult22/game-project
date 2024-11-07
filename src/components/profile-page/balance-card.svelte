@@ -1,5 +1,6 @@
 <script>
   import { items } from "~/pages/gamehub/mock";
+  export let games;
 </script>
 <div class="bg-[#1C1C1E] w-full p-6 rounded-[20px] space-y-3">
 
@@ -20,21 +21,21 @@
         Coins
        </div>
        <div class="text-[20px] font-semibold mt-1">
-        2.045.241,<span class="opacity-55">02</span>
+        0,<span class="opacity-55">00</span>
        </div>
     </div>
     <!-- Games -->
     <div class="w-full flex flex-col py-3 space-y-4 px-4 rounded-[16px] bg-[#464648]">
       <div class="font-semibold">My Games</div>
       <div class="flex gap-2">
-        {#each items as game, index}
+        {#each games as game, index}
           {#if index < 5}
             <img class="w-[32px] h-[32px] object-cover rounded-[8px]" width="32" height="32" src={game.banner} alt="">
           {/if}
         {/each}
       </div>
       <div class="flex justify-between items-center">
-        <div class="font-semibold text-[20px]">{items.length} games</div>
+        <div class="font-semibold text-[20px]">{games.length} games</div>
         <svg class="cursor-pointer anim-btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM15 16H9C8.44771 16 8 15.5523 8 15C8 14.4477 8.44771 14 9 14H12.5858L8.29289 9.70711C7.90236 9.31658 7.90236 8.68342 8.29289 8.29289C8.68341 7.90237 9.31658 7.90237 9.7071 8.29289L14 12.5858V9C14 8.44771 14.4477 8 15 8C15.5523 8 16 8.44771 16 9V15C16 15.5523 15.5523 16 15 16Z" fill="white"/>
         </svg>
