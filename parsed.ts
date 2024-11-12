@@ -193,6 +193,7 @@ export default [
       "release_date": "2023-06-21T11:22:08.537Z",
       "devices": ["Web"],
       "backed_by": [
+        {logo: "https://optim.tildacdn.com/tild3736-3566-4632-b462-656234663161/-/resize/192x/-/format/webp/image.png", name: "Aptos Labs"}
       ],
       "tags": [
         "Casual", "MMORP", "PVP", "PVE"

@@ -9,7 +9,7 @@
   export let img = ''
 </script>
 <a href={link} class="px-2 pt-2 pb-3 rounded-[14px]  group hover:bg-[#37373D] active:bg-[#111115] active:scale-95 cursor-pointer transition-all">
-  <img width="257" height="300" class="w-full rounded-[10px]" src={img} alt="">
+  <img width="257" height="300" class="w-full rounded-[10px] aspect-[257/300]" src={img} alt="">
   <div class="mt-2 transition-all">
     <div class="leading-[120%] flex items-center justify-between">
       <div>
