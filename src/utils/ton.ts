@@ -10,6 +10,8 @@ function init() {
         manifestUrl: 'https://www.bizzon.io/app_meta.json',
         buttonRootId: 'ton-connect'
       })
+      // @ts-ignore
+      window.tonConnectUI = tonConnectUI
     }
   } catch(e) {
     console.log(e)

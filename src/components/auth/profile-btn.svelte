@@ -2,6 +2,7 @@
 	import { fade } from 'svelte/transition';
   import { gapi } from "gapi-script";
   import { auth, logout as logout_s } from '~/store/auth';
+  import { TonConnect } from '@tonconnect/ui';
   export let address = '_'
   export let name = '_'
   export let profile_pic
@@ -9,7 +10,14 @@
   let isOpen = false
 
   const logout = () => {
-    if ($auth.authType === 'metamask' || $auth.authType === 'ton') {
+    if ($auth.authType === 'ton') {
+      const tc = new TonConnect({
+        manifestUrl: 'https://www.bizzon.io/app_meta.json',
+      })
+      tc.disconnect()
+      logout_s()
+    }
+    if ($auth.authType === 'metamask') {
       logout_s()
     }
     if ($auth.authType === 'google') {
