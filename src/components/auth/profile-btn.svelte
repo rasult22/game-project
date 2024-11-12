@@ -2,7 +2,7 @@
 	import { fade } from 'svelte/transition';
   import { gapi } from "gapi-script";
   import { auth, logout as logout_s } from '~/store/auth';
-  import { tonConnectUI } from '~/utils/ton';
+  import { TonConnectUI } from '@tonconnect/ui';
   export let address = '_'
   export let name = '_'
   export let profile_pic
@@ -11,9 +11,7 @@
 
   const logout = () => {
     if ($auth.authType === 'ton') {
-      console.log(tonConnectUI)
-      tonConnectUI.disconnect()
-      if (!tonConnectUI) return
+      new TonConnectUI().disconnect()
       logout_s()
     }
     if ($auth.authType === 'metamask') {
