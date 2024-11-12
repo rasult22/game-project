@@ -11,8 +11,13 @@
 
   const logout = () => {
     if ($auth.authType === 'ton') {
-      new TonConnectUI({manifestUrl: 'https://www.bizzon.io/app_meta.json'}).disconnect()
-      logout_s()
+      const tonConnectUI = new TonConnectUI({
+        manifestUrl: 'https://www.bizzon.io/app_meta.json',
+        buttonRootId: 'ton-connect'
+      })
+      tonConnectUI.disconnect().then(() => {
+        logout_s()
+      })
     }
     if ($auth.authType === 'metamask') {
       logout_s()
