@@ -15,7 +15,7 @@
         manifestUrl: 'https://www.bizzon.io/app_meta.json',
         buttonRootId: 'ton-connect'
       })
-      tonConnectUI.disconnect().then(() => {
+      tonConnectUI.connector.disconnect().then(() => {
         logout_s()
       })
     }
