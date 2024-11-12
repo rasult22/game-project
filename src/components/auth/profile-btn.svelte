@@ -9,15 +9,13 @@
 
   let isOpen = false
 
-  const logout = () => {
+  const logout = async () => {
     if ($auth.authType === 'ton') {
       const tonConnectUI = new TonConnectUI({
         manifestUrl: 'https://www.bizzon.io/app_meta.json',
         buttonRootId: 'ton-connect'
       })
-      tonConnectUI.connector.connect()
-      tonConnectUI.openModal()
-      tonConnectUI.connectWallet()
+      await tonConnectUI.connector.restoreConnection()
       tonConnectUI.connector.disconnect().then(() => {
         logout_s()
       })
