@@ -8,11 +8,17 @@
 
   let isOpen = false
 
-  const logout = () => {
+  const logout = async () => {
     if ($auth.authType === 'metamask' || $auth.authType === 'ton') {
       logout_s()
     }
     if ($auth.authType === 'google') {
+      await gapi.client
+        .init({
+          clientId:
+            "216133606325-vqdj4mcc0jh5p3j659j8glllfmf5r3dq.apps.googleusercontent.com",
+          scope: "profile email",
+        })
       const authInstance = gapi.auth2.getAuthInstance();
       authInstance.signOut().then(() => {
         logout_s()
