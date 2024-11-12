@@ -27,6 +27,14 @@ if (authStore) {
 }
 
 export const auth = writable<AuthScheme>(store)
+export const logout = () => {
+  auth.set({
+    popupIsOpen: false,
+    user:  null,
+    authType: null,
+    isAuthorized: false
+  })
+}
 
 // sync store and localStorage
 auth.subscribe(store => {
