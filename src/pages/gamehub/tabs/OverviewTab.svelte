@@ -6,6 +6,7 @@
   export let backedBy;
   export let on_chain_performance;
   export let team_profile;
+  export let sale_exchanges
 
   $: volume_rank = on_chain_performance.volume_rank || 'N/A'
   $: volume_24h_changed = on_chain_performance.volume_24h_changed || null
@@ -313,12 +314,18 @@
 
     <div class="mt-6">
       <div class="text-[20px] font-semibold">Top sale exchanges</div>
-      <div class="flex gap-4 mt-4">
-        <img width="64" src="/optimized/sale-1.webp" alt="" />
-        <img width="64" src="/optimized/sale-2.webp" alt="" />
-        <img width="64" src="/optimized/sale-3.webp" alt="" />
-        <img width="64" src="/optimized/sale-4.webp" alt="" />
-        <img width="64" src="/optimized/sale-5.webp" alt="" />
+      <div class="flex gap-4 mt-4 h-[64px]">
+        {#if sale_exchanges}
+          {#each sale_exchanges as item }
+            <img width="64" height="64" src={item.icon} alt="" />          
+          {/each}
+        {:else}
+          <img width="64" src="/optimized/sale-1.webp" alt="" />
+          <img width="64" src="/optimized/sale-2.webp" alt="" />
+          <img width="64" src="/optimized/sale-3.webp" alt="" />
+          <img width="64" src="/optimized/sale-4.webp" alt="" />
+          <img width="64" src="/optimized/sale-5.webp" alt="" />
+        {/if}
       </div>
     </div>
   </div>
