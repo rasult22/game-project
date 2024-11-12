@@ -18,8 +18,10 @@
       console.log(tonConnectUI)
       window.tonConnectUI = tonConnectUI
       tonConnectUI.connector.restoreConnection().then(() => {
-        tonConnectUI.connector.disconnect().then(() => {
-          logout_s()
+        setTimeout(() => {
+          tonConnectUI.connector.disconnect().then(() => {
+            logout_s()
+          }, 1000)
         })
       })
     }
