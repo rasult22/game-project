@@ -17,9 +17,10 @@
       })
       console.log(tonConnectUI)
       window.tonConnectUI = tonConnectUI
-      await tonConnectUI.connector.restoreConnection()
-      tonConnectUI.connector.disconnect().then(() => {
-        logout_s()
+      tonConnectUI.connector.restoreConnection().then(() => {
+        tonConnectUI.connector.disconnect().then(() => {
+          logout_s()
+        })
       })
     }
     if ($auth.authType === 'metamask') {
