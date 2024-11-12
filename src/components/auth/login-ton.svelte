@@ -5,7 +5,7 @@
   export let authPopupIsOpen
   let selected = false
 onMount(() => {
-  tonConnectUI.onModalStateChange(function (state) {
+  tonConnectUI?.onModalStateChange?.(function (state) {
     if (!selected && state.status === 'closed') {
       if (tonConnectUI.wallet) {
         let address = tonConnectUI.wallet.account.address
