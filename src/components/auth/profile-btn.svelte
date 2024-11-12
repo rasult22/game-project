@@ -15,6 +15,8 @@
         manifestUrl: 'https://www.bizzon.io/app_meta.json',
         buttonRootId: 'ton-connect'
       })
+      console.log(tonConnectUI)
+      window.tonConnectUI = tonConnectUI
       await tonConnectUI.connector.restoreConnection()
       tonConnectUI.connector.disconnect().then(() => {
         logout_s()
