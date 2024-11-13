@@ -17,10 +17,10 @@
       name: 'About',
       key: 'about'
     },
-    {
-      name: 'On-Chain Perfomance',
-      key: 'ocp'
-    },
+    // {
+    //   name: 'On-Chain Perfomance',
+    //   key: 'ocp'
+    // },
     {
       name: 'Social Level',
       key: 'sl'
