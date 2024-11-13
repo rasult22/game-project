@@ -12,7 +12,7 @@ export default [
     "networks": [
       "aptos"
     ],
-    "players_count": '1100',
+    "players_count": '11425',
     "star_rating": {
       "collection_id": "08c1027f-4984-487a-a968-3c710ef2bd00",
       "collection_type": "games",
