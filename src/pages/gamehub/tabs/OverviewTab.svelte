@@ -45,11 +45,13 @@
       </div>
     </div>
     <div>
-      <svg width="106" height="106" viewBox="0 0 106 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div class="text-[32px] font-bold w-[106px] h-[106px] flex items-center justify-center rounded-full border-[10px] border-[#0000004D]">N\A</div>
+
+      <!-- <svg width="106" height="106" viewBox="0 0 106 106" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="53" cy="53" r="48" stroke="black" stroke-opacity="0.3" stroke-width="10"/>
         <path d="M52 101C64.7304 101 76.9394 95.9429 85.9411 86.9411C94.9429 77.9394 100 65.7304 100 53C100 40.2696 94.9429 28.0606 85.9411 19.0589C76.9394 10.0571 64.7304 5 52 5" stroke="white" stroke-width="10" stroke-linecap="round"/>
         <path d="M29.8798 68H24.2548L34.4963 38.9091H41.002L51.2576 68H45.6326L37.8628 44.875H37.6355L29.8798 68ZM30.0645 56.5938H45.4054V60.8267H30.0645V56.5938ZM58.3851 68H52.7601L63.0016 38.9091H69.5073L79.763 68H74.138L66.3681 44.875H66.1408L58.3851 68ZM58.5698 56.5938H73.9107V60.8267H58.5698V56.5938Z" fill="#1B1B1B"/>
-      </svg>
+      </svg> -->
     </div>
   </div>
 
@@ -63,7 +65,7 @@
           <div class="text-[20px] font-semibold">Team profile</div>
           <div class="text-[#B0B0B2]">Highly experienced and skilled</div>
         </div>
-        <BizzonRating rating="AA" />
+        <BizzonRating rating="" />
       </div>
       <!-- list -->
       <div class="mt-6 space-y-4 max-h-[180px] -mr-4 pr-4 overflow-auto">
@@ -159,7 +161,7 @@
             Funds and investors invested in the project
           </div>
         </div>
-        <BizzonRating rating="AAA" />
+        <BizzonRating rating="" />
       </div>
       <!-- bakers -->
       <div class="flex flex-wrap items-center justify-center gap-3 pt-10 mt-1">
@@ -184,7 +186,7 @@
           Better than N% of the market
         </div>
       </div>
-      <BizzonRating rating="BB" />
+      <BizzonRating rating="" />
     </div>
 
     <!-- cards -->
@@ -193,7 +195,7 @@
         <!-- head -->
         <div class="flex justify-between">
           <div class="font-semibold">Volume 24h</div>
-          <BizzonRating rating="C" />
+          <BizzonRating rating="" />
         </div>
         <!-- chart -->
         <div class="ml-[-5px]">
@@ -211,7 +213,7 @@
         <!-- head -->
         <div class="flex justify-between">
           <div class="font-semibold">Market Cap</div>
-          <BizzonRating rating="CCC" />
+          <BizzonRating rating="" />
         </div>
         <!-- chart -->
         <div class="ml-[-5px]">
@@ -231,7 +233,7 @@
         <!-- head -->
         <div class="flex justify-between">
           <div class="font-semibold">Quarterly close</div>
-          <BizzonRating rating="B" />
+          <BizzonRating rating="" />
         </div>
         <!-- chart -->
         <div class="ml-[-5px]">
@@ -340,7 +342,7 @@
           Ensure transparency in our project documentation with our data
         </div>
       </div>
-      <BizzonRating rating="AA" />
+      <BizzonRating rating="" />
     </div>
     <!-- cards -->
     <div class="flex md:grid md:grid-cols-2 md:gap-4 sm:grid sm:grid-cols-2 sm:gap-4 justify-between mt-4">
@@ -348,25 +350,25 @@
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
         <div class="font-semibold min-w-[138px] text-center">Whitepaper</div>
-        <BizzonRating rating="A" />
+        <BizzonRating rating="" />
       </div>
       <div
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
         <div class="font-semibold min-w-[138px] text-center">Website</div>
-        <BizzonRating rating="AA" />
+        <BizzonRating rating="" />
       </div>
       <div
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
         <div class="font-semibold min-w-[138px] text-center">Tokenomic</div>
-        <BizzonRating rating="A" />
+        <BizzonRating rating="" />
       </div>
       <div
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
         <div class="font-semibold min-w-[138px] text-center">Fundraising</div>
-        <BizzonRating rating="AAA" />
+        <BizzonRating rating="" />
       </div>
     </div>
   </div>
@@ -384,7 +386,7 @@
           statistics
         </div>
       </div>
-      <BizzonRating rating="BB" />
+      <BizzonRating rating="" />
     </div>
     <!-- cards -->
     <div class="flex sm:grid sm:grid-cols-2 gap-4 mt-6">
@@ -395,6 +397,7 @@
         <div class="ml-[-5px]">
           <Chart
             direction="positive"
+            string="N\A"
             data={[
               120, 24, 32, 22, 101, 120, 90, 150, 24, 32, 22, 101, 120, 90, 200,
             ]}
@@ -408,6 +411,7 @@
         <div class="ml-[-5px]">
           <Chart
             direction="positive"
+            string="N\A"
             data={[
               120, 24, 32, 22, 101, 120, 90, 150, 24, 32, 22, 101, 120, 90, 200,
             ]}
@@ -421,6 +425,7 @@
         <div class="ml-[-5px]">
           <Chart
             direction="positive"
+            string="N\A"
             data={[
               120, 24, 32, 22, 101, 120, 90, 150, 24, 32, 22, 101, 120, 90, 200,
             ]}
@@ -434,6 +439,7 @@
         <div class="ml-[-5px]">
           <Chart
             direction="positive"
+            string="N\A"
             data={[
               120, 24, 32, 22, 101, 120, 90, 150, 24, 32, 22, 101, 120, 90, 200,
             ]}
