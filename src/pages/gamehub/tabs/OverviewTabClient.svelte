@@ -320,7 +320,7 @@
           Ensure transparency in our project documentation with our data
         </div>
       </div>
-      <BizzonRating rating="" />
+      <BizzonRating rating="AA" />
     </div>
     <!-- cards -->
     <div class="flex md:grid md:grid-cols-2 md:gap-4 sm:grid sm:grid-cols-2 sm:gap-4 justify-between mt-4">
@@ -328,25 +328,25 @@
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
         <div class="font-semibold min-w-[138px] text-center">Whitepaper</div>
-        <BizzonRating rating="" />
+        <BizzonRating rating="A" />
       </div>
       <div
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
         <div class="font-semibold min-w-[138px] text-center">Website</div>
-        <BizzonRating rating="" />
+        <BizzonRating rating="AA" />
       </div>
       <div
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
         <div class="font-semibold min-w-[138px] text-center">Tokenomic</div>
-        <BizzonRating rating="" />
+        <BizzonRating rating="A" />
       </div>
       <div
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
         <div class="font-semibold min-w-[138px] text-center">Fundraising</div>
-        <BizzonRating rating="" />
+        <BizzonRating rating="AAA" />
       </div>
     </div>
   </div>
