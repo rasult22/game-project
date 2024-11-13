@@ -39,6 +39,8 @@
             <img width="20" height="20" src="/media/moonbeam-icon.svg" alt="">
           {:else if network === 'bsc'}
             <img width="20" height="20" src="/media/bnb-icon.svg" alt="">
+          {:else if network === 'aptos'}
+            <img width="20" height="20" src="/optimized/aptos-logo.webp" alt="">
           {:else}
           {network}
           {/if}

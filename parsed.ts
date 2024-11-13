@@ -1,7 +1,7 @@
 export default [
   {
     "id": "in-match3",
-    "banner": "https://rasult22.pockethost.io/api/files/s35y0meykz2ovme/mt2ak4llvu2b5bv/icon400x400_Lu7J7l827r.png",
+    "banner": "/optimized/in-match3.png",
     "images": [],
     "top": 1,
     "networks": [
