@@ -193,7 +193,7 @@
     </div>
 
     <!-- cards -->
-    <div class="grid grid-cols-3 gap-4 mt-6">
+    <div class="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mt-6">
       <div class="p-[14px] w-full md:w-full flex flex-col sm:w-full bg-[#2A2A2A] rounded-[16px] overflow-hidden">
         <!-- head -->
         <div class="flex justify-between">
