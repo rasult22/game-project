@@ -2,7 +2,12 @@ export default [
   {
     "id": "in-match3",
     "banner": "/optimized/in-match3.png",
-    "images": [],
+    "images": [
+      "/game_images/in-match3-2.jpg",
+      "/game_images/in-match3-3.jpg",
+      "/game_images/in-match3-4.jpg",
+      "/game_images/in-match3-1.jpg",
+    ],
     "top": 1,
     "networks": [
       "aptos"
@@ -44,7 +49,7 @@ export default [
       "token_name": "tin",
       "bizzon_rating": null,
       "release_date": "2023-06-21T11:22:08.537Z",
-      "devices": ["Web"],
+      "devices": ["web", "android", 'ios'],
       "sale_exchanges": [ {"name": "mexc.com", "icon": "/optimized/mexc-icon.webp"} ],
       "backed_by": [
         {logo: "https://optim.tildacdn.com/tild3736-3566-4632-b462-656234663161/-/resize/192x/-/format/webp/image.png", name: "Aptos Labs"}
