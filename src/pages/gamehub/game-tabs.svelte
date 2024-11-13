@@ -1,6 +1,7 @@
 <script>
   export let game_id
   import OverviewTab from "./tabs/OverviewTab.svelte";
+	import OverviewTabClient from './tabs/OverviewTabClient.svelte';
   import AboutTab from "./tabs/AboutTab.svelte";
   import OcpTab from "./tabs/OCPTab.svelte";
   import SlTab from "./tabs/SLTab.svelte";
@@ -42,7 +43,11 @@
 
 <div class="mt-9">
   {#if activeTab === 'overview'}
-    <OverviewTab sale_exchanges={game.game_info.sale_exchanges} team_profile={game.team_profile} on_chain_performance={game.on_chain_performance.data} backedBy={game.game_info.backed_by} />
+    {#if game.id === 'in-match3'}
+      <OverviewTabClient token_name={game.game_info.token_name} sale_exchanges={game.game_info.sale_exchanges} team_profile={game.team_profile} backedBy={game.game_info.backed_by}/>
+    {:else}
+      <OverviewTab sale_exchanges={game.game_info.sale_exchanges} team_profile={game.team_profile} on_chain_performance={game.on_chain_performance.data} backedBy={game.game_info.backed_by} />
+    {/if}
   {/if}
   {#if activeTab === 'about'}
     <AboutTab data={game.about} />
