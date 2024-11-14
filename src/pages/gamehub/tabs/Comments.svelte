@@ -131,7 +131,7 @@ onMount(async() => {
         </div>
         <div class="flex">
           {#each Array.from({length: comment.rating}) as number, index }
-            <StarIcon active={comment.rating > index + 1}/>
+            <StarIcon active={comment.rating >= index + 1}/>
           {/each}
         </div>
       </div>
