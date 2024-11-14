@@ -35,6 +35,22 @@ let items = [
     key: 'mmo'
   },
   {
+    name: 'MMORPG',
+    key: 'mmorpg'
+  },
+  {
+    name: 'Casual',
+    key: 'casual'
+  },
+  {
+    name: 'PVP',
+    key: 'pvp'
+  },
+  {
+    name: 'PVE',
+    key: 'pve'
+  },
+  {
     name: 'Role-playing',
     key: 'role_playing'
   },
