@@ -31,7 +31,7 @@ class="bg-gradient-to-r from-[#FDFC47] to-[#24FE41] text-black rounded-[20px] py
   </div>
 </div>
 <div>
-  <img src="/media/green-ranking.svg" alt="" />
+  <div class="text-[32px] font-bold w-[106px] h-[106px] flex items-center justify-center rounded-full border-[10px] border-[#0000004D]">A</div>
 </div>
 </div>
 
