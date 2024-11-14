@@ -20,7 +20,8 @@
 const fetchComments = async () => {
   $comments_state.loading = true
   const data = await pb.collection('games_comments').getFullList({
-    filter: `game_id = "${game_id}"`
+    filter: `game_id = "${game_id}"`,
+    sort: '-created'
   })
   comment_list = data.map(x => x)
   $comments_state.loading = false
