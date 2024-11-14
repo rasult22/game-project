@@ -1,8 +1,12 @@
 <script>
+    import { createEventDispatcher } from "svelte";
+
 export let name = 'MOBOX'
 export let img = '/media/game-card-sample.png'
 export let tags = 'Casual, Metaverse, Adventure'
 export let networks = []
+
+const dispatch = createEventDispatcher()
 </script>
 <div class="min-w-[260px] px-2 pt-2 pb-3 rounded-[14px] max-w-[290px] group hover:bg-[#37373D] cursor-pointer transition-all">
   <img width="257" height="300" class="w-[257px] h-[300px] object-cover rounded-[10px]" src={img} alt="">
@@ -39,7 +43,7 @@ export let networks = []
       </div>
     </div>
   </div>
-  <button class="hidden hover:bg-[#1CC141] w-full group/btn mt-2 font-medium bg-[#fff] group-hover:flex items-center justify-center space-x-2 text-black py-[10px] active:scale-95 active:bg-[#17B23A] transition-all px-[36px] rounded-[12px]">
+  <button on:click={() => dispatch('play')} class="hidden hover:bg-[#1CC141] w-full group/btn mt-2 font-medium bg-[#fff] group-hover:flex items-center justify-center space-x-2 text-black py-[10px] active:scale-95 active:bg-[#17B23A] transition-all px-[36px] rounded-[12px]">
     <svg class="group-hover/btn:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
       <path d="M7 4V20L20 12L7 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>

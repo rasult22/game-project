@@ -42,7 +42,11 @@
   <div class="text-[24px] font-medium">My Games</div>
   <div use:dragscroll class="flex min-h-[382px] gap-[10px] mt-4 overflow-x-auto pb-3" >
     {#each list as game}
-      <GameCard name={game.game_info.name} img={game.banner} networks={game.networks} tags={game.game_info.tags} />
+      <GameCard on:play={() => {
+        if (game.game_info.game_play_link) {
+          window.open(game.game_info.game_play_link)
+        }
+      }} name={game.game_info.name} img={game.banner} networks={game.networks} tags={game.game_info.tags} />
     {/each}
 
     {#if list.length < 1}
