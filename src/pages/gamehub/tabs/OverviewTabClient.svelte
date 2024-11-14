@@ -329,7 +329,7 @@
       <div
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
-        <div class="font-semibold min-w-[138px] text-center">Whitepaper</div>
+        <div class="font-semibold min-w-[138px] text-center">White Paper</div>
         <BizzonRating rating="A" />
       </div>
       <div
