@@ -41,6 +41,7 @@ export default [
     },
     "social_data": {},
     "follow_link": "https://t.me/inongame",
+    "white_paper_link": "https://ongame.dev/whitepaper",
     "about": {},
     "comments": [],
     "game_info": {

@@ -9,6 +9,7 @@
   export let team_profile;
   export let sale_exchanges
   export let token_name
+  export let white_paper_link
   export let game_id
 
   let data;
@@ -315,14 +316,21 @@
   <!-- 4: White board -->
   <div class="mt-6 p-[20px] bg-white rounded-[20px] text-[#1B1B1B]">
     <!-- head -->
-    <div class="flex items-center">
-      <div class="w-[55%] mr-8">
+    <div class="flex sm:grid items-center">
+      <div class="w-[55%] sm:w-full mr-8">
         <div class="text-[20px] font-semibold">Venture document analysis</div>
         <div class="mt-[10px]">
           Ensure transparency in our project documentation with our data
         </div>
       </div>
       <BizzonRating rating="AA" />
+      {#if white_paper_link}
+        <a href={white_paper_link} target="_blank" class="flex self-start ml-auto gap-1 hover:opacity-65 text-[#F97C0E] text-[20px]">White Paper
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2929 7.29289C14.6834 6.90237 15.3166 6.90237 15.7071 7.29289L19.7071 11.2929C20.0976 11.6834 20.0976 12.3166 19.7071 12.7071L15.7071 16.7071C15.3166 17.0976 14.6834 17.0976 14.2929 16.7071C13.9024 16.3166 13.9024 15.6834 14.2929 15.2929L16.5858 13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H16.5858L14.2929 8.70711C13.9024 8.31658 13.9024 7.68342 14.2929 7.29289Z" fill="#F97C0E"/>
+          </svg>          
+        </a>
+      {/if}
     </div>
     <!-- cards -->
     <div class="flex md:grid md:grid-cols-2 md:gap-4 sm:grid sm:grid-cols-2 sm:gap-4 justify-between mt-4">
