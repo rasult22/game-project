@@ -3,10 +3,12 @@
   import Chart from "./chart.svelte";
   import { fade } from "svelte/transition";
   import { moneyFormatter } from "~/utils/utils";
+  import Comments from "./Comments.svelte";
   export let backedBy;
   export let on_chain_performance;
   export let team_profile;
   export let sale_exchanges
+  export let game_id
 
   $: volume_rank = on_chain_performance.volume_rank || 'N/A'
   $: volume_24h_changed = on_chain_performance.volume_24h_changed || null
@@ -450,6 +452,6 @@
   </div>
 
   <div class="mt-12">
-    <img src="/media/reviews.svg" alt="" />
+    <Comments game_id={game_id} />
   </div>
 </div>

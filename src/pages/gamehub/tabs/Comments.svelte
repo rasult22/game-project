@@ -7,6 +7,7 @@
 
   let comment_list = []
   let loading = false
+  let comments_is_loading = false
 
   $: comment_count = valid_ratings.length
   $: valid_ratings = comment_list.filter(c => c.rating !== 0).map(c => c.rating);
@@ -40,7 +41,12 @@ const onSumbit = async (e) => {
 }
 
 onMount(async() => {
-  await fetchComments()
+  try {
+    comments_is_loading = true
+    await fetchComments()
+  } finally {
+    comments_is_loading = false
+  }
 })
 </script> 
 
@@ -64,12 +70,14 @@ onMount(async() => {
   </div>
 </div>
 {/if}
-{#if $auth.isAuthorized && comment_list.find(comment => comment.user_id === $auth?.user?.address_full)}
+
+{#if comments_is_loading}
+<!-- nothing -->
+{:else if $auth.isAuthorized && comment_list.find(comment => comment.user_id === $auth?.user?.address_full)}
   <div>
     <!-- Commented -->
   </div>
 {:else if $auth.isAuthorized}
-
    <!-- Input -->
    <form on:submit={onSumbit} class="bg-[#2A2A2A] flex gap-8 p-5 rounded-[20px] mt-8">
     <div>
@@ -97,6 +105,9 @@ onMount(async() => {
 {/if}
 
  <!-- Comment list -->
+{#if comments_is_loading}
+ loading...
+{/if}
 <div class="space-y-4 mt-8">
   {#each comment_list as comment }
     <div class="bg-[#2A2A2A] p-[20px] rounded-[20px]">

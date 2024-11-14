@@ -46,7 +46,7 @@
     {#if game.id === 'in-match3'}
       <OverviewTabClient game_id={game.id} token_name={game.game_info.token_name} sale_exchanges={game.game_info.sale_exchanges} team_profile={game.team_profile} backedBy={game.game_info.backed_by}/>
     {:else}
-      <OverviewTab sale_exchanges={game.game_info.sale_exchanges} team_profile={game.team_profile} on_chain_performance={game.on_chain_performance.data} backedBy={game.game_info.backed_by} />
+      <OverviewTab game_id={game.id} sale_exchanges={game.game_info.sale_exchanges} team_profile={game.team_profile} on_chain_performance={game.on_chain_performance.data} backedBy={game.game_info.backed_by} />
     {/if}
   {/if}
   {#if activeTab === 'about'}
