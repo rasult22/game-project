@@ -203,7 +203,9 @@ const { data } = Astro.props;
               <span> Play</span>
             </a>
             <!-- follow btn -->
-            <button
+            <a
+              href={data.follow_link}
+              target="_blank"
               class="w-full justify-center font-medium bg-[#272727] flex items-center space-x-2 text-white py-[10px] active:scale-95 active:bg-[#272727] transition-all px-[36px] rounded-[12px]"
             >
               <svg
@@ -220,7 +222,7 @@ const { data } = Astro.props;
                   fill="white"></path>
               </svg>
               <span> Follow</span>
-            </button>
+            </a>
             <!-- add to list btn -->
            <AddToList game_id={game_name} client:load/>
           </div>

@@ -40,6 +40,7 @@ export default [
       "rank": "S"
     },
     "social_data": {},
+    "follow_link": "https://t.me/inongame",
     "about": {},
     "comments": [],
     "game_info": {
