@@ -22,6 +22,7 @@
         $auth = {
           ...$auth,
           isAuthorized: false,
+          initial: false,
           address: null
         }
       }
@@ -57,6 +58,7 @@
               address: address.slice(0, address.length/5)+ '...' + address.slice(address.length - 5, address.length)
             },
             isAuthorized: true,
+            initial: false,
             authType: 'trustwallet'
           }
           authPopupIsOpen = false

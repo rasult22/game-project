@@ -16,6 +16,7 @@ onMount(() => {
             name: 'Ton User',
             address: address.slice(0, address.length/5)+ '...' + address.slice(address.length - 5, address.length)
           },
+          initial: false,
           authType: 'ton'
         }
         selected = true

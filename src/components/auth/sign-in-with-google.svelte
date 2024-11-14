@@ -21,6 +21,7 @@
             $auth = {
               authType: 'google',
               isAuthorized: true,
+              initial: false,
               user: {
                 name: profile.Ad,
                 address: profile.cu,
@@ -42,6 +43,7 @@
       $auth = {
         authType: 'google',
         isAuthorized: true,
+        initial: false,
         user: {
           name: profile.Ad,
           address: profile.cu,

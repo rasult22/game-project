@@ -8,7 +8,8 @@ type AuthScheme = {
     name: string
   } | null,
   authType: 'ton' | 'metamask' | 'trustwallet' | 'google'| null,
-  isAuthorized: boolean
+  isAuthorized: boolean,
+  initial: boolean
 }
 
 
@@ -17,13 +18,26 @@ let store: AuthScheme = {
   popupIsOpen: false,
   user:  null,
   authType: null,
-  isAuthorized: false
+  isAuthorized: false,
+  initial: true
 }
 
-// syncing state between pages via localStorage
-const authStore = localStorage.getItem('authStore')
-if (authStore) {
-  store = JSON.parse(authStore) as AuthScheme
+export const syncStore = () => {
+   // sync store and localStorage
+   console.log('syncStore')
+   auth.subscribe(store => {
+    // if it's initial state, check write only if localStorage is empty
+    if (store.initial && localStorage.getItem('authStore')) {
+      // skip initial store writing (cause we can have data from localStorage)
+    } else {
+      localStorage.setItem('authStore', JSON.stringify(store))
+    }
+  })
+  // syncing state between pages via localStorage
+  const authStore = localStorage.getItem('authStore')
+  if (authStore) {
+    auth.set(JSON.parse(authStore) as AuthScheme)
+  }
 }
 
 export const auth = writable<AuthScheme>(store)
@@ -32,11 +46,7 @@ export const logout = () => {
     popupIsOpen: false,
     user:  null,
     authType: null,
+    initial: false,
     isAuthorized: false
   })
 }
-
-// sync store and localStorage
-auth.subscribe(store => {
-  localStorage.setItem('authStore', JSON.stringify(store))
-})

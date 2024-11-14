@@ -15,6 +15,7 @@
           $auth = {
             ...$auth,
             isAuthorized: false,
+            initial: false,
             user: null
           }
         }

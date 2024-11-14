@@ -22,6 +22,7 @@
         $auth = {
           ...$auth,
           isAuthorized: false,
+          initial: false,
           address: null
         }
       }
@@ -56,6 +57,7 @@
               address_full: address,
               address: address.slice(0, address.length/5)+ '...' + address.slice(address.length - 5, address.length)
             },
+            initial: false,
             isAuthorized: true,
             authType: 'metamask'
           }

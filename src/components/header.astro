@@ -10,6 +10,7 @@ import TelegramIcon from '~/components/icons/TelegramIcon.svelte'
 import TwitterIcon from '~/components/icons/TwitterIcon.svelte'
 import SmMenuBtn from '~/components/auth/sm-menu-btn.svelte'
 import Footer from "./footer.astro";
+import SyncStore from "./auth/SyncStore.svelte";
 
 const githubPrefix = ''
 const navItems: Array<NavItem> = [
@@ -24,7 +25,7 @@ const navItems: Array<NavItem> = [
 let currentUrl = Astro.url.pathname
 const transparent = Astro.props.transparent
 ---
-
+<SyncStore client:load />
 <header
   id="page-header"
   class={`absolute left-[50%] ${transparent ? 'header-gradient' : 'bg-[#0D0D0F]' }  translate-x-[-50%] font-Inter  min-h-[100px] sm:min-h-[50px] text-[20px] w-full top-0 z-[100] header-bg px-8 md:px-4 sm:px-4 py-4 text-white`}
