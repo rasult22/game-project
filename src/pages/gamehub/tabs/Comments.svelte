@@ -33,7 +33,7 @@ const onSumbit = async (e) => {
   try {
     let address = ''
     if ($auth.authType === 'google') {
-      address = $auth.user.address.slice(0,2) + '*******' + $auth.address.slice(-11)
+      address = $auth.user.address.slice(0,2) + '*******' + $auth.user.address.slice(-11)
     } else {
       address = $auth.user.address
     }
