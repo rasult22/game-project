@@ -20,20 +20,36 @@
     edit = false
   }
   const logout = async () => {
-    if ($auth.authType === 'metamask' || $auth.authType === 'ton') {
+    if ($auth.authType === 'ton') {
+      const tonConnectUI = new TonConnectUI({
+        manifestUrl: 'https://www.bizzon.io/app_meta.json',
+        buttonRootId: 'ton-connect'
+      })
+      window.tonConnectUI = tonConnectUI
+      tonConnectUI.connector.restoreConnection().then(() => {
+        setTimeout(() => {
+          tonConnectUI.connector.disconnect().then(() => {
+            logout_s()
+          }, 1000)
+        })
+      })
+    }
+    if ($auth.authType === 'metamask') {
       logout_s()
     }
     if ($auth.authType === 'google') {
-      await gapi.client
-        .init({
-          clientId:
-            "216133606325-vqdj4mcc0jh5p3j659j8glllfmf5r3dq.apps.googleusercontent.com",
-          scope: "profile email",
-        })
-      const authInstance = gapi.auth2.getAuthInstance();
-      authInstance.signOut().then(() => {
-        logout_s()
-      });
+      gapi.load('client:auth2', async () => {
+        await gapi.client
+          .init({
+            clientId:
+              "216133606325-vqdj4mcc0jh5p3j659j8glllfmf5r3dq.apps.googleusercontent.com",
+            scope: "profile email",
+          })
+        const authInstance = gapi.auth2.getAuthInstance();
+        authInstance.signOut().then(() => {
+          logout_s()
+        });
+      })
     }
   }
 </script>
