@@ -1,4 +1,5 @@
 <script>
+	import Comments from './Comments.svelte';
   import BizzonRating from "~/components/bizzon-rating.svelte";
   import Chart from "./chart.svelte";
   import { fade } from "svelte/transition";
@@ -8,6 +9,7 @@
   export let team_profile;
   export let sale_exchanges
   export let token_name
+  export let game_id
 
   let data;
   let history_data;
@@ -428,6 +430,6 @@
   </div>
 
   <div class="mt-12">
-    <img src="/media/reviews.svg" alt="" />
+    <Comments game_id={game_id} />
   </div>
 </div>
