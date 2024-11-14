@@ -31,12 +31,18 @@ const onSumbit = async (e) => {
   loading = true
   e.preventDefault()
   try {
+    let address = ''
+    if ($auth.authType === 'google') {
+      address = $auth.user.address.slice(0,2) + '*******' + $auth.address.slice(-11)
+    } else {
+      address = $auth.user.address
+    }
     const data = {
       game_id,
       rating: selected_stars,
       comment: selected_comment,
-      user_id: $auth.user && $auth.user.address,
-      user_name: $auth.user && $auth.user.name + '__' + $auth.user.address
+      user_id: address,
+      user_name: $auth.user && $auth.user.name + '__' + address
     }
     await pb.collection('games_comments').create(data)
     await fetchComments()
