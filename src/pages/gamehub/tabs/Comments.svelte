@@ -30,7 +30,7 @@ const onSumbit = async (e) => {
       game_id,
       rating: selected_stars,
       comment: selected_comment,
-      user_id: $auth.user && $auth.user.address_full,
+      user_id: $auth.user && $auth.user.address,
       user_name: $auth.user && $auth.user.name + '__' + $auth.user.address
     }
     await pb.collection('games_comments').create(data)
@@ -73,7 +73,7 @@ onMount(async() => {
 
 {#if comments_is_loading}
 <!-- nothing -->
-{:else if $auth.isAuthorized && comment_list.find(comment => comment.user_id === $auth?.user?.address_full)}
+{:else if $auth.isAuthorized && comment_list.find(comment => comment.user_id === $auth?.user?.address)}
   <div>
     <!-- Commented -->
   </div>
