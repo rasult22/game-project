@@ -1,4 +1,5 @@
 <script>
+	import { comments_state } from './comments_state.ts';
   import pb from '~/pocketbase';
 	import StarIcon from './star-icon.svelte';
   import { auth } from '~/store/auth';
@@ -17,9 +18,13 @@
   let selected_comment = ''
 
 const fetchComments = async () => {
-  comment_list = await pb.collection('games_comments').getFullList({
+  $comments_state.loading = true
+  const data = await pb.collection('games_comments').getFullList({
     filter: `game_id = "${game_id}"`
   })
+  comment_list = data.map(x => x)
+  $comments_state.loading = false
+  $comments_state.data = data.map(x => x) 
 }
 
 const onSumbit = async (e) => {
