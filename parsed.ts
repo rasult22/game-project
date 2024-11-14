@@ -55,7 +55,7 @@ export default [
         {logo: "https://optim.tildacdn.com/tild3736-3566-4632-b462-656234663161/-/resize/192x/-/format/webp/image.png", name: "Aptos Labs"}
       ],
       "tags": [
-        "Casual", "MMORP", "PVP", "PVE"
+        "Casual", "MMORPG", "PVP", "PVE"
       ],
       "game_play_link": "https://t.me/ongame_app_bot?start=5d31ce1f-c7e6-45d3-bbe0-c4719f697e2f",
       "description": "IN enables its players to explore, adapt and conquer a new world, while its casual combat system allows them to experience epic battles ranging from simple monster hunts to global clan battles for world bosses. ",

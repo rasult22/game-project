@@ -65,7 +65,7 @@
   </div>
 
   <!-- 2 -->
-  <div class="grid grid-cols-2 md:flex-wrap sm:space-x-0 md:space-x-0 md:gap-4 sm:gap-4 sm:flex-wrap space-x-4 mt-4">
+  <div class="grid grid-cols-2 sm:grid-cols-1  md:flex-wrap sm:space-x-0 md:space-x-0 md:gap-4 sm:gap-4 sm:flex-wrap space-x-4 mt-4">
     <!-- team profile -->
     <div class="p-[20px] min-w-[292px] md:max-w-none sm:max-w-none md:w-full sm:w-full border border-[#888] rounded-[20px]">
       <!-- head -->
