@@ -12,6 +12,9 @@ export default [
     ],
     "on_chain_performance": {},
     "players_count": '0',
+    "about": {
+      "custom": "quiz-ai"
+    },
     "team_profile": {
       "staffs": [
         {
@@ -52,7 +55,6 @@ export default [
     "social_data": {},
     "follow_link": "https://t.me/QUIZ_AI_S2E",
     "white_paper_link": "",
-    "about": {},
     "comments": [],
     "game_info": {
       "name": "QUIZ AI",
@@ -127,7 +129,9 @@ export default [
     "social_data": {},
     "follow_link": "https://t.me/RealMemeBlastArena",
     "white_paper_link": "",
-    "about": {},
+    "about": {
+      "custom": "meme-blast-arena"
+    },
     "comments": [],
     "game_info": {
       "name": "Meme Blast Arena",

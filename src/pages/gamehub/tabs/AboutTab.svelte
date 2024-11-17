@@ -1,4 +1,7 @@
 <script>
+	import MemeBlastArena from './abouts/meme-blast-arena.svelte';
+	import QuizAi from './abouts/quiz-ai.svelte';
+
   import EdjsParser from 'editorjs-parser'
   export let data
   const p = new EdjsParser()
@@ -62,6 +65,12 @@
     {@html p.parse(typeof data.play_to_earn_model === 'string' ? JSON.parse(data.play_to_earn_model) : data.play_to_earn_model)}
   </div>
 </div>
+{/if}
+{#if data.custom === 'quiz-ai'}
+  <QuizAi />
+  {/if}
+  {#if data.custom === 'meme-blast-arena'}
+  <MemeBlastArena />
 {/if}
 
 <style>
