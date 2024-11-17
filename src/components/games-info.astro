@@ -111,7 +111,7 @@ const is_demo: boolean = Astro.props.is_demo
     </div>
   </div>
   <!-- tags -->
-  <div class="flex space-x-[10px] mt-6">
+  <div class="flex space-x-[10px] mt-6 sm:flex-wrap sm:space-x-0 sm:gap-3">
     {data.tags.map(tag => <button class="anim-btn py-2 px-[10px] border border-[#464648] rounded-[12px]">{tag}</button>)}
   </div>
 
