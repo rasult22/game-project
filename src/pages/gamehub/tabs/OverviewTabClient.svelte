@@ -37,12 +37,13 @@
 <div transition:fade>
   <!-- 1 -->
   <div
-    class="bg-gradient-to-r from-[#FDFC47] to-[#24FE41] text-black rounded-[20px] py-[20px] px-[72px] flex justify-center items-center space-x-9"
+    class="bg-gradient-to-r from-[#FDFC47] to-[#24FE41] text-black rounded-[20px] py-[20px] px-[72px] sm:gap-2 sm:px-[16px] flex sm:space-x-0 sm:flex-col sm:justify-start justify-center items-center space-x-9"
   >
     <div>
       <div class="flex items-center space-x-2">
         <span class="text-[20px] font-semibold">Bizzon ranking</span>
         <svg
+        
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -57,7 +58,7 @@
           />
         </svg>
       </div>
-      <div class="mt-[10px]">
+      <div class="mt-[10px] ">
         Based on UAW, Social, Transactions, and Market cap
       </div>
     </div>
