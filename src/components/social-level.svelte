@@ -1,27 +1,23 @@
-<script>
-  export let level = 95
-</script>
-<svg width="107" height="88" viewBox="0 0 107 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M102.366 74.2859C102.023 75.2522 100.938 75.7133 99.9863 75.3322C99.0327 74.9505 98.5738 73.8686 98.9143 72.8995C100.488 68.421 101.282 63.7297 101.282 58.9308C101.282 35.6388 82.3069 16.6911 58.9812 16.6911C35.6555 16.6911 16.6803 35.6388 16.6803 58.9308C16.6803 63.7297 17.4776 68.421 19.049 72.8994C19.3892 73.8687 18.93 74.9504 17.9763 75.3321C17.024 75.7133 15.939 75.2523 15.5953 74.2859C13.845 69.3642 12.9619 64.2069 12.9619 58.9308C12.9619 33.5929 33.6066 12.978 58.9812 12.978C84.3557 12.978 105 33.5929 105 58.9308C105 64.2099 104.114 69.3672 102.366 74.2859Z" fill="#888888"/>
-  <text class="text-[32px] font-medium translate-x-[36%] translate-y-[75%]" fill="white" x="0" y="0">{level}</text>
-  <g filter="url(#filter0_d_754_3282)">
-  <path d="M17.9753 75.3321C17.023 75.7133 15.9381 75.2523 15.5944 74.2859C13.8441 69.3642 12.9609 64.2069 12.9609 58.9308C12.9609 33.5929 33.6057 12.978 58.9802 12.978C72.7444 12.978 85.5079 18.9598 94.2847 29.4536C94.9437 30.2415 94.7898 31.4129 93.9755 32.0391C93.1633 32.6638 92.0012 32.5095 91.341 31.7258C83.2732 22.1484 71.5827 16.6911 58.9802 16.6911C35.6545 16.6911 16.6794 35.6388 16.6794 58.9308C16.6794 63.7297 17.4767 68.421 19.0481 72.8994C19.3882 73.8687 18.929 74.9504 17.9753 75.3321Z" fill="url(#paint0_linear_754_3282)"/>
+<svg width="106" height="87" viewBox="0 0 106 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M101.405 73.3079C101.062 74.2742 99.9772 74.7353 99.0252 74.3542V74.3542C98.0715 73.9725 97.6127 72.8906 97.9531 71.9215C99.5265 67.443 100.321 62.7517 100.321 57.9528C100.321 34.6608 81.3457 15.7131 58.02 15.7131C34.6943 15.7131 15.7192 34.6608 15.7192 57.9528C15.7192 62.7516 16.5165 67.443 18.0879 71.9214C18.428 72.8907 17.9688 73.9724 17.0151 74.3541V74.3541C16.0628 74.7353 14.9779 74.2743 14.6342 73.3078C12.8839 68.3862 12.0007 63.2289 12.0007 57.9528C12.0007 32.6149 32.6454 12 58.02 12C83.3946 12 104.039 32.6149 104.039 57.9528C104.039 63.2318 103.153 68.3891 101.405 73.3079Z" fill="#888888"/>
+  <g filter="url(#filter0_d_201_4)">
+  <path d="M17.0144 74.3541C16.0621 74.7353 14.9771 74.2743 14.6334 73.3078C12.8831 68.3861 12 63.2289 12 57.9528C12 32.6149 32.6447 12 58.0193 12C71.7835 12 84.547 17.9818 93.3237 28.4755C93.9828 29.2635 93.8288 30.4348 93.0146 31.0611V31.0611C92.2023 31.6858 91.0403 31.5314 90.3801 30.7477C82.3122 21.1704 70.6218 15.7131 58.0193 15.7131C34.6936 15.7131 15.7184 34.6608 15.7184 57.9528C15.7184 62.7516 16.5157 67.4429 18.0871 71.9214C18.4273 72.8907 17.9681 73.9723 17.0144 74.3541V74.3541Z" fill="url(#paint0_linear_201_4)"/>
   </g>
   <defs>
-  <filter id="filter0_d_754_3282" x="0.960938" y="0.978027" width="105.735" height="86.4878" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <filter id="filter0_d_201_4" x="0" y="0" width="105.735" height="86.4877" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
   <feFlood flood-opacity="0" result="BackgroundImageFix"/>
   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
   <feOffset/>
   <feGaussianBlur stdDeviation="6"/>
   <feComposite in2="hardAlpha" operator="out"/>
   <feColorMatrix type="matrix" values="0 0 0 0 0.964706 0 0 0 0 0.239216 0 0 0 0 0.180392 0 0 0 0.14 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_754_3282"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_754_3282" result="shape"/>
+  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_201_4"/>
+  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_201_4" result="shape"/>
   </filter>
-  <linearGradient id="paint0_linear_754_3282" x1="12.9609" y1="44.5" x2="95.4506" y2="44.5" gradientUnits="userSpaceOnUse">
+  <linearGradient id="paint0_linear_201_4" x1="12" y1="43.522" x2="94.4896" y2="43.522" gradientUnits="userSpaceOnUse">
   <stop stop-color="#FDFC47"/>
   <stop offset="1" stop-color="#24FE41"/>
   </linearGradient>
   </defs>
-</svg>
+  </svg>
   
