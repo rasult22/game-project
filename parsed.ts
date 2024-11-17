@@ -1,5 +1,80 @@
 export default [
   {
+    "id": "quiz-ai",
+    "isNewFormat": true,
+    "erase_venture": true,
+    "banner": "/optimized/quiz-ai.webp",
+    "images": [
+    ],
+    "top": 1,
+    "networks": [
+      "ton"
+    ],
+    "on_chain_performance": {},
+    "players_count": '0',
+    "team_profile": {
+      "staffs": [
+        {
+          "link": "https://t.me/Whales_666",
+          "link_type": "telegram",
+          "name": "Ivan Svistunov",
+          "avatar": "/optimized/team-1.webp",
+          "position": "CEO",
+          "description": "CEO, Co-Founder, Game Producer «BIZZON Games»"
+        },
+        {
+          "link": "https://t.me/IGR888",
+          "name": "Igor Borisov",
+          "link_type": "telegram",
+          "avatar": "/optimized/team-2.webp",
+          "position": "COO",
+          "description": "COO, Co-Founder, Game Producer «BIZZON Games»"
+        },
+        {
+          "link": "https://t.me/X3gxu",
+          "name": "Azamat Galimzhanov",
+          "link_type": "telegram",
+          "avatar": "/optimized/team-5.webp",
+          "position": "CTO",
+          "description": "CTO at «BIZZON Games»"
+        },
+        {
+          "link": "https://t.me/Xo6oT_777",
+          "name": "Sergei Madzhuga",
+          "link_type": "telegram",
+          "avatar": "/optimized/team-4.webp",
+          "position": "Game Developer",
+          "description": "Game dev Team leader"
+        },
+      ],
+      "rank": "S"
+    },
+    "social_data": {},
+    "follow_link": "https://t.me/QUIZ_AI_S2E",
+    "white_paper_link": "",
+    "about": {},
+    "comments": [],
+    "game_info": {
+      "name": "QUIZ AI",
+      "studio": "Bizzon Games Team",
+      "social_level": "N/A",
+      "token_name": "",
+      "bizzon_rating": null,
+      "release_date": "2024-11-28T01:22:08.537Z",
+      "devices": ["android", 'ios'],
+      "sale_exchanges": [],
+      "backed_by": [
+        // {logo: "https://optim.tildacdn.com/tild3736-3566-4632-b462-656234663161/-/resize/192x/-/format/webp/image.png", name: "Aptos Labs"}
+      ],
+      "tags": [
+        "Smart-2-Earn", "AI-Games", "PVP", "PVE", "NFT"
+      ],
+      "game_play_link": "https://t.me/quizai_game_bot",
+      "description": "QUIZ AI is an innovative Web3 gaming app that combines the thrill of trivia with blockchain technology. Players can test their knowledge across various topics, compete in exciting PvP and guild battles, and earn valuable tokenized rewards. With its innovative Smart-2-Earn model and integration with Telegram, QUIZ AI offers a seamless, engaging and rewarding gaming experience for everyone.",
+      "game_logo": "/optimized/quiz-ai.webp"
+    }
+  },
+  {
     "id": "meme-blast-arena",
     "isNewFormat": true,
     "erase_venture": true,
@@ -8,16 +83,10 @@ export default [
     ],
     "top": 1,
     "networks": [
-      // "aptos"
+      "ton"
     ],
     "on_chain_performance": {},
     "players_count": '574',
-    "star_rating": {
-      "collection_id": "08c1027f-4984-487a-a968-3c710ef2bd00",
-      "collection_type": "games",
-      "ratings": 0,
-      "star_rating": 0
-    },
     "team_profile": {
       "staffs": [
         {
@@ -95,12 +164,6 @@ export default [
       "aptos"
     ],
     "players_count": '114425',
-    "star_rating": {
-      "collection_id": "08c1027f-4984-487a-a968-3c710ef2bd00",
-      "collection_type": "games",
-      "ratings": 0,
-      "star_rating": 0
-    },
     "team_profile": {
       "staffs": [
         {
