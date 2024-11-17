@@ -91,9 +91,10 @@ onMount(async() => {
   </div>
 {:else if $auth.isAuthorized}
    <!-- Input -->
-   <form on:submit={onSumbit} class="bg-[#2A2A2A] flex gap-8 p-5 rounded-[20px] mt-8">
+   <form on:submit={onSumbit} class="bg-[#2A2A2A] flex sm:flex-col gap-8 sm:gap-4 p-5 rounded-[20px] mt-8">
+    <div class="hidden text-[24px] sm:block font-semibold">My review</div>
     <div>
-      <img width="130" height="130" src="/optimized/avatar.webp" alt="">
+      <img class="sm:w-[72px] sm:h-[72px]" width="130" height="130" src="/optimized/avatar.webp" alt="">
     </div>
     <div class="flex w-full flex-col">
       <div class="flex items-center">
@@ -101,8 +102,8 @@ onMount(async() => {
           <StarIcon on:click={() => selected_stars = number} hoverable active={selected_stars >= number}/>
         {/each}
       </div>
-      <div class="font-semibold mt-4 mb-2">My review</div>
-      <div>
+      <div class="sm:hidden font-semibold mt-4 mb-2">My review</div>
+      <div class="sm:mt-4">
         <textarea bind:value={selected_comment} class="py-2 px-4 rounded-[12px] w-full border border-[#888888] bg-[#2A2A2A] text-[#888]" placeholder="Tell your personal experience whith this game"></textarea>
       </div>
       <div class="mt-3 ml-auto">
