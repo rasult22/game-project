@@ -10,6 +10,7 @@
   export let sale_exchanges
   export let token_name
   export let white_paper_link
+  export let erase_venture;
   export let game_id
 
   let data;
@@ -81,7 +82,7 @@
       <div class="mt-6 space-y-4 max-h-[180px] -mr-4 pr-4 overflow-auto">
         {#each (team_profile.staffs || []) as member}
           <div class="flex items-center border-b border-[#3F3F3F] pb-2">
-            <img class="rounded-full" src={member.avatar ? 'https://d1j2c9jkfhu70p.cloudfront.net/' + member.avatar : '/media/avatar.png'} width="45" alt="" />
+            <img width={45} height={45} class="w-[45px] h-[45px] object-cover rounded-full" src={member.avatar && member.avatar.includes('https') ? 'https://d1j2c9jkfhu70p.cloudfront.net/' + member.avatar : member.avatar || '/media/avatar.png'} alt="" />
             <div class="ml-2">
               <div class="text-[14px] leading-[100%] font-medium">
                 {member.name}
@@ -95,12 +96,20 @@
               target="_blank"
               class="active:scale-95 active:opacity-80 transition-all"
               href={member.link}
-            >
-              <img
-                width="24"
-                src="/media/linkedin-icon.svg"
-                alt=""
-              />
+            > 
+              {#if member.link_type === 'telegram'}
+                <img
+                  width="24"
+                  src="/media/telegram-icon.svg"
+                  alt=""
+                />
+              {:else}
+                <img
+                  width="24"
+                  src="/media/linkedin-icon.svg"
+                  alt=""
+                />
+              {/if}
             </a>
               <!-- {#each member.links as link}
                 {#if link.type === "telegram"}
@@ -211,6 +220,10 @@
               string={moneyFormatter(5).format(price)}
               data={price_history}
             />
+          {:else}
+          <div class="text-[20px] font-semibold pl-1">
+            N\A
+          </div>  
           {/if}
         </div>
       </div>
@@ -242,6 +255,10 @@
               string={moneyFormatter(0).format(market_cap)}
               data={market_cap_history}
             />
+          {:else}
+            <div class="text-[20px] font-semibold pl-1">
+              N\A
+            </div>  
           {/if}
           <!-- <Chart direction="negative" data={[-24,-32,-22,101,-120,-90,150, 24,32,22,-101,-120,-90, -200, 0]} /> -->
         </div>
@@ -323,40 +340,40 @@
           Ensure transparency in our project documentation with our data
         </div>
       </div>
-      <BizzonRating rating="AA" />
-      {#if white_paper_link}
-        <a href={white_paper_link} target="_blank" class="flex self-start ml-auto gap-1 hover:opacity-65 text-[#F97C0E] text-[20px]">White Paper
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2929 7.29289C14.6834 6.90237 15.3166 6.90237 15.7071 7.29289L19.7071 11.2929C20.0976 11.6834 20.0976 12.3166 19.7071 12.7071L15.7071 16.7071C15.3166 17.0976 14.6834 17.0976 14.2929 16.7071C13.9024 16.3166 13.9024 15.6834 14.2929 15.2929L16.5858 13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H16.5858L14.2929 8.70711C13.9024 8.31658 13.9024 7.68342 14.2929 7.29289Z" fill="#F97C0E"/>
-          </svg>          
-        </a>
-      {/if}
+      <BizzonRating rating={erase_venture ? '' :'AA'} />
     </div>
+    {#if white_paper_link}
+      <a href={white_paper_link} target="_blank" class="inline-flex rounded-[16px] shadow-md mt-2 items-center py-2 px-4 self-start ml-auto gap-1 hover:opacity-65 bg-orange-500 text-white text-[20px]">Whitepaper
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2929 7.29289C14.6834 6.90237 15.3166 6.90237 15.7071 7.29289L19.7071 11.2929C20.0976 11.6834 20.0976 12.3166 19.7071 12.7071L15.7071 16.7071C15.3166 17.0976 14.6834 17.0976 14.2929 16.7071C13.9024 16.3166 13.9024 15.6834 14.2929 15.2929L16.5858 13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H16.5858L14.2929 8.70711C13.9024 8.31658 13.9024 7.68342 14.2929 7.29289Z" fill="currentColor"/>
+        </svg>          
+      </a>
+    {/if}
     <!-- cards -->
     <div class="flex md:grid md:grid-cols-2 md:gap-4 sm:grid sm:grid-cols-2 sm:gap-4 justify-between mt-4">
       <div
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
-        <div class="font-semibold min-w-[138px] text-center">White Paper</div>
-        <BizzonRating rating="A" />
+        <div class="font-semibold min-w-[138px] text-center">Whitepaper</div>
+        <BizzonRating rating={erase_venture ? '' : 'A'} />
       </div>
       <div
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
         <div class="font-semibold min-w-[138px] text-center">Website</div>
-        <BizzonRating rating="AA" />
+        <BizzonRating rating={erase_venture ? '' : 'AA'} />
       </div>
       <div
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
         <div class="font-semibold min-w-[138px] text-center">Tokenomic</div>
-        <BizzonRating rating="A" />
+        <BizzonRating rating={erase_venture ? '' : 'A'} />
       </div>
       <div
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
         <div class="font-semibold min-w-[138px] text-center">Fundraising</div>
-        <BizzonRating rating="AAA" />
+        <BizzonRating rating={erase_venture ? '' : 'AAA'} />
       </div>
     </div>
   </div>

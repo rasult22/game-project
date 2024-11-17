@@ -43,8 +43,8 @@
 
 <div class="mt-9">
   {#if activeTab === 'overview'}
-    {#if game.id === 'in-match3'}
-      <OverviewTabClient white_paper_link={game.white_paper_link} game_id={game.id} token_name={game.game_info.token_name} sale_exchanges={game.game_info.sale_exchanges} team_profile={game.team_profile} backedBy={game.game_info.backed_by}/>
+    {#if game.isNewFormat}
+      <OverviewTabClient erase_venture={game.erase_venture} white_paper_link={game.white_paper_link} game_id={game.id} token_name={game.game_info.token_name} sale_exchanges={game.game_info.sale_exchanges} team_profile={game.team_profile} backedBy={game.game_info.backed_by}/>
     {:else}
       <OverviewTab game_id={game.id} sale_exchanges={game.game_info.sale_exchanges} team_profile={game.team_profile} on_chain_performance={game.on_chain_performance.data} backedBy={game.game_info.backed_by} />
     {/if}

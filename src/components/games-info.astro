@@ -19,6 +19,7 @@ type Data = {
 }
 const data: Data = Astro.props.data
 const game_id: string = Astro.props.game_id
+const is_demo: boolean = Astro.props.is_demo
 ---
 <div class="max-w-[778px] ml-auto md:ml-0 sm:ml-0 mt-8">
   <!-- header -->
@@ -40,12 +41,12 @@ const game_id: string = Astro.props.game_id
     </div>
     <div class="ml-auto flex sm:space-x-4 sm:ml-0 space-x-9">
       <div class="flex items-center space-x-4">
-        <BizzonRating rating="AA" />
+        <BizzonRating rating={is_demo ? 'AA' : data.bizzon_rating} />
         <span class="font-medium">Bizzon Ranking</span>
       </div>
       <div class="flex items-center space-x-4">
         <!-- <BizzonRating rating="AA" /> -->
-        <SocialLevel level={data.social_level && Math.floor(data.social_level)} />
+        <SocialLevel level={is_demo ? 98 : data.social_level} />
         <span class="font-medium">Social Level</span>
       </div>
     </div>

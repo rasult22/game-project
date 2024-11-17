@@ -1,6 +1,88 @@
 export default [
   {
+    "id": "meme-blast-arena",
+    "isNewFormat": true,
+    "erase_venture": true,
+    "banner": "/optimized/meme-blast-arena.webp",
+    "images": [
+    ],
+    "top": 1,
+    "networks": [
+      // "aptos"
+    ],
+    "on_chain_performance": {},
+    "players_count": '574',
+    "star_rating": {
+      "collection_id": "08c1027f-4984-487a-a968-3c710ef2bd00",
+      "collection_type": "games",
+      "ratings": 0,
+      "star_rating": 0
+    },
+    "team_profile": {
+      "staffs": [
+        {
+          "link": "https://t.me/Whales_666",
+          "link_type": "telegram",
+          "name": "Ivan Svistunov",
+          "avatar": "/optimized/team-1.webp",
+          "position": "CEO",
+          "description": "CEO, Co-Founder, Game Producer «BIZZON Games»"
+        },
+        {
+          "link": "https://t.me/IGR888",
+          "name": "Igor Borisov",
+          "link_type": "telegram",
+          "avatar": "/optimized/team-2.webp",
+          "position": "COO",
+          "description": "COO, Co-Founder, Game Producer «BIZZON Games»"
+        },
+        {
+          "link": "https://t.me/X3gxu",
+          "name": "Azamat Galimzhanov",
+          "link_type": "telegram",
+          "avatar": "/optimized/team-5.webp",
+          "position": "CTO",
+          "description": "CTO at «BIZZON Games»"
+        },
+        {
+          "link": "https://t.me/Xo6oT_777",
+          "name": "Sergei Madzhuga",
+          "link_type": "telegram",
+          "avatar": "/optimized/team-4.webp",
+          "position": "Game Developer",
+          "description": "Game dev Team leader"
+        },
+      ],
+      "rank": "S"
+    },
+    "social_data": {},
+    "follow_link": "https://t.me/RealMemeBlastArena",
+    "white_paper_link": "",
+    "about": {},
+    "comments": [],
+    "game_info": {
+      "name": "Meme Blast Arena",
+      "studio": "Bizzon Games Team",
+      "social_level": "N\\A",
+      "token_name": "",
+      "bizzon_rating": null,
+      "release_date": "2024-11-12T01:22:08.537Z",
+      "devices": ["android", 'ios'],
+      "sale_exchanges": [],
+      "backed_by": [
+        // {logo: "https://optim.tildacdn.com/tild3736-3566-4632-b462-656234663161/-/resize/192x/-/format/webp/image.png", name: "Aptos Labs"}
+      ],
+      "tags": [
+        "Arcade", "Casual", "PvP", "PvE"
+      ],
+      "game_play_link": "https://t.me/MemeBlastArena_bot",
+      "description": "MEME BLAST ARENA is a fast-paced, blockchain-powered arcade game that combines the fun of meme culture with the excitement of strategic gameplay. Players can compete in various game modes, blast through tiles featuring iconic memes and earn tokenized rewards. With funny meme graphics and a dynamic play-to-earn model, MEME BLAST ARENA offers a unique gaming experience that’s as rewarding as it is entertaining.",
+      "game_logo": "https://rasult22.pockethost.io/api/files/s35y0meykz2ovme/mt2ak4llvu2b5bv/icon400x400_Lu7J7l827r.png"
+    }
+  },
+  {
     "id": "in-match3",
+    "isNewFormat": true,
     "banner": "/optimized/in-match3.png",
     "images": [
       "/game_images/in-match3-2.jpg",
@@ -24,6 +106,7 @@ export default [
         {
           "link": "https://t.me/forly",
           "name": "Vladimir Malyshev",
+          "link_type": "telegram",
           "avatar": "",
           "position": "CEO",
           "description": "CEO at IN-match3"
@@ -31,6 +114,7 @@ export default [
         {
           "link": "https://t.me/dan48bit",
           "name": "Daniil \"Fashion\"",
+          "link_type": "telegram",
           "avatar": "",
           "position": "Designer",
           "description": "Designer at IN-match3"
@@ -47,7 +131,7 @@ export default [
     "game_info": {
       "name": "IN-match3",
       "studio": "OnGame Limited",
-      "social_level": 98.9557876586914,
+      "social_level": "N\\A",
       "token_name": "tin",
       "bizzon_rating": null,
       "release_date": "2023-06-21T11:22:08.537Z",
