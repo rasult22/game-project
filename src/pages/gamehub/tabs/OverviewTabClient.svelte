@@ -341,7 +341,7 @@
           Ensure transparency in our project documentation with our data
         </div>
       </div>
-      <BizzonRating rating={erase_venture ? '' :'AA'} />
+      <BizzonRating white rating={erase_venture ? '' :'AA'} />
       {#if white_paper_link}
         <a href={white_paper_link} target="_blank" class="inline-flex rounded-[16px] shadow-md items-center py-2 px-4 self-start ml-auto gap-1 hover:opacity-65 bg-orange-500 text-white text-[20px]">Whitepaper
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -356,25 +356,25 @@
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
         <div class="font-semibold min-w-[138px] text-center">Whitepaper</div>
-        <BizzonRating rating={erase_venture ? '' : 'A'} />
+        <BizzonRating white rating={erase_venture ? '' : 'A'} />
       </div>
       <div
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
         <div class="font-semibold min-w-[138px] text-center">Website</div>
-        <BizzonRating rating={erase_venture ? '' : 'AA'} />
+        <BizzonRating white rating={erase_venture ? '' : 'AA'} />
       </div>
       <div
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
         <div class="font-semibold min-w-[138px] text-center">Tokenomic</div>
-        <BizzonRating rating={erase_venture ? '' : 'A'} />
+        <BizzonRating white rating={erase_venture ? '' : 'A'} />
       </div>
       <div
         class="border rounded-[16px] flex flex-col items-center justify-center border-[#888] p-4"
       >
         <div class="font-semibold min-w-[138px] text-center">Fundraising</div>
-        <BizzonRating rating={erase_venture ? '' : 'AAA'} />
+        <BizzonRating white rating={erase_venture ? '' : 'AAA'} />
       </div>
     </div>
   </div>
