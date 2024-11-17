@@ -47,7 +47,7 @@
       </div>
     </div>
     <div>
-      <div class="text-[32px] font-bold w-[106px] h-[106px] flex items-center justify-center rounded-full border-[10px] border-[#0000004D]">N\A</div>
+      <div class="text-[32px] font-bold w-[106px] h-[106px] flex items-center justify-center rounded-full border-[10px] border-[#0000004D]">N/A</div>
 
       <!-- <svg width="106" height="106" viewBox="0 0 106 106" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="53" cy="53" r="48" stroke="black" stroke-opacity="0.3" stroke-width="10"/>
@@ -399,7 +399,7 @@
         <div class="ml-[-5px]">
           <Chart
             direction="positive"
-            string="N\A"
+            string="N/A"
             data={[
               120, 24, 32, 22, 101, 120, 90, 150, 24, 32, 22, 101, 120, 90, 200,
             ]}
@@ -413,7 +413,7 @@
         <div class="ml-[-5px]">
           <Chart
             direction="positive"
-            string="N\A"
+            string="N/A"
             data={[
               120, 24, 32, 22, 101, 120, 90, 150, 24, 32, 22, 101, 120, 90, 200,
             ]}
@@ -427,7 +427,7 @@
         <div class="ml-[-5px]">
           <Chart
             direction="positive"
-            string="N\A"
+            string="N/A"
             data={[
               120, 24, 32, 22, 101, 120, 90, 150, 24, 32, 22, 101, 120, 90, 200,
             ]}
@@ -441,7 +441,7 @@
         <div class="ml-[-5px]">
           <Chart
             direction="positive"
-            string="N\A"
+            string="N/A"
             data={[
               120, 24, 32, 22, 101, 120, 90, 150, 24, 32, 22, 101, 120, 90, 200,
             ]}

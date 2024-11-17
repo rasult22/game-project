@@ -62,7 +62,7 @@
       </div>
     </div>
     <div>
-      <div class="text-[32px] font-bold w-[106px] h-[106px] flex items-center justify-center rounded-full border-[10px] border-[#0000004D]">N\A</div>
+      <div class="text-[32px] font-bold w-[106px] h-[106px] flex items-center justify-center rounded-full border-[10px] border-[#0000004D]">N/A</div>
     </div>
   </div>
 
@@ -222,7 +222,7 @@
             />
           {:else}
           <div class="text-[20px] font-semibold pl-1">
-            N\A
+            N/A
           </div>  
           {/if}
         </div>
@@ -257,7 +257,7 @@
             />
           {:else}
             <div class="text-[20px] font-semibold pl-1">
-              N\A
+              N/A
             </div>  
           {/if}
           <!-- <Chart direction="negative" data={[-24,-32,-22,101,-120,-90,150, 24,32,22,-101,-120,-90, -200, 0]} /> -->
@@ -341,14 +341,14 @@
         </div>
       </div>
       <BizzonRating rating={erase_venture ? '' :'AA'} />
+      {#if white_paper_link}
+        <a href={white_paper_link} target="_blank" class="inline-flex rounded-[16px] shadow-md items-center py-2 px-4 self-start ml-auto gap-1 hover:opacity-65 bg-orange-500 text-white text-[20px]">Whitepaper
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2929 7.29289C14.6834 6.90237 15.3166 6.90237 15.7071 7.29289L19.7071 11.2929C20.0976 11.6834 20.0976 12.3166 19.7071 12.7071L15.7071 16.7071C15.3166 17.0976 14.6834 17.0976 14.2929 16.7071C13.9024 16.3166 13.9024 15.6834 14.2929 15.2929L16.5858 13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H16.5858L14.2929 8.70711C13.9024 8.31658 13.9024 7.68342 14.2929 7.29289Z" fill="currentColor"/>
+          </svg>          
+        </a>
+      {/if}
     </div>
-    {#if white_paper_link}
-      <a href={white_paper_link} target="_blank" class="inline-flex rounded-[16px] shadow-md mt-2 items-center py-2 px-4 self-start ml-auto gap-1 hover:opacity-65 bg-orange-500 text-white text-[20px]">Whitepaper
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2929 7.29289C14.6834 6.90237 15.3166 6.90237 15.7071 7.29289L19.7071 11.2929C20.0976 11.6834 20.0976 12.3166 19.7071 12.7071L15.7071 16.7071C15.3166 17.0976 14.6834 17.0976 14.2929 16.7071C13.9024 16.3166 13.9024 15.6834 14.2929 15.2929L16.5858 13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H16.5858L14.2929 8.70711C13.9024 8.31658 13.9024 7.68342 14.2929 7.29289Z" fill="currentColor"/>
-        </svg>          
-      </a>
-    {/if}
     <!-- cards -->
     <div class="flex md:grid md:grid-cols-2 md:gap-4 sm:grid sm:grid-cols-2 sm:gap-4 justify-between mt-4">
       <div
@@ -402,7 +402,7 @@
         <div class="ml-[-5px]">
           <Chart
             direction="positive"
-            string="N\A"
+            string="N/A"
             data={[
               120, 24, 32, 22, 101, 120, 90, 150, 24, 32, 22, 101, 120, 90, 200,
             ]}
@@ -416,7 +416,7 @@
         <div class="ml-[-5px]">
           <Chart
             direction="positive"
-            string="N\A"
+            string="N/A"
             data={[
               120, 24, 32, 22, 101, 120, 90, 150, 24, 32, 22, 101, 120, 90, 200,
             ]}
@@ -430,7 +430,7 @@
         <div class="ml-[-5px]">
           <Chart
             direction="positive"
-            string="N\A"
+            string="N/A"
             data={[
               120, 24, 32, 22, 101, 120, 90, 150, 24, 32, 22, 101, 120, 90, 200,
             ]}
@@ -444,7 +444,7 @@
         <div class="ml-[-5px]">
           <Chart
             direction="positive"
-            string="N\A"
+            string="N/A"
             data={[
               120, 24, 32, 22, 101, 120, 90, 150, 24, 32, 22, 101, 120, 90, 200,
             ]}
