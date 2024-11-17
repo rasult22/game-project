@@ -36,11 +36,11 @@ const is_demo: boolean = Astro.props.is_demo
      <GameRatings game_id={game_id} client:load/>
     </div>
     <div class="ml-auto flex sm:space-x-4 sm:ml-0 space-x-9">
-      <div class="flex items-center space-x-4">
+      <div class="flex sm:flex-col items-center space-x-4">
         <BizzonRating rating={is_demo ? 'AA' : data.bizzon_rating} />
         <span class="font-medium">Bizzon Ranking</span>
       </div>
-      <div class="flex items-center space-x-4">
+      <div class="flex sm:flex-col items-center space-x-4">
         <!-- <BizzonRating rating="AA" /> -->
         <div class="relative min-w-[106px] sm:min-w-[0] flex items-center">
           <SocialLevel />
