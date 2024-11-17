@@ -56,6 +56,6 @@
     <OcpTab on_chain_performance={game.on_chain_performance.data} />
   {/if}
   {#if activeTab === 'sl'}
-    <SlTab social_data={game.social_data} />
+    <SlTab is_demo={!game.isNewFormat} social_data={game.social_data} />
   {/if}
 </div>

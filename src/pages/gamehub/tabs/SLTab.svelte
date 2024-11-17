@@ -3,6 +3,7 @@
   import TwitterStats from "./twitter-stats.svelte";
 
   export let social_data
+  export let is_demo;
 </script>
 
 <div
@@ -31,7 +32,7 @@ class="bg-gradient-to-r from-[#FDFC47] to-[#24FE41] text-black rounded-[20px] py
   </div>
 </div>
 <div>
-  <div class="text-[32px] font-bold w-[106px] h-[106px] flex items-center justify-center rounded-full border-[10px] border-[#0000004D]">A</div>
+  <div class="text-[32px] font-bold w-[106px] h-[106px] flex items-center justify-center rounded-full border-[10px] border-[#0000004D]">{is_demo ? 'A' : 'N/A'}</div>
 </div>
 </div>
 
