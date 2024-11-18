@@ -83,8 +83,8 @@ export default [
     "erase_venture": true,
     "banner": "/optimized/meme-blast-arena.webp",
     "images": [
-      "/optimized/meme-banner-05.webp",
       "/optimized/meme-banner-0.webp",
+      "/optimized/meme-banner-05.webp",
       "/optimized/meme-banner-1.webp",
       "/optimized/meme-banner-2.webp",
       "/optimized/meme-banner-3.webp",
