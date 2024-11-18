@@ -71,7 +71,8 @@ export default [
       "tags": [
         "Smart-2-Earn", "AI-Games", "PVP", "PVE", "NFT"
       ],
-      "game_play_link": "https://t.me/quizai_game_bot",
+      // "game_play_link": "https://t.me/quizai_game_bot",
+      "game_play_link": "",
       "description": "QUIZ AI is an innovative Web3 gaming app that combines the thrill of trivia with blockchain technology. Players can test their knowledge across various topics, compete in exciting PvP and guild battles, and earn valuable tokenized rewards. With its innovative Smart-2-Earn model and integration with Telegram, QUIZ AI offers a seamless, engaging and rewarding gaming experience for everyone.",
       "game_logo": "/optimized/quiz-ai.webp"
     }
