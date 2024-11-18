@@ -89,7 +89,6 @@ export default [
       "/optimized/meme-banner-2.webp",
       "/optimized/meme-banner-3.webp",
       "/optimized/meme-banner-4.webp",
-      "/optimized/meme-banner-5.webp",
     ],
     "top": 1,
     "networks": [
