@@ -83,6 +83,8 @@ export default [
     "erase_venture": true,
     "banner": "/optimized/meme-blast-arena.webp",
     "images": [
+      "/optimized/meme-banner-05.webp",
+      "/optimized/meme-banner-0.webp",
       "/optimized/meme-banner-1.webp",
       "/optimized/meme-banner-2.webp",
       "/optimized/meme-banner-3.webp",
@@ -134,7 +136,7 @@ export default [
     },
     "social_data": {},
     "follow_link": "https://t.me/RealMemeBlastArena",
-    "white_paper_link": "",
+    "white_paper_link": "/meme-wp.pdf",
     "about": {
       "custom": "meme-blast-arena"
     },
@@ -142,7 +144,7 @@ export default [
     "game_info": {
       "name": "Meme Blast Arena",
       "studio": "Bizzon Games Team",
-      "social_level": "N\\A",
+      "social_level": "N/A",
       "token_name": "",
       "bizzon_rating": null,
       "release_date": "2024-11-12T01:22:08.537Z",
