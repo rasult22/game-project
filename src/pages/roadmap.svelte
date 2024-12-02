@@ -141,7 +141,7 @@
         </div>
         <div class="ml-[300px] md:ml-0 flex space-x-4">
           <ul class="max-w-[468px] list-disc leading-[150%]">
-            <li>Launch of 2nd and 3rd original games form Bizzon</li>
+            <li>Launch of 2nd and 3rd original games from Bizzon</li>
             <li>Expansion of game devs partnerships</li>
             <li>Bizzon Cross-economy development</li>
             <li>Expanding on-chain support on BizzonGames Platform</li>
@@ -268,7 +268,7 @@
       4Q <span class="text-[16px] ml-1">2024</span>
     </div>
     <ul class="text-[#888888] list-disc pl-6 mt-6">
-      <li>Launch of 2nd and 3rd original games form Bizzon</li>
+      <li>Launch of 2nd and 3rd original games from Bizzon</li>
       <li>Expansion of game devs partnerships</li>
       <li>Bizzon Cross-economy development</li>
       <li>Expanding on-chain support on BizzonGames Platform</li>
