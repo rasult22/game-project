@@ -1,5 +1,62 @@
 export default [
   {
+    "id": "durov-run",
+    "isNewFormat": true,
+    "erase_venture": true,
+    "banner": "/optimized/durov-run.webp",
+    "images": [
+      '/optimized/durov-run-3.webp',
+      '/optimized/durov-run-5.webp',
+      '/optimized/durov-run-1.webp',
+      '/optimized/durov-run-4.webp',
+    ],
+    "top": 1,
+    "networks": [
+      "ton"
+    ],
+    "on_chain_performance": {},
+    "players_count": '0',
+    "about": {
+      "custom": "durov-run"
+    },
+    "team_profile": {
+      "staffs": [
+        {
+          "link": "https://t.me/TheRealSinSay",
+          "link_type": "telegram",
+          "name": "Dmitriy",
+          "avatar": "",
+          "position": "Assistant to Evgeniy Ustinovich",
+          "description": ""
+        }
+      ],
+      "rank": "S"
+    },
+    "social_data": {},
+    "follow_link": "https://t.me/DurovRunChat",
+    "white_paper_link": "",
+    "comments": [],
+    "game_info": {
+      "name": "Durov Run",
+      "studio": "T-Lab",
+      "social_level": "N/A",
+      "token_name": "",
+      "bizzon_rating": null,
+      "release_date": "2024-10-10T01:22:08.537Z",
+      "devices": ["android", 'ios'],
+      "sale_exchanges": [],
+      "backed_by": [
+        // {logo: "https://optim.tildacdn.com/tild3736-3566-4632-b462-656234663161/-/resize/192x/-/format/webp/image.png", name: "Aptos Labs"}
+      ],
+      "tags": [
+        "Runner"
+      ],
+      "game_play_link": "https://t.me/durovrunbot/run?startapp=runId1694561814",
+      "description": "Durov Run is a dynamic runner game with a storyline and elements of an economic simulator, where the player controls Pavel Durov. Dodge obstacles, collect Gems, build your IT empire, and boost your Popularity as you progress through the story. The game follows a Play&Earn model: become the leader of the races, earn PavelPass, and collect tokens from project partners. Accumulate T-LAB ecosystem points through purchases to receive discounts across various ecosystem products and participate in the upcoming global airdrop following the tokenization of this points.",
+      "game_logo": "/optimized/durov-run.webp"
+    }
+  },
+  {
     "id": "quiz-ai",
     "isNewFormat": true,
     "erase_venture": true,
