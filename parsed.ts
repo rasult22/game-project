@@ -15,7 +15,7 @@ export default [
       "ton"
     ],
     "on_chain_performance": {},
-    "players_count": '0',
+    "players_count": 39725,
     "about": {
       "custom": "durov-run"
     },
