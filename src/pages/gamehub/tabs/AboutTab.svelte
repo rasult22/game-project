@@ -1,4 +1,5 @@
 <script>
+	import DurovRun from './abouts/durov-run.svelte';
 	import MemeBlastArena from './abouts/meme-blast-arena.svelte';
 	import QuizAi from './abouts/quiz-ai.svelte';
 
@@ -68,9 +69,12 @@
 {/if}
 {#if data.custom === 'quiz-ai'}
   <QuizAi />
-  {/if}
-  {#if data.custom === 'meme-blast-arena'}
+{/if}
+{#if data.custom === 'meme-blast-arena'}
   <MemeBlastArena />
+{/if}
+{#if data.custom === 'durov-run'}
+  <DurovRun />
 {/if}
 
 <style>
