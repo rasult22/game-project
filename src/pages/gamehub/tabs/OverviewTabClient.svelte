@@ -1,4 +1,5 @@
 <script>
+	import GameMetrics from './GameMetrics.svelte';
 	import Comments from './Comments.svelte';
   import BizzonRating from "~/components/bizzon-rating.svelte";
   import Chart from "./chart.svelte";
@@ -12,10 +13,12 @@
   export let white_paper_link
   export let erase_venture;
   export let game_id
+  export let analytics_id
 
   let data;
   let history_data;
-
+  
+  let analytics_data;
   $: price = token_info ? token_info.quote.USD.price : null
   $: price_history = token_info_historical ? token_info_historical.quotes.map(obj => obj.quote.USD.price) : []
   $: volume_24h =  token_info ? token_info.quote.USD.volume_24h : null
@@ -29,8 +32,13 @@
   $: circulating_supply = token_info ?  (token_info.circulating_supply / token_info.total_supply) * 100 : null
 
   onMount(async () => {
-    data = await fetch(`https://api.bizzon.io/api/market/currency/quotes/latest?symbol=${token_name}`).then(r => r.json())
-    history_data = await fetch(`https://api.bizzon.io/api/market/currency/quotes/historical?symbol=${token_name}`).then(r => r.json())
+    if (analytics_id) {
+      analytics_data = await fetch(`https://api.bizzon.io/api/analytics/tma/${analytics_id}/stats`).then(r => r.json())
+    }
+    if (token_name) {
+      data = await fetch(`https://api.bizzon.io/api/market/currency/quotes/latest?symbol=${token_name}`).then(r => r.json())
+      history_data = await fetch(`https://api.bizzon.io/api/market/currency/quotes/historical?symbol=${token_name}`).then(r => r.json())
+    }
   })
 </script>
 
@@ -381,12 +389,12 @@
 
   <!-- 5: metrics -->
   <div
-    class="mt-6 p-[20px] sm:p-3 bg-gradient-to-r from-[#78EBFF] via-[#12D8FA] to-[#1FA2FF] rounded-[20px] text-[#1B1B1B]"
+    class="mt-6 p-[20px] sm:p-3 bg-gradient-to-r border border-[#888] from-[#1B1B1B] via-[#1B1B1B] to-[#1B1B1B] rounded-[20px] text-[#B0B0B2]"
   >
     <!-- head  -->
     <div class="flex items-center">
-      <div class="w-[55%] mr-8">
-        <div class="text-[20px] font-semibold">Game users metrics</div>
+      <div class="w-[55%] mr-auto">
+        <div class="text-[20px] font-semibold text-white">Game users metrics ≈</div>
         <div class="mt-[10px]">
           Explore the game through a numerical lens with the aid of our compiled
           statistics
@@ -394,64 +402,10 @@
       </div>
       <BizzonRating rating="" />
     </div>
-    <!-- cards -->
-    <div class="flex sm:grid sm:grid-cols-2 gap-4 mt-6">
-      <div
-        class="bg-[#2A2A2A] min-w-[170px] sm:min-w-[126px] text-white opacity-90 rounded-[16px] p-[14px]"
-      >
-        <div class="font-semibold">Retention</div>
-        <div class="ml-[-5px]">
-          <Chart
-            direction="positive"
-            string="N/A"
-            data={[
-              120, 24, 32, 22, 101, 120, 90, 150, 24, 32, 22, 101, 120, 90, 200,
-            ]}
-          />
-        </div>
-      </div>
-      <div
-        class="bg-[#2A2A2A] min-w-[170px] sm:min-w-[126px] text-white opacity-90 rounded-[16px] p-[14px]"
-      >
-        <div class="font-semibold">Session Lenght</div>
-        <div class="ml-[-5px]">
-          <Chart
-            direction="positive"
-            string="N/A"
-            data={[
-              120, 24, 32, 22, 101, 120, 90, 150, 24, 32, 22, 101, 120, 90, 200,
-            ]}
-          />
-        </div>
-      </div>
-      <div
-        class="bg-[#2A2A2A] min-w-[170px] sm:min-w-[126px] text-white opacity-90 rounded-[16px] p-[14px]"
-      >
-        <div class="font-semibold">ARPDAU</div>
-        <div class="ml-[-5px]">
-          <Chart
-            direction="positive"
-            string="N/A"
-            data={[
-              120, 24, 32, 22, 101, 120, 90, 150, 24, 32, 22, 101, 120, 90, 200,
-            ]}
-          />
-        </div>
-      </div>
-      <div
-        class="bg-[#2A2A2A] min-w-[170px] sm:min-w-[126px] text-white opacity-90 rounded-[16px] p-[14px]"
-      >
-        <div class="font-semibold">Churn Rate</div>
-        <div class="ml-[-5px]">
-          <Chart
-            direction="positive"
-            string="N/A"
-            data={[
-              120, 24, 32, 22, 101, 120, 90, 150, 24, 32, 22, 101, 120, 90, 200,
-            ]}
-          />
-        </div>
-      </div>
+    <div class="mt-6">
+      {#if analytics_data}
+        <GameMetrics {analytics_data} />
+      {/if}
     </div>
   </div>
 

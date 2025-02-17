@@ -69,6 +69,7 @@ export default [
     ],
     "on_chain_performance": {},
     "players_count": '0',
+    "analytics_id": 1,
     "about": {
       "custom": "quiz-ai"
     },
