@@ -7,7 +7,7 @@
 }
 </script>
 
-<div class="bg-[#2A2A2A] p-6 text-[#D9D9D9] gap-6 grid grid-cols-3 rounded-[20px]">
+<div class="bg-[#2A2A2A] p-6 text-[#D9D9D9] gap-6 grid sm:grid-cols-1 grid-cols-3 rounded-[20px]">
   <div>
     <div>MAU</div>
     <div class="flex items-center gap-2 mt-3">
