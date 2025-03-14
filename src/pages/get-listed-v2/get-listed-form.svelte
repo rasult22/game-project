@@ -1,18 +1,21 @@
 <script>
+import Snackbar from './snackbar.svelte';
 import SucceedModal from './success-modal.svelte';
+
 let organization_name = '';
 let link_to_project = '';
 let first_name = '';
 let last_name = '';
 let email = '';
 let requestState = 'initial'
+let snackbar
 
 const onSubmit = async (e) => {
 
   if (organization_name && email && link_to_project && first_name && last_name) {
     try {
       requestState = 'loading';
-      await fetch('https://api.bizzon.io/api/organization/registration', {
+      const response = await fetch('https://api.bizzon.io/api/organization/registration', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -25,9 +28,14 @@ const onSubmit = async (e) => {
           last_name
         })
       })
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.detail || 'Failed to send request')
+      }
       requestState = 'done';
     } catch (error) {
-      console.error(error)
+      requestState = 'error';
+      snackbar.show(`Error: ${error.message || 'Failed to send request'}`)
     }
   }
 }
@@ -43,6 +51,9 @@ const onSubmit = async (e) => {
     email = '';
   }} />
 {/if}
+
+<Snackbar bind:this={snackbar} type="error" />
+
 <div class="text-[36px] font-Oxanium font-medium uppercase">
   Send request
 </div>
