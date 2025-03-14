@@ -68,6 +68,24 @@ const onSubmit = async (e) => {
     </label>
     <input bind:value={organization_name} type="text" id="org-name" required class="my-input mt-[6px]" placeholder="Enter your organization name">
   </div>
+  <div class="grid sm:grid-cols-1 sm:gap-[32px] grid-cols-2 gap-4 mt-[32px]">
+    <div class="flex flex-col ">
+      <label for="first-name">
+        First Name
+        <span class="text-[#FA5252]">*</span>
+      </label>
+      <input bind:value={first_name} type="text" id="first-name" required class="my-input mt-[6px]" placeholder="First name">
+    </div>
+     <!-- last name -->
+     <div class="flex flex-col">
+      <label for="last-name">
+        Last Name
+        <span class="text-[#FA5252]">*</span>
+      </label>
+      <input bind:value={last_name} type="text" id="last-name" required class="my-input mt-[6px]" placeholder="Last name">
+    </div>
+  </div>
+    <!-- first name -->
 
   <!-- email -->
   <div class="flex flex-col mt-[32px]">
@@ -86,22 +104,7 @@ const onSubmit = async (e) => {
     </label>
     <input bind:value={link_to_project} type="text" id="project-link" required class="my-input mt-[6px]" placeholder="Website, Telegram app link, etc.">
   </div>
-   <!-- first name -->
-   <div class="flex flex-col mt-[32px]">
-    <label for="first-name">
-      First Name
-      <span class="text-[#FA5252]">*</span>
-    </label>
-    <input bind:value={first_name} type="text" id="first-name" required class="my-input mt-[6px]" placeholder="First name">
-  </div>
-   <!-- last name -->
-   <div class="flex flex-col mt-[32px]">
-    <label for="last-name">
-      Last Name
-      <span class="text-[#FA5252]">*</span>
-    </label>
-    <input bind:value={last_name} type="text" id="last-name" required class="my-input mt-[6px]" placeholder="Last name">
-  </div>
+ 
   <div class="flex justify-end w-full mt-9">
     <button disabled={requestState === 'loading'} class="flex justify-center gap-2 md:w-full sm:w-full disabled:opacity-[0.5] disabled:cursor-not-allowed anim-btn rounded-[12px] py-[14px] px-9 bg-[#F97C0E]">
       <div>
