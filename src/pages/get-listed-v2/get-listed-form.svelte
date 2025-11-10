@@ -15,7 +15,7 @@ const onSubmit = async (e) => {
   if (organization_name && email && link_to_project && first_name && last_name) {
     try {
       requestState = 'loading';
-      const response = await fetch('https://api.bizzon.io/api/organization/registration', {
+      const response = await fetch('https://staging-api.dreambody.ai/api/organization/registration', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
