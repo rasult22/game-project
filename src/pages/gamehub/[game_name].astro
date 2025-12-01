@@ -1,14 +1,12 @@
 ---
+import { getPublicProjects } from "~/services";
 import type { GetStaticPaths } from "astro";
-// import pb, {items} from '~/pocketbase'
-import { formatDate } from "~/utils/utils";
-import {items} from './mock'
 import "@fontsource-variable/inter";
 import "@fontsource/oxanium/500.css";
 import "@fontsource/oxanium/600.css";
 import "@fontsource/oxanium/800.css";
 import "~/styles/global.css";
-import GameTabs from './game-tabs.svelte'
+import GameTabs from './game-tabs-astro.astro'
 import AddToList from './AddToList.svelte'
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
@@ -20,7 +18,8 @@ import { ViewTransitions } from "astro:transitions";
 const image = new URL("optimized/social.webp", site);
 
 export const getStaticPaths = (async () => {
-  return items.map((game) => {
+  const items = await getPublicProjects()
+  return items.projects.map((game) => {
     return {
       params: {
         game_name: game.id,
@@ -103,7 +102,7 @@ const { data } = Astro.props;
             d="M6.91056 4.41083C7.23597 4.08539 7.76357 4.08539 8.08898 4.41083L13.0886 9.41083C13.414 9.73626 13.414 10.2639 13.0886 10.5893L8.08898 15.5893C7.76357 15.9148 7.23597 15.9148 6.91056 15.5893C6.58515 15.2639 6.58515 14.7363 6.91056 14.4108L11.321 10.0001L6.91056 5.58934C6.58515 5.2639 6.58515 4.73626 6.91056 4.41083Z"
             fill="white"></path>
         </svg>
-        <a class="uppercase">{game_name}</a>
+        <a class="uppercase">{data.name}</a>
       </div>
       <div class="flex items-start justify-center space-x-8 mt-[30px]">
         <div class="overflow-hidden">
@@ -112,7 +111,7 @@ const { data } = Astro.props;
           <!-- buttons md sm -->
           <div class="hidden md:block sm:block space-y-[10px] mt-6">
             <a
-              href={data.game_info.game_play_link}
+              href={""}
               target="_blank"
               class="w-full text-black justify-center font-medium bg-white hover:bg-[#1CC141] flex items-center space-x-2 hover:text-white py-2 active:scale-95 active:bg-[#17B23A] transition-all px-[36px] rounded-[12px]"
             >
@@ -134,7 +133,7 @@ const { data } = Astro.props;
             </a>
             <!-- follow btn -->
             <a
-              href={data.follow_link}
+              href={""}
               target="_blank"
               class="w-full justify-center font-medium bg-[#272727] flex items-center space-x-2 text-white py-[10px] active:scale-95 active:bg-[#272727] transition-all px-[36px] rounded-[12px]"
             >
@@ -157,17 +156,17 @@ const { data } = Astro.props;
              <AddToList game_id={game_name} client:load/>
             </div>
           <!-- info -->
-          <GamesInfo is_demo={!data.isNewFormat} game_id={data.id} data={{...data.game_info}}/>
+          <GamesInfo game_id={data.id} />
           <div class="max-w-[778px] game-tabs ml-auto md:ml-0 sm:ml-0 mt-8">
-            <GameTabs game={data} client:load game_id={data.id} />
+            <GameTabs game_id={data.id} />
           </div>
         </div>
         <!-- side card -->
         <div class="sticky md:hidden sm:hidden z-50 shrink-0 top-[105px] w-[300px]">
-          <img class="rounded-[16px]" src={data.banner} alt="" />
+          <img class="rounded-[16px]" src={data.covers.find(cover => cover.cover_type === 'thumbnail')?.url} alt="" />
           <div class="space-y-[10px] mt-6">
             <a
-              href={data.game_info.game_play_link}
+              href={""}
               target="_blank"
               class="w-full text-black justify-center font-medium bg-white hover:bg-[#1CC141] flex items-center space-x-2 hover:text-white py-2 active:scale-95 active:bg-[#17B23A] transition-all px-[36px] rounded-[12px]"
             >
@@ -189,7 +188,7 @@ const { data } = Astro.props;
             </a>
             <!-- follow btn -->
             <a
-              href={data.follow_link}
+              href={""}
               target="_blank"
               class="w-full justify-center font-medium bg-[#272727] flex items-center space-x-2 text-white py-[10px] active:scale-95 active:bg-[#272727] transition-all px-[36px] rounded-[12px]"
             >

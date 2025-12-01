@@ -8,10 +8,11 @@ import FooterTwo from "~/components/footer-two.astro";
 import Header from "~/components/header.astro";
 import { ViewTransitions } from 'astro:transitions';
 import GameHub from './game-hub.svelte'
+import { getPublicProjects } from '~/services'
 const { generator, site } = Astro;
 const image = new URL("optimized/social.webp", site);
 import {description, title} from '~/site'
-
+const { projects } = await getPublicProjects()
 ---
 
 <!doctype html>
@@ -47,7 +48,7 @@ import {description, title} from '~/site'
   <body class="h-full pt-[150px] sm:pt-[100px] overflow-x-hidden bg-[#0D0D0F] text-white">
     <Header />
     <div class="flex flex-col space-x-4 px-9 xl:px-0 sm:px-4 max-w-[1376px] mx-auto">
-      <GameHub client:load/>
+      <GameHub items={projects} client:load />
     </div>
     <FooterTwo />
   </body>

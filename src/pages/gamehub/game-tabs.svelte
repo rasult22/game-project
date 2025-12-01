@@ -1,12 +1,12 @@
-<script>
-  export let game_id;
+<script lang="ts">
   import OverviewTab from "./tabs/OverviewTab.svelte";
   import OverviewTabClient from "./tabs/OverviewTabClient.svelte";
   import AboutTab from "./tabs/AboutTab.svelte";
   import OcpTab from "./tabs/OCPTab.svelte";
   import SlTab from "./tabs/SLTab.svelte";
+  import type { ProjectExtended } from "~/services";
 
-  export let game;
+  export let game: ProjectExtended;
 
   let activeTab = "overview";
   const tabs = [
@@ -47,34 +47,24 @@
 
 <div class="mt-9">
   {#if activeTab === "overview"}
-    {#if game.isNewFormat}
       <OverviewTabClient
-        erase_venture={game.erase_venture}
-        white_paper_link={game.white_paper_link}
+        erase_venture={true}
+        white_paper_link={game.whitepaper?.external_link || game.whitepaper?.pdf_url}
         game_id={game.id}
-        analytics_id={game.analytics_id}
-        token_name={game.game_info.token_name}
-        sale_exchanges={game.game_info.sale_exchanges}
-        team_profile={game.team_profile}
-        backedBy={game.game_info.backed_by}
+        analytics_id={'none'}
+        token_name={game.token_info?.contract_address}
+        sale_exchanges={game.token_info?.exchange_names}
+        team_profile={game.team_members}
+        backedBy={[]}
       />
-    {:else}
-      <OverviewTab
-        game_id={game.id}
-        sale_exchanges={game.game_info.sale_exchanges}
-        team_profile={game.team_profile}
-        on_chain_performance={game.on_chain_performance.data}
-        backedBy={game.game_info.backed_by}
-      />
-    {/if}
   {/if}
   {#if activeTab === "about"}
     <AboutTab data={game.about} />
   {/if}
   {#if activeTab === "ocp"}
-    <OcpTab on_chain_performance={game.on_chain_performance.data} />
+    <!-- <OcpTab on_chain_performance={game.on_chain_performance.data} /> -->
   {/if}
   {#if activeTab === "sl"}
-    <SlTab is_demo={!game.isNewFormat} social_data={game.social_data} />
+    <!-- <SlTab is_demo={!game.isNewFormat} social_data={game.social_data} /> -->
   {/if}
 </div>

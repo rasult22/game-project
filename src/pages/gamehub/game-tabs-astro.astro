@@ -1,0 +1,7 @@
+---
+import { getPublicProjectById } from "~/services"
+import GameTabs from "./game-tabs.svelte"
+const game_id: string = Astro.props.game_id
+const project = await getPublicProjectById(game_id)
+---
+<GameTabs client:load game={project}/>

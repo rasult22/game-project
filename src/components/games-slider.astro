@@ -1,17 +1,17 @@
 ---
-type Data = {images: string[]}
-const data: Data = Astro.props.data;
+import { ProjectShort } from "~/services";
+const data: ProjectShort = Astro.props.data;
 ---
 <div class="flex sm:flex-col sm:space-x-0 sm:gap-6 md:flex-col items-center md:space-x-0 md:gap-6 space-x-8 w-full">
   <div thumbsSlider="" style="padding: 0; margin:0;" class="md:!hidden sm:!hidden swiper shrink-0 mySwiper2 max-w-[130px] max-h-[320px] text-black">
     <div class="swiper-wrapper">
       {
-        data.images.map((image, index) => (
+        data.covers.filter(cover => cover.cover_type === 'banner').map((image, index) => (
           <div data-thumb-1-index={index} class="swiper-slide border-2 border-transparent">
             <img
               width="130"
               class="w-[130px] h-[74px] object-cover cursor-pointer rounded-[8px]"
-              src={image}
+              src={image.url}
               alt=""
             />
           </div>
@@ -22,12 +22,12 @@ const data: Data = Astro.props.data;
   <div class="swiper mySwiper max-w-[778px] sm:max-w-[90vw]">
     <div class="swiper-wrapper">
       {
-        data.images.map((image) => (
+        data.covers.filter(cover => cover.cover_type === 'banner').map((image) => (
           <div class="swiper-slide">
             <img
               width="778"
               class="w-[778px] sm:w-full sm:h-[200px] h-[320px] object-cover rounded-[32px]"
-              src={image}
+              src={image.url}
               alt=""
             />
           </div>
@@ -62,12 +62,12 @@ const data: Data = Astro.props.data;
   <div thumbsSlider="" style="padding: 0; margin:0;" class="!hidden md:!block sm:!block swiper mySwiper3 max-w-[90vw] text-black">
     <div class="swiper-wrapper">
       {
-        data.images.map((image, index) => (
+        data.covers.filter(cover => cover.cover_type === 'banner').map((image, index) => (
           <div data-thumb-2-index={index} class="swiper-slide border-2 border-transparent">
             <img
               width="172"
               class="w-[100%] object-cover cursor-pointer rounded-[8px]"
-              src={image}
+              src={image.url}
               alt=""
             />
           </div>
