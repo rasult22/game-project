@@ -91,24 +91,24 @@
       </div>
       <!-- list -->
       <div class="mt-6 space-y-4 max-h-[180px] -mr-4 pr-4 overflow-auto">
-        {#each (team_profile.staffs || []) as member}
+        {#each (game.team_members) as member}
           <div class="flex items-center border-b border-[#3F3F3F] pb-2">
-            <img width={45} height={45} class="w-[45px] h-[45px] object-cover rounded-full" src={member.avatar && member.avatar.includes('https') ? 'https://d1j2c9jkfhu70p.cloudfront.net/' + member.avatar : member.avatar || '/media/avatar.png'} alt="" />
+            <img width={45} height={45} class="w-[45px] h-[45px] object-cover rounded-full" src={'/media/avatar.png'} alt="" />
             <div class="ml-2">
               <div class="text-[14px] leading-[100%] font-medium">
                 {member.name}
               </div>
               <div class="text-[12px] leading-[100%] text-[#888888] mt-[6px]">
-                {member.position}
+                {member.role}
               </div>
             </div>
             <div class="flex space-x-1 ml-auto">
               <a
               target="_blank"
               class="active:scale-95 active:opacity-80 transition-all"
-              href={member.link}
+              href={member.social_media_link}
             > 
-              {#if member.link_type === 'telegram'}
+              <!-- {#if member.link_type === 'telegram'}
                 <img
                   width="24"
                   src="/media/telegram-icon.svg"
@@ -120,7 +120,7 @@
                   src="/media/linkedin-icon.svg"
                   alt=""
                 />
-              {/if}
+              {/if} -->
             </a>
               <!-- {#each member.links as link}
                 {#if link.type === "telegram"}
