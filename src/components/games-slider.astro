@@ -3,11 +3,11 @@ import { ProjectShort } from "~/services";
 const data: ProjectShort = Astro.props.data;
 ---
 <div class="flex sm:flex-col sm:space-x-0 sm:gap-6 md:flex-col items-center md:space-x-0 md:gap-6 space-x-8 w-full">
-  <div thumbsSlider="" style="padding: 0; margin:0;" class="md:!hidden sm:!hidden swiper shrink-0 mySwiper2 max-w-[130px] max-h-[320px] text-black">
+  <div thumbsSlider="" style="padding: 0; margin:0;" class="md:!hidden sm:!hidden swiper shrink-0 mySwiper2 max-w-[130px] h-[320px] text-black">
     <div class="swiper-wrapper">
       {
         data.covers.filter(cover => cover.cover_type === 'banner').map((image, index) => (
-          <div data-thumb-1-index={index} class="swiper-slide border-2 border-transparent">
+          <div data-thumb-1-index={index} class="swiper-slide border-2 border-transparent ">
             <img
               width="130"
               class="w-[130px] h-[74px] object-cover cursor-pointer rounded-[8px]"
