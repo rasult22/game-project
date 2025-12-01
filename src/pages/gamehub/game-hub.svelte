@@ -20,7 +20,6 @@
   } 
 
   $: filtered_items = items.filter(item => {
-    console.log(item);
     return item;
     let networkFilterIsTurnedOn = networkFilter.length > 0
     let genreFilterIsTurnedOn = genreFilter.length > 0
@@ -164,12 +163,12 @@
       {#if filtered_items.length}
         <div class="mt-[50px] sm:mt-6 p-4 sm:p-0 gap-3 grid md:grid-cols-3 sm:grid-cols-1 grid-cols-4 bg-[#1C1C1E] rounded-[16px]">
           {#each filtered_items as card, index }
-            <GameCardBasic link={'/gamehub/' + card.id} img={card.covers.find(c => c.cover_type === 'thumbnail')?.url} name={card.name} networks={[]} players={0} rank={`${index + 1}`} />
+            <GameCardBasic link={'/gamehub/' + card.id} tags={card.genre} img={card.covers.find(c => c.cover_type === 'thumbnail')?.url} name={card.name} networks={[]} players={0} rank={`${index + 1}`} />
           {/each}
         </div>
       {:else}
         <div class="py-36 flex font-Oxanium font-semibold items-center justify-center text-[20px] uppercase opacity-60">
-          There is no games matching given criteria 123
+          There is no games matching given criteria
         </div>
       {/if}
     </div>

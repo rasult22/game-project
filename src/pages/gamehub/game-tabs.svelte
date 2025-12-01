@@ -1,5 +1,4 @@
 <script lang="ts">
-  import OverviewTab from "./tabs/OverviewTab.svelte";
   import OverviewTabClient from "./tabs/OverviewTabClient.svelte";
   import AboutTab from "./tabs/AboutTab.svelte";
   import OcpTab from "./tabs/OCPTab.svelte";
@@ -51,6 +50,7 @@
         erase_venture={true}
         white_paper_link={game.whitepaper?.external_link || game.whitepaper?.pdf_url}
         game_id={game.id}
+        game={game}
         analytics_id={'none'}
         token_name={game.token_info?.contract_address}
         sale_exchanges={game.token_info?.exchange_names}

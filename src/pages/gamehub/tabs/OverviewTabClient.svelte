@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import GameMetrics from './GameMetrics.svelte';
 	import Comments from './Comments.svelte';
   import BizzonRating from "~/components/bizzon-rating.svelte";
@@ -6,8 +6,11 @@
   import { fade } from "svelte/transition";
   import { moneyFormatter } from "~/utils/utils";
   import { onMount } from "svelte";
+  import type { ProjectExtended } from '~/services';
+  
   export let backedBy;
   export let team_profile;
+  export let game: ProjectExtended;
   export let sale_exchanges
   export let token_name
   export let white_paper_link
@@ -18,7 +21,6 @@
   let data;
   let history_data;
   
-  let analytics_data;
   $: price = token_info ? token_info.quote.USD.price : null
   $: price_history = token_info_historical ? token_info_historical.quotes.map(obj => obj.quote.USD.price) : []
   $: volume_24h =  token_info ? token_info.quote.USD.volume_24h : null
@@ -403,9 +405,7 @@
       <BizzonRating rating="" />
     </div>
     <div class="mt-6">
-      {#if analytics_data}
-        <GameMetrics {analytics_data} />
-      {/if}
+      <GameMetrics game={game}/>
     </div>
   </div>
 
